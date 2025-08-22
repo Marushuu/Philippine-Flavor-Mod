@@ -1,0 +1,1 @@
+﻿## Overwrites "More Unique Companies" as they have duplicate entries for Philippine Companies.

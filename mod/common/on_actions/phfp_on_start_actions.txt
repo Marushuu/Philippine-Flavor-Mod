@@ -1,0 +1,22 @@
+﻿phfp_on_game_started = {
+	effect = {
+		s:STATE_LUZON = {
+			add_state_trait = phfp_state_trait_pasig_river
+			add_state_trait = phfp_state_trait_cordilleran_gold_mines
+			add_state_trait = state_trait_volcanic_soil
+		}
+		s:STATE_VISAYAS = {
+			add_state_trait = state_trait_natural_harbors
+			add_state_trait = phfp_state_trait_semirara_coal_mines
+		}
+		s:STATE_MINDANAO = {
+			add_state_trait = phfp_state_trait_butuan_gold_mines
+		}
+	}
+}
+
+on_game_started = {
+	on_actions = {
+		phfp_on_game_started
+	}
+}

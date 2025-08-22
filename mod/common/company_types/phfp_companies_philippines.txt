@@ -1,0 +1,1062 @@
+﻿# Compañía General de Tabacos de Filipinas or La Tabacalera
+# https://en.wikipedia.org/wiki/Compa%C3%B1%C3%ADa_General_de_Tabacos_de_Filipinas
+company_Tabacalera = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/tabacalera.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_LUZON
+	}
+
+	possible_prestige_goods = {
+		prestige_good_filipino_tobacco
+	}
+
+	building_types = {
+		building_tobacco_plantation
+	}
+
+	extension_building_types = {
+		building_logging_camp
+		building_sugar_plantation
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tobacco_plantation
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_tobacco_plantations_throughput_add = 0.1
+		state_trade_capacity_mult = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_tobacco_plantation = {
+			level = 3
+			state_trigger = { 
+				state_region = s:STATE_LUZON
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+# Batangas Coffee Plantations (Fictional Company meant to represent the coffee industry in Batangas)
+company_Batangas_Coffee = {
+	icon = "gfx/interface/icons/company_icons/basic_colonial_plantations.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_LUZON
+	}
+
+	possible_prestige_goods = {
+		prestige_good_barako_coffee
+	}
+
+	building_types = {
+		building_coffee_plantation
+		building_tea_plantation
+	}
+
+	extension_building_types = {
+		building_fishing_wharf
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_coffee_plantation
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_tobacco_plantations_throughput_add = 0.1
+		state_lower_strata_expected_sol_add = -0.25
+		state_middle_strata_expected_sol_add = -0.5
+		state_upper_strata_expected_sol_add = -0.75
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_coffee_plantation = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_LUZON
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+# Ayala y Compañía
+# https://en.wikipedia.org/wiki/Ayala_Corporation
+company_Ayala = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ayala.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+	
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_LUZON
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_tools
+	}
+
+	building_types = {
+		building_tooling_workshops
+		building_glassworks
+		building_trade_center
+	}
+
+	extension_building_types = {
+		building_steel_mills
+		building_railway
+		building_port
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tooling_workshops
+				level >= 3
+			}
+			any_scope_building = {
+				is_building_type = building_trade_center
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_urban_center_throughput_add = 0.05
+		building_trade_center_throughput_add = 0.1
+		state_construction_mult = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_tooling_workshops = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_LUZON
+				is_incorporated = yes
+			}
+		}
+		building_trade_center = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_LUZON
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+# Armscor Global Defense, Inc
+# https://en.wikipedia.org/wiki/Armscor_%28Philippines%29
+company_Armscor = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/armscor.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_LUZON
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_small_arms
+	}
+
+	building_types = {
+		building_arms_industry
+		building_munition_plants
+	}
+
+	extension_building_types = {
+		building_artillery_foundries
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_arms_industry
+				level >= 3
+			}
+		}
+		has_technology_researched = rifling
+	}
+
+	prosperity_modifier = {
+		unit_army_offense_mult = 0.05
+		unit_army_defense_mult = 0.075
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_arms_industry = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_LUZON
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+# The Manila Times
+# https://en.wikipedia.org/wiki/The_Manila_Times
+company_Manila_Times = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/manila_times.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_LUZON
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_newspaper
+	}
+
+	building_types = {
+		building_paper_mills
+	}
+
+	extension_building_types = {
+		building_logging_camp
+		building_arts_academy
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_paper_mills
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		interest_group_ig_intelligentsia_pol_str_mult = 0.15
+		interest_group_ig_intelligentsia_approval_add = 3
+		country_tech_spread_mult = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_paper_mills = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_LUZON
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+# Victorias Milling Company
+# https://en.wikipedia.org/wiki/Victorias_Milling
+company_Victorias = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/victorias.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_VISAYAS
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_sugarcane
+	}
+
+	building_types = {
+		building_sugar_plantation
+		building_banana_plantation
+	}
+
+	extension_building_types = {
+		building_food_industry
+		building_rice_farm
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_VISAYAS
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_VISAYAS
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_sugar_plantation
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_sugar_plantations_throughput_add = 0.2
+		state_trade_advantage_mult = 0.15
+		interest_group_ig_landowners_approval_add = 3
+		interest_group_ig_landowners_pop_attraction_mult = 0.1
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_VISAYAS
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_sugar_plantation = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_VISAYAS
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+# Benguet Consolidated Mining Company
+# https://en.wikipedia.org/wiki/Benguet_Corporation
+company_Benguet = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/benguet.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_LUZON
+	}
+
+	building_types = {
+		building_iron_mine
+		building_gold_mine
+		building_gold_fields
+	}
+
+	extension_building_types = {
+		building_coal_mine
+		building_chemical_plants
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_iron_mine
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_minting_mult = 0.05
+		building_group_bg_mining_throughput_add = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_iron_mine = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_LUZON
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+# Manila Electric Railroad and Light Company
+# https://en.wikipedia.org/wiki/Meralco
+company_Meralco = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/meralco.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_LUZON
+	}
+
+	building_types = {
+		building_power_plant
+		building_railway
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_steel_mills
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+			any_scope_building = {
+				OR = {
+					is_building_type = building_railway
+					is_building_type = building_power_plant
+				}
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.05
+		building_power_plant_throughput_add = 0.15
+		building_railway_throughput_add = 0.15
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_LUZON
+				is_incorporated = yes
+			}
+		}
+		building_power_plant = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_LUZON
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+# La Fábrica de Cerveza San Miguel - Replaces the Vanilla
+# https://en.wikipedia.org/wiki/San_Miguel_Corporation
+company_san_miguel = {
+    icon = "gfx/interface/icons/company_icons/historical_company_icons/san_miguel.png"
+    background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+    flavored_company = yes
+	preferred_headquarters = {
+		STATE_LUZON
+	}
+
+    building_types = {
+        building_food_industry
+		building_rice_farm
+    }
+
+    extension_building_types = {
+        building_wheat_farm
+        building_maize_farm
+        building_rye_farm
+    }
+
+    possible_prestige_goods = {
+        prestige_good_san_miguel
+    }
+
+    prestige_goods_trigger = {
+        custom_tooltip = {
+            text = je_prestige_goods_groceries_complete_tt
+            has_variable = prestige_good_generic_groceries_var
+        }
+    }
+
+    potential = {
+        has_interest_marker_in_region = region_indonesia
+    }
+
+    attainable = {
+        hidden_trigger = {
+            any_scope_state = {
+                state_region = s:STATE_LUZON
+            }
+        }
+    }
+
+    possible = {
+        any_scope_state = {
+			state_region = s:STATE_LUZON
+            is_incorporated = yes
+            any_scope_building = {
+                is_building_type = building_food_industry
+                level >= 3
+            }
+        }
+    }
+
+    prosperity_modifier = {
+		building_food_industry_throughput_add = 0.15
+        state_radicals_from_political_movements_mult = -0.1
+		state_loyalists_from_political_movements_mult = 0.1
+    }
+
+    ai_will_do = {
+        any_scope_state = {
+			state_region = s:STATE_LUZON
+            is_incorporated = yes
+        }
+    }
+
+    ai_construction_targets = {
+        building_food_industry = {
+            level = 3
+            state_trigger = {
+                state_region = s:STATE_LUZON
+                is_incorporated = yes
+            }
+        }
+    }
+
+    ai_weight = {
+        value = 3
+    }
+}
+
+
+# Destileria Limtuaco & Co., Inc
+# https://en.wikipedia.org/wiki/Destileria_Limtuaco
+company_Limtuaco = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/destileria_limtuanco.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_LUZON
+	}
+
+	building_types = {
+		building_food_industry
+		building_rice_farm
+	}
+
+	extension_building_types = {
+		building_vineyard_plantation
+		building_livestock_ranch
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_food_industry
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_migration_pull_mult = 0.1
+		state_radicals_from_political_movements_mult = -0.1
+		state_lower_strata_expected_sol_add = -0.35
+		state_middle_strata_expected_sol_add = -0.7
+		state_upper_strata_expected_sol_add = -1.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_food_industry = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+# Ynchausti y Compañía
+# https://en.wikipedia.org/wiki/Ynchausti_y_Compa%C3%B1%C3%ADa
+company_Ynchausti = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ynchausti.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_LUZON
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_merchant_marine
+	}
+
+	building_types = {
+		building_shipyards
+		building_military_shipyards
+		building_port
+	}
+
+	extension_building_types = {
+		building_trade_center
+		building_sugar_plantation
+		building_food_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyards
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.1
+		unit_navy_defense_mult = 0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_shipyards = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+# Aserradora Mecánica de Tuason y Sampedro
+# https://en.wikipedia.org/wiki/Aserradora_Mec%C3%A1nica_de_Tuason_y_Sampedro
+company_Tuason = {
+	icon = "gfx/interface/icons/company_icons/basic_forestry.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	possible_prestige_goods = {
+		prestige_good_burmese_teak
+	}
+
+	building_types = {
+		building_logging_camp
+		building_furniture_manufacturies
+	}
+
+	extension_building_types = {
+		building_tooling_workshops
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = { is_homeland = cu:filipino }
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = { is_homeland = cu:filipino }
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_logging_camp
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_logging_throughput_add = 0.15
+		country_max_weekly_construction_progress_add = 5
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = { is_homeland = cu:filipino }
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_logging_camp = {
+			level = 5
+			state_trigger = {
+				state_region = { is_homeland = cu:filipino }
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+# Philippine Long Distance Telephone Company (PLDT)
+# https://en.wikipedia.org/wiki/PLDT
+company_PLDT = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/pldt.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+	preferred_headquarters = {
+		STATE_LUZON
+	}
+
+	building_types = {
+		building_electrics_industry
+	}
+
+	extension_building_types = {
+		building_power_plant
+		building_rubber_plantation
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_LUZON
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = telephone
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_electrics_industry
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_assimilation_mult = 0.15
+		state_education_access_add = 0.05
+	}
+
+	ai_will_do = {
+		has_technology_researched = telephone
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_electrics_industry = {
+			level = 3
+			state_trigger = {
+				state_region = s:STATE_LUZON
+				is_incorporated = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}
+
+# Almazora Motors Corporation
+# https://en.wikipedia.org/wiki/Almazora_Motors_Corporation
+company_Almazora = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/almazora.png"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	building_types = {
+		building_automotive_industry
+	}
+
+	extension_building_types = {
+		building_motor_industry
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = { is_homeland = cu:filipino }
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = combustion_engine
+		any_scope_state = {
+			state_region = { is_homeland = cu:filipino }
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_automotive_industry
+				level >= 3
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_infrastructure_mult = 0.1
+		military_formation_movement_speed_mult = 0.1
+	}
+
+	ai_will_do = {
+		has_technology_researched = combustion_engine
+		any_scope_state = {
+			state_region = { is_homeland = cu:filipino }
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_automotive_industry = {
+			level = 3
+			state_trigger = {
+				state_region = { is_homeland = cu:filipino }
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3
+	}
+}

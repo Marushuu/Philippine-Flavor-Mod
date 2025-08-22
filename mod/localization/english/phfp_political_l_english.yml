@@ -1,0 +1,39 @@
+﻿l_english:
+  # Dynamic Subjugation Names
+  phfp_dyn_c_spanish: "Captaincy General of the Philippines"
+  phfp_dyn_c_american: "Philippine Insular Government"
+  phfp_dyn_c_commonwealth: "Commonwealth of the Philippines"
+  phfp_dyn_c_japanese: "Hikoku Executive Commission"
+
+  # Dynamic Independent Philippine Names
+  phfp_dyn_c_HKBP: "Hukbong Bayan Republic"
+  phfp_dyn_c_FTP: "Free Territories of the Philippine Isles"
+  phfp_dyn_c_NPR: "New Philippine Republic"
+  phfp_dyn_c_PGP: "Provisional Government of the Philippines"
+  phfp_dyn_c_KP: "Kingdom of the Philippines"
+  phfp_dyn_c_PE: "Philippine Empire"
+
+  # Power Bloc Names
+  
+  # Party Names
+  phfp_py_anarchist: "Association of the Free Filipinos" # Fictional
+  phfp_py_communist: "Hukbong Bayan Party" # Hukbalahap
+  phfp_py_liberal: "Liberal Party" # Liberal breakaway of the Nacionalista Party
+  phfp_py_fascist: "KALIBAPI" # Kapisanan sa Paglilingkod sa Bagong Pilipinas
+  phfp_py_conservative: "Nacionalista Party" # Oldest Party
+  phfp_party_radicals: "People's Power" # Lakas ng Bayan (LABAN) from the People Power Revolution
+  phfp_py_socdem: "PDSP" # Partido Demokratiko Sosyalista ng Pilipinas
+
+  # Interest Groups
+  phfp_ig_illustrados: "Illustrados" # Intelligentsia
+  phfp_ig_principalia: "Principalia" # Landowners
+  phfp_ig_simbahan: "Simbahan" # Devout
+  phfp_ig_sakahan: "Sakahan" # Rural Folk
+  phfp_ig_samahan: "Samahan" # Trade Unions
+
+  # Interest Group Descriptions
+  phfp_ig_illustrados_desc: "Literally meaning 'the enlightened ones', the #italic Illustrados#! are the intellectual elite of Filipino society who studied in Europe and the Americas. Influenced by Enlightenment ideas, they advocate for social and political reforms."
+  phfp_ig_principalia_desc: "The #italic Principalia#! are the wealthy landowners and traditional elites. Comprising both of Spanish Colonial Families to the Pre-Colonial Nobility, they seek to maintain their social status and influence in the political landscape."
+  phfp_ig_simbahan_desc: "Literally meaning 'Church', the #italic Simbahan#! represents the powerful Catholic Church institution and its faithful as it deeply embedded itself into Filipino society. Controlling vast friar estates and educational institutions, they wield enormous influence over the rural communities."
+  phfp_ig_sakahan_desc: "Literally meaning 'Farmland', they represent the collective farming communities that form the backbone of Philippine rural society."
+  phfp_ig_samahan_desc: "Literally meaning 'Group', they are the organized worker associations that emerged from traditional Filipino concepts of mutual aid and collective action."

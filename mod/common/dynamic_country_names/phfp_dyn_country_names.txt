@@ -1,0 +1,167 @@
+﻿PHI = {
+	# Spanish Colony
+	dynamic_country_name = {
+		name = phfp_dyn_c_spanish
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 40
+
+		trigger = {
+			scope:actor = {
+				is_subject = yes
+				can_increase_autonomy = yes
+				overlord ?= {
+					OR = {
+						c:SPA = THIS
+						was_formed_from = SPA
+					}
+				}
+			}
+		}
+	}
+
+	# American Colony
+	dynamic_country_name = {
+		name = phfp_dyn_c_american
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 40
+
+		trigger = {
+			scope:actor = {
+				is_subject = yes
+				can_increase_autonomy = yes
+				overlord ?= {
+					OR = {
+						c:USA = THIS
+						was_formed_from = USA
+					}
+				}
+			}
+		}
+	}
+
+	# American Dominion
+	dynamic_country_name = {
+		name = phfp_dyn_c_commonwealth
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 45
+
+		trigger = {
+			scope:actor = {
+				is_subject = yes
+				can_increase_autonomy = no
+				overlord ?= {
+					OR = {
+						c:USA = THIS
+						was_formed_from = USA
+					}
+				}
+			}
+		}
+	}
+
+	# Japanese Subject
+	dynamic_country_name = {
+		name = phfp_dyn_c_japanese
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 40
+
+		trigger = {
+			scope:actor = {
+				is_subject = yes
+				can_increase_autonomy = no
+				overlord ?= {
+					OR = {
+						c:JAP = THIS
+						was_formed_from = JAP
+					}
+				}
+			}
+		}
+	}
+
+	# Communist
+	dynamic_country_name = {
+		name = phfp_dyn_c_HKBP
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 30
+
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+
+	# Anarchist
+	dynamic_country_name = {
+		name = phfp_dyn_c_FTP
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 35
+
+		trigger = {
+			coa_def_anarchy_flag_trigger = yes
+		}
+	}
+
+	# Fascist
+	dynamic_country_name = {
+		name = phfp_dyn_c_NPR
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 35
+
+		trigger = {
+			coa_fascist_trigger = yes
+		}
+	}
+
+	# Military Dictatorship
+	dynamic_country_name = {
+		name = phfp_dyn_c_PGP
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 30
+
+		trigger = {
+			coa_military_trigger = yes
+		}
+	}
+
+	# Kingdom of the Philippines
+	dynamic_country_name = {
+		name = phfp_dyn_c_KP
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 30
+
+		trigger = {
+			coa_monarchy_trigger = yes
+		}
+	}
+
+	# Philippine Empire
+	dynamic_country_name = {
+		name = phfp_dyn_c_PE
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 35
+
+		trigger = {
+			coa_absolute_monarchy_trigger = yes
+		}
+	}
+}

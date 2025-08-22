@@ -1,0 +1,45 @@
+﻿state_trait_manila_bay = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+
+	modifier = {
+		building_shipyards_throughput_add = 0.15
+		building_military_shipyards_throughput_add = 0.15
+		building_port_throughput_add = 0.15
+		state_trade_capacity_mult = 0.25
+		state_building_naval_base_max_level_add = 20
+		state_market_access_price_impact = 0.05
+	}
+}
+
+phfp_state_trait_pasig_river = {
+	icon = "gfx/interface/icons/state_trait_icons/river.dds"
+
+	modifier = {
+		state_market_access_price_impact = 0.05
+		state_infrastructure_add = 15
+	}
+}
+
+phfp_state_trait_cordilleran_gold_mines = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
+
+	modifier = {
+		building_gold_mine_throughput_add = 0.05
+	}
+}
+
+phfp_state_trait_butuan_gold_mines = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
+
+	modifier = {
+		building_gold_mine_throughput_add = 0.01
+	}
+}
+
+phfp_state_trait_semirara_coal_mines = {
+	icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
+
+	modifier = {
+		building_coal_mine_throughput_add = 0.05
+	}
+}

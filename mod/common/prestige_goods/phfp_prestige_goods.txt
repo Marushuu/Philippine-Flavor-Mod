@@ -1,0 +1,30 @@
+﻿prestige_good_filipino_tobacco = {
+	base_good = tobacco
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/filipino_tabacco.png"
+}
+
+prestige_good_barako_coffee = {
+	base_good = coffee
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_coffee_prestige.dds"
+}
+
+prestige_good_san_miguel = {
+	base_good = liquor
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/san_miguel.png"
+}
+
+## Generic Prestige Goods meant for More Unique Companies
+prestige_good_generic_sugarcane = {
+	base_good = sugar
+	prestige_bonus = 1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/sugarcane.dds"
+}
+
+prestige_good_generic_newspaper = {
+    base_good = paper
+    prestige_bonus = 0.1
+    texture = "gfx/interface/icons/goods_icons/prestige_goods/newspapers.dds"
+}

@@ -1,0 +1,16 @@
+﻿l_english:
+  party_anarchist: "[SCOPE.GetRootScope.GetCountry.GetCustom('phfp_cl_py_anarchist')]"
+  party_communist: "[SCOPE.GetRootScope.GetCountry.GetCustom('phfp_cl_py_communist')]"
+  party_liberal: "[SCOPE.GetRootScope.GetCountry.GetCustom('phfp_cl_py_liberal')]"
+  party_fascist: "[SCOPE.GetRootScope.GetCountry.GetCustom('phfp_cl_py_fascist')]"
+  party_conservative: "[SCOPE.GetRootScope.GetCountry.GetCustom('phfp_cl_py_conservative')]"
+  party_radicals: "[SCOPE.GetRootScope.GetCountry.GetCustom('phfp_cl_py_radical')]"
+  party_social_democrats: "[SCOPE.GetRootScope.GetCountry.GetCustom('phfp_cl_py_socdem')]"
+
+  phfp_party_anarchist: "Anarchist Society"
+  phfp_party_communist: "Communist Party"
+  phfp_party_liberal: "Liberal Party"
+  phfp_party_fascist: "Fascist Party"
+  phfp_party_conservative: "Conservative Party"
+  phfp_party_radicals: "Radical Party"
+  phfp_party_social_democrats: "Social Democratic Party"

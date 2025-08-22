@@ -1,0 +1,87 @@
+﻿STATE_MINDANAO = {
+    id = 552
+    subsistence_building = "building_subsistence_farms"
+    provinces = { "x0180F0" "x2D5E65" "x355FBE" "x4C67A7" "x585200" "x62D16D" "x678557" "x7B364D" "x988CCA" "x99D030" "xAA1CA3" "xBC5002" "xC3EC2D" "xCAFE73" "xE804B7" "xE90347" "xF0014A" }
+    impassable = { "x0180F0" }
+    city = "x355FBE"
+    port = "xF0014A"
+    farm = "xBC5002"
+    mine = "x4C67A7"
+    wood = "xCAFE73"
+    arable_land = 72
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
+    capped_resources = {
+		bg_iron_mining = 42
+        bg_logging = 28
+        bg_fishing = 16
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 14
+    }
+	resource = {
+		type = "bg_gold_fields"
+		depleted_type = "bg_gold_mining"
+		undiscovered_amount = 4
+		discovered_amount = 2
+	}
+    naval_exit_id = 3055
+}
+
+STATE_LUZON = {
+    id = 553
+    subsistence_building = "building_subsistence_rice_paddies"
+    provinces = { "x0D8236" "x1B9953" "x1C8BCF" "x2291B3" "x31F0E0" "x33B5F8" "x51BC8C" "x5C0D4C" "x5ED347" "x63FA56" "x6D44B5" "x707061" "x795BD8" "x946A22" "x95102A" "x97B9E0" "xB08546" "xB0F0B0" "xB0F0E0" "xCDE626" "xD2AEEB" "xE173C4" "xEB310E" "xECF5E9" "xF4CD9C" }
+    traits = { "state_trait_manila_bay" }
+    city = "x0D8236"
+    port = "xF4CD9C"
+    farm = "x31F0E0"
+    mine = "x33B5F8"
+    wood = "xEB310E"
+    arable_land = 160
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+		bg_iron_mining = 58
+        bg_logging = 40
+        bg_fishing = 24
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 21
+    }
+    resource = {
+        type = "bg_oil_extraction"
+        undiscovered_amount = 8
+    }
+	resource = {
+		type = "bg_gold_fields"
+		depleted_type = "bg_gold_mining"
+		undiscovered_amount = 5
+		discovered_amount = 3
+	}
+    naval_exit_id = 3056
+}
+
+STATE_VISAYAS = {
+    id = 554
+    subsistence_building = "building_subsistence_rice_paddies"
+    provinces = { "x02E634" "x05FD19" "x223245" "x46EA60" "x48B8C8" "x591034" "x8001F0" "x8ABD23" "x90F80A" "xB4699E" "xB971C4" "xCFAFEE" "xD2CA4A" "xE2086C" "xF001E2" }
+    city = "xD2CA4A"
+    port = "x90F80A"
+    farm = "x90F80A"
+    mine = "x46EA60"
+    wood = "x05FD19"
+    arable_land = 108
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
+    capped_resources = {
+		bg_iron_mining = 34
+        bg_logging = 36
+        bg_fishing = 20
+		bg_coal_mining = 20
+    }
+    resource = {
+        type = "bg_rubber"
+        undiscovered_amount = 28
+    }
+    naval_exit_id = 3127
+}

@@ -1,0 +1,11 @@
+﻿GLOBAL = {
+	cu:filipino = {
+		add_cultural_obsession = coffee
+	}
+	cu:filipino = {
+		add_cultural_obsession = tobacco
+	}
+	cu:moro = {
+		add_cultural_obsession = tobacco
+	}
+}

@@ -1,0 +1,149 @@
+﻿phfp_cl_py_anarchist = {
+    type = country
+    random_valid = no
+
+    text = {
+        trigger = {
+            OR = { 
+				c:PHI ?= THIS 
+				was_formed_from = PHI
+			}
+        }
+        localization_key = phfp_py_anarchist
+    }
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = phfp_party_anarchist
+    }
+}
+
+phfp_cl_py_communist = {
+    type = country
+    random_valid = no
+
+    text = {
+        trigger = {
+            OR = { 
+				c:PHI ?= THIS 
+				was_formed_from = PHI
+			}
+        }
+        localization_key = phfp_py_communist
+    }
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = phfp_party_communist
+    }
+}
+
+phfp_cl_py_conservative = {
+    type = country
+    random_valid = no
+
+    text = {
+        trigger = {
+            OR = { 
+				c:PHI ?= THIS 
+				was_formed_from = PHI
+			}
+        }
+        localization_key = phfp_py_conservative
+    }
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = phfp_party_conservative
+    }
+}
+
+phfp_cl_py_fascist = {
+    type = country
+    random_valid = no
+
+    text = {
+        trigger = {
+            OR = { 
+				c:PHI ?= THIS 
+				was_formed_from = PHI
+			}
+        }
+        localization_key = phfp_py_fascist
+    }
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = phfp_party_fascist
+    }
+}
+
+phfp_cl_py_liberal = {
+    type = country
+    random_valid = no
+
+    text = {
+        trigger = {
+            OR = { 
+				c:PHI ?= THIS 
+				was_formed_from = PHI
+			}
+        }
+        localization_key = phfp_py_liberal
+    }
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = phfp_party_liberal
+    }
+}
+
+phfp_cl_py_radical = {
+    type = country
+    random_valid = no
+
+    text = {
+        trigger = {
+            OR = { 
+				c:PHI ?= THIS 
+				was_formed_from = PHI
+			}
+        }
+        localization_key = phfp_py_radical
+    }
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = phfp_party_radicals
+    }
+}
+
+phfp_cl_py_socdem = {
+    type = country
+    random_valid = no
+
+    text = {
+        trigger = {
+            OR = { 
+				OR = { 
+				c:PHI ?= THIS 
+				was_formed_from = PHI
+			} 
+				was_formed_from = PHI
+			}
+        }
+        localization_key = phfp_py_socdem
+    }
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = phfp_party_social_democrats
+    }
+}

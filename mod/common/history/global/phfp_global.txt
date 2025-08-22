@@ -1,0 +1,27 @@
+﻿GLOBAL = {
+	c:PHI = {
+		#add_journal_entry = {
+		#	type = je_phfp_conquest_of_moroland
+		#}
+		#trigger_event = {
+		#	id = phfp_phi_001 # Situation
+		#}
+
+		# IG Names
+		ig:ig_intelligentsia = {
+			set_interest_group_name = phfp_ig_illustrados
+		}
+		ig:ig_landowners = {
+			set_interest_group_name = phfp_ig_principalia
+		}
+		ig:ig_devout = {
+			set_interest_group_name = phfp_ig_simbahan
+		}
+		ig:ig_rural_folk = {
+			set_interest_group_name = phfp_ig_sakahan
+		}
+		ig:ig_trade_unions = {
+			set_interest_group_name = phfp_ig_samahan
+		}
+	}
+}
