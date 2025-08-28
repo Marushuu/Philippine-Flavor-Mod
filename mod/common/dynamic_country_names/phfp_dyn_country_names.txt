@@ -1,4 +1,39 @@
 ﻿PHI = {
+	#################################################
+	# Dynamic Subjugated Philippine Names			#
+	#################################################
+
+	# Protectorate Status
+	dynamic_country_name = {
+		name = phfp_dyn_c_protectorate
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			scope:actor = {
+				is_subject = yes
+				is_subject_type = subject_type_protectorate
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = phfp_dyn_c_dominion
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 10
+
+		trigger = {
+			scope:actor = {
+				is_subject = yes
+				is_subject_type = subject_type_dominion
+			}
+		}
+	}
+
 	# Spanish Colony
 	dynamic_country_name = {
 		name = phfp_dyn_c_spanish
@@ -32,6 +67,10 @@
 		trigger = {
 			scope:actor = {
 				is_subject = yes
+				OR = {
+					is_subject_type = subject_type_colony
+					is_subject_type = subject_type_puppet
+				}
 				can_increase_autonomy = yes
 				overlord ?= {
 					OR = {
@@ -54,7 +93,8 @@
 		trigger = {
 			scope:actor = {
 				is_subject = yes
-				can_increase_autonomy = no
+				is_subject_type = subject_type_dominion
+				can_increase_autonomy = yes
 				overlord ?= {
 					OR = {
 						c:USA = THIS
@@ -87,9 +127,26 @@
 		}
 	}
 
+	#################################################
+	# Dynamic Independent Philippine Names			#
+	#################################################
+
+	# Republic
+	dynamic_country_name = {
+		name = phfp_dyn_c_republic
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 20
+
+		trigger = {
+			coa_def_republic_flag_trigger = yes
+		}
+	}
+
 	# Communist
 	dynamic_country_name = {
-		name = phfp_dyn_c_HKBP
+		name = phfp_dyn_c_communist
 		adjective = PHI_ADJ
 
 		is_main_tag_only = yes
@@ -102,7 +159,7 @@
 
 	# Anarchist
 	dynamic_country_name = {
-		name = phfp_dyn_c_FTP
+		name = phfp_dyn_c_anarchist
 		adjective = PHI_ADJ
 
 		is_main_tag_only = yes
@@ -115,53 +172,66 @@
 
 	# Fascist
 	dynamic_country_name = {
-		name = phfp_dyn_c_NPR
+		name = phfp_dyn_c_fascist
 		adjective = PHI_ADJ
 
 		is_main_tag_only = yes
 		priority = 35
 
 		trigger = {
-			coa_fascist_trigger = yes
+			coa_def_fascist_flag_trigger = yes
 		}
 	}
 
 	# Military Dictatorship
 	dynamic_country_name = {
-		name = phfp_dyn_c_PGP
+		name = phfp_dyn_c_military
 		adjective = PHI_ADJ
 
 		is_main_tag_only = yes
 		priority = 30
 
 		trigger = {
-			coa_military_trigger = yes
+			coa_def_military_junta_flag_trigger = yes
 		}
 	}
 
-	# Kingdom of the Philippines
+	# Kingdom
 	dynamic_country_name = {
-		name = phfp_dyn_c_KP
+		name = phfp_dyn_c_kingdom
 		adjective = PHI_ADJ
 
 		is_main_tag_only = yes
 		priority = 30
 
 		trigger = {
-			coa_monarchy_trigger = yes
+			coa_def_monarchy_flag_trigger = yes
 		}
 	}
 
-	# Philippine Empire
+	# Empire
 	dynamic_country_name = {
-		name = phfp_dyn_c_PE
+		name = phfp_dyn_c_empire
 		adjective = PHI_ADJ
 
 		is_main_tag_only = yes
 		priority = 35
 
 		trigger = {
-			coa_absolute_monarchy_trigger = yes
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+
+	# Theocracy
+	dynamic_country_name = {
+		name = phfp_dyn_c_theocracy
+		adjective = PHI_ADJ
+
+		is_main_tag_only = yes
+		priority = 30
+
+		trigger = {
+			coa_def_theocracy_flag_trigger = yes
 		}
 	}
 }

@@ -1,0 +1,38 @@
+﻿phfp_je_conquest_of_moroland = {
+	icon = "gfx/interface/icons/invention_icons/napoleonic_warfare.dds"
+	 # Similar to the French Conquest of Algeria with some tweaks teehee
+	group = phfp_je_group_moroland
+
+	complete = {
+		country_or_subject_owns_entire_state_region = STATE_LUZON
+		country_or_subject_owns_entire_state_region = STATE_MINDANAO
+	}
+
+	on_complete = {
+		trigger_event = phfp_moro.1
+	}
+
+	fail = {
+		NOT = { 
+			has_state_in_state_region = STATE_MINDANAO
+		}
+	}
+
+	on_fail = {
+		trigger_event = phfp_moro.2
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			95 = 0
+			5 = phfp_moro.5
+		}
+	}
+
+	transferable = no
+	can_deactivate = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = yes
+
+	weight = 5000
+}

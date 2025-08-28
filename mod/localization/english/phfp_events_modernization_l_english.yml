@@ -1,0 +1,78 @@
+﻿l_english:
+
+  # Ilustrado
+
+  phfp_reform.1.t: "Dawn of the $phfp_je_modernization_name$ Reforms"
+  phfp_reform.1.d: "Reform-minded leaders across the islands have begun coordinating their efforts, establishing committees to oversee the transformation of our society."
+  phfp_reform.1.f: ""We shall not be content to remain in the shadows of history. The [ROOT.GetCountry.GetAdjectiveNoFlag] people deserve a government that serves their interests, not those of foreign masters." - [SCOPE.sCharacter('phfp_ilustrado_leader').GetFullName]"
+  phfp_reform.1.a: "Mabuhay Filipinas!"
+
+  phfp_reform.2.t: "[SCOPE.sCountry('phfp_overlord').GetAdjectiveNoFlag] Investments"
+  phfp_reform.2.d: "[SCOPE.sCharacter('phfp_overlord_investor_leader').GetFullName], a wealthy and powerful industrialist of our overlord seeks to invest in our nation. Seeing us as an untapped market, they are willing to provide technology in order to develop their colony."
+  phfp_reform.2.f: ""What I see is an untouched land a plenty, ripe for an economic harvest." - [SCOPE.sCharacter('phfp_overlord_investor_leader').GetFullName]"
+  phfp_reform.2.a: "We welcome [SCOPE.sCountry('phfp_overlord').GetNameNoFlag]'s investments"
+  phfp_reform.2.b: "We can handle our own industrialization."
+
+  phfp_reform.3.t: "Breaking the Chains of Encomienda"
+  phfp_reform.3.d: "Government surveyors fan out across the islands, implementing the $phfp_je_modernization_name$ vision of land justice. Tenant farmers gather in village squares as officials announce their new status as their own landowners."
+  phfp_reform.3.f: ""Today, the carabao belongs to the one who guides the plow, and the rice belongs to the one who plants the seed." - [SCOPE.sCharacter('phfp_rural_folk_leader').GetFullName]"
+  phfp_reform.3.a: "This is only fair."
+
+  phfp_reform.4.t: "The Secularization Decree"
+  phfp_reform.4.d: "Secularization reforms are finally pushed forward and have been brought into force of de-entangling the Friars from Governmental Authority."
+  phfp_reform.4.f: "Government offices across the archipelago begin transferring civil functions from religious to secular authorities. New civil registries open to record births, marriages, and deaths, while secular schools are established alongside religious institutions. Church lands are surveyed for redistribution."
+  phfp_reform.4.a: "As Rizal intended."
+
+  phfp_reform.5.t: "The Great Administrative Expansion"
+  phfp_reform.5.d: "Construction begins on new government buildings across the archipelago as the administration dramatically expands its capacity. Our coffers are finally filled and our provinces start to see proper governance."
+  phfp_reform.5.f: "Where once a single corrupt official 'collected' taxes for an entire province, now proper offices with trained staff ensure every peso reaches the national treasury."
+  phfp_reform.5.a: "This will be the engine of our bureaucracy."
+
+  phfp_reform.6.t: "The [ROOT.GetCountry.GetAdjectiveNoFlag] Economic Renaissance"
+  phfp_reform.6.d: "Through economic expansion and reform, our economy is booming. Banks are lending, ports are trading, factories are producing."
+  phfp_reform.6.f: "While we might still be behind from the Western Powers, these reforms shall herald the end to our feudalistic economy."
+  phfp_reform.6.a: "May this continue."
+
+  phfp_reform.7.t: "Abolishing Polo y Servicio"
+  phfp_reform.7.d: "Government proclamations are read in every town plaza across the archipelago, officially abolishing the polo y servicio system. Former polistas receive certificates declaring their freedom from forced labor obligations, while the government begins hiring paid workers for public projects."
+  phfp_reform.7.f: "Every man's labor deserves wages, every family deserves their father's time."
+  phfp_reform.7.a: "As is just."
+
+  # Maharlika
+
+  phfp_reform.20.t: "Defending our Sovereignity"
+  phfp_reform.20.d: "Former revolutionary commanders gather to establish unified military institutions under the $phfp_je_military_modernization_name$ Reforms. We shall deter any who dares harm these [ROOT.GetCountry.GetName]."
+  phfp_reform.20.f: "Our flag flies over our first military academies as it is our bayonets won our freedom; our discipline shall preserve it."
+  phfp_reform.20.a: "We will not be trampled upon."
+
+  phfp_reform.21.t: "[SCOPE.sCountry('phfp_foreign_military').GetAdjectiveNoFlag] Military Advisors"
+  phfp_reform.21.d: "[SCOPE.sCharacter('phfp_foreign_military_general').GetPrimaryRoleTitle] [SCOPE.sCharacter('phfp_foreign_military_general').GetLastName] of [SCOPE.sCountry('phfp_foreign_military').GetName] has offered their services in order to aid us in our modernization. However, be wary of indebting ourselves to the $concept_great_powers$"
+  phfp_reform.21.f: "#italic "This, sir, is a Gatling gun. Two hundred rounds per minute. There is nothing, neither man nor beast nor machine, that can withstand the hellish cacophony of ammunition that this device can unleash. We will teach your soldiers to operate such machines, to maintain modern military discipline, and to obey their superiors without question"#!"
+  phfp_reform.21.a: "We will embrace foreign advice."
+  phfp_reform.21.b: "We will handle our own development."
+
+  phfp_reform.22.t: "Military Railway Expansion"
+  phfp_reform.22.d: "[SCOPE.sCharacter('phfp_armed_forces_ig').GetPrimaryRoleTitle] [SCOPE.sCharacter('phfp_armed_forces_ig').GetLastName] complains about the lack of railways in [SCOPE.sState('phfp_military_rail').GetName]. As the leader of the [SCOPE.gsInterestGroup('phfp_armed_forces_ig').GetName], they offer to build these rails themselves."
+  phfp_reform.22.f: "With our current military expansion, logistics is an important affair and the military will benefit in any case. However, this might give them too much influence with how they will decide our infrastructure."
+  phfp_reform.22.a: "Full Steam Ahead!"
+  phfp_reform.22.b: "We can build these ourselves."
+
+  phfp_reform.23.t: "Modernized Army"
+  phfp_reform.23.d: "Military depots across the country distribute standardized uniforms and modern rifles to newly organized regiments following modern military principles. Foreign military advisors arrive to establish war colleges and train a new officer corps in the newest tactics and strategies."
+  phfp_reform.23.f: "Today we trade our bolos for rifles, our tattered clothes for proud uniforms. This is a testament to our discipline and prowess."
+  phfp_reform.23.a: "For the Katipunan"
+
+  phfp_reform.24.t: "Modernized Navy"
+  phfp_reform.24.d: "As the first ships of our the new Navy are commissioned in Manila Bay, [ROOT.GetCountry.GetAdjectiveNoFlag] oficers trained in foreign shores take command as the people witness the birth of the [ROOT.GetCountry.GetAdjectiveNoFlag] Maritime Power."
+  phfp_reform.24.f: ""Our ancestors were once the greatest sailors of the Pacific. Now shall rule our own waters once again." - [SCOPE.sCharacter('phfp_admiral').GetPrimaryRoleTitle] [SCOPE.sCharacter('phfp_admiral').GetLastName]"
+  phfp_reform.24.a: "This is our heritage."
+
+  phfp_reform.25.t: "Order in Every Barangay"
+  phfp_reform.25.d: "New police stations open across the archipelago, staffed by officers trained in our ideals of service and protection."
+  phfp_reform.25.f: "Our constables shall be protectors, as warriors who serve the people, not oppressors who prey upon them."
+  phfp_reform.25.a: "Bringers of Order."
+
+  phfp_reform.26.t: "The Great Connection"
+  phfp_reform.26.d: "Construction all throughout the isles whether it may be rail, road, or military installations. All in order to lay the foundations for the infrastructure that will bind our defense network together."
+  phfp_reform.26.f: "From Aparri to Jolo, every garrison is connected whether through rail, road, or sea. Through this connection may we be able to guard every shore."
+  phfp_reform.26.a: "Excellent"

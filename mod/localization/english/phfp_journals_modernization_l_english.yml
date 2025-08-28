@@ -1,0 +1,24 @@
+﻿l_english:
+  phfp_je_modernization_name: "Ilustrado"
+
+  phfp_je_modernization_main: "The $phfp_je_modernization_name$ Reforms"
+  phfp_je_modernization_main_reason: "Unrest is growing, nationalism is spreading, the winds of change blows across these 7000 islands. It is an era of change and it is being abundantly clear that the [ROOT.GetCountry.GetNameNoFlag] must undertake systematic change so that we don't fall behind."
+  phfp_je_modernization_main_goal: "All #bold $phfp_je_modernization_name$ Reforms#! [concept_journal_entry] are completed."
+
+  phfp_je_land_reform: "$phfp_je_modernization_name$: The Encomienda System"
+  phfp_je_land_reform_reason: "For centuries, the encomienda and hacienda systems have kept our people in bondage, toiling the land they can never own while enriching the elites. Spanish friars, wealthy mestizos, elite principalias control vast estates while the [ROOT.GetCountry.GetAdjectiveNoFlag] hold nothing.\n\nWe must turn away from these feudalistic practices before they continue to spread disease and decay within these bountiful lands."
+
+  phfp_je_secularization: "$phfp_je_modernization_name$: Dismantling the Frailocracy"
+  phfp_je_secularization_reason: "A term popularized by Jose Rizal in his novel #italic 'Noli Me Tangere'#!, the Frailocracy is the dominance that the Spanish Catholic Friars hold in everyday life in these [ROOT.GetCountry.GetNameNoFlag].\n\nNow is the time to end this chokehold that the Church holds in both government and society."
+
+  phfp_je_administrative_reform: "$phfp_je_modernization_name$: The Civil Service"
+  phfp_je_administrative_reform_reason: "The current administrative system is a patchwork of tributes, monopolies, and arbitrary levies handled by a skeletal bureaucracy that can hardly be described as an actual 'Administration.' Tax collection is haphazard, records are poorly kept, and vast sums seem to disappear unknowingly.\n\nThese legacies of old have to go, we must expand our administrative capacity and reform our antiquated laws."
+
+  phfp_je_economic_reform: "$phfp_je_modernization_name$: Fostering Economic Development"
+  phfp_je_economic_reform_reason: "This archipelago posses abundant natural resources, whether agricultural or industrial, yet the profits only continue to flow towards foreign shores. Thus, we must develop our own, extract our resources and refine it ourselves. Create our own businesses, our own banks, and our own trade relationships all for the benefit of our citizens.\n\nWe must harness our wealth for the benefit of all our citizens."
+
+  phfp_je_slavery: "$phfp_je_modernization_name$: Ending Polo y Servicio"
+  phfp_je_slavery_reason: "For centuries, the #italic polo y servicio#! system continues to force our people to provide 40 days of unpaid labor annually, whether it is to build roads, churches, or boats. While benefitial to a privileged few, this system of forced labor has devastated many.\n\nIn order to call ourselves 'Civilized', we can not allow such barbaric practices continue in our dreams of a Modern [ROOT.GetCountry.GetNameNoFlag]."
+
+  phfp_je_manila_railway: "Manila Railway"
+  phfp_je_manila_railway_reason: "Given this is our main economic isle, Luzon, it is only fitting that we develop our railway system here first in order to connect Manila with the outskirts that host our industrial regions in Northern Luzon.\n\nThe Manila Railway, historically, was the first railway system in the Philippines as the #italic Ferrocarril de Manila a Dagupan#!, a rail line that connected Manila to Dagupan in Pangasinan during the later period of Spanish colonial rule."

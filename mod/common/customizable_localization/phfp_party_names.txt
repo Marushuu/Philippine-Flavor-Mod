@@ -1,13 +1,30 @@
-﻿phfp_cl_py_anarchist = {
+﻿phfp_cl_py_agrarian = {
     type = country
     random_valid = no
 
     text = {
         trigger = {
-            OR = { 
-				c:PHI ?= THIS 
-				was_formed_from = PHI
-			}
+            exists = c:PHI
+            THIS = c:PHI
+        }
+        localization_key = phfp_py_agrarian
+    }
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = phfp_party_agrarian
+    }
+}
+
+phfp_cl_py_anarchist = {
+    type = country
+    random_valid = no
+
+    text = {
+        trigger = {
+            exists = c:PHI
+            THIS = c:PHI
         }
         localization_key = phfp_py_anarchist
     }
@@ -25,10 +42,8 @@ phfp_cl_py_communist = {
 
     text = {
         trigger = {
-            OR = { 
-				c:PHI ?= THIS 
-				was_formed_from = PHI
-			}
+            exists = c:PHI
+            THIS = c:PHI
         }
         localization_key = phfp_py_communist
     }
@@ -46,10 +61,8 @@ phfp_cl_py_conservative = {
 
     text = {
         trigger = {
-            OR = { 
-				c:PHI ?= THIS 
-				was_formed_from = PHI
-			}
+            exists = c:PHI
+            THIS = c:PHI
         }
         localization_key = phfp_py_conservative
     }
@@ -67,10 +80,8 @@ phfp_cl_py_fascist = {
 
     text = {
         trigger = {
-            OR = { 
-				c:PHI ?= THIS 
-				was_formed_from = PHI
-			}
+            exists = c:PHI
+            THIS = c:PHI
         }
         localization_key = phfp_py_fascist
     }
@@ -82,16 +93,33 @@ phfp_cl_py_fascist = {
     }
 }
 
+phfp_cl_py_free_trade = {
+    type = country
+    random_valid = no
+
+    text = {
+        trigger = {
+            exists = c:PHI
+            THIS = c:PHI
+        }
+        localization_key = phfp_py_free_trade
+    }
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = phfp_party_free_trade
+    }
+}
+
 phfp_cl_py_liberal = {
     type = country
     random_valid = no
 
     text = {
         trigger = {
-            OR = { 
-				c:PHI ?= THIS 
-				was_formed_from = PHI
-			}
+            exists = c:PHI
+            THIS = c:PHI
         }
         localization_key = phfp_py_liberal
     }
@@ -103,18 +131,35 @@ phfp_cl_py_liberal = {
     }
 }
 
-phfp_cl_py_radical = {
+phfp_cl_py_military = {
     type = country
     random_valid = no
 
     text = {
         trigger = {
-            OR = { 
-				c:PHI ?= THIS 
-				was_formed_from = PHI
-			}
+            exists = c:PHI
+            THIS = c:PHI
         }
-        localization_key = phfp_py_radical
+        localization_key = phfp_py_military
+    }
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = phfp_party_military
+    }
+}
+
+phfp_cl_py_radicals = {
+    type = country
+    random_valid = no
+
+    text = {
+        trigger = {
+            exists = c:PHI
+            THIS = c:PHI
+        }
+        localization_key = phfp_py_radicals
     }
     text = {
         trigger = {
@@ -124,21 +169,35 @@ phfp_cl_py_radical = {
     }
 }
 
-phfp_cl_py_socdem = {
+phfp_cl_py_religious = {
     type = country
     random_valid = no
 
     text = {
         trigger = {
-            OR = { 
-				OR = { 
-				c:PHI ?= THIS 
-				was_formed_from = PHI
-			} 
-				was_formed_from = PHI
-			}
+            exists = c:PHI
+            THIS = c:PHI
         }
-        localization_key = phfp_py_socdem
+        localization_key = phfp_py_religious
+    }
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = phfp_party_religious
+    }
+}
+
+phfp_cl_py_social_democrats = {
+    type = country
+    random_valid = no
+
+    text = {
+        trigger = {
+            exists = c:PHI
+            THIS = c:PHI
+        }
+        localization_key = phfp_py_social_democrats
     }
     text = {
         trigger = {

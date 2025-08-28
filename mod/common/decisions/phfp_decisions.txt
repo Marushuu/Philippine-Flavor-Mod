@@ -1,0 +1,29 @@
+﻿phfp_integrate_moro = {
+	is_shown = {
+		OR = {
+			c:PHI ?= THIS
+			was_formed_from = PHI
+		}
+		custom_tooltip = {
+			text = phfp_tt_moro_decision
+			NOT = {
+				has_variable = phfp_moro_decision_taken
+			}
+		}
+	}
+
+	possible = {
+		has_variable = phfp_moro_je_success
+	}
+
+	when_taken = {
+		add_primary_culture = cu:moro
+		set_variable = {
+			name = phfp_moro_decision_taken
+		}
+	}
+
+	ai_chance = {
+		value = 0
+	}
+}

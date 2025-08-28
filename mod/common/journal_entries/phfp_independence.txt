@@ -1,0 +1,73 @@
+﻿phfp_je_philippine_independence = {
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	group = phfp_je_group_independence
+
+	is_shown_when_inactive = {
+		OR = {
+			c:PHI ?= THIS
+			was_formed_from = PHI
+		}
+		is_subject = yes
+	}
+
+	possible = {
+		is_subject = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_technology_researched = nationalism
+			}
+			scope:journal_entry = {
+				add_modifier = {
+					name = phfp_md_nationalistic_fervor
+				}
+			}
+		}
+		else = {
+			scope:journal_entry = {
+				add_modifier = {
+					name = phfp_md_growing_identity
+				}
+			}
+		}
+	}
+
+	complete = {
+		is_subject = no
+		is_at_war = no
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = phfp_phi.3 # Independence Event
+		}
+		ig:ig_industrialists = {
+			remove_ideology = ideology_colonialist
+			add_ideology = ideology_laissez_faire
+		}
+		add_journal_entry = {
+			type = phfp_je_military_modernization_main
+		}
+		add_journal_entry = {
+			type = phfp_je_army_reform
+		}
+		add_journal_entry = {
+			type = phfp_je_navy_reform
+		}
+		add_journal_entry = {
+			type = phfp_je_police
+		}
+		add_journal_entry = {
+			type = phfp_je_logistics
+		}
+	}
+
+	transferable = no
+	can_deactivate = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = yes
+	weight = 10000
+}

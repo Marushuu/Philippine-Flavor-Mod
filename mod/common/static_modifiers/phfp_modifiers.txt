@@ -1,0 +1,259 @@
+﻿# Starter Modifiers
+
+phfp_md_opening_of_trade = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_intelligentsia_pol_str_mult = 0.15
+	interest_group_ig_industrialists_pol_str_mult = 0.25
+	country_tech_spread_mult = 0.15
+	state_pop_support_movement_modernizer_mult = 0.50
+}
+
+# Independence JE Modifier
+
+phfp_md_growing_identity = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_liberty_desire_decrease_mult = -0.25
+}
+
+phfp_md_nationalistic_fervor = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_liberty_desire_add = 0.15
+	country_liberty_desire_increase_mult = 0.25
+	interest_group_ig_intelligentsia_pol_str_mult = 0.10
+}
+
+# Malolos Constitution
+
+phfp_md_patriotic_government = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_law_enactment_time_mult = -0.25
+	country_law_enactment_stall_mult = -0.25
+}
+
+phfp_md_secularism = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	interest_group_ig_intelligentsia_approval_add = 3
+	interest_group_ig_devout_approval_add = -3
+	interest_group_ig_devout_pol_str_mult = -0.15
+}
+
+phfp_md_church = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	state_conversion_mult = 0.50
+	interest_group_ig_intelligentsia_approval_add = -3
+	interest_group_ig_devout_approval_add = 3
+	interest_group_ig_devout_pol_str_mult = 0.15
+}
+
+phfp_md_malolos_legacy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.05
+	country_authority_mult = 0.05
+	country_bureaucracy_mult = 0.05
+	country_bureaucracy_investment_cost_factor_mult = -0.1
+}
+
+# Moro Related Modifiers
+
+phfp_md_moro_state_raided = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	state_mortality_mult = 0.15
+	state_migration_pull_mult = -0.1
+}
+
+phfp_md_moros_vanquished = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_approval_add = 3
+	interest_group_pop_attraction_mult = 0.10
+	interest_group_pol_str_mult = 0.10
+}
+
+phfp_md_moro_migration = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_migration_pull_mult = 0.15
+	state_construction_mult = 0.15
+}
+
+phfp_md_moro_conversion = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_conversion_mult = 0.50
+}
+
+phfp_md_moro_failure = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	country_prestige_mult = -0.25
+}
+
+# Modernization Modifiers
+phfp_md_foreign_investment = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_production_tech_spread_mult = 0.75
+}
+
+phfp_md_feudal_agriculture = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	state_expected_sol_mult = -0.05
+	building_rice_farm_throughput_add = -0.15
+	building_group_bg_agriculture_throughput_add = -0.15
+	building_subsistence_farms_throughput_add = -0.15
+	state_aristocrats_investment_pool_contribution_add = 0.25
+}
+
+phfp_md_land_reform = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	building_rice_farm_throughput_add = 0.15
+	building_group_bg_agriculture_throughput_add = 0.15
+	interest_group_ig_landowners_pop_attraction_mult = -0.50
+}
+
+phfp_md_frailocracy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	state_conversion_mult = 0.30
+	interest_group_ig_devout_pol_str_mult = 0.25
+	country_clergymen_pol_str_mult = 0.25
+	state_clergymen_investment_pool_contribution_add = 0.25
+}
+
+phfp_md_secularization = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_ig_devout_approval_add = -5
+	interest_group_ig_devout_pol_str_mult = -0.25
+	interest_group_ig_devout_pop_attraction_mult = -0.25
+}
+
+phfp_md_colonial_corruption = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	state_tax_waste_add = 0.1
+	country_bureaucracy_mult = -0.05
+	country_authority_mult = -0.05
+}
+
+phfp_md_bureaucratic_reform = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+    state_tax_capacity_mult = 0.10
+    country_bureaucracy_mult = 0.10
+    country_institution_size_change_speed_mult = 0.10
+    country_bureaucracy_investment_cost_factor_mult = -0.15
+}
+
+phfp_md_growing_economy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	state_construction_mult = 0.15
+	state_trade_advantage_mult = 0.25
+	state_trade_capacity_mult = 0.25
+	state_capitalists_investment_pool_efficiency_mult = 0.15
+	state_shopkeepers_investment_pool_efficiency_mult = 0.15
+}
+
+phfp_md_slavery_abolished = {
+	icon =gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.05
+}
+
+phfp_md_modernization_done = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	interest_group_ig_intelligentsia_approval_add = 5
+	interest_group_ig_intelligentsia_pol_str_mult = 0.50
+	state_loyalists_from_political_movements_mult =  0.25
+	state_radicals_from_political_movements_mult  = -0.25
+}
+
+phfp_md_manila_railway = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+    state_migration_pull_mult = 0.15
+    building_railway_throughput_add = 0.10
+}
+
+# Military Modernization
+phfp_md_military_research = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_military_tech_spread_mult = 0.25
+	country_military_tech_research_speed_mult = 0.50
+}
+
+phfp_md_foreign_consultants = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_military_tech_spread_mult = 1
+}
+
+phfp_md_railway_expansion = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_pol_str_mult = 0.15
+}
+
+phfp_md_controlled_rail_expansion = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	interest_group_approval_add = -3
+}
+
+phfp_md_modernized_military = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_ig_armed_forces_approval_add = 5
+	interest_group_ig_armed_forces_pol_str_mult = 0.20
+	interest_group_ig_armed_forces_pop_attraction_mult = 0.20
+	building_training_rate_mult = 0.25
+	country_military_goods_cost_mult = -0.25
+}
+
+phfp_md_modernized_army = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_prestige_from_army_power_projection_mult = 0.10
+	building_barracks_throughput_add = 0.15
+	unit_army_defense_mult = 0.15
+	unit_army_experience_gain_mult = 0.25
+}
+
+phfp_md_modernized_navy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_prestige_from_navy_power_projection_mult = 0.10
+	building_naval_base_throughput_add = 0.15
+	unit_navy_defense_mult = 0.15
+	unit_navy_experience_gain_mult = 0.25
+}
+
+phfp_md_policing = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    state_turmoil_effects_mult = -0.25
+    state_radicals_from_political_movements_mult = -0.25
+}
+
+phfp_md_logistics = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    state_infrastructure_mult = 0.20
+	military_formation_mobilization_speed_mult = 0.15
+	military_formation_movement_speed_mult = 0.10
+	military_formation_attrition_risk_mult = -0.15
+}
+
+# For Future Use?
+
+phfp_md_economic_focus = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+    country_prestige_mult = 0.1
+    state_trade_capacity_mult = 0.15
+    state_trade_advantage_mult = 0.15
+    state_capitalists_investment_pool_efficiency_mult = 0.25
+    state_shopkeepers_investment_pool_efficiency_mult = 0.25
+    country_production_tech_research_speed_mult = 0.15
+}
+
+phfp_md_military_focus = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    country_prestige_mult = 0.1
+    unit_army_experience_gain_mult = 0.25
+    unit_morale_loss_mult = -0.15
+    unit_supply_consumption_mult = -0.15
+    country_military_tech_research_speed_mult = 0.15
+}
+
+phfp_md_diplomatic_focus = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+    country_prestige_mult = 0.1
+    country_influence_mult = 0.2
+    country_infamy_decay_mult = 0.15
+    country_leverage_generation_mult = 0.15
+    country_leverage_resistance_mult = 0.15
+    country_improve_relations_speed_mult = 0.25
+    country_damage_relations_speed_mult = 0.25
+    country_society_tech_research_speed_mult = 0.15
+}

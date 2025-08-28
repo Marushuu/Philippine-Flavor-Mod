@@ -1,0 +1,5 @@
+﻿l_english:
+  phfp_tt_moro_decision: "Must complete #bold $phfp_je_conquest_of_moroland$#! [concept_journal_entry]"
+  phfp_tt_manila_rail_completed: "Completed the #bold $phfp_je_manila_railway$#! [concept_journal_entry] project"
+  phfp_tt_modernization_add_progress: "The progress of #bold $phfp_je_modernization_main$#! [concept_journal_entry] advances by #v 1#!"
+  phfp_tt_military_add_progress: "The progress of #bold $phfp_je_military_modernization_main$#! [concept_journal_entry] advances by #v 1#!"

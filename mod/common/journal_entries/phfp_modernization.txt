@@ -1,0 +1,355 @@
+﻿phfp_je_modernization_main = {
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	group = phfp_je_group_modernization
+
+	immediate = {
+		set_variable = {
+			name = phfp_modernization_progress
+			value = 0
+		}
+	}
+
+	complete = {
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+	}
+
+	on_complete = {
+		remove_variable = phfp_modernization_progress
+		trigger_event = {
+			id = phfp_reform.1
+		}
+	}
+
+	current_value = {
+		if = {
+			limit = {
+				has_variable = phfp_modernization_progress
+			}
+			value = var:phfp_modernization_progress
+		}
+		else = {
+			value = 0
+		}
+	}
+
+	goal_add_value = {
+		value = 5
+	}
+
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			10 = phfp_reform.2
+		}
+	}
+
+	progressbar = yes
+	transferable = no
+	can_deactivate = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = yes
+
+	weight = 1000
+}
+
+phfp_je_land_reform = {
+	icon = "gfx/interface/icons/principles_icons/colonial_offices.dds"
+
+	group = phfp_je_group_modernization
+
+	complete = {
+		ig:ig_landowners = {
+			is_powerful = no
+		}
+		NOR = {
+			has_law = law_type:law_serfdom
+			has_law = law_type:law_tenant_farmers
+		}
+	}
+	
+	on_complete = {
+		custom_tooltip = {
+			text = phfp_tt_modernization_add_progress
+			change_variable = {
+				name = phfp_modernization_progress
+				add = 1
+			}
+		}
+		trigger_event = {
+			id = phfp_reform.3
+		}
+	}
+
+	modifiers_while_active = {
+		phfp_md_feudal_agriculture
+	}
+
+	transferable = no
+	can_deactivate = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = no
+
+	weight = 900
+}
+
+phfp_je_secularization = {
+	icon = "gfx/interface/icons/religion_icons/catholic.dds"
+
+	group = phfp_je_group_modernization
+
+	complete = {
+		ig:ig_devout = {
+			is_powerful = no
+		}
+		NOT = {
+			has_law = law_type:law_state_religion
+		}
+		any_scope_building = {
+			is_building_type = building_university
+			NOT = { 
+				has_active_production_method = pm_religious_academia
+			}
+		}
+		any_scope_building = {
+			is_building_type = building_government_administration
+			NOT = {
+				has_active_production_method = pm_religious_bureaucrats
+			}
+		}
+		any_scope_building = {
+			is_building_type = building_urban_center
+			NOT = {
+				has_active_production_method = pm_state_urban_clergy
+			}
+		}
+	}
+
+	on_complete = {
+		custom_tooltip = {
+			text = phfp_tt_modernization_add_progress
+			change_variable = {
+				name = phfp_modernization_progress
+				add = 1
+			}
+		}
+		trigger_event = {
+			id = phfp_reform.4
+		}
+	}
+
+	modifiers_while_active = {
+		phfp_md_frailocracy
+	}
+
+	transferable = no
+	can_deactivate = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = no
+
+	weight = 800
+}
+
+phfp_je_administrative_reform = {
+	icon = "gfx/interface/icons/central_identity_pillars_icons/unused/research_conglomerate.dds"
+
+	group = phfp_je_group_modernization
+
+	complete = {
+		NOT = {
+			has_law = law_type:law_hereditary_bureaucrats
+		}
+		NOR = {
+			has_law = law_type:law_consumption_based_taxation
+			has_law = law_type:law_land_based_taxation
+		}
+		any_scope_state = {
+			count = all
+			filter = {
+				state_region = {
+					is_homeland = cu:filipino
+				}
+			}
+			state_region = {
+				is_homeland = cu:filipino
+			}
+			any_scope_building = {
+				is_building_type = building_government_administration
+				level >= 3
+				occupancy >= 0.75
+				NOR = {
+					has_active_production_method = pm_simple_organization
+					has_active_production_method = pm_hereditary_bureaucrats
+				}
+			}
+		}
+		bureaucracy >= 100
+		approaching_bureaucracy_shortage = no
+	}
+
+	on_complete = {
+		custom_tooltip = {
+			text = phfp_tt_modernization_add_progress
+			change_variable = {
+				name = phfp_modernization_progress
+				add = 1
+			}
+		}
+		trigger_event = {
+			id = phfp_reform.5
+		}
+	}
+
+	modifiers_while_active = {
+		phfp_md_colonial_corruption
+	}
+
+	transferable = no
+	can_deactivate = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = no
+
+	weight = 700
+}
+
+phfp_je_economic_reform = {
+	icon = "gfx/interface/icons/invention_icons/banking.dds"
+
+	group = phfp_je_group_modernization
+
+	complete = {
+		gdp >= scope:journal_entry.goal_value
+		NOR = {
+			has_law = law_type:law_traditionalism
+			has_law = law_type:law_agrarianism
+			has_law = law_type:law_extraction_economy
+			has_law = law_type:law_industry_banned
+		}
+		NOR = {
+			has_law = law_type:law_isolationism
+		}
+	}
+
+	on_complete = {
+		custom_tooltip = {
+			text = phfp_tt_modernization_add_progress
+			change_variable = {
+				name = phfp_modernization_progress
+				add = 1
+			}
+		}
+		trigger_event = {
+			id = phfp_reform.6
+		}
+	}
+
+	current_value = {
+		value = root.gdp
+	}
+
+	goal_add_value = {
+		value = root.gdp
+		multiply = 3.5
+	}
+
+	progressbar = yes
+	transferable = no
+	can_deactivate = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = no
+
+	weight = 600
+}
+
+phfp_je_slavery = {
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
+	group = phfp_je_group_modernization
+
+	complete = {
+		has_law = law_type:law_slavery_banned
+	}
+
+	on_complete = {
+		custom_tooltip = {
+			text = phfp_tt_modernization_add_progress
+			change_variable = {
+				name = phfp_modernization_progress
+				add = 1
+			}
+		}
+		trigger_event = {
+			id = phfp_reform.7
+		}
+	}
+
+	transferable = no
+	can_deactivate = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = no
+
+	weight = 500
+}
+
+phfp_je_manila_railway = {
+	icon = "gfx/interface/icons/invention_icons/railways.dds"
+
+	group = phfp_je_group_modernization
+
+	is_shown_when_inactive = {
+		OR = {
+			c:PHI ?= THIS
+			was_formed_from = PHI
+		}
+	}
+
+	possible = {
+		OR = {
+			c:PHI ?= THIS
+			was_formed_from = PHI
+		}
+		has_technology_researched = railways
+	}
+
+	complete = {
+		any_scope_state = {
+			state_region = s:STATE_LUZON
+			any_scope_building = {
+				is_building_type = building_railway
+				building_has_goods_shortage = no
+			}
+			any_scope_building = {
+				is_building_type = building_urban_center
+				has_active_production_method = pm_public_trams
+			}
+		}
+	}
+
+	invalid = {
+		NOT = { has_state_in_state_region = STATE_LUZON }
+	}
+
+	on_complete = {
+		set_variable = phfp_manila_rail_completed
+		s:STATE_LUZON = {
+			add_modifier = {
+				name = phfp_md_manila_railway
+				years = 10
+			}
+		}
+		add_technology_progress = { 
+			progress = 1500
+			technology = steel_railway_cars 
+		}
+	}
+
+	transferable = no
+	can_deactivate = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = no
+	should_be_pinned_by_default = yes
+	
+	weight = 15
+}

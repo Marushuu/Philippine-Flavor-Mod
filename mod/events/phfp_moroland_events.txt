@@ -1,0 +1,264 @@
+﻿namespace = phfp_moro
+
+# Successful Subjugation
+phfp_moro.1 = {
+	type = country_event
+	title = phfp_moro.1.t
+	desc = phfp_moro.1.d
+	flavor = phfp_moro.1.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	trigger = {} # Triggered by Moro Conquest JE
+
+	immediate = {
+		set_variable = phfp_moro_je_success
+	}
+
+	option = { # Military Parade
+		name = phfp_moro.1.a
+		ai_chance = {
+			base = 0
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = phfp_md_moros_vanquished
+				years = 5
+			}
+		}
+		add_loyalists = {
+			pop_type = officers
+			value = large_radicals
+		}
+		add_loyalists = {
+			pop_type = soldiers
+			value = large_radicals
+		}
+	}
+
+	option = { # Focus on Migration
+		name = phfp_moro.1.b
+		default_option = yes
+		ai_chance = {
+			base = 1
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_MINDANAO
+			}
+			add_modifier = {
+				name = phfp_md_moro_migration
+				years = 5
+			}
+		}
+	}
+
+	option = { # Focus on Assimilation and Conversion
+		name = phfp_moro.1.c
+		ai_chance = {
+			base = 0
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_MINDANAO
+			}
+			add_modifier = {
+				name = phfp_md_moro_conversion
+				years = 5
+			}
+		}
+	}
+}
+
+# Catastrophic Failure
+phfp_moro.2 = {
+	type = country_event
+	title = phfp_moro.2.t
+	desc = phfp_moro.2.d
+	flavor = phfp_moro.2.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	event_image = {
+		video = "votp_cops_march"
+	}
+
+	trigger = {} # Triggered by Moro Conquest JE
+
+	immediate = {
+		ig:ig_armed_forces = {
+			leader = {
+				save_scope_as = phfp_moro_failed_leader
+			}
+			save_scope_as = phfp_moro_failed_ig
+		}
+		cu:moro = {
+			save_scope_as = phfp_moro_culture
+		}
+	}
+
+	option = {
+		name = phfp_moro.2.a
+		default_option = yes
+		add_modifier = {
+			name = phfp_md_moro_failure
+			years = 10
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = widespread_condemnation_modifier
+				years = 5
+			}
+		}
+		add_radicals = {
+			value = 0.02
+			culture = cu:filipino
+		}
+		add_radicals = {
+			value = 0.5
+			pop_type = officers
+		}
+		add_radicals = {
+			value = 0.05
+			pop_type = soldiers
+		}
+		random_list = {
+			50 = {
+				scope:phfp_moro_failed_leader = {
+					kill_character = yes
+				}
+			}
+			50 = {
+				scope:phfp_moro_failed_leader = {
+					add_trait = wounded
+					add_trait = psychological_affliction
+				}
+			}
+		}
+		s:STATE_MINDANAO = {
+			add_claim = c:PHI
+		}
+	}
+}
+
+# The Moro Raids
+phfp_moro.5 = {
+	type = country_event
+	title = phfp_moro.5.t
+	desc = phfp_moro.5.d
+	flavor = phfp_moro.5.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+
+	trigger = {
+		OR = {
+			AND = {
+				exists = c:SUL
+				c:SUL = { relations:root <= relations_threshold:neutral }
+				NOT = { c:CON = { is_subject_of = c:PHI } }
+			}
+			AND = {
+				exists = c:MGD
+				c:MGD = { relations:root <= relations_threshold:neutral }
+				NOT = { c:CON = { is_subject_of = c:PHI } }
+			}
+		}
+		any_scope_character = {
+			has_role = general
+			is_ruler = no
+			is_heir = no
+		}
+	}
+
+	immediate = {
+		save_scope_as = phfp_moro_raided_scope
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_LUZON
+					state_region = s:STATE_VISAYAS
+					state_region = s:STATE_MINDANAO
+				}
+			}
+			save_scope_as = phfp_moro_raided_state_scope
+		}
+		random_neighbouring_state = {
+			limit = {
+				OR = {
+					c:SUL ?= owner
+					c:MGD ?= owner
+				}
+				NOT = { owner = { is_subject_of = c:PHI } }
+				owner = {
+					relations:root <= relations_threshold:cordial
+				}
+			}
+			owner = { save_scope_as = phfp_moro_raiding_country }
+		}
+		random_scope_character = {
+			limit = {
+				has_role = general
+				is_ruler = no
+				is_heir = no
+			}
+			save_scope_as = phfp_moro_raid_general_scope
+		}
+	}
+
+	option = {
+		name = phfp_moro.5.a
+		default_option = yes
+		scope:phfp_moro_raided_state_scope = {
+			add_modifier = {
+				name = phfp_md_moro_state_raided
+				years = 1
+			}
+		}
+		change_relations = {
+			country = scope:phfp_moro_raiding_country
+			value = -20
+		}
+	}
+
+	option = {
+		name = phfp_moro.5.b
+		scope:phfp_moro_raided_state_scope = {
+			add_modifier = {
+				name = phfp_md_moro_state_raided
+				years = 1
+			}
+		}
+		trigger = {
+			exists = scope:phfp_moro_failed_leader
+		}
+		custom_tooltip = {
+			text = phfp_moro.5.tt
+			random_list = {
+				75 = {
+					scope:phfp_moro_raid_general_scope = {
+						kill_character = yes
+					}
+				}
+				25 = {}
+			}
+		}
+		change_relations = {
+			country = scope:phfp_moro_raiding_country
+			value = -20
+		}
+	}
+}

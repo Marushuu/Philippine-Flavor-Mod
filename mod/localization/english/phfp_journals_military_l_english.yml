@@ -1,0 +1,18 @@
+﻿l_english:
+  phfp_je_military_modernization_name: "Maharlika"
+
+  phfp_je_military_modernization_main: "The $phfp_je_military_modernization_name$ Reforms"
+  phfp_je_military_modernization_main_reason: "Our hard-won independence means nothing if one can simply take it away. The $concept_great_powers$ circle our waters like sharks, while our neighbors watch our every move. We must transform our revolutionary bands into a disciplined professional military, construct a modern navy to protect our extensive coasts, and establish institutions to cement our control in this Archipelago."
+  phfp_je_military_modernization_main_goal: "All #bold $phfp_je_military_modernization_name$ Reforms#! [concept_journal_entry] are completed."
+  
+  phfp_je_army_reform: "$phfp_je_military_modernization_name$: Army Reorganization"
+  phfp_je_army_reform_reason: "Our brave Katipuneros fought with bolos and captured rifles, relying on local terrain and popular suport. However, a Modern Army requires more than just that. It needs standardized equipment, formal training, and unified command. We must create a professional force capable of defending our land against any threat."
+
+  phfp_je_navy_reform: "$phfp_je_military_modernization_name$: Naval Buildup"
+  phfp_je_navy_reform_reason: "We are an archipelago, our destiny is tied to the seas. Yet we have no navy worthy of the name, only small fishing boats and captured vessels. Foreign warships patrol our waters while foreign merchants dominate our trade. We must build a modern fleet to protect our commerce, enforce our sovereignty, and connect our scattered islands."
+
+  phfp_je_police: "$phfp_je_military_modernization_name$: The Constabulary"
+  phfp_je_police_reason: "With the our colonizers gone, lawlessness spreads across the 7000 islands. Bandits prey on travelers, disputes escalate to violence, and our courts cannot function without officers to enforce their decisions. We must establish a constabulary that serves the people rather than oppressing them, the [ROOT.GetCountry.GetNameNoFlag] constabulary led by [ROOT.GetCountry.GetAdjectiveNoFlag] officers."
+
+  phfp_je_logistics: "$phfp_je_military_modernization_name$: Logistical Expansion"
+  phfp_je_logistics_reason: "Our geographical fate often makes it difficult to control the entirety of the [ROOT.GetCountry.GetAdjectiveNoFlag] Archipelago. More importantly, it also hampers our development as we cannot prosper with our islands isolated from each other. But that must change, our military cannot function without proper infrastructure. We must build the infrastructure that will bind our archipelago into a single, unified state."

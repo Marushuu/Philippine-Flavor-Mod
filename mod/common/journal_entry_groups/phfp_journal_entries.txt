@@ -1,2 +1,6 @@
 ﻿## PHFP Journal Groups
-je_group_phfp_moro = {}
+phfp_je_group_moroland = {}
+phfp_je_group_independence = {}
+phfp_je_group_modernization = {}
+phfp_je_group_militarization = {}
+phfp_je_group_nationalism = {}

@@ -1,0 +1,10 @@
+﻿STATES = {
+	# Hokkien Community
+	s:STATE_LUZON = {
+		add_cultural_community = cu:min
+	}
+
+	s:STATE_VISAYAS = {
+		add_cultural_community = cu:min
+	}
+}

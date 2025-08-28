@@ -1,0 +1,18 @@
+﻿l_english:
+  phfp_malolos.1.t: "The Constitutional Congress of Malolos"
+  phfp_malolos.1.d: "In the historic Barasoain Church in Malolos, Bulacan, delegates from across our newly independent nation gather to draft the fundamental law that will govern the Philippine Republic. This moment represents the culmination of centuries of struggle for self-governance.\n\nWhat principles should guide our fledgling republic?"
+  phfp_malolos.1.f: "#italic Today we write not just laws, but the very soul of our nation. Let history record that when the Filipinos were given the chance to govern themselves, they chose wisely and with full consideration for future generations#!"
+  phfp_malolos.1.a: "Unity of command is essential for a young republic."
+  phfp_malolos.1.b: "The people's representatives should hold ultimate power."
+  phfp_malolos.1.c: "Our current system is good as it is."
+
+  phfp_malolos.2.t: "The Separation of Church and State"
+  phfp_malolos.2.d: "As we draft the constitution, we must ensure that the church and state are separate entities. This is crucial for the protection of our democracy and the freedom of our citizens."
+  phfp_malolos.2.f: "#italic The union of Church and State has been the bane of many nations. Let us not repeat the errors of the past, but neither let us forget that our people's faith has sustained them through three centuries of oppression.#! - [SCOPE.sCharacter('phfp_malolos_religious_leader').GetPrimaryRoleTitle] [SCOPE.sCharacter('phfp_malolos_religious_leader').GetLastName]"
+  phfp_malolos.2.a: "We should push towards Secularization."
+  phfp_malolos.2.b: "We should push towards Christianization."
+
+  phfp_malolos.3.t: "The Republic Established - Legacy of Malolos"
+  phfp_malolos.3.d: "As of today, the Malolos Constitution is formally ratified, officially establishing the [ROOT.GetCountry.GetNameNoFlag]. Church bells ring across our liberated territories as the new government takes its oath of office."
+  phfp_malolos.3.f: "#italic At this very moment, the Constitution of the Republic was solemnly promulgated. This day will be memorable in our history, for it marks the beginning of a new era in which our people have established their right to be free and independent.#!"
+  phfp_malolos.3.a: "Mabuhay ang Pilipinas!"

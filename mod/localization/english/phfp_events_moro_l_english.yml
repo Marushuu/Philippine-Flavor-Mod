@@ -1,0 +1,19 @@
+﻿l_english:
+  phfp_moro.1.t: "The Moro has been Vanquished."
+  phfp_moro.1.d: "After a series of decisive battles, we have finally successfully subjugated the Moro forces."
+  phfp_moro.1.f: "The Moro people, primarily Muslim inhabitants of the southern Philippines, have long resisted foreign domination.\n\nTheir fierce independence and guerrilla tactics have made them formidable opponents. However, through a combination of military strategy, superior weaponry, and alliances with local groups, we have managed to defeat their forces and bring them under our control. This victory not only secures our southern borders but also opens up new opportunities for trade and development in the region."
+  phfp_moro.1.a: "We must celebrate the heroes!"
+  phfp_moro.1.b: "We must settle the region."
+  phfp_moro.1.c: "We must convert these non-believers."
+
+  phfp_moro.2.t: "Catastrophic Failure in Moroland"
+  phfp_moro.2.d: "We have lost Mindanao, our main front against the Moro. This is a devastating blow to our campaign to consolidate the Philippine Isles."
+  phfp_moro.2.f: "[SCOPE.sCharacter('phfp_moro_failed_leader').GetFullNameNoFormatting]'s legacy is that of failure and disgrace. The one who lost to the [SCOPE.sCulture('phfp_moro_culture').GetNameNoFormatting] has brought shame upon us all."
+  phfp_moro.2.a: "[SCOPE.sCharacter('phfp_moro_failed_leader').GetPrimaryRoleTitle] [SCOPE.sCharacter('phfp_moro_failed_leader').GetLastName] must answer for this failure."
+
+  phfp_moro.5.t: "The Moro Raids [SCOPE.sState('phfp_md_moro_state_raided').GetStateRegion.GetName]"
+  phfp_moro.5.d: "The Moro of [SCOPE.sCountry('phfp_moro_raiding_country').GetName] have launched a series of raids against our towns in [SCOPE.sState('phfp_md_moro_state_raided').GetStateRegion.GetName]."
+  phfp_moro.5.f: "The Muslim sultanates of Mindanao and the Sulu Archipelago have maintained their independence for centuries, resisting Spanish colonization through fierce resistance and frequent raids on the northern Christianized lowlands. With the decline of Spanish power in the Philippines, these Moro groups have become more emboldened, launching devastating raids on our settlements. These raids not only threaten our security but also disrupt trade and agriculture in the affected regions. It is imperative that we address this threat to ensure the safety and prosperity of our people."
+  phfp_moro.5.a: "We must rebuild."
+  phfp_moro.5.b: "[SCOPE.sCharacter('phfp_moro_raid_general_scope').GetPrimaryRoleTitle] [SCOPE.sCharacter('phfp_moro_raid_general_scope').GetLastName] has failed us."
+  phfp_moro.5.tt: "[SCOPE.sCharacter('phfp_moro_raid_general_scope').GetFullName] will be held responsible for this failure. There is a #bold 75%#! chance that [SCOPE.sCharacter('phfp_moro_raid_general_scope').GetSheHe] will be dismissed."

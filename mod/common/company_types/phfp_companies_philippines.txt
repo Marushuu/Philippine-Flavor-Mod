@@ -436,7 +436,7 @@ company_Victorias = {
 	}
 
 	prosperity_modifier = {
-		building_group_bg_sugar_plantations_throughput_add = 0.2
+		building_group_bg_sugar_plantations_throughput_add = 0.25
 		state_trade_advantage_mult = 0.15
 		interest_group_ig_landowners_approval_add = 3
 		interest_group_ig_landowners_pop_attraction_mult = 0.1
@@ -644,13 +644,6 @@ company_san_miguel = {
         prestige_good_san_miguel
     }
 
-    prestige_goods_trigger = {
-        custom_tooltip = {
-            text = je_prestige_goods_groceries_complete_tt
-            has_variable = prestige_good_generic_groceries_var
-        }
-    }
-
     potential = {
         has_interest_marker_in_region = region_indonesia
     }
@@ -675,6 +668,7 @@ company_san_miguel = {
     }
 
     prosperity_modifier = {
+		state_birth_rate_mult = 0.05
 		building_food_industry_throughput_add = 0.15
         state_radicals_from_political_movements_mult = -0.1
 		state_loyalists_from_political_movements_mult = 0.1
@@ -748,7 +742,7 @@ company_Limtuaco = {
 	}
 
 	prosperity_modifier = {
-		state_migration_pull_mult = 0.1
+		state_migration_pull_mult = 0.15
 		state_radicals_from_political_movements_mult = -0.1
 		state_lower_strata_expected_sol_add = -0.35
 		state_middle_strata_expected_sol_add = -0.7
@@ -828,6 +822,7 @@ company_Ynchausti = {
 
 	prosperity_modifier = {
 		country_convoys_capacity_mult = 0.1
+		unit_convoy_defense_mult = 0.10
 		unit_navy_defense_mult = 0.05
 	}
 
@@ -898,7 +893,7 @@ company_Tuason = {
 
 	prosperity_modifier = {
 		building_group_bg_logging_throughput_add = 0.15
-		country_max_weekly_construction_progress_add = 5
+		country_max_weekly_construction_progress_add = 0.15
 	}
 
 	ai_will_do = {
@@ -968,7 +963,8 @@ company_PLDT = {
 
 	prosperity_modifier = {
 		state_assimilation_mult = 0.15
-		state_education_access_add = 0.05
+		state_education_access_add = 0.10
+		building_electrics_industry_throughput_add = 0.10
 	}
 
 	ai_will_do = {

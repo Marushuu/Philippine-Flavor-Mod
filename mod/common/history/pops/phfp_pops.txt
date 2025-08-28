@@ -1,0 +1,28 @@
+﻿POPS = {
+	# Replace the Han with the Min (Hokkien), they are the prominent Chinese-Filipino even in this time period.
+	s:STATE_LUZON = {
+		region_state:PHI = {
+			create_pop = {
+				culture = min
+				religion = catholic
+				size = 10000
+			}
+			kill_population_in_state = {
+				value = 8000
+				culture = cu:han
+				religion = rel:catholic
+			}
+		}
+	}
+
+	# Just to justify the Min Community, they most likely tiny in this time period. Probably like only hundreds, but why not?
+	s:STATE_VISAYAS = {
+		region_state:PHI = {
+			create_pop = {
+				culture = min
+				religion = catholic
+				size = 2500
+			}
+		}
+	}
+}

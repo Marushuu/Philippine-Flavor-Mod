@@ -1,15 +1,27 @@
 ﻿GLOBAL = {
-	c:PHI = {
-		#add_journal_entry = {
-		#	type = je_phfp_conquest_of_moroland
-		#}
-		#trigger_event = {
-		#	id = phfp_phi_001 # Situation
-		#}
+	c:PHI ?= {
+		# Starter Event
+		trigger_event = {
+			id = phfp_phi.1 
+		}
 
-		# IG Names
+		# Laws
+		activate_law = law_type:law_peasant_levies
+		activate_law = law_type:law_extraction_economy
+		activate_law = law_type:law_colonial_exploitation
+		activate_law = law_type:law_charitable_health_system
+		activate_law = law_type:law_debt_slavery
+
+		# Interest Groups
 		ig:ig_intelligentsia = {
-			set_interest_group_name = phfp_ig_illustrados
+			set_interest_group_name = phfp_ig_ilustrados
+		}
+		ig:ig_industrialists = {
+			remove_ideology = ideology_laissez_faire
+			add_ideology = ideology_colonialist
+		}
+		ig:ig_petty_bourgeoisie = {
+			add_ideology = ideology_modernizer
 		}
 		ig:ig_landowners = {
 			set_interest_group_name = phfp_ig_principalia

@@ -1,0 +1,157 @@
+﻿namespace = phfp_malolos
+
+phfp_malolos.1 = {
+	type = country_event
+
+	title = phfp_malolos.1.t
+	desc = phfp_malolos.1.d
+	flavor = phfp_malolos.1.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	event_image = {
+		video = "unspecific_ruler_speaking_to_people"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {} # Triggered by Philippine Independence
+
+	immediate = {}
+
+	option = {
+		name = phfp_malolos.1.a
+		activate_law = law_type:law_presidential_republic
+		add_modifier = {
+			name = phfp_md_patriotic_government
+			years = 5
+		}
+		trigger_event = {
+			id = phfp_malolos.2
+		}
+	}
+
+	option = {
+		name = phfp_malolos.1.b
+		activate_law = law_type:law_parliamentary_republic
+		add_modifier = {
+			name = phfp_md_patriotic_government
+			years = 5
+		}
+		trigger_event = {
+			id = phfp_malolos.2
+		}
+	}
+
+	option = {
+		name = phfp_malolos.1.c
+		default_option = yes
+		add_modifier = {
+			name = phfp_md_patriotic_government
+			years = 5
+		}
+		trigger_event = {
+			id = phfp_malolos.2
+		}
+	}
+}
+
+phfp_malolos.2 = {
+	type = country_event
+
+	title = phfp_malolos.2.t
+	desc = phfp_malolos.2.d
+	flavor = phfp_malolos.2.f
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	immediate = {
+		ig:ig_devout = {
+			leader = {
+				save_scope_as = phfp_malolos_religious_leader
+			}
+		}
+	}
+
+	option = {
+		name = phfp_malolos.2.a
+		default_option = yes
+		add_loyalists = {
+			religion = rel:sunni
+			value = 0.05
+		}
+		add_radicals = {
+			religion = rel:catholic
+			value = 0.05
+		}
+		if = {
+			limit = {
+				has_modifier = phfp_md_frailocracy
+			}
+			add_modifier = {
+				name = phfp_md_secularism
+				years = 5
+			}
+		}
+		trigger_event = {
+			id = phfp_malolos.3
+		}
+	}
+
+	option = {
+		name = phfp_malolos.2.b
+		add_loyalists = {
+			religion = rel:catholic
+			value = 0.05
+		}
+		add_radicals = {
+			religion = rel:sunni
+			value = 0.05
+		}
+		if = {
+			limit = {
+				has_modifier = phfp_md_secularism
+			}
+			add_modifier = {
+				name = phfp_md_church
+				years = 5
+			}
+		}
+		trigger_event = {
+			id = phfp_malolos.3
+		}
+	}
+}
+
+phfp_malolos.3 = {
+	type = country_event
+
+	title = phfp_malolos.3.t
+	desc = phfp_malolos.3.d
+	flavor = phfp_malolos.3.f
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	option = {
+		name = phfp_malolos.3.a
+		default_option = yes
+		add_modifier = {
+			name = phfp_md_malolos_legacy
+		}
+	}
+}

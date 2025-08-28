@@ -1,0 +1,16 @@
+﻿l_english:
+  phfp_phi.1.t: "The Pearl of the Orient Seas"
+  phfp_phi.1.d: "For over two centuries, these islands have served as [SCOPE.sCountry('spain_scope').GetNameNoFlag]'s vital gateway to the riches of Asia, with the famous Manila Galleon. But those days are long over, it has been decades since the last galleon sailed in 1815.\n\nThe [ROOT.GetCountry.GetName] now stands within a precipice, would they seek to remain within [SCOPE.sCountry('spain_scope').GetNameNoFlag]'s orbit or would they chart their own destiny?"
+  phfp_phi.1.f: "#italic The Islands are Spain's most beautiful and richest possession in the Orient, but like an uncut diamond, their true value remains hidden beneath layers of old custom and distant rule.#!"
+  phfp_phi.1.a: "What lies beyond the seas?"
+
+  phfp_phi.2.t: "The Opening of the Gates of Manila"
+  phfp_phi.2.d: "In 1834, through [SCOPE.sCountry('spain_scope').GetAdjectiveNoFlag] Royal Decree, the Port of Manila was finally opened to Foreign Trade.\n\nNo longer will we be bound to only trade with [SCOPE.sCountry('spain_scope').GetNameNoFlag]'s Galleons. What awaits us?"
+  phfp_phi.2.f: "For two and a half centuries, Manila has served as the western terminus of the Manila-Acapulco Galleon Trade, with only Spanish ships allowed to dock at its ports. However, the Royal Decree of September 1834 has shattered this monopoly, finally opening Manila's ports to foreign traders.\n\nThe Age of the Galleons has ended, and a new beginning awaits the Pearl of the Orient Seas."
+  phfp_phi.2.a: "It is an era of change."
+
+  phfp_phi.3.t: "The End of Spanish Rule"
+  phfp_phi.3.d: "With the successful ousting of the [SCOPE.sCountry('spain_scope').GetAdjectiveNoFlag] colonial forces, the old administration has crumbled.\n\nIt seems that [SCOPE.sCountry('spain_scope').GetAdjectiveNoFlag] rule over the Philippines has finally come to an end."
+  phfp_phi.3.f: "#italic Across these 7000 islands, the spirit of independence burns bright. The Spanish flag has been lowered, and the sun rises on a new era for the Philippines. Loyalists flee, deserters abandon their posts, the Spanish Empire has finally been driven from these shores.#!"
+  phfp_phi.3.a: "We might have seized our destiny..."
+  phfp_phi.3.b: "...But their legacy remains."

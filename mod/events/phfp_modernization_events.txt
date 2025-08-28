@@ -1,0 +1,602 @@
+﻿namespace = phfp_reform
+
+# Modernization Reform Complete
+phfp_reform.1 = { 
+    type = country_event
+
+    title = phfp_reform.1.t
+    desc = phfp_reform.1.d
+    flavor = phfp_reform.1.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+    event_image = {
+        video = "unspecific_ruler_speaking_to_people"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	immediate = {
+		ig:ig_intelligentsia = {
+			leader = {
+				save_scope_as = phfp_ilustrado_leader
+			}
+		}
+	}
+
+	option = {
+		name = phfp_reform.1.a
+		default_option = yes
+		add_loyalists = {
+			strata = middle
+			value = 0.10
+		}
+		add_loyalists = {
+			strata = lower
+			value = 0.10
+		}
+		add_modifier = {
+			name = phfp_md_modernization_done
+			years = 10
+		}
+	}
+}
+
+# Spanish Investment - Copied from Japan
+phfp_reform.2 = { 
+	type = country_event
+	
+	title = phfp_reform.2.t
+	desc = phfp_reform.2.d
+	flavor = phfp_reform.2.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {
+		is_subject = yes
+		NOT = {
+			has_modifier = phfp_md_foreign_investment
+		}
+		overlord = {
+			country_rank >= rank_value:major_power
+			relations:root >= relations_threshold:neutral
+		}
+	}
+
+	immediate = {
+		overlord = {
+			save_scope_as = phfp_overlord
+			ig:ig_industrialists = {
+				leader = {
+					save_scope_as = phfp_overlord_investor_leader
+				}
+			}
+		}
+	}
+
+	option = {
+		name = phfp_reform.2.a
+		default_option = yes
+		add_modifier = {
+			name = phfp_md_foreign_investment
+			years = 5
+		}
+	}
+
+	option = {
+		name = phfp_reform.2.b
+		change_relations = {
+			country = scope:phfp_overlord
+			value = 10
+		}
+	}
+}
+
+# Land Reform
+phfp_reform.3 = {
+	type = country_event
+
+	title = phfp_reform.3.t
+	desc = phfp_reform.3.d
+	flavor = phfp_reform.3.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/principles_icons/colonial_offices.dds"
+	event_image = {
+		video = "africa_prosperous_farm"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	immediate = {
+		ig:ig_rural_folk = {
+			leader = {
+				save_scope_as = phfp_rural_folk_leader
+			}
+		}
+	}
+
+	option = {
+		name = phfp_reform.3.a
+		default_option = yes
+		add_modifier = {
+			name = phfp_md_land_reform
+			years = 10
+		}
+	}
+}
+
+# Secularization
+phfp_reform.4 = {
+	type = country_event
+
+	title = phfp_reform.4.t
+	desc = phfp_reform.4.d
+	flavor = phfp_reform.4.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/religion_icons/catholic.dds"
+	event_image = {
+		video = "southamerica_christianity"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	option = {
+		name = phfp_reform.4.a
+		default_option = yes
+		add_loyalists = {
+			interest_group = ig:ig_intelligentsia
+			value = 0.15
+		}
+		add_radicals = {
+			interest_group = ig:ig_devout
+			value = 0.15
+		}
+		add_modifier = {
+			name = phfp_md_secularization
+			years = 10
+		}
+	}
+}
+
+# Administrative Reform
+phfp_reform.5 = {
+	type = country_event
+
+	title = phfp_reform.5.t
+	desc = phfp_reform.5.d
+	flavor = phfp_reform.5.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/central_identity_pillars_icons/unused/research_conglomerate.dds"
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	option = {
+		name = phfp_reform.5.a
+		default_option = yes
+		add_modifier = {
+			name = phfp_md_bureaucratic_reform
+			years = 10
+		}
+	}
+}
+
+# Economic Reform
+phfp_reform.6 = {
+	type = country_event
+
+	title = phfp_reform.6.t
+	desc = phfp_reform.6.d
+	flavor = phfp_reform.6.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/invention_icons/banking.dds"
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	option = {
+		name = phfp_reform.6.a
+		default_option = yes
+		add_modifier = {
+			name = phfp_md_growing_economy
+			years = 10
+		}
+	}
+}
+
+# Slavery
+phfp_reform.7 = {
+	type = country_event
+
+	title = phfp_reform.7.t
+	desc = phfp_reform.7.d
+	flavor = phfp_reform.7.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	event_image = {
+		video = "southamerica_slave_chains"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	option = {
+		name = phfp_reform.7.a
+		default_option = yes
+		add_loyalists = {
+			strata = lower
+			value = 0.15
+		}
+		add_loyalists = {
+			interest_group = ig:ig_intelligentsia
+			value = 0.05
+		}
+		add_radicals = {
+			pop_type = aristocrats
+			value = 0.1
+		}
+		add_modifier = {
+			name = phfp_md_slavery_abolished
+			years = 10
+		}
+	}
+}
+
+# Military Reform Complete
+phfp_reform.20 = {
+    type = country_event
+
+    title = phfp_reform.20.t
+    desc = phfp_reform.20.d
+    flavor = phfp_reform.20.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+    event_image = {
+        video = "unspecific_military_parade"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	option = {
+		name = phfp_reform.20.a
+		default_option = yes
+		add_loyalists = {
+			interest_group = ig:ig_armed_forces
+			value = 0.25
+		}
+		add_modifier = {
+			name = phfp_md_military_research
+			years = 5
+			is_decaying = yes
+		}
+		add_modifier = {
+			name = phfp_md_modernized_military
+			years = 10
+		}
+	}
+}
+
+# Western Advisors - Stolen again from Japan lmfao
+phfp_reform.21 = { 
+    type = country_event
+
+    title = phfp_reform.21.t
+    desc = phfp_reform.21.d
+    flavor = phfp_reform.21.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+    event_image = {
+        video = "asia_westerners_arriving"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {
+		NOT = {
+			has_modifier = phfp_md_foreign_consultants
+		}
+		any_country = {
+			country_rank >= rank_value:major_power
+			relations:root >= relations_threshold:neutral
+			relations:root >= 0
+			NOT = { is_owed_obligation_by = ROOT }
+			NOT = { has_war_with = ROOT }
+			any_scope_character = {
+				has_role = general
+				is_busy = no
+			}
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				country_rank >= rank_value:major_power
+				relations:root >= relations_threshold:neutral
+				NOT = { is_owed_obligation_by = ROOT }
+				NOT = { has_war_with = ROOT }
+				any_scope_character = {
+					has_role = general
+					is_busy = no
+				}
+			}
+			save_scope_as = phfp_foreign_military
+			random_scope_character = {
+				limit = {
+					has_role = general
+					is_busy = no
+				}
+				save_scope_as = phfp_foreign_military_general
+			}
+		}
+	}
+
+	option = {
+		name = phfp_reform.21.a
+		default_option = yes
+		set_owes_obligation_to = {
+			country = scope:phfp_foreign_military
+			setting = yes
+		}
+		add_modifier = {
+			name = phfp_md_foreign_consultants
+			years = 2
+		}
+	}
+
+	option = {
+		name = phfp_reform.21.b
+		add_loyalists = {
+			pop_type = officers
+			value = 0.05
+		}
+		change_relations = {
+			country = scope:phfp_foreign_military
+			value = -15
+		}
+	}
+}
+
+# Military Build - Again, based on Japan's
+phfp_reform.22 = {
+    type = country_event
+
+    title = phfp_reform.22.t
+    desc = phfp_reform.22.d
+    flavor = phfp_reform.22.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+    event_image = {
+        video = "unspecific_trains"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {
+		has_technology_researched = railways
+		any_scope_state = {
+			has_building = building_barracks
+			NOT = {
+				has_building = building_railway
+			}
+		}
+		NOT = {
+			ig:ig_armed_forces = {
+				has_modifier = phfp_md_controlled_rail_expansion
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_building = building_barracks
+				NOT = {
+					has_building = building_railway
+				}
+			}
+			save_scope_as = phfp_military_rail
+		}
+		ig:ig_armed_forces = {
+			leader = {
+				save_scope_as = phfp_armed_forces_leader
+			}
+			save_scope_as = phfp_armed_forces_ig
+		}
+	}
+
+	option = {
+		name = phfp_reform.22.a
+		default_option = yes
+		scope:phfp_military_rail = {
+			create_building = {
+				building = building_railway
+				level = 1
+			}
+		}
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = phfp_md_railway_expansion
+				years = 5
+			}
+		}
+	}
+
+	option = {
+		name = phfp_reform.22.b
+		ig:ig_armed_forces = {
+			add_modifier = {
+				name = phfp_md_controlled_rail_expansion
+				years = 5
+			}
+		}
+	}
+}
+
+# Army Reform
+phfp_reform.23 = {
+    type = country_event
+
+    title = phfp_reform.23.t
+    desc = phfp_reform.23.d
+    flavor = phfp_reform.23.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/goods_icons/artillery.dds"
+    event_image = {
+        video = "europenorthamerica_before_the_battle"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	option = {
+		name = phfp_reform.23.a
+		default_option = yes
+		add_modifier = {
+			name = phfp_md_modernized_army
+			years = 10
+		}
+	}
+}
+
+# Naval Reform
+phfp_reform.24 = {
+    type = country_event
+
+    title = phfp_reform.24.t
+    desc = phfp_reform.24.d
+    flavor = phfp_reform.24.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/goods_icons/ironclads.dds"
+    event_image = {
+        video = "votp_gunboat_diplomacy"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_role = admiral
+				is_ruler = no
+				is_heir = no
+			}
+			save_scope_as = phfp_admiral
+		}
+	}
+
+	option = {
+		name = phfp_reform.24.a
+		default_option = yes
+		add_modifier = {
+			name = phfp_md_modernized_navy
+			years = 10
+		}
+	}
+}
+
+# Police Reform
+phfp_reform.25 = {
+    type = country_event
+
+    title = phfp_reform.25.t
+    desc = phfp_reform.25.d
+    flavor = phfp_reform.25.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/invention_icons/standing_army.dds"
+    event_image = {
+        video = "ep1_cossacks"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	option = {
+		name = phfp_reform.25.a
+		default_option = yes
+		add_modifier = {
+			name = phfp_md_policing
+			years = 10
+		}
+	}
+}
+
+# Logistics
+phfp_reform.26 = {
+    type = country_event
+
+    title = phfp_reform.26.t
+    desc = phfp_reform.26.d
+    flavor = phfp_reform.26.f
+
+	duration = 3
+
+	icon = "gfx/interface/icons/invention_icons/logistics_tech.dds"
+    event_image = {
+        video = "unspecific_trains"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	trigger = {}
+
+	option = {
+		name = phfp_reform.26.a
+		default_option = yes
+		add_modifier = {
+			name = phfp_md_logistics
+			years = 10
+		}
+	}
+}
