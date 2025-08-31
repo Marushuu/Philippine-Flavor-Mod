@@ -1,0 +1,63 @@
+﻿# Politicians or Agitators
+# Jose Rizal - Who else
+phfp_template_jose_rizal = {
+	first_name = "José"
+	last_name = "Rizal"
+	historical = yes
+	dna = phfp_dna_jose_rizal
+	culture = cu:filipino
+	female = no
+	religion = rel:catholic
+	ideology = ideology_liberal_leader
+	interest_group = ig_intelligentsia
+	birth_date = 1861.6.19
+	traits = {
+		persistent
+		inspirational_orator
+		literary
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+		}
+		earliest_usage_date = 1879.6.19		# 18 Years Old
+		latest_usage_date = 1896.12.30		# Execution
+		chance = 65		# So that he doesn't show up ASAP
+	}
+}
+
+# Pedro Paterno - The Filipino Turncoat, will probably have to make him change his ideology and interest group depending on leader
+phfp_template_pedro_paterno = {
+	first_name = "Pedro"
+	last_name = "Paterno"
+	historical = yes
+	dna = phfp_dna_pedro_paterno
+	culture = cu:filipino
+	female = no
+	religion = rel:catholic
+	ideology = ideology_moderate
+	interest_group = ig_landowners
+	birth_date = 1857.2.27
+	traits = {
+		cautious
+		experienced_political_operator
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+		}
+		earliest_usage_date = 1876.1.1		# First Written his Opus
+		latest_usage_date = 1911.4.26		# Death
+		chance = 90
+	}
+}

@@ -1,164 +1,142 @@
-﻿
-# Military Modernization for After Securing Independence
+﻿# Military Modernization for After Securing Independence
 phfp_je_military_modernization_main = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
-
-    group = phfp_je_group_militarization
-
-    immediate = {
-        set_variable = {
-            name = phfp_military_modernization_progress
-            value = 0
-        }
-    }
-
-    complete = {
-        scope:journal_entry = {
-            is_goal_complete = yes
-        }
-    }
-
-    on_complete = {
-        remove_variable = phfp_military_modernization_progress
-        trigger_event = {
-            id = phfp_reform.20
-        }
-    }
-
-    current_value = {
-        if = {
-            limit = {
-                has_variable = phfp_military_modernization_progress
-            }
-            value = var:phfp_military_modernization_progress
-        }
-        else = {
-            value = 0
-        }
-    }
-
-    goal_add_value = {
-        value = 4
-    }
-
-    on_monthly_pulse = {
+	group = phfp_je_group_militarization
+	immediate = {
+		set_variable = {
+			name = phfp_military_modernization_progress
+			value = 0
+		}
+	}
+	complete = {
+		scope:journal_entry = {
+			is_goal_complete = yes
+		}
+	}
+	on_complete = {
+		remove_variable = phfp_military_modernization_progress
+		trigger_event = {
+			id = phfp_reform.20
+		}
+	}
+	current_value = {
+		if = {
+			limit = {
+				has_variable = phfp_military_modernization_progress
+			}
+			value = var:phfp_military_modernization_progress
+		}
+		else = {
+			value = 0
+		}
+	}
+	goal_add_value = {
+		value = 4
+	}
+	on_monthly_pulse = {
 		random_events = {
 			100 = 0
 			10 = phfp_reform.21
 			10 = phfp_reform.22
 		}
-    }
-
-    progressbar = yes
-    transferable = no
-    can_deactivate = no
-    can_revolution_inherit = yes
-    should_be_pinned_by_default = yes
-
-    weight = 2000
+	}
+	progressbar = yes
+	transferable = no
+	can_deactivate = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = yes
+	weight = 2000
 }
 
 # Army Reform - Get 50 Napoleonic Era+ Units
 phfp_je_army_reform = {
 	icon = "gfx/interface/icons/goods_icons/artillery.dds"
-
-    group = phfp_je_group_militarization
-
-    complete = {
-        has_technology_researched = military_statistics
-        NOT = {
-            has_law = law_type:law_peasant_levies
-        }
-        any_military_formation = {
-            count = all
-            filter = {
-                is_army = yes
-            }
-            any_combat_unit = {
-                count >= 50
-                NOR = {
-                    has_unit_type = unit_type:combat_unit_type_irregular_infantry
-                    has_unit_type = unit_type:combat_unit_type_line_infantry
-                    has_unit_type = unit_type:combat_unit_type_cannon_artillery
-                    has_unit_type = unit_type:combat_unit_type_hussars
-                    has_unit_type = unit_type:combat_unit_type_dragoons
-                    has_unit_type = unit_type:combat_unit_type_cuirassiers
-                }
-            }
-        }
-    }
-
-    on_complete = {
-        custom_tooltip = {
-            text = phfp_tt_military_add_progress
-            change_variable = {
-                name = phfp_military_modernization_progress
-                add = 1
-            }
-        }
-        trigger_event = {
-            id = phfp_reform.23
-        }
-    }
-
-    transferable = no
-    can_deactivate = no
-    can_revolution_inherit = yes
-    should_be_pinned_by_default = no
-
-    weight = 1900
+	group = phfp_je_group_militarization
+	complete = {
+		has_technology_researched = military_statistics
+		NOT = {
+			has_law = law_type:law_peasant_levies
+		}
+		any_military_formation = {
+			count = all
+			filter = {
+				is_army = yes
+			}
+			any_combat_unit = {
+				count >= 50
+				NOR = {
+					has_unit_type = unit_type:combat_unit_type_irregular_infantry
+					has_unit_type = unit_type:combat_unit_type_line_infantry
+					has_unit_type = unit_type:combat_unit_type_cannon_artillery
+					has_unit_type = unit_type:combat_unit_type_hussars
+					has_unit_type = unit_type:combat_unit_type_dragoons
+					has_unit_type = unit_type:combat_unit_type_cuirassiers
+				}
+			}
+		}
+	}
+	on_complete = {
+		custom_tooltip = {
+			text = phfp_tt_military_add_progress
+			change_variable = {
+				name = phfp_military_modernization_progress
+				add = 1
+			}
+		}
+		trigger_event = {
+			id = phfp_reform.23
+		}
+	}
+	transferable = no
+	can_deactivate = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = no
+	weight = 1900
 }
 
 # Navy Reform - Get 20 Steel Ships
 phfp_je_navy_reform = {
 	icon = "gfx/interface/icons/goods_icons/ironclads.dds"
-
-    group = phfp_je_group_militarization
-
-    complete = {
-        has_technology_researched = ironclad_tech
-        any_military_formation = {
-            count = all
-            filter = {
-                is_fleet = yes
-            }
-            any_combat_unit = {
-                count >= 20
-                NOR = {
-                    has_unit_type = unit_type:combat_unit_type_frigate
-                    has_unit_type = unit_type:combat_unit_type_man_o_war
-                }
-            }
-        }
-    }
-
-    on_complete = {
-        custom_tooltip = {
-            text = phfp_tt_military_add_progress
-            change_variable = {
-                name = phfp_military_modernization_progress
-                add = 1
-            }
-        }
-        trigger_event = {
-            id = phfp_reform.24
-        }
-    }
-
-    transferable = no
-    can_deactivate = no
-    can_revolution_inherit = yes
-    should_be_pinned_by_default = no
-
-    weight = 1800
+	group = phfp_je_group_militarization
+	complete = {
+		has_technology_researched = ironclad_tech
+		any_military_formation = {
+			count = all
+			filter = {
+				is_fleet = yes
+			}
+			any_combat_unit = {
+				count >= 20
+				NOR = {
+					has_unit_type = unit_type:combat_unit_type_frigate
+					has_unit_type = unit_type:combat_unit_type_man_o_war
+				}
+			}
+		}
+	}
+	on_complete = {
+		custom_tooltip = {
+			text = phfp_tt_military_add_progress
+			change_variable = {
+				name = phfp_military_modernization_progress
+				add = 1
+			}
+		}
+		trigger_event = {
+			id = phfp_reform.24
+		}
+	}
+	transferable = no
+	can_deactivate = no
+	can_revolution_inherit = yes
+	should_be_pinned_by_default = no
+	weight = 1800
 }
 
 # Security - Build up the Police to cement control
 phfp_je_police = {
 	icon = "gfx/interface/icons/invention_icons/standing_army.dds"
-
 	group = phfp_je_group_militarization
-
 	complete = {
 		NOR = {
 			has_law = law_type:law_no_police
@@ -176,7 +154,6 @@ phfp_je_police = {
 			value = 3
 		}
 	}
-
 	on_complete = {
 		custom_tooltip = {
 			text = phfp_tt_military_add_progress
@@ -189,36 +166,32 @@ phfp_je_police = {
 			id = phfp_reform.25
 		}
 	}
-
 	transferable = no
 	can_deactivate = no
 	can_revolution_inherit = yes
 	should_be_pinned_by_default = no
-
 	weight = 1700
 }
 
 # Logistics - Build up Infrastructure to support Military
 phfp_je_logistics = {
 	icon = "gfx/interface/icons/invention_icons/logistics_tech.dds"
-
 	group = phfp_je_group_militarization
-
 	complete = {
 		custom_tooltip = {
 			text = phfp_tt_manila_rail_completed
 			has_variable = phfp_manila_rail_completed
 		}
-        any_military_formation = {
-            count = all
-            filter = {
-                is_army = yes
-            }
-            OR = {
-                has_mobilization_option = mobilization_option:mobilization_option_rail_transport
-                has_mobilization_option = mobilization_option:mobilization_option_truck_transport
-            }
-        }
+		any_military_formation = {
+			count = all
+			filter = {
+				is_army = yes
+			}
+			OR = {
+				has_mobilization_option = mobilization_option:mobilization_option_rail_transport
+				has_mobilization_option = mobilization_option:mobilization_option_truck_transport
+			}
+		}
 		any_scope_state = {
 			count = all
 			any_scope_building = {
@@ -255,7 +228,6 @@ phfp_je_logistics = {
 			}
 		}
 	}
-
 	on_complete = {
 		remove_variable = phfp_manila_rail_completed
 		custom_tooltip = {
@@ -269,11 +241,9 @@ phfp_je_logistics = {
 			id = phfp_reform.26
 		}
 	}
-
 	transferable = no
 	can_deactivate = no
 	can_revolution_inherit = yes
 	should_be_pinned_by_default = no
-
 	weight = 1600
 }

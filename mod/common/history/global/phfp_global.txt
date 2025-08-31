@@ -2,16 +2,16 @@
 	c:PHI ?= {
 		# Starter Event
 		trigger_event = {
-			id = phfp_phi.1 
+			id = phfp_phi.1
 		}
-
+		# Remove Filipino
+		remove_primary_culture = cu:filipino
 		# Laws
 		activate_law = law_type:law_peasant_levies
 		activate_law = law_type:law_extraction_economy
 		activate_law = law_type:law_colonial_exploitation
 		activate_law = law_type:law_charitable_health_system
 		activate_law = law_type:law_debt_slavery
-
 		# Interest Groups
 		ig:ig_intelligentsia = {
 			set_interest_group_name = phfp_ig_ilustrados
@@ -21,10 +21,12 @@
 			add_ideology = ideology_colonialist
 		}
 		ig:ig_petty_bourgeoisie = {
+			remove_ideology = ideology_reactionary
 			add_ideology = ideology_modernizer
 		}
 		ig:ig_landowners = {
 			set_interest_group_name = phfp_ig_principalia
+			add_ideology = ideology_colonialist
 		}
 		ig:ig_devout = {
 			set_interest_group_name = phfp_ig_simbahan

@@ -1,30 +1,24 @@
 ﻿namespace = phfp_phi
-
-phfp_phi.1 = { # Philippines Starter Event
+phfp_phi.1 = {
+	# Philippines Starter Event
 	type = country_event
 	placement = root
-
 	title = phfp_phi.1.t
 	desc = phfp_phi.1.d
 	flavor = phfp_phi.1.f
-
 	duration = 3
-
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 	event_image = {
 		video = "southamerica_aristocrats"
 	}
-
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	trigger = {}
-
+	trigger = {
+	}
 	immediate = {
 		c:SPA = {
 			save_scope_as = spain_scope
 		}
 	}
-
 	option = {
 		name = phfp_phi.1.a
 		default_option = yes
@@ -55,30 +49,26 @@ phfp_phi.1 = { # Philippines Starter Event
 	}
 }
 
-phfp_phi.2 = { # The Opening of the Philippines
+phfp_phi.2 = {
+	# The Opening of the Philippines
 	type = country_event
-
 	title = phfp_phi.2.t
 	desc = phfp_phi.2.d
 	flavor = phfp_phi.2.f
-
 	duration = 3
-
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
 	event_image = {
 		video = "votp_gunboat_diplomacy"
 	}
-
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	trigger = {} # Triggered by the Starter Event
-
+	trigger = {
+	}
+	# Triggered by the Starter Event
 	immediate = {
 		c:SPA = {
 			save_scope_as = spain_scope
 		}
 	}
-
 	option = {
 		name = phfp_phi.2.a
 		default_option = yes
@@ -89,33 +79,30 @@ phfp_phi.2 = { # The Opening of the Philippines
 	}
 }
 
-phfp_phi.3 = { # Independence
+phfp_phi.3 = {
+	# Independence
 	type = country_event
-
 	title = phfp_phi.3.t
 	desc = phfp_phi.3.d
 	flavor = phfp_phi.3.f
-
 	duration = 3
-
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 	event_image = {
 		video = "ep1_transfer_of_authority"
 	}
-
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-	trigger = {} # Triggered by Independence
-
+	trigger = {
+	}
+	# Triggered by Independence
 	immediate = {
 		c:SPA = {
 			save_scope_as = spain_scope
 		}
 	}
-
 	option = {
 		name = phfp_phi.3.a
 		default_option = yes
+		add_primary_culture = cu:filipino
 		remove_primary_culture = cu:spanish
 		every_scope_character = {
 			limit = {
@@ -132,9 +119,9 @@ phfp_phi.3 = { # Independence
 			id = phfp_malolos.1
 		}
 	}
-
 	option = {
 		name = phfp_phi.3.b
+		add_primary_culture = cu:filipino
 		add_radicals = {
 			culture = cu:filipino
 			value = very_large_radicals

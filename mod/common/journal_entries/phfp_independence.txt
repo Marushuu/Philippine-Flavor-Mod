@@ -1,8 +1,6 @@
 ﻿phfp_je_philippine_independence = {
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
-
 	group = phfp_je_group_independence
-
 	is_shown_when_inactive = {
 		OR = {
 			c:PHI ?= THIS
@@ -10,11 +8,9 @@
 		}
 		is_subject = yes
 	}
-
 	possible = {
 		is_subject = yes
 	}
-
 	immediate = {
 		if = {
 			limit = {
@@ -34,19 +30,22 @@
 			}
 		}
 	}
-
 	complete = {
 		is_subject = no
 		is_at_war = no
 	}
-
 	on_complete = {
 		trigger_event = {
-			id = phfp_phi.3 # Independence Event
+			id = phfp_phi.3			# Independence Event
 		}
 		ig:ig_industrialists = {
 			remove_ideology = ideology_colonialist
 			add_ideology = ideology_laissez_faire
+		}
+		ig:ig_landowners = {
+			remove_ideology = ideology_colonialist
+			remove_ideology = ideology_stratocratic
+			add_ideology = ideology_oligarchic
 		}
 		add_journal_entry = {
 			type = phfp_je_military_modernization_main
@@ -64,7 +63,31 @@
 			type = phfp_je_logistics
 		}
 	}
-
+	on_weekly_pulse = {
+		effect = {
+			scope:journal_entry = {
+				remove_modifier = phfp_md_growing_identity
+				remove_modifier = phfp_md_nationalistic_fervor
+			}
+			if = {
+				limit = {
+					has_technology_researched = nationalism
+				}
+				scope:journal_entry = {
+					add_modifier = {
+						name = phfp_md_nationalistic_fervor
+					}
+				}
+			}
+			else = {
+				scope:journal_entry = {
+					add_modifier = {
+						name = phfp_md_growing_identity
+					}
+				}
+			}
+		}
+	}
 	transferable = no
 	can_deactivate = no
 	can_revolution_inherit = yes
