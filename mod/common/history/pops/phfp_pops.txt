@@ -1,27 +1,243 @@
 ﻿POPS = {
-	# Replace the Han with the Min (Hokkien), they are the prominent Chinese-Filipino even in this time period.
-	s:STATE_LUZON = {
+	s:STATE_WEST_MICRONESIA = {
 		region_state:PHI = {
 			create_pop = {
-				culture = min
-				religion = catholic
+				culture = micronesian
+				size = 23840
+			}
+			create_pop = {
+				culture = spanish
+				size = 24
+			}
+			create_pop = {
+				culture = polynesian
+				size = 360
+			}
+		}
+	}
+	
+	s:STATE_MINDANAO = {
+		region_state:PHI = {
+			create_pop = {
+				culture = phfp_cebuano
+				size = 235800
+			}
+			create_pop = {
+				culture = phfp_cebuano
+				religion = animist
+				size = 18400
+			}
+
+			create_pop = {
+				culture = phfp_maguindanaon
+				religion = sunni
+				size = 15161
+			}
+			create_pop = {
+				culture = phfp_tausug
+				religion = sunni
+				size = 15160
+			}
+
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:filipino
+			}
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:moro
+			}
+		}
+		region_state:MGD = {
+			create_pop = {
+				culture = phfp_maguindanaon
+				size = 206000
+			}
+			create_pop = {
+				culture = phfp_cebuano
+				size = 35800
+			}
+			create_pop = {
+				culture = phfp_maguindanaon
+				religion = animist
+				size = 20311
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = phfp_maguindanaon
+				religion = animist
 				size = 10000
 			}
-			kill_population_in_state = {
-				value = 8000
-				culture = cu:han
-				religion = rel:catholic
+
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:filipino
+			}
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:moro
+			}
+		}
+		region_state:SUL = {
+			create_pop = {
+				culture = phfp_tausug
+				religion = sunni
+				size = 60400
+			}
+			create_pop = {
+				culture = phfp_tausug
+				religion = animist
+				size = 17200
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = phfp_tausug
+				religion = animist
+				size = 6300
+			}
+			create_pop = {
+				culture = min
+				size = 2500
+			}
+
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:filipino
+			}
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:moro
+			}
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:yue
 			}
 		}
 	}
 
-	# Just to justify the Min Community, they most likely tiny in this time period. Probably like only hundreds, but why not?
+	s:STATE_LUZON = {
+		region_state:PHI = {
+			create_pop = { # The Hokkien
+				culture = min
+				religion = catholic
+				size = 12000
+			}
+			create_pop = {
+				culture = phfp_tagalog
+				size = 1362792
+			}
+			create_pop = {
+				culture = phfp_ilocano
+				size = 723000
+			}
+
+			# Slaves
+			create_pop = {
+				pop_type = slaves
+				culture = phfp_tagalog
+				size = 27000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = phfp_ilocano
+				size = 23000
+			}
+
+			# Remove Cultures
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:han
+			}
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:filipino
+			}
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:moro
+			}
+		}
+		region_state:SUL = {
+			create_pop = {
+				culture = phfp_tagalog
+				religion = sunni
+				size = 25000
+			}
+			create_pop = {
+				culture = phfp_tausug
+				size = 6000
+			}
+			create_pop = {
+				culture = phfp_tagalog
+				religion = animist
+				size = 7000
+			}
+			create_pop = {
+				culture = min
+				religion = sunni
+				size = 1500
+			}
+			
+			create_pop = {
+				pop_type = slaves
+				culture = phfp_tagalog
+				size = 5000
+			}
+
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:filipino
+			}
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:moro
+			}
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:yue
+			}
+		}
+	}
+
 	s:STATE_VISAYAS = {
 		region_state:PHI = {
 			create_pop = {
 				culture = min
 				religion = catholic
 				size = 2500
+			}
+			create_pop = {
+				culture = phfp_cebuano
+				size = 550000
+			}
+			create_pop = {
+				culture = phfp_ilonggo
+				size = 411604
+			}
+			create_pop = {
+				culture = phfp_ilonggo
+				religion = animist
+				size = 40000
+			}
+
+			create_pop = {
+				pop_type = slaves
+				culture = phfp_cebuano
+				size = 15000
+			}
+			create_pop = {
+				pop_type = slaves
+				culture = phfp_ilonggo
+				size = 15000
+			}
+
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:filipino
+			}
+			kill_population_percent_in_state = {
+				percent = 1
+				culture = cu:moro
 			}
 		}
 	}

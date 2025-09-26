@@ -1,11 +1,11 @@
 ﻿# Politicians or Agitators
 # Jose Rizal - Who else
 phfp_template_jose_rizal = {
-	first_name = "José"
+	first_name = "Jose"
 	last_name = "Rizal"
 	historical = yes
 	dna = phfp_dna_jose_rizal
-	culture = cu:filipino
+	culture = cu:phfp_tagalog
 	female = no
 	religion = rel:catholic
 	ideology = ideology_liberal_leader
@@ -37,7 +37,7 @@ phfp_template_pedro_paterno = {
 	last_name = "Paterno"
 	historical = yes
 	dna = phfp_dna_pedro_paterno
-	culture = cu:filipino
+	culture = cu:phfp_tagalog
 	female = no
 	religion = rel:catholic
 	ideology = ideology_moderate

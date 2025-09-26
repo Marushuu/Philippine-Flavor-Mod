@@ -1,10 +1,37 @@
 ﻿STATES = {
-	# Hokkien Community
+	s:STATE_WEST_MICRONESIA = {
+		create_state = {
+			country = c:PHI
+			owned_provinces = { x414170 xa7f7e3 x71414d x6e4206  }
+			state_type = unincorporated
+		}
+	}
+
+	s:STATE_MINDANAO = {
+		add_cultural_community = cu:min # Hokkien Community
+
+		add_homeland = cu:phfp_cebuano
+		add_homeland = cu:phfp_maguindanaon
+		add_homeland = cu:phfp_tausug
+		remove_homeland = cu:filipino
+		remove_homeland = cu:moro
+	}
+
 	s:STATE_LUZON = {
-		add_cultural_community = cu:min
+		add_cultural_community = cu:min # Hokkien Community
+
+		add_homeland = cu:phfp_tagalog
+		add_homeland = cu:phfp_ilocano
+		remove_homeland = cu:filipino
+		remove_homeland = cu:moro
 	}
 
 	s:STATE_VISAYAS = {
-		add_cultural_community = cu:min
+		add_cultural_community = cu:min # Hokkien Community
+
+		add_homeland = cu:phfp_cebuano
+		add_homeland = cu:phfp_ilonggo
+		remove_homeland = cu:filipino
+		remove_homeland = cu:moro
 	}
 }

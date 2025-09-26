@@ -1,12 +1,12 @@
 {
   "name" : "Philippine Flavor Mod",
   "id" : "com.github.Marushuu.Philippine-Flavor-Mod",
-  "version" : "1.1.0",
+  "version" : "1.1.1",
   "game_id" : "victoria3",
   "picture" : "thumbnail.png",
-  "supported_game_version" : "1.9.*",
+  "supported_game_version" : "1.10.*",
   "short_description" : "",
-  "tags" : ["Cultures and Religions", "Events", "Expansion", "Historical", "Journal Entries"],
+  "tags" : ["1.10", "Cultures and Religions", "Events", "Expansion", "Historical", "Journal Entries"],
   "relationships" : [],
   "game_custom_data" : {
     "multiplayer_synchronized" : true

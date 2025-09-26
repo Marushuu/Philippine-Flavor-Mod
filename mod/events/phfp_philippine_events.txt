@@ -1,4 +1,29 @@
 ﻿namespace = phfp_phi
+phfp_phi.999 = {
+	# Kill every Filipino and Moro
+	type = country_event
+	hidden = yes
+
+	trigger = {
+		game_date = 1836.1.1
+	}
+
+	immediate = {
+		every_character = {
+			limit = {
+				culture = cu:filipino
+			}
+			kill_character = yes
+		}
+		every_character = {
+			limit = {
+				culture = cu:moro
+			}
+			kill_character = yes
+		}
+	}
+}
+
 phfp_phi.1 = {
 	# Philippines Starter Event
 	type = country_event

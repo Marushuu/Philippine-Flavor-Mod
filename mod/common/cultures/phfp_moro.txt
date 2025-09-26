@@ -1,40 +1,41 @@
 ﻿moro = {
-    color= hsv{ 0.41 0.80 0.60 }
-    religion = sunni
-    traits = { southeast_asian_heritage malay_culture }
-    male_common_first_names = {
-        Aliyud_Din
-        Shakirul_Lah
-        Jamalul_Kiram
-        Mohammed_Esmail_Kiram
-        Badarud_Din
-        Shahabud_Din
-        Nasarud_Din
-        Alimud_Din
-        Bantilan_Muizzud_Din
-        Mohammad_Israel
-        Sharapud_Din
-        Shakirul_Lah
-        Mohammad_Pulalun_Kiram
-        Jamalul_A_Lam
-        Wasit
-        Mohammed_Esmail_Kiram
-        Mohammed
-        Kiram
-        Abdulmari
-        Abul
-        Hussin
-        Abdul
-        Abdulmunir
-        Iskandar
-        Mangigin
-        Kawasa
-        Bayan
-        Farouk
-        Omar
-        Iskandar_Qudraullah
-        Muhammad_Makakwa
-
+	color = { 0.41 0.8 0.6 }
+	religion = sunni
+	heritage = heritage_insulindian
+	language = language_philippinic
+	traditions = { }
+	male_common_first_names = {
+		Aliyud_Din
+		Shakirul_Lah
+		Jamalul_Kiram
+		Mohammed_Esmail_Kiram
+		Badarud_Din
+		Shahabud_Din
+		Nasarud_Din
+		Alimud_Din
+		Bantilan_Muizzud_Din
+		Mohammad_Israel
+		Sharapud_Din
+		Shakirul_Lah
+		Mohammad_Pulalun_Kiram
+		Jamalul_A_Lam
+		Wasit
+		Mohammed_Esmail_Kiram
+		Mohammed
+		Kiram
+		Abdulmari
+		Abul
+		Hussin
+		Abdul
+		Abdulmunir
+		Iskandar
+		Mangigin
+		Kawasa
+		Bayan
+		Farouk
+		Omar
+		Iskandar_Qudraullah
+		Muhammad_Makakwa
 		Abdullah
 		Abu_Bakr
 		Ahmad
@@ -102,25 +103,24 @@
 		Yusuf
 		Zahid
 		Zain
-    }
-    female_common_first_names = {
-        Amirah
-        Aminah
-        Amanah
-        Fatmawati
-        Tahira
-        Fatima
-        Laisa
-        Bahira
-        Fayza
-        Ghalia
-        Nadia
-        Noura
-        Samira
-        Sulafa
-        Zeina
-        Zuhur
-
+	}
+	female_common_first_names = {
+		Amirah
+		Aminah
+		Amanah
+		Fatmawati
+		Tahira
+		Fatima
+		Laisa
+		Bahira
+		Fayza
+		Ghalia
+		Nadia
+		Noura
+		Samira
+		Sulafa
+		Zeina
+		Zuhur
 		Aisha
 		Amira
 		Asma
@@ -145,23 +145,22 @@
 		Tarhata
 		Yasmin
 		Zaynab
-    }
-    noble_last_names = {
-        Mastura
-        Pagayawan
-        Bayang
-        Masiu
-        Bansayan
-        Rogan
-        Taporog
-        Minitupad
-        Borocot
-        Bacolod
-        Maribo
-        Ramain
-        Ditsaan
-        Baloi
-
+	}
+	noble_last_names = {
+		Mastura
+		Pagayawan
+		Bayang
+		Masiu
+		Bansayan
+		Rogan
+		Taporog
+		Minitupad
+		Borocot
+		Bacolod
+		Maribo
+		Ramain
+		Ditsaan
+		Baloi
 		Abubakar
 		Abirin
 		Alonto
@@ -192,23 +191,22 @@
 		Tawantawan
 		Tengah
 		Wasit
-    }
-    common_last_names = {
-        Janjalani
-        Jikiri
-        Sali
-        Sahidulla
-        Sulayman
-        Akbar
-        Asarul
-        Dimaporo
-        Bago
-        Ali
-        Amin
-        Hashim
-        Usman
-        Mangudadatu
-
+	}
+	common_last_names = {
+		Janjalani
+		Jikiri
+		Sali
+		Sahidulla
+		Sulayman
+		Akbar
+		Asarul
+		Dimaporo
+		Bago
+		Ali
+		Amin
+		Hashim
+		Usman
+		Mangudadatu
 		Abdullah
 		Adiong
 		Afdal
@@ -248,10 +246,9 @@
 		Tan
 		Tandoc
 		Topaan
-    }
-
-    ethnicities = {
-        1 = south_east_asian
-    }
-    graphics = east_asian
+	}
+	ethnicities = {
+		1 = south_east_asian
+	}
+	graphics = east_asian
 }

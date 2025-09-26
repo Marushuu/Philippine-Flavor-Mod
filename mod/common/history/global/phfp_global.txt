@@ -2,6 +2,7 @@
 	c:PHI ?= {
 		# Starter Event
 		trigger_event = {
+			id = phfp_phi.999
 			id = phfp_phi.1
 		}
 		# Remove Filipino
@@ -37,5 +38,13 @@
 		ig:ig_trade_unions = {
 			set_interest_group_name = phfp_ig_samahan
 		}
+	}
+	c:SUL ?= {
+		remove_primary_culture = cu:moro
+		add_primary_culture = cu:phfp_tausug
+	}
+	c:MGD ?= {
+		remove_primary_culture = cu:moro
+		add_primary_culture = cu:phfp_maguindanaon
 	}
 }

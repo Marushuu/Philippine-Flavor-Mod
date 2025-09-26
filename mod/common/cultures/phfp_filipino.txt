@@ -1,7 +1,9 @@
 ﻿filipino = {
     color= hsv{ 0.18 0.56 0.86 }
     religion = catholic
-    traits = { southeast_asian_heritage malay_culture }
+	heritage = heritage_insulindian
+	language = language_philippinic
+	traditions = { }
     male_common_first_names = { #177 Names
 		Abel
 		Adlao
