@@ -1,12 +1,11 @@
 ﻿# Politicians or Agitators
-# Jose Rizal - Who else
+# Jose Rizal - https://en.wikipedia.org/wiki/Jose_Rizal
 phfp_template_jose_rizal = {
 	first_name = "Jose"
 	last_name = "Rizal"
 	historical = yes
 	dna = phfp_dna_jose_rizal
-	culture = cu:phfp_tagalog
-	female = no
+	culture = cu:filipino_mestizo
 	religion = rel:catholic
 	ideology = ideology_liberal_leader
 	interest_group = ig_intelligentsia
@@ -31,14 +30,14 @@ phfp_template_jose_rizal = {
 	}
 }
 
-# Pedro Paterno - The Filipino Turncoat, will probably have to make him change his ideology and interest group depending on leader
+
+# Pedro Paterno - https://en.wikipedia.org/wiki/Pedro_Paterno
 phfp_template_pedro_paterno = {
-	first_name = "Pedro"
-	last_name = "Paterno"
+	first_name = Pedro
+	last_name = Paterno
 	historical = yes
 	dna = phfp_dna_pedro_paterno
-	culture = cu:phfp_tagalog
-	female = no
+	culture = cu:filipino_mestizo
 	religion = rel:catholic
 	ideology = ideology_moderate
 	interest_group = ig_landowners
@@ -50,7 +49,7 @@ phfp_template_pedro_paterno = {
 	interest_group_leader_usage = {
 		country_trigger = {
 			OR = {
-				c:PHI ?= THIS
+				c:PHI ?= this
 				was_formed_from = PHI
 			}
 		}
@@ -59,5 +58,32 @@ phfp_template_pedro_paterno = {
 		earliest_usage_date = 1876.1.1		# First Written his Opus
 		latest_usage_date = 1911.4.26		# Death
 		chance = 90
+	}
+}
+
+# Apolinario Mabini - Brains of the Revolution - https://en.wikipedia.org/wiki/Apolinario_Mabini
+phfp_template_apolinario_mabini = {
+	first_name = Apolinario
+	last_name = Mabini
+	historical = yes
+	dna = phfp_dna_apolinario_mabini
+	culture = cu:tagalog
+	religion = rel:catholic
+	ideology = ideology_republican
+	interest_group = ig_intelligentsia
+	birth_date = 1864.7.23
+	traits = {
+		persistent
+		master_bureaucrat
+		sickly
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+				is_subject = no
+			}
+		}
 	}
 }

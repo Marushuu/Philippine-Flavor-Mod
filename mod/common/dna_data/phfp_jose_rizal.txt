@@ -1,4 +1,4 @@
-﻿phfp_dna_jose_rizal = {
+﻿﻿phfp_dna_jose_rizal = {
 	enabled = yes
 	portrait_info = {
 		genes = {

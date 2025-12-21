@@ -1,0 +1,41 @@
+﻿phfp_amendment_philippine_sangleys = {
+	parent = law_cultural_exclusion
+
+	allowed_laws = {
+		law_ethnostate
+		law_national_supremacy
+		law_racial_segregation
+		law_cultural_exclusion
+	}
+
+	modifier = {
+		country_min_cultural_acceptance_add = 40
+	}
+
+	possible = {
+		c:PHI ?= this
+		country_has_primary_culture = cu:filipino
+		country_has_primary_culture = cu:filipino_hispanophone
+		country_has_primary_culture = cu:filipino_mestizo
+	}
+
+	would_sponsor = {
+		OR = {
+			AND = {
+				exists = scope:approval
+				scope:approval > 0
+			}
+			is_interest_group_type = ig_intelligentsia
+		}
+	}
+
+	ai_will_revoke = {
+		always = no
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+
+	amendment_activism_multiplier = 0.25
+}

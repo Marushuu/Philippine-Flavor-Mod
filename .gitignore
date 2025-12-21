@@ -7,3 +7,5 @@ gate.iml
 .vscode
 .cwtool
 vscode-userdata:
+/mod/vscode-userdata:
+/mod/.vscode

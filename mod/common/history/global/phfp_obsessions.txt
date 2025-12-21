@@ -1,31 +1,27 @@
 ﻿GLOBAL = {
 	cu:filipino = {
+		add_cultural_obsession = tobacco
+	}
+	cu:filipino_hispanophone = {
+		add_cultural_obsession = tobacco
+	}
+	cu:filipino_mestizo = {
+		add_cultural_obsession = tobacco
+	}
+	cu:tagalog = {
 		add_cultural_obsession = coffee
 		add_cultural_obsession = tobacco
 	}
-	cu:phfp_tagalog = {
+	cu:visayan = {
 		add_cultural_obsession = coffee
 		add_cultural_obsession = tobacco
 	}
-	cu:phfp_ilocano = {
-		add_cultural_obsession = coffee
-		add_cultural_obsession = tobacco
-	}
-	cu:phfp_cebuano = {
-		add_cultural_obsession = coffee
-		add_cultural_obsession = tobacco
-	}
-	cu:phfp_ilonggo = {
+	cu:ilocano = {
 		add_cultural_obsession = coffee
 		add_cultural_obsession = tobacco
 	}
 	cu:moro = {
-		add_cultural_obsession = tobacco
-	}
-	cu:phfp_tausug = {
-		add_cultural_obsession = tobacco
-	}
-	cu:phfp_maguindanaon = {
+		add_cultural_obsession = coffee
 		add_cultural_obsession = tobacco
 	}
 }

@@ -1,1 +1,85 @@
-﻿
+﻿# Commanders
+# Antonio Luna - https://en.wikipedia.org/wiki/Antonio_Luna
+phfp_template_antonio_luna = {
+	first_name = Antonio
+	last_name = Luna
+	historical = yes
+	dna = phfp_dna_antonio_luna
+	culture = cu:filipino_mestizo
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist
+	birth_date = 1866.10.29
+	traits = {
+		arrogant
+		direct
+		brave
+		experienced_offensive_planner
+	}
+	commander_usage = {
+		country_trigger = {
+			c:PHI ?= this
+		}
+		role = general
+		earliest_usage_date = 1898.9.26
+		chance = 100
+	}
+}
+
+# Gregorio del Pilar - https://en.wikipedia.org/wiki/Gregorio_del_Pilar
+phfp_template_gregorio_del_pilar = {
+	first_name = Gregorio
+	last_name = "del Pilar"
+	historical = yes
+	dna = phfp_dna_gregorio_del_pilar
+	culture = cu:filipino_mestizo
+	interest_group = ig_armed_forces
+	ideology = ideology_republican
+	birth_date = 1875.11.14
+	traits = {
+		romantic
+		celebrity_commander
+	}
+	commander_usage = {
+		country_trigger = {
+			c:PHI ?= this
+		}
+		role = general
+		earliest_usage_date = 1898.5.28
+		chance = 100
+	}
+}
+
+# Miguel Malvar - https://en.wikipedia.org/wiki/Miguel_Malvar
+phfp_template_miguel_malvar = {
+	first_name = Miguel
+	last_name = Malvar
+	historical = yes
+	dna = phfp_dna_miguel_malvar
+	culture = cu:tagalog
+	interest_group = ig_armed_forces
+	ideology = ideology_republican
+	birth_date = 1865.9.27
+	traits = {
+		persistent
+		brave
+		experienced_defensive_strategist
+	}
+	commander_usage = {
+		country_trigger = {
+			c:PHI ?= this
+		}
+		role = general
+		earliest_usage_date = 1896.1.1
+		chance = 100
+	}
+}
+
+# Artemio Ricarte - https://en.wikipedia.org/wiki/Artemio_Ricarte
+phfp_template_artemio_ricarte = {
+	first_name = Artemio
+	last_name = Ricarte
+	historical = yes
+	dna = phfp_dna_artemio_ricarte
+	culture = cu:tagalog
+	
+}

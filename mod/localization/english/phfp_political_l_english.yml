@@ -33,14 +33,12 @@
   phfp_py_social_democrats: "PDSP" # Partido Demokratiko Sosyalista ng Pilipinas
 
   # Interest Groups
-  phfp_ig_ilustrados: "Ilustrados" # Intelligentsia
   phfp_ig_principalia: "Principalia" # Landowners
   phfp_ig_simbahan: "Simbahan" # Devout
   phfp_ig_sakahan: "Sakahan" # Rural Folk
   phfp_ig_samahan: "Samahan" # Trade Unions
 
   # Interest Group Descriptions
-  phfp_ig_ilustrados_desc: "Literally meaning 'the enlightened ones', the #italic Ilustrados#! are the intellectual elite of Filipino society who studied in Europe and the Americas. Influenced by Enlightenment ideas, they advocate for social and political reforms."
   phfp_ig_principalia_desc: "The #italic Principalia#! are the wealthy landowners and traditional elites. Comprising both of Spanish Colonial Families to the Pre-Colonial Nobility, they seek to maintain their social status and influence in the political landscape."
   phfp_ig_simbahan_desc: "Literally meaning 'Church', the #italic Simbahan#! represents the powerful Catholic Church institution and its faithful as it deeply embedded itself into Filipino society. Controlling vast friar estates and educational institutions, they wield enormous influence over the rural communities."
   phfp_ig_sakahan_desc: "Literally meaning 'Farmland', they represent the collective farming communities that form the backbone of Philippine rural society."
