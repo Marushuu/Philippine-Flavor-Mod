@@ -117,10 +117,6 @@ phfp_moro.2 = {
 			}
 		}
 		add_radicals = {
-			value = 0.02
-			culture = cu:filipino
-		}
-		add_radicals = {
 			value = 0.5
 			pop_type = officers
 		}
@@ -143,122 +139,6 @@ phfp_moro.2 = {
 		}
 		s:STATE_MINDANAO = {
 			add_claim = c:PHI
-		}
-	}
-}
-
-# The Moro Raids
-phfp_moro.5 = {
-	type = country_event
-	title = phfp_moro.5.t
-	desc = phfp_moro.5.d
-	flavor = phfp_moro.5.f
-
-	duration = 3
-
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
-	event_image = {
-		video = "unspecific_vandalized_storefront"
-	}
-
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-
-	trigger = {
-		OR = {
-			AND = {
-				exists = c:SUL
-				c:SUL = { relations:root <= relations_threshold:neutral }
-				NOT = { c:CON = { is_subject_of = c:PHI } }
-			}
-			AND = {
-				exists = c:MGD
-				c:MGD = { relations:root <= relations_threshold:neutral }
-				NOT = { c:CON = { is_subject_of = c:PHI } }
-			}
-		}
-		any_scope_character = {
-			has_role = general
-			is_ruler = no
-			is_heir = no
-		}
-	}
-
-	immediate = {
-		save_scope_as = phfp_moro_raided_scope
-		random_scope_state = {
-			limit = {
-				OR = {
-					state_region = s:STATE_LUZON
-					state_region = s:STATE_VISAYAS
-					state_region = s:STATE_MINDANAO
-				}
-			}
-			save_scope_as = phfp_moro_raided_state_scope
-		}
-		random_neighbouring_state = {
-			limit = {
-				OR = {
-					c:SUL ?= owner
-					c:MGD ?= owner
-				}
-				NOT = { owner = { is_subject_of = c:PHI } }
-				owner = {
-					relations:root <= relations_threshold:cordial
-				}
-			}
-			owner = { save_scope_as = phfp_moro_raiding_country }
-		}
-		random_scope_character = {
-			limit = {
-				has_role = general
-				is_ruler = no
-				is_heir = no
-			}
-			save_scope_as = phfp_moro_raid_general_scope
-		}
-	}
-
-	option = {
-		name = phfp_moro.5.a
-		default_option = yes
-		scope:phfp_moro_raided_state_scope = {
-			add_modifier = {
-				name = phfp_md_moro_state_raided
-				years = 1
-			}
-		}
-		change_relations = {
-			country = scope:phfp_moro_raiding_country
-			value = -20
-		}
-	}
-
-	option = {
-		name = phfp_moro.5.b
-		scope:phfp_moro_raided_state_scope = {
-			add_modifier = {
-				name = phfp_md_moro_state_raided
-				years = 1
-			}
-		}
-		trigger = {
-			exists = scope:phfp_moro_failed_leader
-		}
-		custom_tooltip = {
-			text = phfp_moro.5.tt
-			random_list = {
-				75 = {
-					scope:phfp_moro_raid_general_scope = {
-						kill_character = yes
-					}
-				}
-				25 = {}
-			}
-		}
-		change_relations = {
-			country = scope:phfp_moro_raiding_country
-			value = -20
 		}
 	}
 }

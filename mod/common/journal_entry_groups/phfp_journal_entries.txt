@@ -14,3 +14,6 @@ phfp_je_group_militarization = {
 phfp_je_group_nationalism = {
 	context = country
 }
+phfp_je_group_overwrites = {
+	context = country
+}

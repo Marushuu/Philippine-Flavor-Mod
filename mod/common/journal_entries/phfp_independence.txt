@@ -9,6 +9,10 @@
 		is_subject = yes
 	}
 	possible = {
+		OR = {
+			c:PHI ?= THIS
+			was_formed_from = PHI
+		}
 		is_subject = yes
 	}
 	immediate = {
@@ -41,11 +45,6 @@
 		ig:ig_industrialists = {
 			remove_ideology = ideology_colonialist
 			add_ideology = ideology_laissez_faire
-		}
-		ig:ig_landowners = {
-			remove_ideology = ideology_colonialist
-			remove_ideology = ideology_stratocratic
-			add_ideology = ideology_oligarchic
 		}
 		add_journal_entry = {
 			type = phfp_je_military_modernization_main

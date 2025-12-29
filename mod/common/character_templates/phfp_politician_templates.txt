@@ -21,12 +21,15 @@ phfp_template_jose_rizal = {
 				c:PHI ?= THIS
 				was_formed_from = PHI
 			}
+			NOT = {
+				has_dlc_feature = ip4_content
+			}
 		}
 		interest_group_trigger = {
 		}
-		earliest_usage_date = 1879.6.19		# 18 Years Old
+		earliest_usage_date = 1887.1.1		# Noli me Tangere publication
 		latest_usage_date = 1896.12.30		# Execution
-		chance = 65		# So that he doesn't show up ASAP
+		chance = 0							# Spawned in by event
 	}
 }
 
@@ -54,6 +57,7 @@ phfp_template_pedro_paterno = {
 			}
 		}
 		interest_group_trigger = {
+			is_interest_group_type = ig_landowners
 		}
 		earliest_usage_date = 1876.1.1		# First Written his Opus
 		latest_usage_date = 1911.4.26		# Death
@@ -82,8 +86,14 @@ phfp_template_apolinario_mabini = {
 			OR = {
 				c:PHI ?= this
 				was_formed_from = PHI
-				is_subject = no
 			}
+			is_subject = no
 		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1899.1.1	# Establishment of the Prime Minister Position
+		latest_usage_date = 1903.5.13	# Death
+		chance = 100
 	}
 }

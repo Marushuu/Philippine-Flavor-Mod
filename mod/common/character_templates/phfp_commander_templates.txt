@@ -17,7 +17,10 @@ phfp_template_antonio_luna = {
 	}
 	commander_usage = {
 		country_trigger = {
-			c:PHI ?= this
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
 		}
 		role = general
 		earliest_usage_date = 1898.9.26
@@ -41,7 +44,10 @@ phfp_template_gregorio_del_pilar = {
 	}
 	commander_usage = {
 		country_trigger = {
-			c:PHI ?= this
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
 		}
 		role = general
 		earliest_usage_date = 1898.5.28
@@ -66,7 +72,10 @@ phfp_template_miguel_malvar = {
 	}
 	commander_usage = {
 		country_trigger = {
-			c:PHI ?= this
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
 		}
 		role = general
 		earliest_usage_date = 1896.1.1
@@ -81,5 +90,22 @@ phfp_template_artemio_ricarte = {
 	historical = yes
 	dna = phfp_dna_artemio_ricarte
 	culture = cu:tagalog
-	
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist
+	birth_date = 1866.10.20
+	traits = {
+		persistent
+		reckless
+		experienced_defensive_strategist
+	}
+	commander_usage = {
+		country_trigger = { 
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
+		}
+		earliest_usage_date = 1896.8.31
+		chance = 100
+	}
 }

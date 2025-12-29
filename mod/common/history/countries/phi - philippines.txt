@@ -1,0 +1,76 @@
+﻿COUNTRIES = {
+	c:PHI ?= {
+		add_primary_culture = cu:spanish
+		remove_primary_culture = cu:filipino_mestizo
+		remove_primary_culture = cu:tagalog
+		remove_primary_culture = cu:ilocano
+		remove_primary_culture = cu:visayan
+
+		effect_starting_technology_tier_3_tech  = yes
+
+		effect_starting_politics_conservative = yes
+
+		activate_law = law_type:law_colonial_administration
+		activate_law = law_type:law_state_religion
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_legacy_slavery
+		activate_law = law_type:law_subjecthood
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_religious_schools
+		activate_law = law_type:law_censorship
+
+		active_law:lawgroup_citizenship ?= { # Subjecthood
+			add_amendment = {
+				type = amendment_racialized_subjecthood
+				sponsor = PREV.ig:ig_armed_forces
+			}
+			add_amendment = {
+				type = phfp_amendment_philippine_sangleys
+				sponsor = prev.ig:ig_intelligentsia
+			}
+		}
+
+		ig:ig_landowners ?= {
+			add_ruling_interest_group = yes
+			set_interest_group_name = phfp_ig_principalia
+		}
+
+		ig:ig_devout = {
+			add_ruling_interest_group = yes
+			set_interest_group_name = phfp_ig_simbahan
+		}
+
+		ig:ig_industrialists = {
+			remove_ideology = ideology_laissez_faire
+			add_ideology = ideology_colonialist
+		}
+
+		ig:ig_petty_bourgeoisie = {
+			remove_ideology = ideology_reactionary
+			add_ideology = ideology_modernizer
+		}
+
+		ig:ig_rural_folk = {
+			set_interest_group_name = phfp_ig_sakahan
+		}
+
+		ig:ig_trade_unions = {
+			set_interest_group_name = phfp_ig_samahan
+		}
+
+		if = {
+			limit = {
+				has_dlc_feature = ip4_content # Iberian Twilight
+			}
+		}
+		else = {
+			trigger_event = {
+				id = phfp_phi.1
+			}
+		}
+		
+		initialise_caciquismo_effect = yes
+	}
+}

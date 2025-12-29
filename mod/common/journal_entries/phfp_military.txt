@@ -54,9 +54,6 @@ phfp_je_army_reform = {
 	group = phfp_je_group_militarization
 	complete = {
 		has_technology_researched = military_statistics
-		NOT = {
-			has_law = law_type:law_peasant_levies
-		}
 		any_military_formation = {
 			count = all
 			filter = {

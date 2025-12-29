@@ -1,7 +1,39 @@
 ﻿phfp_je_conquest_of_moroland = {
 	icon = "gfx/interface/icons/invention_icons/napoleonic_warfare.dds"
-	 # Similar to the French Conquest of Algeria with some tweaks teehee
 	group = phfp_je_group_moroland
+
+	is_shown_when_inactive = {
+		OR = {
+			c:PHI ?= THIS
+			was_formed_from = PHI
+		}
+	}
+
+	possible = {
+		OR = {
+			AND = {
+				is_subject = yes
+				is_subject_type = subject_type_dominion
+			}
+			is_subject = no
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_dlc_feature = ip4_content
+				}
+			}
+			activate_law = law_type:law_frontier_colonization
+		}
+		c:SUL = {
+			s:STATE_LUZON = {
+				add_claim = c:PHI
+			}
+		}
+	}
 
 	complete = {
 		country_or_subject_owns_entire_state_region = STATE_LUZON
@@ -20,13 +52,6 @@
 
 	on_fail = {
 		trigger_event = phfp_moro.2
-	}
-
-	on_monthly_pulse = {
-		random_events = {
-			95 = 0
-			5 = phfp_moro.5
-		}
 	}
 
 	transferable = no

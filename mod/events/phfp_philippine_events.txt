@@ -1,31 +1,6 @@
 ﻿namespace = phfp_phi
-phfp_phi.999 = {
-	# Kill every Filipino and Moro
-	type = country_event
-	hidden = yes
-
-	trigger = {
-		game_date = 1836.1.1
-	}
-
-	immediate = {
-		every_character = {
-			limit = {
-				culture = cu:filipino
-			}
-			kill_character = yes
-		}
-		every_character = {
-			limit = {
-				culture = cu:moro
-			}
-			kill_character = yes
-		}
-	}
-}
-
 phfp_phi.1 = {
-	# Philippines Starter Event
+	# Philippines Starter Event - No Dlc
 	type = country_event
 	placement = root
 	title = phfp_phi.1.t
@@ -33,12 +8,16 @@ phfp_phi.1 = {
 	flavor = phfp_phi.1.f
 	duration = 3
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
 	event_image = {
 		video = "southamerica_aristocrats"
 	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
 	trigger = {
 	}
+
 	immediate = {
 		c:SPA = {
 			save_scope_as = spain_scope
@@ -49,9 +28,6 @@ phfp_phi.1 = {
 		default_option = yes
 		trigger_event = {
 			id = phfp_phi.2
-		}
-		add_journal_entry = {
-			type = phfp_je_conquest_of_moroland
 		}
 		add_journal_entry = {
 			type = phfp_je_modernization_main
@@ -128,6 +104,11 @@ phfp_phi.3 = {
 		name = phfp_phi.3.a
 		default_option = yes
 		add_primary_culture = cu:filipino
+		start_national_awakening = {
+			culture = cu:filipino
+			months = 60
+			state_region = s:STATE_LUZON
+		}
 		remove_primary_culture = cu:spanish
 		every_scope_character = {
 			limit = {
@@ -140,15 +121,35 @@ phfp_phi.3 = {
 			culture = cu:spanish
 			value = very_large_radicals
 		}
+		s:STATE_LUZON = {
+			add_homeland = cu:filipino
+			remove_homeland = cu:filipino_mestizo
+		}
+		s:STATE_VISAYAS = {
+			add_homeland = cu:filipino
+			remove_homeland = cu:filipino_mestizo
+		}
+		s:STATE_MINDANAO = {
+			add_homeland = cu:filipino
+			remove_homeland = cu:filipino_mestizo
+		}
 		trigger_event = {
 			id = phfp_malolos.1
 		}
 	}
 	option = {
 		name = phfp_phi.3.b
-		add_primary_culture = cu:filipino
+		add_primary_culture = cu:filipino_mestizo
 		add_radicals = {
-			culture = cu:filipino
+			culture = cu:tagalog
+			value = very_large_radicals
+		}
+		add_radicals = {
+			culture = cu:visayan
+			value = very_large_radicals
+		}
+		add_radicals = {
+			culture = cu:ilocano
 			value = very_large_radicals
 		}
 		trigger_event = {

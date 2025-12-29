@@ -1,8 +1,8 @@
 ﻿l_english:
   phfp_md_opening_of_trade: "The Opening of the Port of Manila"
 
-  phfp_md_growing_identity: "Fermenting Filipino Identity"
-  phfp_md_nationalistic_fervor: "Filipino Nationalistic Fervor"
+  phfp_md_growing_identity: "Fermenting the Philippine Identity"
+  phfp_md_nationalistic_fervor: "Philippine Nationalistic Fervor"
 
   phfp_md_patriotic_government: "Patriotic Government"
   phfp_md_secularism: "Pushing for Secularism"
@@ -11,8 +11,8 @@
 
   phfp_md_moro_state_raided: "Devastating Moro Raids"
   phfp_md_moros_vanquished: "Moro Forces Vanquished"
-  phfp_md_moro_migration: "Filipino Settlers"
-  phfp_md_moro_conversion: "Filipino Missionaries"
+  phfp_md_moro_migration: "Settling Moroland"
+  phfp_md_moro_conversion: "Converting Moroland"
   phfp_md_moro_failure: "Humiliation in Moroland"
 
   phfp_md_foreign_investment: "Overlord's Investment"
@@ -33,9 +33,9 @@
   phfp_md_railway_expansion: "Military Rail Expansion"
   phfp_md_controlled_rail_expansion: "Denied Military Rail Expansion"
   phfp_md_modernized_military: "Modernized Military"
-  phfp_md_modernized_army: "Filipino Defense Force"
-  phfp_md_modernized_navy: "Filipino Maritime Defense"
-  phfp_md_policing: "Filipino National Guard"
+  phfp_md_modernized_army: "Philippine Defense Force"
+  phfp_md_modernized_navy: "Philippine Maritime Defense"
+  phfp_md_policing: "Philippine National Guard"
   phfp_md_logistics: "Modernized Logistics Network"
 
   phfp_economic_focus: "Economic Boom"

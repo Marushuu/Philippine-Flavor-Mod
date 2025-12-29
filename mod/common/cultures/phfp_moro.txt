@@ -1,5 +1,5 @@
 ﻿moro = {
-	color = { 0.41 0.8 0.6 }
+	color = hsv{ 0.41 0.80 0.60 }
 	religion = sunni
 	heritage = heritage_insulindian
 	language = language_philippinic
