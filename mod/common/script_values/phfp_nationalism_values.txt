@@ -1,0 +1,214 @@
+﻿phfp_tagalog_literacy_value = {
+	value = {
+		every_scope_pop = {
+			limit = {
+				culture = cu:tagalog
+			}
+			add = literacy_rate
+		}
+	}
+	divide = {
+		every_scope = {
+			limit = {
+				culture = cu:tagalog
+			}
+			add = 1
+		}
+		min = 1
+	}
+}
+
+phfp_tagalog_wealth_value = {
+	value = {
+		every_scope_pop = {
+			limit = {
+				culture = cu:tagalog
+			}
+			add = wealth
+		}
+	}
+	divide = {
+		every_scope = {
+			limit = {
+				culture = cu:tagalog
+			}
+			add = 1
+		}
+		min = 1
+	}
+	divide = 45
+}
+
+phfp_tagalog_radicals_value = {
+	value = {
+		every_scope_pop= {
+			limit = {
+				culture = cu:tagalog
+			}
+			add = pop_radical_fraction
+		}
+	}
+	divide = {
+		every_scope = {
+			limit = {
+				culture = cu:tagalog
+			}
+			add = 1
+		}
+		min = 1
+	}
+}
+
+phfp_visaya_literacy_value = {
+	value = {
+		every_scope_pop = {
+			limit = {
+				culture = cu:visayan
+			}
+			add = literacy_rate
+		}
+	}
+	divide = {
+		every_scope = {
+			limit = {
+				culture = cu:visayan
+			}
+			add = 1
+		}
+		min = 1
+	}
+}
+
+phfp_visaya_wealth_value = {
+	value = {
+		every_scope_pop = {
+			limit = {
+				culture = cu:visayan
+			}
+			add = wealth
+		}
+	}
+	divide = {
+		every_scope = {
+			limit = {
+				culture = cu:visayan
+			}
+			add = 1
+		}
+		min = 1
+	}
+	divide = 45
+}
+
+phfp_visaya_radicals_value = {
+	value = {
+		every_scope_pop= {
+			limit = {
+				culture = cu:visayan
+			}
+			add = pop_radical_fraction
+		}
+	}
+	divide = {
+		every_scope = {
+			limit = {
+				culture = cu:visayan
+			}
+			add = 1
+		}
+		min = 1
+	}
+}
+
+phfp_moro_literacy_value = {
+	value = {
+		every_scope_pop = {
+			limit = {
+				culture = cu:moro
+			}
+			add = literacy_rate
+		}
+	}
+	divide = {
+		every_scope = {
+			limit = {
+				culture = cu:moro
+			}
+			add = 1
+		}
+		min = 1
+	}
+}
+
+phfp_moro_wealth_value = {
+	value = {
+		every_scope_pop = {
+			limit = {
+				culture = cu:moro
+			}
+			add = wealth
+		}
+	}
+	divide = {
+		every_scope = {
+			limit = {
+				culture = cu:moro
+			}
+			add = 1
+		}
+		min = 1
+	}
+}
+
+phfp_moro_radicals_value = {
+	value = {
+		every_scope_pop= {
+			limit = {
+				culture = cu:moro
+			}
+			add = pop_radical_fraction
+		}
+	}
+	divide = {
+		every_scope = {
+			limit = {
+				culture = cu:moro
+			}
+			add = 1
+		}
+		min = 1
+	}
+}
+
+phfp_moro_loyalist_value = {
+	value = {
+		every_scope_pop= {
+			limit = {
+				culture = cu:moro
+			}
+			add = pop_loyalist_fraction
+		}
+	}
+	divide = {
+		every_scope = {
+			limit = {
+				culture = cu:moro
+			}
+			add = 1
+		}
+		min = 1
+	}
+}
+
+phfp_university_count_value = {
+	value = 0
+	every_scope_state = {
+		every_scope_building = {
+			limit = {
+				is_building_type = building_university
+			}
+			add = level
+		}
+	}
+	divide = 5
+}

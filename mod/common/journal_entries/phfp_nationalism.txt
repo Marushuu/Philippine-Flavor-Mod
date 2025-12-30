@@ -1,1 +1,32 @@
-﻿
+﻿phfp_je_questions_of_language = {
+	group = phfp_je_group_nationalism
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	is_shown_when_inactive = {
+		c:PHI ?= this
+		# has_technology_researched = nationalism
+	}
+
+	possible = {
+		# country_has_primary_culture = cu:filipino
+		# literacy_rate > 0.25
+		has_technology_researched = nationalism
+	}
+
+	immediate = {
+		# trigger_event = {
+		# 	id = phfp_nationalism.1
+		# }
+	}
+
+	scripted_progress_bar = phfp_tagalog_bar
+	scripted_progress_bar = phfp_visaya_bar
+	scripted_progress_bar = phfp_moro_bar
+	scripted_progress_bar = phfp_filipino_bar
+
+	# scripted_button = phfp_language_commission_button
+	# scripted_button = phfp_declare_language_button
+
+	complete = {
+	}
+}
