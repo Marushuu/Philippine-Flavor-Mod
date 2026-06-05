@@ -24,7 +24,6 @@
 			triggered_desc = {
 				desc = party_british_socialist_party
 				trigger = {
-					exists = c:GBR
 					c:GBR ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -37,7 +36,6 @@
 			triggered_desc = {
 				desc = party_pcf
 				trigger = {
-					exists = c:FRA
 					c:FRA ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -50,7 +48,6 @@
 			triggered_desc = {
 				desc = party_kps
 				trigger = {
-					exists = c:SWI
 					c:SWI ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -63,7 +60,6 @@
 			triggered_desc = {
 				desc = party_nkp
 				trigger = {
-					exists = c:NOR
 					c:NOR ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -76,7 +72,6 @@
 			triggered_desc = {
 				desc = party_dkp
 				trigger = {
-					exists = c:DEN
 					c:DEN ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -89,7 +84,6 @@
 			triggered_desc = {
 				desc = party_skp
 				trigger = {
-					exists = c:SWE
 					c:SWE ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -102,7 +96,6 @@
 			triggered_desc = {
 				desc = party_skp
 				trigger = {
-					exists = c:FIN
 					c:FIN ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -115,7 +108,6 @@
 			triggered_desc = {
 				desc = party_kpl
 				trigger = {
-					exists = c:LUX
 					c:LUX ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -128,7 +120,6 @@
 			triggered_desc = {
 				desc = party_bkp
 				trigger = {
-					exists = c:BUL
 					c:BUL ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -141,7 +132,6 @@
 			triggered_desc = {
 				desc = party_mkp
 				trigger = {
-					exists = c:HUN
 					c:HUN ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -154,7 +144,6 @@
 			triggered_desc = {
 				desc = party_kpo
 				trigger = {
-					exists = c:AUS
 					c:AUS ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -167,7 +156,6 @@
 			triggered_desc = {
 				desc = party_jcp
 				trigger = {
-					exists = c:JAP
 					c:JAP ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -180,7 +168,6 @@
 			triggered_desc = {
 				desc = party_justice_party
 				trigger = {
-					exists = c:PER
 					c:PER ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -193,7 +180,6 @@
 			triggered_desc = {
 				desc = party_socialist_workers_party
 				trigger = {
-					exists = c:MEX
 					c:MEX ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -206,7 +192,6 @@
 			triggered_desc = {
 				desc = party_kke
 				trigger = {
-					exists = c:GRE
 					c:GRE ?= THIS
 					any_interest_group = {
 						is_powerful = yes
@@ -329,12 +314,17 @@
 	available_for_interest_group = {
 		owner = {
 			country_has_voting_franchise = yes
-			any_interest_group = {
-				leader ?= {
-					OR = {
-						has_ideology = ideology:ideology_communist
-						has_ideology = ideology:ideology_vanguardist
-						has_ideology = ideology:ideology_anarchist
+			OR = {
+				py:communist_party ?= {
+					any_member = {}
+				}		
+				any_interest_group = {
+					leader ?= {
+						OR = {
+							has_ideology = ideology:ideology_communist
+							has_ideology = ideology:ideology_vanguardist
+							has_ideology = ideology:ideology_anarchist
+						}
 					}
 				}
 			}
@@ -350,7 +340,7 @@
 				has_ideology = ideology:ideology_ethno_nationalist
 				has_ideology = ideology:ideology_market_liberal
 				has_ideology = ideology:ideology_traditionalist
-				has_ideology = ideology:ideology_carlist
+				character_has_carlist_ideology = yes
 				has_ideology = ideology:ideology_royalist
 				has_ideology = ideology:ideology_orleanist
 				has_ideology = ideology:ideology_bonapartist
@@ -610,6 +600,7 @@
 					has_ideology = ideology:ideology_egalitarian_modern
 					has_ideology = ideology:ideology_anti_slavery
 					has_ideology = ideology:ideology_laissez_faire
+					has_ideology = ideology:ideology_interventionist
 					has_ideology = ideology:ideology_particularist
 					leader ?= {
 						OR = {

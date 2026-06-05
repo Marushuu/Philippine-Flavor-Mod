@@ -1,138 +1,138 @@
-﻿phfp_tagalog_bar = {
-	name = "phfp_tagalog_bar"
-	desc = "phfp_tagalog_bar_desc"
+﻿# phfp_tagalog_bar = {
+# 	name = "phfp_tagalog_bar"
+# 	desc = "phfp_tagalog_bar_desc"
 
-	default = yes
+# 	default = yes
 
-	monthly_progress = {
-		add = {
-			desc = "phfp_progress_from_principalia_clout"
-			value = owner.ig:ig_landowners.ig_clout
-		}
-		add = {
-			desc = "phfp_progress_from_army_clout"
-			value = owner.ig:ig_armed_forces.ig_clout
-		}
-		add = {
-			desc = "phfp_progress_from_tagalog_literacy"
-			value = phfp_tagalog_literacy_value
-		}
-		add = {
-			desc = "phfp_progress_from_tagalog_wealth"
-			value = phfp_tagalog_wealth_value
-		}
-		subtract = {
-			desc = "phfp_progress_from_tagalog_radicals"
-			value = phfp_tagalog_radicals_value
-		}
-	}
+# 	monthly_progress = {
+# 		add = {
+# 			desc = "phfp_progress_from_principalia_clout"
+# 			value = owner.ig:ig_landowners.ig_clout
+# 		}
+# 		add = {
+# 			desc = "phfp_progress_from_army_clout"
+# 			value = owner.ig:ig_armed_forces.ig_clout
+# 		}
+# 		add = {
+# 			desc = "phfp_progress_from_tagalog_literacy"
+# 			value = phfp_tagalog_literacy_value
+# 		}
+# 		add = {
+# 			desc = "phfp_progress_from_tagalog_wealth"
+# 			value = phfp_tagalog_wealth_value
+# 		}
+# 		subtract = {
+# 			desc = "phfp_progress_from_tagalog_radicals"
+# 			value = phfp_tagalog_radicals_value
+# 		}
+# 	}
 
-	start_value = 0
-	min_value = 0
-	max_value = 360
-}
+# 	start_value = 0
+# 	min_value = 0
+# 	max_value = 360
+# }
 
-phfp_visaya_bar = {
-	name = "phfp_visaya_bar"
-	desc = "phfp_visaya_bar_desc"
+# phfp_visaya_bar = {
+# 	name = "phfp_visaya_bar"
+# 	desc = "phfp_visaya_bar_desc"
 
-	default = yes
+# 	default = yes
 
-	monthly_progress = {
-		add = {
-			desc = "phfp_progress_from_bour_clout"
-			value = owner.ig:ig_petty_bourgeoisie.ig_clout
-		}
-		add = {
-			desc = "phfp_progress_from_rural_clout"
-			value = owner.ig:ig_rural_folk.ig_clout
-		}
-		add = {
-			desc = "phfp_progress_from_visaya_literacy"
-			value = phfp_visaya_literacy_value
-		}
-		add = {
-			desc = "phfp_progress_from_visaya_wealth"
-			value = phfp_visaya_wealth_value
-		}
-		subtract = {
-			desc = "phfp_progress_from_visaya_radicals"
-			value = phfp_visaya_radicals_value
-		}
-	}
+# 	monthly_progress = {
+# 		add = {
+# 			desc = "phfp_progress_from_bour_clout"
+# 			value = owner.ig:ig_petty_bourgeoisie.ig_clout
+# 		}
+# 		add = {
+# 			desc = "phfp_progress_from_rural_clout"
+# 			value = owner.ig:ig_rural_folk.ig_clout
+# 		}
+# 		add = {
+# 			desc = "phfp_progress_from_visaya_literacy"
+# 			value = phfp_visaya_literacy_value
+# 		}
+# 		add = {
+# 			desc = "phfp_progress_from_visaya_wealth"
+# 			value = phfp_visaya_wealth_value
+# 		}
+# 		subtract = {
+# 			desc = "phfp_progress_from_visaya_radicals"
+# 			value = phfp_visaya_radicals_value
+# 		}
+# 	}
 
-	start_value = 0
-	min_value = 0
-	max_value = 360
-}
+# 	start_value = 0
+# 	min_value = 0
+# 	max_value = 360
+# }
 
-phfp_moro_bar = {
-	name = "phfp_moro_bar"
-	desc = "phfp_moro_bar_desc"
+# phfp_moro_bar = {
+# 	name = "phfp_moro_bar"
+# 	desc = "phfp_moro_bar_desc"
 
-	default = yes
+# 	default = yes
 
-	monthly_progress = {
-		if = {
-			limit = {
-				owner = {
-					NOT = {
-						has_law_or_variant = law_type:law_state_religion
-						has_law_or_variant = law_type:law_state_atheism
-					}
-				}
-			}
-			add = {
-				desc = "phfp_progress_from_moro_loyalism"
-				value = phfp_moro_loyalist_value
-			}
-		}
-		add = {
-			desc = "phfp_progress_from_moro_literacy"
-			value = phfp_moro_literacy_value
-		}
-		add = {
-			desc = "phfp_progress_from_moro_wealth"
-			value = phfp_moro_wealth_value
-		}
-		subtract = {
-			desc = "phfp_progress_from_moro_radicals"
-			value = phfp_moro_radicals_value
-		}
-	}
+# 	monthly_progress = {
+# 		if = {
+# 			limit = {
+# 				owner = {
+# 					NOT = {
+# 						has_law_or_variant = law_type:law_state_religion
+# 						has_law_or_variant = law_type:law_state_atheism
+# 					}
+# 				}
+# 			}
+# 			add = {
+# 				desc = "phfp_progress_from_moro_loyalism"
+# 				value = phfp_moro_loyalist_value
+# 			}
+# 		}
+# 		add = {
+# 			desc = "phfp_progress_from_moro_literacy"
+# 			value = phfp_moro_literacy_value
+# 		}
+# 		add = {
+# 			desc = "phfp_progress_from_moro_wealth"
+# 			value = phfp_moro_wealth_value
+# 		}
+# 		subtract = {
+# 			desc = "phfp_progress_from_moro_radicals"
+# 			value = phfp_moro_radicals_value
+# 		}
+# 	}
 
-	start_value = 0
-	min_value = 0
-	max_value = 360
-}
+# 	start_value = 0
+# 	min_value = 0
+# 	max_value = 360
+# }
 
-phfp_filipino_bar = {
-	name = "phfp_filipino_bar"
-	desc = "phfp_filipino_bar_desc"
+# phfp_filipino_bar = {
+# 	name = "phfp_filipino_bar"
+# 	desc = "phfp_filipino_bar_desc"
 
-	default = yes
+# 	default = yes
 
-	monthly_progress = {
-		add = {
-			desc = "phfp_progress_from_ilustrado_clout"
-			value = owner.ig:ig_intelligentsia.ig_clout
-		}
-		add = {
-			desc = "phfp_progress_from_industrialist_clout"
-			value = owner.ig:ig_industrialists.ig_clout
-		}
-		add = {
-			desc = "phfp_progress_from_universities"
-			value = phfp_university_count_value
-		}
-		add = {
-			desc = "phfp_progress_from_investment"
-			value = owner.var:filipino_language_investment
-		}
-	}
+# 	monthly_progress = {
+# 		add = {
+# 			desc = "phfp_progress_from_ilustrado_clout"
+# 			value = owner.ig:ig_intelligentsia.ig_clout
+# 		}
+# 		add = {
+# 			desc = "phfp_progress_from_industrialist_clout"
+# 			value = owner.ig:ig_industrialists.ig_clout
+# 		}
+# 		add = {
+# 			desc = "phfp_progress_from_universities"
+# 			value = phfp_university_count_value
+# 		}
+# 		add = {
+# 			desc = "phfp_progress_from_investment"
+# 			value = owner.var:filipino_language_investment
+# 		}
+# 	}
 
-	start_value = 0
-	min_value = 0
-	max_value = 360
-}
+# 	start_value = 0
+# 	min_value = 0
+# 	max_value = 360
+# }
 

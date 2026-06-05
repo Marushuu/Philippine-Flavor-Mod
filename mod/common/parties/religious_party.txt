@@ -15,7 +15,6 @@ religious_party = {
 			triggered_desc = {
 				desc = party_fatherland_front
 				trigger = {
-					exists = c:AUS
 					c:AUS ?= THIS
 					any_interest_group = {
 						is_in_government = yes
@@ -30,7 +29,6 @@ religious_party = {
 			triggered_desc = {
 				desc = party_catholic_peoples_party
 				trigger = {
-					exists = c:AUS
 					c:AUS ?= THIS
 					NAND = {
 						any_interest_group = {
@@ -67,35 +65,30 @@ religious_party = {
 			triggered_desc = {
 				desc = party_catholic_right
 				trigger = {
-					exists = c:SWI
 					c:SWI ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_anti_revolutionary_party
 				trigger = {
-					exists = c:NET
 					c:NET ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_learned_council
 				trigger = {
-					exists = c:PER
 					c:PER ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_traditionalist_communion
 				trigger = {
-					exists = c:SPA
 					c:SPA ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_christian_peoples_party
 				trigger = {
-					exists = c:BEL
 					c:BEL ?= THIS
 				}
 			}
@@ -132,7 +125,6 @@ religious_party = {
 			triggered_desc = {
 				desc = party_union_of_the_russian_people
 				trigger = {
-					exists = c:RUS
 					c:RUS ?= THIS
 				}
 			}
@@ -169,6 +161,22 @@ religious_party = {
 						c:KUK ?= this
 						c:HRE ?= this
 					}
+				}
+			}
+			triggered_desc = {
+				desc = party_taikunate_religious
+				trigger = {
+					c:JAP ?= THIS
+					has_law_or_variant = law_type:law_landed_voting
+					country_is_taikunate = yes
+				}
+			}
+			triggered_desc = {
+				desc = party_ezo_religious
+				trigger = {
+					c:EZO ?= THIS
+					has_variable = ezo_republic_var
+					has_law_or_variant = law_type:law_landed_voting
 				}
 			}
 			triggered_desc = {
@@ -406,7 +414,7 @@ religious_party = {
 				leader ?= {
 					OR = {
 						has_ideology = ideology:ideology_traditionalist
-						has_ideology = ideology:ideology_carlist
+						character_has_carlist_ideology = yes
 						has_ideology = ideology:ideology_theocrat
 						has_ideology = ideology:ideology_corporatist_leader
 					}
@@ -462,11 +470,11 @@ religious_party = {
 		}
 		if = { # Carlists and Miguelists were against participating in electoral politics for a good while
 			limit = {
-				NOT = { owner = { has_technology_researched = political_agitation } }
+				NOT = { owner = { has_technology_researched = corporatism } }
 				leader = {
 					OR = {
-						has_ideology = ideology:ideology_carlist
-						has_ideology = ideology:ideology_miguelist
+						character_has_carlist_ideology = yes
+						character_has_miguelist_ideology = yes
 					}
 				}
 			}

@@ -4,12 +4,58 @@
 			add_state_trait = phfp_state_trait_pasig_river
 			add_state_trait = phfp_state_trait_cordilleran_gold_mines
 			add_state_trait = state_trait_volcanic_soil
+			add_arable_land = 80
+			change_resource_potential = {
+				type = building_iron_mine
+				amount = 36
+			}
+			change_resource_potential = {
+				type = building_rubber_plantation
+				amount = 21
+			}
+			add_resource_potential = building_oil_rig
+			change_resource_potential = {
+				type = building_oil_rig
+				amount = 8
+			}
+			add_resource_potential = building_gold_mine
+			change_resource_potential = {
+				type = building_gold_mine
+				amount = 6
+			}
 		}
 		s:STATE_VISAYAS = {
 			add_state_trait = phfp_state_trait_semirara_coal_mines
+			add_arable_land = 40
+			change_resource_potential = {
+				type = building_coal_mine
+				amount = 16
+			}
+			change_resource_potential = {
+				type = building_rubber_plantation
+				amount = 28
+			}
 		}
 		s:STATE_MINDANAO = {
 			add_state_trait = phfp_state_trait_butuan_gold_mines
+			add_arable_land = 12
+			change_resource_potential = {
+				type = building_iron_mine
+				amount = 42
+			}
+			change_resource_potential = {
+				type = building_logging_camp
+				amount = 28
+			}
+			change_resource_potential = {
+				type = building_rubber_plantation
+				amount = 16
+			}
+			add_resource_potential = building_gold_mine
+			change_resource_potential = {
+				type = building_gold_mine
+				amount = 4
+			}
 		}
 	}
 }

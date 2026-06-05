@@ -1,39 +1,5 @@
 ﻿BUILDINGS = {
 	s:STATE_LUZON.region_state:PHI = {
-		create_building = {
-			building = building_logging_camp
-			add_ownership = {
-				building = {
-					type = building_logging_camp
-					country = c:PHI
-					levels = 2
-					region = STATE_LUZON
-				}
-			}
-			reserves = 1
-			activate_production_methods = {
-				pm_simple_forestry
-				pm_no_hardwood
-				pm_no_equipment
-				pm_road_carts
-			}
-		}
-		create_building = {
-			building = building_paper_mills
-			add_ownership = {
-				building = {
-					type = building_paper_mills
-					country = c:PHI
-					levels = 1
-					region = STATE_LUZON
-				}
-			}
-			reserves = 1
-			activate_production_methods = {
-				pm_pulp_pressing
-				pm_automation_disabled
-			}
-		}
 		create_building = { # University of Santo Tomas
 			building = building_university
 			level = 1

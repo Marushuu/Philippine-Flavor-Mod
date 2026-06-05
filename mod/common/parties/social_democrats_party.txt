@@ -23,21 +23,18 @@ social_democrat_party = {
 			triggered_desc = {
 				desc = party_labour_party
 				trigger = {
-					exists = c:GBR
 					c:GBR ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_psoe
 				trigger = {
-					exists = c:SPA
 					c:SPA ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_labour_party
 				trigger = {
-					exists = c:IRE
 					c:IRE ?= THIS
 				}
 			}
@@ -50,98 +47,141 @@ social_democrat_party = {
 			triggered_desc = {
 				desc = party_ftsf
 				trigger = {
-					exists = c:FRA
 					c:FRA ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_menshevik_party
 				trigger = {
-					exists = c:RUS
 					c:RUS ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_finnish_labor_party
 				trigger = {
-					exists = c:FIN
 					c:FIN ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_belgian_workers_party
 				trigger = {
-					exists = c:BEL
 					c:BEL ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_sdapo
 				trigger = {
-					exists = c:AUS
 					c:AUS ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_brsdp
 				trigger = {
-					exists = c:BUL
 					c:BUL ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_mszdp
 				trigger = {
-					exists = c:HUN
 					c:HUN ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_social_democratic_workers_party
 				trigger = {
-					exists = c:NET
 					c:NET ?= THIS
 				}
 			}
 			triggered_desc = {
-				desc = party_common_peoples_party
+				desc = party_shakai_to
 				trigger = {
-					exists = c:JAP
 					c:JAP ?= THIS
+					has_law_or_variant = law_type:law_landed_voting # Also works for Taikunate
+				}
+			}
+			triggered_desc = {
+				desc = party_ezo_social_democrat
+				trigger = {
+					c:EZO ?= THIS
+					has_variable = ezo_republic_var
+					has_law_or_variant = law_type:law_landed_voting # Also works for Taikunate
+				}
+			}
+			triggered_desc = {
+				desc = party_common_peoples_party # Heiminsha
+				trigger = {
+					country_has_primary_culture = cu:japanese
+					OR = {
+						has_law_or_variant = law_type:law_wealth_voting
+						has_law_or_variant = law_type:law_census_voting
+					}
+				}
+			}
+			triggered_desc = {
+				desc = party_rodonominto # Rōdōnōmintō
+				trigger = {
+					country_has_primary_culture = cu:japanese
+					OR = {
+						has_law_or_variant = law_type:law_universal_suffrage
+						has_law_or_variant = law_type:law_single_party_state
+					}
+					any_interest_group = {
+						party ?= {
+							is_party_type = social_democrat_party
+						}
+						leader ?= {
+							has_socialist_ideology = yes
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = party_shakai_taishuto # Shakai Taishūtō
+				trigger = {
+					country_has_primary_culture = cu:japanese
+					OR = {
+						has_law_or_variant = law_type:law_universal_suffrage
+						has_law_or_variant = law_type:law_single_party_state
+					}
+					NOT = {
+						any_interest_group = {
+							party ?= {
+								is_party_type = social_democrat_party
+							}
+							leader ?= {
+								has_socialist_ideology = yes
+							}
+						}
+					}
 				}
 			}
 			triggered_desc = {
 				desc = party_democrat_party
 				trigger = {
-					exists = c:PER
 					c:PER ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_socialist_workers_federation
 				trigger = {
-					exists = c:TUR
 					c:TUR ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_laborist_party
 				trigger = {
-					exists = c:MEX
 					c:MEX ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_confederate_socialist_party
 				trigger = {
-					exists = c:CSA
 					c:CSA ?= THIS
 				}
 			}
 			triggered_desc = {
 				desc = party_seke
 				trigger = {
-					exists = c:GRE
 					c:GRE ?= THIS
 				}
 			}
@@ -236,6 +276,9 @@ social_democrat_party = {
 		owner = {
 			country_has_voting_franchise = yes
 			OR = {
+				py:social_democrat_party ?= {
+					any_member = {}
+				}
 				any_interest_group = {
 					ig_counts_as_marginal = no
 					leader ?= {
@@ -257,7 +300,7 @@ social_democrat_party = {
 				has_ideology = ideology:ideology_integralist
 				has_ideology = ideology:ideology_ethno_nationalist
 				has_ideology = ideology:ideology_traditionalist
-				has_ideology = ideology:ideology_carlist
+				character_has_carlist_ideology = yes
 				has_ideology = ideology:ideology_royalist
 				has_ideology = ideology:ideology_orleanist
 				has_ideology = ideology:ideology_bonapartist
@@ -541,7 +584,7 @@ social_democrat_party = {
 					has_ideology = ideology:ideology_agrarian
 					has_ideology = ideology:ideology_paternalistic
 					has_ideology = ideology:ideology_magnatial
-					has_ideology = ideology:ideology_carlist_ig
+					ig_has_carlist_ideology = yes
 				}
 				owner = {
 					has_law_or_variant = law_type:law_free_trade
@@ -618,6 +661,7 @@ social_democrat_party = {
 					has_ideology = ideology:ideology_egalitarian_modern
 					has_ideology = ideology:ideology_anti_slavery
 					has_ideology = ideology:ideology_laissez_faire
+					has_ideology = ideology:ideology_interventionist
 					has_ideology = ideology:ideology_particularist
 					leader ?= {
 						OR = {

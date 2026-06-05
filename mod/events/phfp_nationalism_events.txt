@@ -1,9 +1,0 @@
-﻿namespace = phfp_nationalism
-
-phfp_nationalism.1 = {
-	
-}
-
-phfp_nationalism.2 = {
-
-}
