@@ -1,0 +1,308 @@
+﻿## Philippine Ship Names - Majority aren't historical as despite being a maritime civilization, they don't have a sizable navy
+ship_names_philippine_carriers = {
+	name = "shipname_default_format"
+	selection_weight = 10
+	country = PHI
+
+	allowed_ship_types = {
+		ship_type_seaplane_tender
+		ship_type_aircraft_carrier
+	}
+
+	properties = {
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_bkp"
+			quick_trigger_required_law = law_monarchy
+		}
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_brp"
+		}
+		{
+			type = name_list
+			key = "SHIP_NAMESAKE"
+			name_list = {
+				# What the current navy has them as their namesakes (even if they don't have one)
+				sn_luzon sn_visayas sn_mindanao
+
+				# Mythical Creatures - kinda like Japan lol
+				sn_minokawa sn_bakunawa sn_manaul sn_galura sn_pah sn_tiburones sn_sarimanok
+				sn_olimaw sn_samal_naga sn_kataw sn_mampak sn_magindara
+			}
+		}
+	}
+
+}
+
+ship_names_philippine_capitals = {
+	name = "shipname_default_format"
+	selection_weight = 10
+	country = PHI
+
+	allowed_ship_types = {
+		ship_type_ship_of_the_line
+		ship_type_early_ironclad
+		ship_type_modern_ironclad
+		ship_type_pre_dreadnought
+		ship_type_dreadnought
+		ship_type_super_dreadnought
+	}
+
+	properties = {
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_bkp"
+			quick_trigger_required_law = law_monarchy
+		}
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_brp"
+		}
+		{
+			type = name_list
+			key = "SHIP_NAMESAKE"
+			name_list = {
+				# Ancient Kings
+				sn_rajah_sulayman sn_rajah_lakandula sn_rajah_humabon sn_rajah_ache sn_rajah_kalamayin
+				sn_lakan_tagkan sn_gat_lontok sn_sultan_kudarat sn_datu_tupas sn_datu_marikudo
+				sn_datu_sikatuna sn_magat_salamat
+
+				# Main Heroes
+				sn_jose_rizal sn_andres_bonifacio sn_apolinario_mabini sn_emilio_aguinaldo sn_marcelo_del_pilar
+
+				# Ancient Polities
+				sn_tondo sn_maynila sn_cebu sn_namayan sn_cainta sn_madjaas sn_mai
+
+				# Absolutist ADdectives
+				sn_pangulo sn_karangalan sn_lakan sn_tagumpay sn_dakila sn_luwalhati sn_kutang_bato sn_panguna
+				sn_lupig sn_soberano sn_tanggulan
+
+				# Provinces - Fallback
+				sn_abra sn_agusan_del_norte sn_aklan sn_albay sn_antique sn_apayao sn_aurora sn_basilan
+				sn_bataan sn_batanes sn_batangas sn_biliran sn_benguet sn_bohol sn_bukidnon sn_bulacan
+				sn_cagayan sn_camarines_norte sn_camarines_sur sn_camiguin sn_capiz sn_catanduanes
+				sn_cavite sn_cebu sn_compostela sn_cordillera sn_davao_del_norte sn_davao_del_sur sn_davao_oriental
+				sn_guimaras sn_hilagang_samar sn_ifugao sn_ilocos_norte sn_ilocos_sur sn_iloilo sn_isabela sn_islang_dinagat
+				sn_kalinga sn_laguna sn_lanao_del_norte sn_lanao_del_sur sn_la_union sn_leyte sn_maguindanao
+				sn_marinduque sn_masbate sn_mindoro_occidental sn_mindoro_oriental sn_misamis_occidental
+				sn_misamis_oriental sn_negros_occidental sn_negros_oriental sn_nueva_ecija sn_nueva_vizcaya sn_manila
+				sn_occidental_mindoro sn_oriental_mindoro sn_palawan sn_pampanga sn_pangasinan sn_quezon sn_quirino
+				sn_rizal sn_romblon sn_samar sn_sarangani sn_siquijor sn_silangang_samar sn_sorsogon sn_sultan_kudarat
+				sn_sulu sn_surigao_del_norte sn_surigao_del_sur sn_tarlac sn_tawi_tawi sn_timog_cotabato sn_timog_samar
+				sn_zambales sn_zamboanga_del_norte sn_zamboanga_del_sur sn_zamboanga_sibugay
+			}
+		}
+	}
+}
+
+ship_names_philippine_cruisers = {
+	name = "shipname_default_format"
+	selection_weight = 10
+	country = PHI
+
+	allowed_ship_types = {
+		ship_type_frigate
+		ship_type_iron_frigate
+		ship_type_light_cruiser
+		ship_type_protected_cruiser
+		ship_type_armored_cruiser
+	}
+
+	properties = {
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_bkp"
+			quick_trigger_required_law = law_monarchy
+		}
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_brp"
+		}
+		{
+			type = name_list
+			key = "SHIP_NAMESAKE"
+			name_list = {
+				# Generals and Commanders
+				sn_antonio_luna sn_gregorio_del_pilar sn_macario_sakay sn_artemio_ricarte sn_miguel_malvar
+				sn_vicente_lukban sn_juan_cailles sn_paciano_rizal
+
+				# Rivers
+				sn_agno sn_chico sn_pulangi sn_agusan sn_tagoloan sn_panay sn_jalaur sn_loboc sn_adgawan sn_ilagan
+				sn_magat sn_libuganon sn_kabulnan sn_maradugao sn_bambungan sn_tullahan sn_dulangdulang sn_pulag
+				sn_kitanglad sn_ragang sn_kalatungan sn_tabayoc sn_maagnaw sn_mongoto sn_timbak sn_kalawitan sn_kapiligan
+				sn_tuminungan sn_amuyao sn_talomo sn_tagubud sn_abao sn_alchanon sn_lumuluyaw sn_halcon sn_baco
+
+				# Peaks
+				sn_apo sn_mayon sn_taal sn_kanlaon sn_bulusan sn_pinatubo sn_banahaw sn_matutum sn_arayat sn_isarog
+				sn_iriga sn_makiling sn_hibok_hibok sn_cagua sn_biliran sn_maringakit
+
+				# Less Known Generals
+				sn_luciano_san_miguel sn_pantaleon_villegas sn_martin_delgado sn_diego_slang sn_edilberto_evangelista sn_mamerto_natividad
+				sn_ananias_diokno sn_mariano_llanera sn_tomas_mascardo sn_vito_belarmino sn_pio_del_pilar sn_maximino_hizon
+
+				# Steadfast - Adjectives
+				sn_marangal sn_matatag sn_tapat sn_tiyaga sn_katarungan sn_kalayaan sn_maasahan sn_sikhay sn_pagtitiis
+				sn_tindig sn_kasarinlan
+			}
+		}
+	}
+}
+
+ship_names_philippine_destroyers = {
+	name = "shipname_default_format"
+	selection_weight = 10
+	country = PHI
+
+	allowed_ship_types = {
+		ship_type_torpedo_boat_destroyer
+		ship_type_destroyer
+	}
+
+	properties = {
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_bkp"
+			quick_trigger_required_law = law_monarchy
+		}
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_brp"
+		}
+		{
+			type = name_list
+			key = "SHIP_NAMESAKE"
+			name_list = {
+				# Aggressive - Adjectives
+				sn_matapang sn_magiting sn_mabangis sn_mabalasik sn_mabilis sn_maliksi sn_maagap
+				sn_maasintado sn_maliksi sn_madahas sn_maahas sn_matusong sn_masagasa
+
+				# Weapons
+				sn_kampilan sn_kris sn_barong sn_balisong sn_bolo sn_golok sn_panabas sn_itak
+				sn_dahong_palay sn_pinuti sn_garab sn_plata sn_balasiong
+
+				## Weathers
+				# Winds
+				sn_amihan sn_habagat sn_salatan sn_kanaway sn_sabalas sn_balaklaot sn_dumagsa
+				sn_timog sn_hilaga sn_silangan sn_kanluran sn_simoy sn_sariwata sn_baliwtag
+				sn_haloloy sn_hanginglupa sn_hangingdagat sn_hangingbasa sn_hangingtuyot
+
+				# Storms
+				sn_unos sn_sigwa sn_sigwada sn_buhawi sn_subasko sn_ipoipo sn_alimpuyo sn_bagyo
+				sn_delubyo sn_daguldol sn_alimpapaw
+
+				# Thunders
+				sn_kidlat sn_kulog sn_lintik sn_linti sn_dagundong sn_dagisk sn_kidlat-tatal
+				sn_bagting sn_dahas sn_dilim sn_banag sn_banaag sn_sinag sn_dagundongdagat
+
+				# Waves
+				sn_alon sn_daluyong sn_agos sn_suno s_kati sn_taog sn_uliuli sn_humak sn_lilo
+				sn_sambal sn_sarak sn_lona sn_alahoy sn_subasob sn_balinggataw sn_luyong sn_alonalon
+				sn_salpok
+
+				# Clouds
+				sn_ulap sn_alapaap sn_dagim sn_kunem sn_ambon sn_ambonhangin sn_tikatik sn_salibo
+				sn_ampiyas sn_hamog sn_limos sn_singaw sn_alingasaw sn_dapithapon sn_talampasulap
+				sn_dapithapondagat
+			}
+		}
+	}
+}
+
+ship_names_philippine_submarines = {
+	name = "shipname_default_format"
+	selection_weight = 10
+	country = PHI
+
+	allowed_ship_types = {
+		ship_type_submarine
+	}
+
+	properties = {
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_bkp"
+			quick_trigger_required_law = law_monarchy
+		}
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_brp"
+		}
+		{
+			type = name_list
+			key = "SHIP_NAMESAKE"
+			name_list = {
+				# Fishes
+				sn_butanding sn_pating sn_tamban sn_bangus sn_galunggong sn_tulingan sn_tanigue sn_mayamaya sn_dalag
+				sn_hito sn_mameng sn_malasugi sn_tursilyo sn_lapulapu
+
+				sn_alakaak sn_alumahan sn_apahap sn_asohos sn_bakoko sn_betilya sn_biloan sn_bisugo sn_chabita
+				sn_hiwas sn_dagumdagum sn_lapas sn_danggit sn_dapa sn_dilis sn_dorado sn_duhol sn_espada
+				sn_gindara sn_hasahasa sn_haolhaol sn_lawin sn_kanduli sn_labahita sn_loro sn_malasugui
+				sn_maming sn_matangbaka sn_matangdagat sn_matumbok sn_pagi sn_palos sn_pampano sn_sapsap
+				sn_salaysalay sn_sinarapan sn_talakitok sn_tambakol sn_tamban sn_tanguingue sn_tawalis
+
+				sn_tagan sn_ayungin sn_biya sn_martiniko sn_ludong sn_maliputo sn_kitang
+                sn_mamsa sn_bambangin sn_sunog_baga sn_tururot sn_bugiw sn_siliw sn_balo
+                sn_bagitis sn_tagong_bato sn_bulador sn_buan_buan sn_bidbid sn_gonggong
+                sn_bato_bato sn_pating_martilyo sn_pating_bulik sn_pating_tiki sn_dulong
+                sn_kapak sn_muslo sn_talilong
+			}
+		}
+	}
+}
+
+ship_names_philippine_auxiliary = {
+	name = "shipname_default_format"
+	selection_weight = 10
+	country = PHI
+
+	allowed_ship_types = {
+		ship_type_supply_ship
+		ship_type_troop_ship
+		ship_type_monitor
+		ship_type_coastal_defense_ship
+	}
+
+	properties = {
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_bkp"
+			quick_trigger_required_law = law_monarchy
+		}
+		{
+			type = custom_text
+			key = "PREFIX"
+			custom_text = "ship_prefix_brp"
+		}
+		{
+			type = name_list
+			key = "SHIP_NAMESAKE"
+			name_list = {
+				# Cities
+				sn_alaminos sn_angeles sn_antipolo sn_bacolod sn_bacoor sn_bago sn_baguio sn_bais sn_balanga sn_batac sn_batangas sn_bayawan
+				sn_baybay sn_bayugan sn_binan sn_bislig sn_bogo sn_borongan sn_butuan sn_cabadbaran sn_cabanatuan sn_cabuyao sn_cadiz sn_cagayan_de_oro
+				sn_calaca sn_calamba sn_calapan sn_calbayog sn_caloocan sn_candon sn_canlaon sn_carcar sn_carmona sn_catbalogan sn_cauayan sn_cavite sn_cebu
+				sn_cotabato sn_dagupan sn_danao sn_dapitan sn_dasmarinas sn_davao sn_igos sn_dipolog sn_dumaguete sn_el_salvador sn_escalante sn_gapan sn_general_santos
+				sn_general_trias sn_gingoog sn_guihulngan sn_himamaylan sn_ilagan sn_iligan sn_iloilo sn_imus sn_iriga sn_isabela sn_koronadal sn_la_carlota sn_lamitan
+				sn_lapu_lapu sn_las_pinas sn_legazpi sn_ligao sn_lipa sn_lucena sn_maasin sn_mabalacat sn_makati sn_malabon sn_malaybalay sn_malolos sn_mandaluyong sn_mandaue
+				sn_manila sn_marawi sn_marikina sn_masbate sn_mati sn_meycauayan sn_munoz sn_muntinlupa sn_naga sn_navotas sn_olongapo sn_ormoc sn_oroquieta sn_ozamiz sn_pagadian
+				sn_palayan sn_panabo sn_paranaque sn_pasay sn_pasig sn_passi sn_puerto_princesa sn_quezon sn_roxas sn_sagay sn_samal sn_san_carlos sn_san_fernando sn_san_jose
+				sn_san_jose_del_monte sn_san_juan sn_san_pablo sn_san_pedro sn_santa_rosa sn_santo_tomas sn_santiago sn_sipalay sn_sorsogon sn_surigao sn_tabaco sn_tabuk
+				sn_tacloban sn_tacurong sn_tagaytay sn_tagbilaran sn_taguig sn_tagum sn_talisay sn_tanauan sn_tandag sn_tangub sn_tanjay sn_tarlac sn_tayabas sn_toledo
+				sn_trece_martires sn_tuguegarao sn_urdaneta sn_valencia sn_valenzuela sn_victorias sn_vigan sn_zamboanga
+			}
+		}
+	}
+}

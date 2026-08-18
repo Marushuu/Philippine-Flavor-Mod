@@ -1,0 +1,128 @@
+﻿phfp_mindanao.1 = {
+	type = country_event
+	placement = ROOT
+	title = phfp_mindanao.1.t
+	desc = phfp_mindanao.1.d
+	flavor = phfp_mindanao.1.f
+	duration = 3
+	event_image = {
+		video = "europenorthamerica_before_the_battle"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	trigger = {
+	}
+	immediate = {
+		s:STATE_MINDANAO = {
+			random_scope_state = {
+				limit = {
+					owner = c:MGD
+				}
+				save_scope_as = mgd_min_scope
+			}
+		}
+		c:MGD = {
+			save_scope_as = maguindanao_scope
+		}
+	}
+	option = {
+		name = phfp_mindanao.1.a
+		default_option = yes
+		if = {
+			limit = {
+				c:MGD ?= {
+					is_subject_of = c:SPA
+				}
+			}
+			c:PHI ?= {
+				annex = c:MGD
+			}
+		}
+		else = {
+			create_diplomatic_play = {
+				type = dp_annex_war
+				target_country = c:MGD
+				add_war_goal = {
+					holder = C:MGD
+					type = return_state
+					target_state = s:STATE_MINDANAO.region_state:PHI
+				}
+			}
+		}
+	}
+	option = {
+		name = phfp_mindanao.1.a
+		remove_variable = phfp_maguindanao_expedition_button_var
+	}
+}
+
+phfp_mindanao.2 = {
+	type = country_event
+	placement = ROOT
+	title = phfp_mindanao.2.t
+	desc = phfp_mindanao.2.d
+	flavor = phfp_mindanao.2.f
+	duration = 3
+	event_image = {
+		video = "europenorthamerica_before_the_battle"
+	}
+	option = {
+		name = phfp_mindanao.2.a
+		default_option = yes
+		if = {
+			limit = {
+				c:SUL ?= {
+					is_subject_of = c:SPA
+				}
+			}
+			c:PHI ?= {
+				annex = c:SUL
+			}
+		}
+		else = {
+			create_diplomatic_play = {
+				type = dp_annex_war
+				target_country = c:SUL
+				add_war_goal = {
+					holder = C:SUL
+					type = return_state
+					target_state = s:STATE_MINDANAO.region_state:PHI
+				}
+			}
+		}
+	}
+	option = {
+		name = phfp_mindanao.2.b
+		remove_variable = phfp_sulu_expedition_button_var
+	}
+}
+
+phfp_mindanao.3 = {
+	type = country_event
+	placement = ROOT
+	title = phfp_mindanao.3.t
+	desc = phfp_mindanao.3.d
+	flavor = phfp_mindanao.3.f
+	duration = 3
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+}
+
+phfp_mindanao.4 = {
+	type = country_event
+	placement = ROOT
+	title = phfp_mindanao.4.t
+	desc = phfp_mindanao.4.d
+	flavor = phfp_mindanao.4.f
+	duration = 3
+}
+
+phfp_mindanao.5 = {
+	type = country_event
+	placement = ROOT
+	title = phfp_mindanao.5.t
+	desc = phfp_mindanao.5.d
+	flavor = phfp_mindanao.5.f
+	duration = 3
+}

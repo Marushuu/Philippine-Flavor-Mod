@@ -1,45 +1,50 @@
-﻿state_trait_manila_bay = {
-	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
-
+﻿phfp_state_trait_central_luzon_plain = {
+	icon = "gfx/interface/icons/state_trait_icons/great_plains.dds"
 	modifier = {
-		building_shipyards_throughput_add = 0.15
-		building_military_shipyards_throughput_add = 0.15
+		state_infrastructure_add = 5
+		building_group_bg_agriculture_throughput_add = 0.1
+		building_group_bg_plantations_throughput_add = 0.1
+	}
+}
+
+phfp_state_trait_port_of_manila = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyard_throughput_add = 0.15
 		building_port_throughput_add = 0.15
 		state_trade_capacity_mult = 0.25
-		state_building_naval_base_max_level_add = 20
-		state_market_access_price_impact = 0.05
+		state_market_access_price_impact = 0.1
 	}
 }
 
-phfp_state_trait_pasig_river = {
-	icon = "gfx/interface/icons/state_trait_icons/river.dds"
-
+phfp_state_trait_port_of_cebu = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
 	modifier = {
-		state_market_access_price_impact = 0.05
-		state_infrastructure_add = 15
+		building_shipyard_throughput_add = 0.15
+		building_port_throughput_add = 0.15
+		state_trade_capacity_mult = 0.25
+		state_market_access_price_impact = 0.1
 	}
 }
 
-phfp_state_trait_cordilleran_gold_mines = {
-	icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
-
+phfp_state_trait_sugar_islands = {
+	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
 	modifier = {
-		building_gold_mine_throughput_add = 0.05
+		building_sugar_plantation_throughput_add = 0.1
 	}
 }
 
-phfp_state_trait_butuan_gold_mines = {
-	icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
-
+phfp_state_trait_sugar_islands_upgrade = {
+	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
 	modifier = {
-		building_gold_mine_throughput_add = 0.01
+		building_sugar_plantation_throughput_add = 0.25
 	}
 }
 
-phfp_state_trait_semirara_coal_mines = {
-	icon = "gfx/interface/icons/state_trait_icons/resources_ore.dds"
-
+phfp_state_trait_cotabato_basin = {
+	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
 	modifier = {
-		building_coal_mine_throughput_add = 0.05
+		building_group_bg_agriculture_throughput_add = 0.05
+		building_group_bg_plantations_throughput_add = 0.05
 	}
 }

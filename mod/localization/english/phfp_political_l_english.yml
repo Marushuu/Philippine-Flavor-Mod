@@ -1,4 +1,12 @@
 ﻿l_english:
+  # Laws
+  law_frailocracy: "Frailocracy"
+  law_frailocracy_desc: "Agricultural land are dominated by the various catholic religious orders. Their tenants, the inquilinos, were often subjected to arbitrary rent increases."
+
+  # Amendments
+  phfp_amendment_philippine_sangleys: "Sangley Presence"
+  phfp_amendment_philippine_sangleys_desc: "The Philippines have a long history of chinese migration, throughout it's history, the economic vitality of these islands has become inextricably linked to the Sangley and their descendants, the Mestizo de Sangleys."
+
   # Dynamic Subjugation Names
   phfp_dyn_c_protectorate: "Philippine Protectorate"
   phfp_dyn_c_spanish: "Captaincy General of the Philippines"
@@ -8,17 +16,13 @@
   phfp_dyn_c_japanese: "Hikoku Executive Commission"
 
   # Dynamic Independent Philippine Names
-  phfp_dyn_c_republic: "Republic of the Philippines"
-  phfp_dyn_c_communist: "People’s Democratic Republic of the Philippines"
-  phfp_dyn_c_anarchist: "Free Territories of the Filipinos"
-  phfp_dyn_c_fascist: "Republic of the New Philippines"
-  phfp_dyn_c_military: "Philippine Provisional Government"
-  phfp_dyn_c_kingdom: "Kingdom of the Philippines"
-  phfp_dyn_c_empire: "Empire of the Philippines"
-  phfp_dyn_c_theocracy: "Islands of the Most Holy Mary"
+  phfp_dyn_c_communist: "People's Republic of the Philippines"
+  phfp_dyn_c_anarchist: "Philippine Free Territories"
+  phfp_dyn_c_empire: "Philippine Empire"
+  phfp_dyn_c_theocracy: "The Holy Islands of Mary"
 
-  # Power Bloc Names - Soon
-  
+  # Power Bloc Names
+
   # Party Names
   phfp_py_agrarian: "Collectivista" # Collectivista Party, a Nacionalista Faction
   phfp_py_anarchist: "Association of the Free Filipinos" # Fictional
@@ -34,10 +38,12 @@
 
   # Interest Groups
   phfp_ig_principalia: "Principalia" # Landowners
+  phfp_ig_frailocracia: "Frailocracia" # Devout - Spain
   phfp_ig_simbahan: "Simbahan" # Devout
-  phfp_ig_sakahan: "Kasamahan" # Rural Folk
-  phfp_ig_samahan: "Unión Obrera" # Trade Unions
+  phfp_ig_sakahan: "Sakahan"
 
   # Interest Group Descriptions
-  phfp_ig_principalia_desc: "The #italic Principalia#! are the wealthy landowners and traditional elites. Comprising both of Spanish Colonial Families to the Pre-Colonial Nobility, they seek to maintain their social status and influence in the political landscape."
-  phfp_ig_simbahan_desc: "Literally meaning 'Church', the #italic Simbahan#! represents the powerful Catholic Church institution and its faithful as it deeply embedded itself into Filipino society. Controlling vast friar estates and educational institutions, they wield enormous influence over the rural communities."
+  phfp_ig_principalia_desc: ""
+  phfp_ig_frailocracia_desc: ""
+  phfp_ig_simbahan_desc: ""
+  phfp_ig_sakahan_desc: ""

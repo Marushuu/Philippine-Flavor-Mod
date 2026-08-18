@@ -1,59 +1,79 @@
 ﻿phfp_on_game_started = {
 	effect = {
 		s:STATE_LUZON = {
-			add_state_trait = phfp_state_trait_pasig_river
-			add_state_trait = phfp_state_trait_cordilleran_gold_mines
-			add_state_trait = state_trait_volcanic_soil
-			add_arable_land = 80
+			add_state_trait = phfp_state_trait_central_luzon_plain
+			add_arable_land = 26
 			change_resource_potential = {
 				type = building_iron_mine
-				amount = 36
+				amount = 28
 			}
 			change_resource_potential = {
 				type = building_rubber_plantation
 				amount = 21
 			}
-			add_resource_potential = building_oil_rig
+			add_resource_potential = building_gold_field
 			change_resource_potential = {
-				type = building_oil_rig
-				amount = 8
+				type = building_gold_field
+				amount = 4
 			}
-			add_resource_potential = building_gold_mine
-			change_resource_potential = {
-				type = building_gold_mine
-				amount = 6
+			region_state:PHI = {
+				create_pop = {
+					# The Sangley
+					culture = min
+					religion = catholic
+					size = 12000
+				}
+				add_cultural_community = cu:min
+				create_building = {
+					# University of Santo Tomas
+					building = building_university
+					level = 1
+					activate_production_methods = {
+						pm_scholastic_education
+						pm_religious_academia
+						pm_freedom_of_movement_no_effect
+					}
+				}
 			}
 		}
 		s:STATE_VISAYAS = {
-			add_state_trait = phfp_state_trait_semirara_coal_mines
-			add_arable_land = 40
+			add_state_trait = phfp_state_trait_sugar_islands
+			add_arable_land = 14
 			change_resource_potential = {
 				type = building_coal_mine
-				amount = 16
+				amount = 8
 			}
 			change_resource_potential = {
 				type = building_rubber_plantation
-				amount = 28
+				amount = 16
+			}
+			region_state:PHI = {
+				add_cultural_community = cu:min
+				create_pop = {
+					culture = min
+					religion = catholic
+					size = 2500
+				}
 			}
 		}
 		s:STATE_MINDANAO = {
-			add_state_trait = phfp_state_trait_butuan_gold_mines
-			add_arable_land = 12
+			add_state_trait = phfp_state_trait_cotabato_basin
+			add_arable_land = 8
 			change_resource_potential = {
 				type = building_iron_mine
-				amount = 42
+				amount = 24
 			}
 			change_resource_potential = {
 				type = building_logging_camp
-				amount = 28
+				amount = 14
 			}
 			change_resource_potential = {
 				type = building_rubber_plantation
 				amount = 16
 			}
-			add_resource_potential = building_gold_mine
+			add_resource_potential = building_gold_field
 			change_resource_potential = {
-				type = building_gold_mine
+				type = building_gold_field
 				amount = 4
 			}
 		}

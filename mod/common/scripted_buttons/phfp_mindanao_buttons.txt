@@ -1,0 +1,92 @@
+﻿phfp_maguindanao_expedition_button = {
+	name = phfp_maguindanao_expedition_button
+	desc = phfp_maguindanao_expedition_button_desc
+	visible = {
+		has_journal_entry = phfp_je_subjugation_of_the_south
+		OR = {
+			exists = C:MGD
+			exists = C:SUL
+		}
+		NOT = {
+			has_variable = phfp_maguindanao_expedition_button_var
+		}
+	}
+	possible = {
+		OR = {
+			exists = C:MGD
+		}
+	}
+	effect = {
+		set_variable = phfp_maguindanao_expedition_button_var
+		trigger_event = {
+			id = phfp_mindanao.1
+			popup = yes
+		}
+	}
+	ai_chance = {
+		value = 10
+	}
+}
+
+phfp_sulu_expedition_button = {
+	name = phfp_sulu_expedition_button
+	desc = phfp_sulu_expedition_button_desc
+	visible = {
+		has_journal_entry = phfp_je_subjugation_of_the_south
+		OR = {
+			exists = C:SUL
+		}
+		NOT = {
+			has_variable = phfp_sulu_expedition_button_var
+			exists = C:MGD
+		}
+	}
+	possible = {
+		OR = {
+			exists = C:SUL
+		}
+	}
+	effect = {
+		set_variable = phfp_sulu_expedition_button_var
+		trigger_event = {
+			id = phfp_mindanao.2
+			popup = yes
+		}
+	}
+	ai_chance = {
+		value = 10
+	}
+}
+
+phfp_establish_colonies_button = {
+	name = phfp_establish_colonies_button
+	desc = phfp_establish_colonies_button_desc
+	visible = {
+		has_journal_entry = phfp_je_subjugation_of_the_south
+		NOT = {
+			has_variable = phfp_establish_colonies_button_var
+		}
+	}
+	possible = {
+		s:STATE_MINDANAO = {
+			any_scope_state = {
+				owner = {
+					is_country_type = decentralized
+				}
+			}
+		}
+		NOT = {
+			has_law_or_variant = law_type:law_no_colonial_affairs
+		}
+	}
+	effect = {
+		set_variable = phfp_establish_colonies_button_var
+		trigger_event = {
+			id = phfp_mindanao.3
+			popup = yes
+		}
+	}
+	ai_chance = {
+		value = 10
+	}
+}

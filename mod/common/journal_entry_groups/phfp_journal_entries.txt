@@ -1,19 +1,3 @@
-﻿## PHFP Journal Groups
-phfp_je_group_moroland = {
-	context = country
-}
-phfp_je_group_independence = {
-	context = country
-}
-phfp_je_group_modernization = {
-	context = country
-}
-phfp_je_group_militarization = {
-	context = country
-}
-phfp_je_group_nationalism = {
-	context = country
-}
-phfp_je_group_overwrites = {
+﻿phfp_je_group_hidden = {
 	context = country
 }

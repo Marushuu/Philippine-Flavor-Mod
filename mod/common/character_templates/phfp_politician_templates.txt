@@ -1,7 +1,7 @@
 ﻿# Politicians or Agitators
 # Jose Rizal - https://en.wikipedia.org/wiki/Jose_Rizal
 phfp_template_jose_rizal = {
-	first_name = "Jose"
+	first_name = "JosE_"
 	last_name = "Rizal"
 	historical = yes
 	dna = phfp_dna_jose_rizal
@@ -70,7 +70,7 @@ phfp_template_apolinario_mabini = {
 	first_name = Apolinario
 	last_name = Mabini
 	historical = yes
-	dna = phfp_dna_apolinario_mabini
+	# dna = phfp_dna_apolinario_mabini
 	culture = cu:tagalog
 	religion = rel:catholic
 	ideology = ideology_republican

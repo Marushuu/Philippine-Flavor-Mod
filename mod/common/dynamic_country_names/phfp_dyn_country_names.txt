@@ -131,107 +131,107 @@
 	# Dynamic Independent Philippine Names			#
 	#################################################
 
-	# Republic
-	dynamic_country_name = {
-		name = phfp_dyn_c_republic
-		adjective = PHI_ADJ
+	# # Republic
+	# dynamic_country_name = {
+	# 	name = phfp_dyn_c_republic
+	# 	adjective = PHI_ADJ
 
-		is_main_tag_only = yes
-		priority = 20
+	# 	is_main_tag_only = yes
+	# 	priority = 20
 
-		trigger = {
-			coa_def_republic_flag_trigger = yes
-		}
-	}
+	# 	trigger = {
+	# 		coa_def_republic_flag_trigger = yes
+	# 	}
+	# }
 
-	# Communist
-	dynamic_country_name = {
-		name = phfp_dyn_c_communist
-		adjective = PHI_ADJ
+	# # Communist
+	# dynamic_country_name = {
+	# 	name = phfp_dyn_c_communist
+	# 	adjective = PHI_ADJ
 
-		is_main_tag_only = yes
-		priority = 30
+	# 	is_main_tag_only = yes
+	# 	priority = 30
 
-		trigger = {
-			coa_def_communist_flag_trigger = yes
-		}
-	}
+	# 	trigger = {
+	# 		coa_def_communist_flag_trigger = yes
+	# 	}
+	# }
 
-	# Anarchist
-	dynamic_country_name = {
-		name = phfp_dyn_c_anarchist
-		adjective = PHI_ADJ
+	# # Anarchist
+	# dynamic_country_name = {
+	# 	name = phfp_dyn_c_anarchist
+	# 	adjective = PHI_ADJ
 
-		is_main_tag_only = yes
-		priority = 35
+	# 	is_main_tag_only = yes
+	# 	priority = 35
 
-		trigger = {
-			coa_def_anarchy_flag_trigger = yes
-		}
-	}
+	# 	trigger = {
+	# 		coa_def_anarchy_flag_trigger = yes
+	# 	}
+	# }
 
-	# Fascist
-	dynamic_country_name = {
-		name = phfp_dyn_c_fascist
-		adjective = PHI_ADJ
+	# # Fascist
+	# dynamic_country_name = {
+	# 	name = phfp_dyn_c_fascist
+	# 	adjective = PHI_ADJ
 
-		is_main_tag_only = yes
-		priority = 35
+	# 	is_main_tag_only = yes
+	# 	priority = 35
 
-		trigger = {
-			coa_def_fascist_flag_trigger = yes
-		}
-	}
+	# 	trigger = {
+	# 		coa_def_fascist_flag_trigger = yes
+	# 	}
+	# }
 
-	# Military Dictatorship
-	dynamic_country_name = {
-		name = phfp_dyn_c_military
-		adjective = PHI_ADJ
+	# # Military Dictatorship
+	# dynamic_country_name = {
+	# 	name = phfp_dyn_c_military
+	# 	adjective = PHI_ADJ
 
-		is_main_tag_only = yes
-		priority = 30
+	# 	is_main_tag_only = yes
+	# 	priority = 30
 
-		trigger = {
-			coa_def_military_junta_flag_trigger = yes
-		}
-	}
+	# 	trigger = {
+	# 		coa_def_military_junta_flag_trigger = yes
+	# 	}
+	# }
 
-	# Kingdom
-	dynamic_country_name = {
-		name = phfp_dyn_c_kingdom
-		adjective = PHI_ADJ
+	# # Kingdom
+	# dynamic_country_name = {
+	# 	name = phfp_dyn_c_kingdom
+	# 	adjective = PHI_ADJ
 
-		is_main_tag_only = yes
-		priority = 30
+	# 	is_main_tag_only = yes
+	# 	priority = 30
 
-		trigger = {
-			coa_def_monarchy_flag_trigger = yes
-		}
-	}
+	# 	trigger = {
+	# 		coa_def_monarchy_flag_trigger = yes
+	# 	}
+	# }
 
-	# Empire
-	dynamic_country_name = {
-		name = phfp_dyn_c_empire
-		adjective = PHI_ADJ
+	# # Empire
+	# dynamic_country_name = {
+	# 	name = phfp_dyn_c_empire
+	# 	adjective = PHI_ADJ
 
-		is_main_tag_only = yes
-		priority = 35
+	# 	is_main_tag_only = yes
+	# 	priority = 35
 
-		trigger = {
-			coa_def_absolute_monarchy_flag_trigger = yes
-		}
-	}
+	# 	trigger = {
+	# 		coa_def_absolute_monarchy_flag_trigger = yes
+	# 	}
+	# }
 
-	# Theocracy
-	dynamic_country_name = {
-		name = phfp_dyn_c_theocracy
-		adjective = PHI_ADJ
+	# # Theocracy
+	# dynamic_country_name = {
+	# 	name = phfp_dyn_c_theocracy
+	# 	adjective = PHI_ADJ
 
-		is_main_tag_only = yes
-		priority = 30
+	# 	is_main_tag_only = yes
+	# 	priority = 30
 
-		trigger = {
-			coa_def_theocracy_flag_trigger = yes
-		}
-	}
+	# 	trigger = {
+	# 		coa_def_theocracy_flag_trigger = yes
+	# 	}
+	# }
 }

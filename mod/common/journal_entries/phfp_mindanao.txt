@@ -1,0 +1,95 @@
+﻿phfp_je_subjugation_of_the_south = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+	scripted_button = phfp_maguindanao_expedition_button
+	scripted_button = phfp_sulu_expedition_button
+	scripted_button = phfp_establish_colonies_button
+	is_shown_when_inactive = {
+		c:PHI ?= this
+	}
+	is_shown_in_lobby = {
+		c:PHI ?= this
+	}
+	possible = {
+		c:PHI ?= this
+		has_technology_researched = colonization
+	}
+	immediate = {
+		s:STATE_MINDANAO = {
+			random_scope_state = {
+				limit = {
+					owner = ROOT
+				}
+				save_scope_as = mindanao_scope
+			}
+		}
+		c:MGD = {
+			save_scope_as = maguindanao_scope
+		}
+		c:SUL = {
+			save_scope_as = sulu_scope
+		}
+	}
+	complete = {
+		owns_entire_state_region = STATE_MINDANAO
+	}
+	on_complete = {
+		trigger_event = {
+			id = phfp_mindanao.4
+			popup = yes
+		}
+	}
+
+	event_outcome_completed_desc = {
+	}
+
+	fail = {
+		NOT = {
+			has_state_in_state_region = STATE_MINDANAO
+		}
+	}
+
+	on_fail = {
+		trigger_event = {
+			id = phfp_mindanao.5
+			popup = yes
+		}
+	}
+
+	event_outcome_failed_desc = {
+	}
+
+	invalid = {}
+
+	weight = 5000
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+phfp_je_taming_the_south = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+	# scripted_button = phfp_
+	possible = {
+		owns_entire_state_region = STATE_MINDANAO
+		any_scope_state = {
+			is_incorporated = yes
+			owner = ROOT
+			state_region = s:STATE_MINDANAO
+		}
+		OR = {
+			c:PHI ?= this
+			was_formed_from = PHI
+		}
+	}
+	immediate = {
+		s:STATE_MINDANAO = {
+			random_scope_state = {
+				limit = {
+					owner = ROOT
+				}
+				save_scope_as = mindanao_scope
+			}
+		}
+	}
+}

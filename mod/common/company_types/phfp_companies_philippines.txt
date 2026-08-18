@@ -3,7 +3,7 @@
 company_Tabacalera = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/tabacalera.png"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
-	
+
 	flavored_company = yes
 	preferred_headquarters = {
 		STATE_LUZON
@@ -46,7 +46,7 @@ company_Tabacalera = {
 	}
 
 	prosperity_modifier = {
-		building_group_bg_tobacco_plantations_throughput_add = 0.1
+		building_tobacco_plantation_throughput_add = 0.1
 		state_trade_capacity_mult = 0.05
 	}
 
@@ -60,7 +60,7 @@ company_Tabacalera = {
 	ai_construction_targets = {
 		building_tobacco_plantation = {
 			level = 3
-			state_trigger = { 
+			state_trigger = {
 				state_region = s:STATE_LUZON
 				is_incorporated = yes
 			}
@@ -119,7 +119,7 @@ company_Batangas_Coffee = {
 	}
 
 	prosperity_modifier = {
-		building_group_bg_tobacco_plantations_throughput_add = 0.1
+		building_coffee_plantation_throughput_add = 0.1
 		state_lower_strata_expected_sol_add = -0.25
 		state_middle_strata_expected_sol_add = -0.5
 		state_upper_strata_expected_sol_add = -0.75
@@ -152,7 +152,7 @@ company_Batangas_Coffee = {
 company_Ayala = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/ayala.png"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
-	
+
 	flavored_company = yes
 	preferred_headquarters = {
 		STATE_LUZON
@@ -178,7 +178,7 @@ company_Ayala = {
 		has_interest_marker_in_region = region_indonesia
 	}
 
-	
+
 	attainable = {
 		hidden_trigger = {
 			any_scope_state = {
@@ -333,7 +333,7 @@ company_Manila_Times = {
 
 	extension_building_types = {
 		building_logging_camp
-		building_arts_academy
+		building_art_academy
 	}
 
 	potential = {
@@ -436,8 +436,7 @@ company_Victorias = {
 	}
 
 	prosperity_modifier = {
-		building_group_bg_sugar_plantations_throughput_add = 0.25
-		state_trade_advantage_mult = 0.15
+		building_sugar_plantation_throughput_add = 0.50
 		interest_group_ig_landowners_approval_add = 3
 		interest_group_ig_landowners_pop_attraction_mult = 0.1
 	}
@@ -714,7 +713,7 @@ company_Limtuaco = {
 	}
 
 	extension_building_types = {
-		building_vineyard_plantation
+		building_vineyard
 		building_livestock_ranch
 	}
 
@@ -820,9 +819,8 @@ company_Ynchausti = {
 	}
 
 	prosperity_modifier = {
-		country_convoys_capacity_mult = 0.1
-		unit_convoy_defense_mult = 0.10
-		unit_navy_defense_mult = 0.05
+		building_shipyard_throughput_add = 0.15
+		state_trade_advantage_mult = 0.25
 	}
 
 	ai_will_do = {
@@ -891,8 +889,8 @@ company_Tuason = {
 	}
 
 	prosperity_modifier = {
-		building_group_bg_logging_throughput_add = 0.15
-		country_max_weekly_construction_progress_add = 0.15
+		building_group_bg_logging_throughput_add = 0.25
+		building_furniture_manufactory_throughput_add = 0.25
 	}
 
 	ai_will_do = {
@@ -961,9 +959,8 @@ company_PLDT = {
 	}
 
 	prosperity_modifier = {
-		state_assimilation_mult = 0.15
-		state_education_access_add = 0.10
-		building_electrics_industry_throughput_add = 0.10
+		state_assimilation_mult = 0.1
+		state_education_access_add = 0.15
 	}
 
 	ai_will_do = {
@@ -1031,7 +1028,7 @@ company_Almazora = {
 
 	prosperity_modifier = {
 		state_infrastructure_mult = 0.1
-		military_formation_movement_speed_mult = 0.1
+		military_formation_army_movement_speed_mult = 0.1
 	}
 
 	ai_will_do = {

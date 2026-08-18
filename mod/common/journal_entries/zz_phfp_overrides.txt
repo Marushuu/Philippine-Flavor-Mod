@@ -1,0 +1,44 @@
+﻿REPLACE:je_philippines_development = {
+	group = phfp_je_group_hidden
+	weight = 0
+
+	complete = {
+		always = no
+	}
+
+	on_complete = {}
+
+	invalid = {
+		always = yes
+	}
+}
+
+REPLACE:je_philippines_main = {
+	group = phfp_je_group_hidden
+	weight = 0
+
+	complete = {
+		always = no
+	}
+
+	on_complete = {}
+
+	invalid = {
+		always = yes
+	}
+}
+
+REPLACE:je_filipino_ethnogenesis = {
+	group = phfp_je_group_hidden
+	weight = 0
+
+	complete = {
+		always = no
+	}
+
+	on_complete = {}
+
+	invalid = {
+		always = yes
+	}
+}

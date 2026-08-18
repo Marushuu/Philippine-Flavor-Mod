@@ -1,32 +1,71 @@
-﻿# phfp_je_questions_of_language = {
-# 	group = phfp_je_group_nationalism
-# 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+﻿phfp_je_propagandist_movement = {
+	group = je_group_historical_content
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-# 	is_shown_when_inactive = {
-# 		c:PHI ?= this
-# 		# has_technology_researched = nationalism
-# 	}
+	is_shown_when_inactive = {
+		c:PHI ?= this
+	}
 
-# 	possible = {
-# 		# country_has_primary_culture = cu:filipino
-# 		# literacy_rate > 0.25
-# 		has_technology_researched = nationalism
-# 	}
+	possible = {
+		c:PHI ?= this
+		has_technology_researched = nationalism
+	}
 
-# 	immediate = {
-# 		# trigger_event = {
-# 		# 	id = phfp_nationalism.1
-# 		# }
-# 	}
+	complete = {
 
-# 	scripted_progress_bar = phfp_tagalog_bar
-# 	scripted_progress_bar = phfp_visaya_bar
-# 	scripted_progress_bar = phfp_moro_bar
-# 	scripted_progress_bar = phfp_filipino_bar
+	}
 
-# 	# scripted_button = phfp_language_commission_button
-# 	# scripted_button = phfp_declare_language_button
+	on_complete = {
 
-# 	complete = {
-# 	}
-# }
+	}
+
+	modifiers_while_active = {
+
+	}
+
+	weight = 100
+
+	transferable = no
+	can_revolution_inherit = yes
+	can_deactivate = no
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+phfp_je_the_matter_of_language = {
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	group = je_group_historical_content
+
+	is_shown_when_inactive = {
+		c:PHI ?= this
+		has_technology_researched = nationalism
+	}
+
+	possible = {
+		country_has_primary_culture = cu:filipino
+		literacy_rate >= 0.35
+		has_technology_researched = nationalism
+	}
+
+	immediate = {
+		trigger_event = {
+		}
+	}
+
+	# scripted_progress_bar = phfp_tagalog_bar
+	# scripted_progress_bar = phfp_visaya_bar
+	# scripted_progress_bar = phfp_moro_bar
+	# scripted_progress_bar = phfp_filipino_bar
+
+	# scripted_button = phfp_language_commission_button
+	# scripted_button = phfp_declare_language_button
+
+	complete = {
+	}
+
+	weight = 100
+
+	transferable = no
+	can_revolution_inherit = yes
+	can_deactivate = no
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

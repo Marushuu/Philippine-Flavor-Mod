@@ -1,4 +1,5 @@
 ﻿l_english:
+  # Companies
   company_Tabacalera: "Compañía General de Tabacos de Filipinas"
   company_Batangas_Coffee: "Batangas Coffee Plantations"
   company_Ayala: "Ayala y Compañía"
@@ -13,3 +14,10 @@
   company_Tuason: "Aserradora Mecánica de Tuason y Sampedro"
   company_PLDT: "Philippine Long Distance Telephone Company"
   company_Almazora: "Almazora Motors Corporation"
+
+  # Prestige Goods
+  prestige_good_filipino_tobacco: "Filipino Tobacco"
+  prestige_good_barako_coffee: "Barako Coffee"
+  prestige_good_san_miguel: "San Miguel Beer"
+  prestige_good_generic_sugarcane: "Sugarcane"
+  prestige_good_generic_newspaper: "Newspaper"

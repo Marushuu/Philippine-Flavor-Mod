@@ -1,0 +1,59 @@
+﻿# Expanding the DLC's content made
+
+phfp_je_philippines_development_ip4 = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	group = je_group_technology
+	is_shown_in_lobby = {
+		c:PHI ?= this
+		has_dlc_feature = ip4_content
+	}
+	is_shown_when_inactive = {
+		c:PHI ?= this
+		has_dlc_feature = ip4_content
+	}
+	weight = 100
+	transferable = no
+	can_revolution_inherit = yes
+	can_deactivate = no
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+phfp_je_philippines_main_ip4 = {
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	group = je_group_historical_content
+	is_shown_in_lobby = {
+		c:PHI ?= this
+		has_dlc_feature = ip4_content
+	}
+	is_shown_when_inactive = {
+		c:PHI ?= this
+		has_dlc_feature = ip4_content
+	}
+	weight = 100
+	transferable = no
+	can_revolution_inherit = yes
+	can_deactivate = no
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+phfp_je_national_ethnogenesis_ip4 = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	group = je_group_historical_content
+
+	is_shown_in_lobby = {
+		c:PHI ?= this
+		has_dlc_feature = ip4_content
+	}
+
+	is_shown_when_inactive = {
+		c:PHI ?= this
+		has_dlc_feature = ip4_content
+	}
+
+	weight = 100
+
+	transferable = no
+	can_revolution_inherit = yes
+	can_deactivate = no
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

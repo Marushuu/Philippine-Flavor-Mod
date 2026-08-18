@@ -3,25 +3,23 @@
 		add_cultural_obsession = tobacco
 	}
 	cu:filipino_hispanophone = {
-		add_cultural_obsession = tobacco
+		add_cultural_obsession = wine
 	}
 	cu:filipino_mestizo = {
-		add_cultural_obsession = tobacco
+		add_cultural_obsession = liquor
 	}
 	cu:tagalog = {
 		add_cultural_obsession = coffee
 		add_cultural_obsession = tobacco
 	}
 	cu:visayan = {
-		add_cultural_obsession = coffee
-		add_cultural_obsession = tobacco
+		add_cultural_obsession = liquor
+		add_cultural_obsession = fish
 	}
 	cu:ilocano = {
-		add_cultural_obsession = coffee
 		add_cultural_obsession = tobacco
 	}
 	cu:moro = {
 		add_cultural_obsession = coffee
-		add_cultural_obsession = tobacco
 	}
 }
