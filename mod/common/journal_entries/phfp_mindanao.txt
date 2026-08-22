@@ -1,27 +1,29 @@
 ﻿phfp_je_subjugation_of_the_south = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
+
 	scripted_button = phfp_maguindanao_expedition_button
 	scripted_button = phfp_sulu_expedition_button
 	scripted_button = phfp_establish_colonies_button
+
 	is_shown_when_inactive = {
 		c:PHI ?= this
 	}
+
 	is_shown_in_lobby = {
 		c:PHI ?= this
 	}
+
 	possible = {
 		c:PHI ?= this
-		has_technology_researched = colonization
 	}
+
 	immediate = {
-		s:STATE_MINDANAO = {
-			random_scope_state = {
-				limit = {
-					owner = ROOT
-				}
-				save_scope_as = mindanao_scope
+		s:STATE_MINDANAO.region_state:PHI = {
+			add_modifier = {
+				name = phfp_md_moro_resistance
 			}
+			save_scope_as = mindanao_scope
 		}
 		c:MGD = {
 			save_scope_as = maguindanao_scope
@@ -30,13 +32,22 @@
 			save_scope_as = sulu_scope
 		}
 	}
+
 	complete = {
 		owns_entire_state_region = STATE_MINDANAO
 	}
+
 	on_complete = {
+		set_variable = phfp_subjugated_the_south_var
+		s:STATE_MINDANAO.region_state:PHI = {
+			remove_modifier = phfp_md_moro_resistance
+		}
 		trigger_event = {
 			id = phfp_mindanao.4
 			popup = yes
+		}
+		add_journal_entry = {
+			type = phfp_je_taming_the_south
 		}
 	}
 
@@ -62,26 +73,22 @@
 	invalid = {}
 
 	weight = 5000
-
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 phfp_je_taming_the_south = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
-	# scripted_button = phfp_
-	possible = {
-		owns_entire_state_region = STATE_MINDANAO
-		any_scope_state = {
-			is_incorporated = yes
-			owner = ROOT
-			state_region = s:STATE_MINDANAO
-		}
-		OR = {
-			c:PHI ?= this
-			was_formed_from = PHI
-		}
+
+	scripted_button = phfp_arable_land_button
+	scripted_button = phfp_send_missionaries_button
+	scripted_button = phfp_fund_schools_button
+	scripted_button = phfp_establish_port_of_zamboanga_button
+
+	modifiers_while_active = {
+		phfp_md_moro_pacification
 	}
+
 	immediate = {
 		s:STATE_MINDANAO = {
 			random_scope_state = {
@@ -92,4 +99,53 @@ phfp_je_taming_the_south = {
 			}
 		}
 	}
+	complete = {
+		s:STATE_MINDANAO.region_state:PHI = {
+			is_incorporated = yes
+			state_population > 750000
+			gdp > 750000
+			turmoil < 0.25
+		}
+		NOT = {
+			any_political_movement = {
+				culture = cu:moro
+				is_insurrectionary = yes
+			}
+		}
+		custom_tooltip = {
+			text = taming_the_south_arable_land_goal_tt
+			exists = var:arable_land_counter_var
+			var:arable_land_counter_var >= 3
+		}
+		custom_tooltip = {
+			text = taming_the_south_established_port_of_zamboanga_tt
+			has_variable = phfp_establish_port_of_zamboanga_var
+		}
+	}
+
+	on_complete = {
+
+	}
+
+	event_outcome_completed_effect_desc = {
+
+	}
+
+	fail = {
+
+	}
+
+	on_fail = {
+
+	}
+
+	event_outcome_failed_effect_desc = {
+
+	}
+
+	invalid = {}
+
+	weight = 5000
+
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }

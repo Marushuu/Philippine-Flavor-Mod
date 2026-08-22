@@ -1,0 +1,28 @@
+﻿phfp_ideology_ilustrado = {
+    character_ideology = yes
+
+    interest_group_leader_trigger = {
+        AND = {
+            c:PHI ?= owner
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+                is_interest_group_type = ig_petty_bourgeoisie
+            }
+        }
+    }
+}
+
+phfp_ideology_katipunero = {
+    character_ideology = yes
+
+    interest_group_leader_trigger = {
+        AND = {
+            c:PHI ?= owner
+            OR = {
+                is_interest_group_type = ig_rural_folk
+                is_interest_group_type = ig_armed_forces
+                is_interest_group_type = ig_trade_unions
+            }
+        }
+    }
+}

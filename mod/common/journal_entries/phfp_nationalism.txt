@@ -2,6 +2,8 @@
 	group = je_group_historical_content
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
+	# scripted_progress_bar = phfp_reformist
+
 	is_shown_when_inactive = {
 		c:PHI ?= this
 	}
@@ -11,23 +13,118 @@
 		has_technology_researched = nationalism
 	}
 
-	complete = {
+	immediate = {
+		trigger_event = {}
+	}
 
+	complete = {
+		AND = {
+			OR = {
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
+			}
+			OR = {
+				has_law_or_variant = law_type:law_freedom_of_conscience
+				has_law_or_variant = law_type:law_total_separation
+			}
+			has_law_or_variant = law_type:law_guaranteed_liberties
+			OR = {
+				has_law_or_variant = law_type:law_commercialized_agriculture
+				has_law_or_variant = law_type:law_peasant_proprietorship
+				has_law_or_variant = law_type:law_collectivized_agriculture
+			}
+			OR = {
+				has_law_or_variant = law_type:law_right_of_assembly
+				has_law_or_variant = law_type:law_protected_speech
+			}
+			has_law_or_variant = law_type:law_slavery_banned
+		}
+		custom_tooltip = {
+			text = no_insurrectionary_movement_tt
+			NOT = {
+				any_political_movement = {
+					is_insurrectionary = yes
+				}
+			}
+		}
+		AND = {
+			OR = {
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_protectorate
+			}
+			custom_tooltip = {
+				text = spain_is_overlord_tt
+				top_overlord = {
+					c:SPA ?= this
+				}
+			}
+			c:SPA ?= {
+				relations:ROOT >= relations_threshold:amicable
+			}
+		}
+		liberty_desire <= 25
 	}
 
 	on_complete = {
+		trigger_event = {
+
+		}
+	}
+
+	fail = {
+		custom_tooltip = {
+			text = independence_war_tt
+			any_diplomatic_play = {
+				is_war = yes
+				initiator_is = ROOT
+				is_diplomatic_play_type = dp_independence
+				has_play_goal = independence
+			}
+		}
+	}
+
+	on_fail = {
+		add_journal_entry = {
+			type = phfp_je_the_revolution
+		}
+	}
+
+	weight = 5000
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+phfp_je_the_revolution = {
+	group = je_group_historical_content
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+	immediate = {
+		trigger_event = {}
 
 	}
 
-	modifiers_while_active = {
-
+	complete = {
+		is_subject = no
+		is_active_in_diplomatic_play = no
 	}
 
-	weight = 100
+	on_complete = {
+		trigger_event = {
 
-	transferable = no
-	can_revolution_inherit = yes
-	can_deactivate = no
+		}
+	}
+
+	fail = {
+		is_subject = yes
+		is_active_in_diplomatic_play = no
+	}
+
+	on_fail = {
+		trigger_event = {
+
+		}
+	}
+
+	weight = 5000
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
@@ -63,9 +160,5 @@ phfp_je_the_matter_of_language = {
 	}
 
 	weight = 100
-
-	transferable = no
-	can_revolution_inherit = yes
-	can_deactivate = no
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }

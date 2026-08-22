@@ -1,66 +1,12 @@
-phfp_je_malolos = {
-    group = je_group_historical_content
-    icon = "gfx/interface/icons/event_icons/event_scales.dds"
-    immediate = {
-    }
-    complete = {
-        ig:ig_landowners = {
-            is_powerful = no
-        }
-        ig:ig_devout = {
-            is_powerful = no
-        }
-        OR = {
-            has_law = law_type:law_census_voting
-            has_law = law_type:law_universal_suffrage
-        }
-        OR = {
-            has_law = law_type:law_total_separation
-            has_law = law_type:law_freedom_of_conscience
-        }
-        has_law = law_type:law_public_schools
-        has_law = law_type:law_public_health_insurance
-        NOT = {
-            OR = {
-                has_law = law_type:law_serfdom
-                has_law = law_type:law_frailocracy
-            }
-        }
-        NOT = {
-            OR = {
-                has_law = law_type:law_outlawed_dissent
-                has_law = law_type:law_censorship
-            }
-        }
-        has_law = law_type:law_slavery_banned
-        is_diplomatic_play_committed_participant = no
-    }
-    on_complete = {
-    }
-    timeout = 1830
-    on_timeout = {
-    }
-    modifiers_while_active = {
-        # phfp_md_ratifying_constitution
-    }
-    weight = 200
-    transferable = no
-    can_revolution_inherit = yes
-    can_deactivate = no
-    should_be_pinned_by_default_uninvolved_or_context = yes
-}
-
-phfp_je_sovereignity = {
+﻿phfp_je_sovereignity = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     immediate = {
     }
     complete = {
         any_country = {
-            filter = {
-                NOT = {
-                    this = ROOT
-                }
+            NOT = {
+                ROOT
             }
             country_rank >= rank_value:major_power
             relations:ROOT >= relations_threshold:cordial

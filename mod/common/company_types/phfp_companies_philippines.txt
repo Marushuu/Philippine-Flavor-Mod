@@ -986,10 +986,10 @@ company_PLDT = {
 	}
 }
 
-# Almazora Motors Corporation
-# https://en.wikipedia.org/wiki/Almazora_Motors_Corporation
-company_Almazora = {
-	icon = "gfx/interface/icons/company_icons/historical_company_icons/almazora.png"
+# Francisco Motors Corporation
+# https://en.wikipedia.org/wiki/Francisco_Motors_Corporation
+company_Francisco = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/francisco.png"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 
 	flavored_company = yes
@@ -1009,7 +1009,11 @@ company_Almazora = {
 	attainable = {
 		hidden_trigger = {
 			any_scope_state = {
-				state_region = { is_homeland = cu:filipino }
+				OR = {
+					state_region = s:STATE_LUZON
+					state_region = s:STATE_VISAYAS
+					state_region = s:STATE_MINDANAO
+				}
 			}
 		}
 	}
@@ -1017,7 +1021,11 @@ company_Almazora = {
 	possible = {
 		has_technology_researched = combustion_engine
 		any_scope_state = {
-			state_region = { is_homeland = cu:filipino }
+			OR = {
+				state_region = s:STATE_LUZON
+				state_region = s:STATE_VISAYAS
+				state_region = s:STATE_MINDANAO
+			}
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_automotive_industry
@@ -1034,7 +1042,11 @@ company_Almazora = {
 	ai_will_do = {
 		has_technology_researched = combustion_engine
 		any_scope_state = {
-			state_region = { is_homeland = cu:filipino }
+			OR = {
+				state_region = s:STATE_LUZON
+				state_region = s:STATE_VISAYAS
+				state_region = s:STATE_MINDANAO
+			}
 			is_incorporated = yes
 		}
 	}
@@ -1043,7 +1055,11 @@ company_Almazora = {
 		building_automotive_industry = {
 			level = 3
 			state_trigger = {
-				state_region = { is_homeland = cu:filipino }
+				OR = {
+					state_region = s:STATE_LUZON
+					state_region = s:STATE_VISAYAS
+					state_region = s:STATE_MINDANAO
+				}
 			}
 		}
 	}

@@ -1,10 +1,12 @@
-﻿phfp_phi.1 = {
+﻿namespace = phfp_dlc_events
+
+phfp_dlc_events.1 = {
 	# Philippines Starter Event - No Dlc
 	type = country_event
-	placement = root
-	title = phfp_phi.1.t
-	desc = phfp_phi.1.d
-	flavor = phfp_phi.1.f
+	placement = ROOT
+	title = phfp_dlc_events.1.t
+	desc = phfp_dlc_events.1.d
+	flavor = phfp_dlc_events.1.f
 	duration = 3
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
@@ -22,18 +24,18 @@
 	}
 
 	option = {
-		name = phfp_phi.1.a
+		name = phfp_dlc_events.1.a
 		default_option = yes
 	}
 }
 
-phfp_phi.2 = {
+phfp_dlc_events.2 = {
 	# Philippine Start Event - IP4
 	type = country_event
-	placement = root
-	title = phfp_phi.2.t
-	desc = phfp_phi.2.d
-	flavor = phfp_phi.2.f
+	placement = ROOT
+	title = phfp_dlc_events.2.t
+	desc = phfp_dlc_events.2.d
+	flavor = phfp_dlc_events.2.f
 	duration = 3
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
@@ -51,21 +53,10 @@ phfp_phi.2 = {
 	}
 
 	option = {
-		name = phfp_phi.2.a
+		name = phfp_dlc_events.2.a
 		default_option = yes
-
-		add_modifier = {
-			name = phfp_md_opening_of_trade
-			years = 10
-		}
 	}
 	option = {
-		name = phfp_phi.2.a
-		default_option = yes
-
-		add_modifier = {
-			name = phfp_md_opening_of_trade
-			years = 10
-		}
+		name = phfp_dlc_events.2.b
 	}
 }

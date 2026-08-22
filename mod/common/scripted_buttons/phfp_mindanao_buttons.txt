@@ -15,6 +15,7 @@
 		OR = {
 			exists = C:MGD
 		}
+		army_size >= 15
 	}
 	effect = {
 		set_variable = phfp_maguindanao_expedition_button_var
@@ -45,6 +46,8 @@ phfp_sulu_expedition_button = {
 		OR = {
 			exists = C:SUL
 		}
+		naval_power_projection >= 5
+		army_size >= 20
 	}
 	effect = {
 		set_variable = phfp_sulu_expedition_button_var
@@ -75,6 +78,9 @@ phfp_establish_colonies_button = {
 				}
 			}
 		}
+		s:STATE_MINDANAO.region_state:PHI = {
+			has_decree = decree_greener_grass_campaign
+		}
 		NOT = {
 			has_law_or_variant = law_type:law_no_colonial_affairs
 		}
@@ -88,5 +94,112 @@ phfp_establish_colonies_button = {
 	}
 	ai_chance = {
 		value = 10
+	}
+}
+
+phfp_arable_land_button = {
+	name = phfp_arable_land_button
+	desc = phfp_arable_land_button_desc
+
+	cooldown = {
+		days = 1095 # 3 Years
+	}
+
+	visible = {
+		has_journal_entry = phfp_je_taming_the_south
+		var:arable_land_counter_var < 3
+	}
+
+	possible = {
+		var:arable_land_counter_var < 3
+	}
+
+	selected = {
+		custom_tooltip = {
+			text = phfp_arable_land_button_complete
+			var:arable_land_counter_var >= 3
+		}
+	}
+
+	effect = {
+		change_variable = {
+			name = arable_land_counter_var
+			add = 1
+		}
+		trigger_event = {
+
+		}
+	}
+
+	ai_chance = {
+		value = 10
+	}
+}
+
+phfp_send_missionaries_button = {
+	name = phfp_send_missionaries_button
+	desc = phfp_send_missionaries_button_desc
+
+	visible = {
+		has_journal_entry = phfp_je_taming_the_south
+		NOT = {
+			has_variable = phfp_send_missionaries_var
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_law_or_variant = law_type:law_total_separation
+		}
+	}
+
+	effect = {
+		s:STATE_MINDANAO = {
+			every_scope_state = {
+				limit = {
+					owner = ROOT
+				}
+				add_radicals_in_state = {
+					value = medium_radicals
+					culture = cu:moro
+				}
+				add_modifier = {
+				}
+			}
+		}
+		set_variable = phfp_send_missionaries_var
+	}
+}
+
+phfp_fund_schools_button = {
+	name = phfp_fund_schools_button
+	desc = phfp_fund_schools_button_desc
+
+	visible = {
+		has_journal_entry = phfp_je_taming_the_south
+		NOT = {
+			has_variable = phfp_fund_schools_var
+		}
+	}
+}
+
+phfp_establish_port_of_zamboanga_button = {
+	name = phfp_establish_port_of_zamboanga_button
+	desc = phfp_establish_port_of_zamboanga_button_desc
+
+	visible = {
+		has_journal_entry = phfp_je_taming_the_south
+		NOT = {
+			has_variable = phfp_establish_port_of_zamboanga_var
+		}
+	}
+
+	effect = {
+		set_variable = {
+			phfp_establish_port_of_zamboanga_var
+		}
+		s:STATE_MINDANAO = {
+			add_state_trait = phfp_state_trait_port_of_zamboanga
+		}
 	}
 }

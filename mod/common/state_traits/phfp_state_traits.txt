@@ -1,9 +1,9 @@
 ﻿phfp_state_trait_central_luzon_plain = {
 	icon = "gfx/interface/icons/state_trait_icons/great_plains.dds"
 	modifier = {
-		state_infrastructure_add = 5
-		building_group_bg_agriculture_throughput_add = 0.1
-		building_group_bg_plantations_throughput_add = 0.1
+		state_infrastructure_add = 10
+		building_group_bg_agriculture_throughput_add = 0.15
+		building_group_bg_plantations_throughput_add = 0.15
 	}
 }
 
@@ -27,6 +27,16 @@ phfp_state_trait_port_of_cebu = {
 	}
 }
 
+phfp_state_trait_port_of_zamboanga = {
+	icon = "gfx/interface/icons/state_trait_icons/natural_harbors.dds"
+	modifier = {
+		building_shipyard_throughput_add = 0.1
+		building_port_throughput_add = 0.1
+		state_trade_capacity_mult = 0.15
+		state_market_access_price_impact = 0.05
+	}
+}
+
 phfp_state_trait_sugar_islands = {
 	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
 	modifier = {
@@ -46,5 +56,14 @@ phfp_state_trait_cotabato_basin = {
 	modifier = {
 		building_group_bg_agriculture_throughput_add = 0.05
 		building_group_bg_plantations_throughput_add = 0.05
+	}
+}
+
+phfp_state_trait_cotabato_basin_upgrade = {
+	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
+	modifier = {
+		state_infrastructure_add = 5
+		building_group_bg_agriculture_throughput_add = 0.1
+		building_group_bg_plantations_throughput_add = 0.1
 	}
 }

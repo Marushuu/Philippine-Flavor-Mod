@@ -1,1 +1,50 @@
-﻿
+﻿# Mindanao Modifiers
+
+phfp_md_moro_resistance = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+    state_colony_growth_speed_mult = -0.5
+    state_construction_mult = -0.1
+    state_radicals_from_political_movements_mult = 0.1
+}
+
+phfp_md_southern_settlement = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    state_colony_growth_speed_mult = 0.25
+    state_migration_pull_mult = 0.3
+}
+
+phfp_md_moro_autonomy = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    state_migration_pull_mult = 0.1
+    state_assimilation_mult = -0.25
+    state_construction_mult = 0.1
+    state_tax_collection_mult = 0.1
+}
+
+phfp_md_moro_education_invesment = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+    state_education_access_add = 0.15
+    state_assimilation_mult = 0.05
+    country_expenses_add = 0.5
+}
+
+phfp_md_moro_conversion = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+    state_conversion_mult = 0.25
+    country_expenses_add = 0.5
+}
+
+phfp_md_moro_pacification = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+
+}
+
+phfp_md_loss_of_mindanao = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    country_prestige_mult = -0.1
+}
+
+phfp_md_loss_of_mindanao_approval = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    interest_group_approval_add = -2
+}

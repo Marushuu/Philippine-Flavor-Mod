@@ -1,4 +1,7 @@
-﻿phfp_mindanao.1 = {
+﻿namespace = phfp_mindanao
+
+# Conquer Maguindanao
+phfp_mindanao.1 = {
 	type = country_event
 	placement = ROOT
 	title = phfp_mindanao.1.t
@@ -13,16 +16,8 @@
 	trigger = {
 	}
 	immediate = {
-		s:STATE_MINDANAO = {
-			random_scope_state = {
-				limit = {
-					owner = c:MGD
-				}
-				save_scope_as = mgd_min_scope
-			}
-		}
 		c:MGD = {
-			save_scope_as = maguindanao_scope
+			save_scope_as = mgd_scope
 		}
 	}
 	option = {
@@ -51,11 +46,12 @@
 		}
 	}
 	option = {
-		name = phfp_mindanao.1.a
+		name = phfp_mindanao.1.b
 		remove_variable = phfp_maguindanao_expedition_button_var
 	}
 }
 
+# Conquer Sulu
 phfp_mindanao.2 = {
 	type = country_event
 	placement = ROOT
@@ -65,6 +61,21 @@ phfp_mindanao.2 = {
 	duration = 3
 	event_image = {
 		video = "europenorthamerica_before_the_battle"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	immediate = {
+		s:STATE_MINDANAO = {
+			random_scope_state = {
+				limit = {
+					owner = c:SUL
+				}
+				save_scope_as = sulu_min_scope
+			}
+		}
+		c:SUL = {
+			save_scope_as = sulu_scope
+		}
 	}
 	option = {
 		name = phfp_mindanao.2.a
@@ -97,6 +108,7 @@ phfp_mindanao.2 = {
 	}
 }
 
+# Encourage Colonization
 phfp_mindanao.3 = {
 	type = country_event
 	placement = ROOT
@@ -107,8 +119,66 @@ phfp_mindanao.3 = {
 	event_image = {
 		video = "southamerica_aristocrats"
 	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	immediate = {
+		s:STATE_MINDANAO.region_state:PHI = {
+			save_scope_as = mindanao_scope
+		}
+		s:STATE_VISAYAS.region_state:PHI = {
+			save_scope_as = visayas_scope
+		}
+	}
+	option = {
+		name = phfp_mindanao.3.a
+		default_option = yes
+		scope:mindanao_scope = {
+			add_modifier = {
+				name = phfp_md_southern_settlement
+				days = very_long_modifier_time
+			}
+		}
+		scope:visayas_scope = {
+			custom_tooltip = {
+				text = phfp_mindanao.3.tt_1
+				every_scope_pop = {
+					limit = {
+						culture = cu:visayan
+					}
+					move_partial_pop = {
+						state = scope:mindanao_scope
+						population_ratio = 0.05
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+	option = {
+		name = phfp_mindanao.3.b
+		scope:mindanao_scope = {
+			add_radicals_in_state = {
+				value = large_radicals
+				culture = cu:visayan
+			}
+			add_loyalists_in_state = {
+				value = large_radicals
+				culture = cu:moro
+			}
+			add_modifier = {
+				name = phfp_md_moro_autonomy
+				days = very_long_modifier_time
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
 }
 
+# Own all of Mindanao
 phfp_mindanao.4 = {
 	type = country_event
 	placement = ROOT
@@ -116,8 +186,22 @@ phfp_mindanao.4 = {
 	desc = phfp_mindanao.4.d
 	flavor = phfp_mindanao.4.f
 	duration = 3
+	event_image = {
+		video = "asia_farmers_market"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+	immediate = {
+
+	}
+
+	option = {
+		name = phfp_mindanao.4.a
+		default_option = yes
+	}
 }
 
+# Lose Mindanao
 phfp_mindanao.5 = {
 	type = country_event
 	placement = ROOT
@@ -125,4 +209,41 @@ phfp_mindanao.5 = {
 	desc = phfp_mindanao.5.d
 	flavor = phfp_mindanao.5.f
 	duration = 3
+	event_image = {
+		video = "unspecific_devastation"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	immediate = {
+		s:STATE_MINDANAO = {
+			save_scope_as = mindanao_scope
+		}
+		s:STATE_VISAYAS.region_state:PHI = {
+			save_scope_as = visayas_scope
+		}
+	}
+
+	option = {
+		name = phfp_mindanao.5.a
+		default_option = yes
+		add_modifier = {
+			name = phfp_md_loss_of_mindanao
+			days = moderately_long_modifier_time
+		}
+		add_radicals = {
+			value = medium_radicals
+		}
+		ig:ig_armed_forces ?= {
+			add_modifier = {
+				name = phfp_md_loss_of_mindanao_approval
+				days = normal_modifier_time
+			}
+		}
+		ig:ig_landowners ?= {
+			add_modifier = {
+				name = phfp_md_loss_of_mindanao
+				days = normal_modifier_time
+			}
+		}
+	}
 }

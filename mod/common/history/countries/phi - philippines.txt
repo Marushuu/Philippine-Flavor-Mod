@@ -64,8 +64,12 @@
 				has_dlc_feature = ip4_content
 			}
 			add_journal_entry = {
-				phfp_je_philippines_development_ip4
+				type = phfp_je_philippines_development_ip4
 			}
+			trigger_event = phfp_dlc_events.2
+		}
+		else = {
+			trigger_event = phfp_dlc_events.1
 		}
 
 		initialise_caciquismo_effect = yes
