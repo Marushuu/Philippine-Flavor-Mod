@@ -2,7 +2,7 @@
 	group = je_group_historical_content
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	# scripted_progress_bar = phfp_reformist
+	scripted_progress_bar = phfp_propaganda_movement_bar
 
 	is_shown_when_inactive = {
 		c:PHI ?= this
@@ -12,6 +12,8 @@
 		c:PHI ?= this
 		has_technology_researched = nationalism
 	}
+
+	modifiers_while_active = {  }
 
 	immediate = {
 		trigger_event = {}
@@ -37,7 +39,6 @@
 				has_law_or_variant = law_type:law_right_of_assembly
 				has_law_or_variant = law_type:law_protected_speech
 			}
-			has_law_or_variant = law_type:law_slavery_banned
 		}
 		custom_tooltip = {
 			text = no_insurrectionary_movement_tt
@@ -89,6 +90,10 @@
 		}
 	}
 
+	on_yearly_pulse = {
+
+	}
+
 	weight = 5000
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }
@@ -122,6 +127,10 @@ phfp_je_the_revolution = {
 		trigger_event = {
 
 		}
+	}
+
+	on_monthly_pulse = {
+
 	}
 
 	weight = 5000

@@ -117,7 +117,7 @@ phfp_mindanao.3 = {
 	flavor = phfp_mindanao.3.f
 	duration = 3
 	event_image = {
-		video = "southamerica_aristocrats"
+		video = "asia_poor_people_moving"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
@@ -198,6 +198,10 @@ phfp_mindanao.4 = {
 	option = {
 		name = phfp_mindanao.4.a
 		default_option = yes
+		add_modifier = {
+			name = phfp_md_moro_pacification
+			days = long_modifier_time
+		}
 	}
 }
 
@@ -243,6 +247,218 @@ phfp_mindanao.5 = {
 			add_modifier = {
 				name = phfp_md_loss_of_mindanao
 				days = normal_modifier_time
+			}
+		}
+	}
+}
+
+phfp_mindanao.6 = {
+	type = country_event
+	placement = ROOT
+	title = phfp_mindanao.6.t
+	desc = phfp_mindanao.6.d
+	flavor = phfp_mindanao.6.f
+	duration = 3
+	event_image = {
+		video = "southamerica_christianity"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	immediate = {
+		s:STATE_MINDANAO.region_state:PHI = {
+			save_scope_as = mindanao_scope
+		}
+	}
+	option = {
+		name = phfp_mindanao.6.a
+		default_option = yes
+		scope:mindanao_scope = {
+			add_modifier = {
+				name = phfp_md_moro_conversion
+				days = long_modifier_time
+				multiplier = money_amount_multiplier_medium
+			}
+		}
+		add_modifier = {
+			name = phfp_md_conversion_cost
+			days = long_modifier_time
+			multiplier = money_amount_multiplier_small
+		}
+	}
+}
+
+phfp_mindanao.7 = {
+	type = country_event
+	placement = ROOT
+	title = phfp_mindanao.7.t
+	desc = phfp_mindanao.7.d
+	flavor = phfp_mindanao.7.f
+	duration = 3
+	event_image = {
+		video = "ip3_village_school"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	immediate = {
+		s:STATE_MINDANAO.region_state:PHI = {
+			save_scope_as = mindanao_scope
+		}
+	}
+	option = {
+		name = phfp_mindanao.7.a
+		default_option = yes
+		scope:mindanao_scope = {
+			add_modifier = {
+				name = phfp_md_moro_education_investment
+				days = long_modifier_time
+			}
+		}
+		add_modifier = {
+			name = phfp_md_education_cost
+			days = long_modifier_time
+			multiplier = money_amount_multiplier_small
+		}
+	}
+}
+
+phfp_mindanao.8 = {
+	type = country_event
+	placement = ROOT
+	title = phfp_mindanao.8.t
+	desc = phfp_mindanao.8.d
+	flavor = phfp_mindanao.8.f
+	duration = 3
+	event_image = {
+		video = "ep2_active_shipyard"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	immediate = {
+		s:STATE_MINDANAO.region_state:PHI = {
+			save_scope_as = mindanao_scope
+		}
+	}
+	option = {
+		name = phfp_mindanao.8.a
+		default_option = yes
+		scope:mindanao_scope = {
+			state_region = {
+				add_state_trait = phfp_state_trait_port_of_zamboanga
+			}
+		}
+	}
+}
+
+phfp_mindanao.9 = {
+	type = country_event
+	placement = ROOT
+	title = phfp_mindanao.9.t
+	desc = phfp_mindanao.9.d
+	flavor = phfp_mindanao.9.f
+	duration = 3
+	event_image = {
+		video = "ip2_india_countryside"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	immediate = {
+		s:STATE_MINDANAO.region_state:PHI = {
+			save_scope_as = mindanao_scope
+		}
+	}
+	option = {
+		name = phfp_mindanao.9.a
+		default_option = yes
+		scope:mindanao_scope = {
+			if = {
+				limit = {
+					has_state_trait = phfp_state_trait_liguasan_marsh
+				}
+				state_region = {
+					remove_state_trait = phfp_state_trait_liguasan_marsh
+					add_state_trait = phfp_state_trait_cotabato_basin
+				}
+			}
+			else_if = {
+				limit = {
+					has_state_trait = phfp_state_trait_cotabato_basin
+				}
+				state_region = {
+					remove_state_trait = phfp_state_trait_cotabato_basin
+					add_state_trait = phfp_state_trait_cotabato_basin_upgrade
+				}
+			}
+			else_if = {
+				limit = {
+					has_state_trait = phfp_state_trait_cotabato_basin_upgrade
+				}
+				state_region = {
+					remove_state_trait = phfp_state_trait_cotabato_basin_upgrade
+					add_state_trait = phfp_state_trait_cotabato_basin_upgrade_2
+					change_resource_potential = {
+						type = building_oil_rig
+						amount = 12
+					}
+				}
+			}
+			state_region = {
+				add_arable_land = 15
+			}
+		}
+		add_modifier = {
+			name = phfp_md_immigration
+			days = normal_modifier_time
+		}
+	}
+}
+
+phfp_mindanao.10 = {
+	type = country_event
+	placement = ROOT
+	title = phfp_mindanao.10.t
+	desc = phfp_mindanao.10.d
+	flavor = phfp_mindanao.10.f
+	duration = 3
+	event_image = {
+		video = "ip4_colonial_exploitation_going_well"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	immediate = {
+		s:STATE_MINDANAO.region_state:PHI = {
+			save_scope_as = mindanao_scope
+		}
+	}
+	option = {
+		name = phfp_mindanao.10.a
+		add_modifier = {
+			name = phfp_md_mindanao_developed
+			days = long_modifier_time
+		}
+		ig:ig_industrialists ?= {
+			add_modifier = {
+				name = phfp_md_mindanao_developed_approval
+				days = normal_modifier_time
+			}
+		}
+		ig:ig_rural_folk ?= {
+			add_modifier = {
+				name = phfp_md_mindanao_developed_approval
+				days = normal_modifier_time
+			}
+		}
+		s:STATE_MINDANAO = {
+			every_scope_state = {
+				limit = {
+					owner = ROOT
+				}
+				add_loyalists_in_state = {
+					value = medium_radicals
+				}
+				add_modifier = {
+					name = phfp_md_tamed_south
+					days = long_modifier_time
+				}
 			}
 		}
 	}

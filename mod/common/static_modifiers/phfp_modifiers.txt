@@ -10,7 +10,7 @@ phfp_md_moro_resistance = {
 phfp_md_southern_settlement = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     state_colony_growth_speed_mult = 0.25
-    state_migration_pull_mult = 0.3
+    state_migration_pull_mult = 0.25
 }
 
 phfp_md_moro_autonomy = {
@@ -21,11 +21,15 @@ phfp_md_moro_autonomy = {
     state_tax_collection_mult = 0.1
 }
 
-phfp_md_moro_education_invesment = {
+phfp_md_moro_education_investment = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
     state_education_access_add = 0.15
     state_assimilation_mult = 0.05
-    country_expenses_add = 0.5
+}
+
+phfp_md_education_cost = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    country_expenses_add = 1
 }
 
 phfp_md_moro_conversion = {
@@ -34,9 +38,15 @@ phfp_md_moro_conversion = {
     country_expenses_add = 0.5
 }
 
+phfp_md_conversion_cost = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    country_expenses_add = 1
+}
+
 phfp_md_moro_pacification = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
-
+    country_prestige_mult = 1
+    state_assimilation_mult = 0.05
 }
 
 phfp_md_loss_of_mindanao = {
@@ -47,4 +57,30 @@ phfp_md_loss_of_mindanao = {
 phfp_md_loss_of_mindanao_approval = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
     interest_group_approval_add = -2
+}
+
+phfp_md_immigration = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    state_migration_pull_mult = 1
+}
+
+
+phfp_md_mindanao_developed = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_legitimacy_base_add = 10
+    country_production_tech_spread_mult = 0.1
+}
+
+
+phfp_md_mindanao_developed_approval = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_approval_add = 2
+}
+
+phfp_md_tamed_south = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    state_migration_pull_mult = 0.1
+    building_group_bg_oil_extraction_throughput_add = 0.1
+    building_group_bg_agriculture_throughput_add = 0.1
+    building_group_bg_mining_throughput_add = 0.1
 }

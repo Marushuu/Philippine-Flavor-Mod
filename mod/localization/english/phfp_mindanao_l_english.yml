@@ -1,0 +1,85 @@
+﻿l_english:
+ phfp_je_subjugation_of_the_south: "Subjugation of the South"
+ phfp_je_subjugation_of_the_south_reason: "The southern island of [SCOPE.sState('mindanao_scope').GetName] and its surrounding islands remain largely outside effective central governance, split between independent sultanates and an unmapped frontier terrain still inhabited by the [GetCulture('lumad').GetName]. Securing complete control over the region is essential for our national security and economic growth."
+
+ phfp_maguindanao_expedition_button: "Launch the Pulangi Expedition"
+ phfp_maguindanao_expedition_button_desc: "Dispatch our forces to subdue the [SCOPE.sCountry('maguindanao_scope').GetName], it is time to expand past the Pulangi River."
+
+ phfp_sulu_expedition_button: "Launch the [SCOPE.sCountry('sulu_scope').GetCapital.GetCityHubName] Campaign"
+ phfp_sulu_expedition_button_desc: "With the mainlands secured, It is finally time to compel the Sultante of [SCOPE.sCountry('sulu_scope').GetName] to recognize our authority over this archipelago."
+
+ phfp_establish_colonies_button: "Encourage Colonization"
+ phfp_establish_colonies_button_desc: ""
+
+ phfp_mindanao.1.t: "The Pulangi Expedition"
+ phfp_mindanao.1.d: "Our forces are massing along the Pulangi River basin, preparing to launch a decisive military operation to bring the [SCOPE.sCountry('mgd_scope').GetName] Sultanate under our authority."
+ phfp_mindanao.1.f: "The dense jungles and fierce warriors of the Sultanate stand in defiant opposition to our authority."
+ phfp_mindanao.1.a: "We shall advance into [SCOPE.sCountry('sulu_scope').GetCapital.GetName]."
+ phfp_mindanao.1.b: "Let us reconsider."
+
+ phfp_mindanao.2.t: "Pacifying [SCOPE.sCountry('sulu_scope').GetName]"
+ phfp_mindanao.2.d: "The Jolo continues to exert its independence, threatening our maritime trade routes, raiding our coasts. They shall finally fall under our might."
+ phfp_mindanao.2.f: "For centuries, the Sulu Sea has been a domain of independent raiders and proud sultans. It is time to bring order to the waves."
+ phfp_mindanao.2.a: "We will bombard [SCOPE.sCountry('sulu_scope').GetCapital.GetName] into submission. Set sail!"
+ phfp_mindanao.2.b: "Back to the drawing board."
+
+ phfp_mindanao.3.t: "Settling the Frontiers"
+ phfp_mindanao.3.d: "With outposts established, the question arises of who shall settle these lands. Do we let eager [GetCulture('visayan').GetName] migrants to till the earth, or should we respect the traditional domains of the locals?"
+ phfp_mindanao.3.f: "The influx of our settlers promises economic growth, but risks stoking the fires of resistance among the local populace who view this as an encroachment on their ancestral domains."
+ phfp_mindanao.3.a: "Sponsor [GetCulture('visayan').GetName] settlement!"
+ phfp_mindanao.3.b: "Leave them to the locals."
+ phfp_mindanao.3.tt_1: "#v 5%#! of all [GetCulture('visayan').GetName] [Concept('concept_pop', '$concept_pops$')] from [SCOPE.sState('visayas_scope').GetName] will relocate to [SCOPE.sState('mindanao_scope').GetName]"
+
+ phfp_mindanao.4.t: "Dominion Over the South"
+ phfp_mindanao.4.d: "The independent sultanates have been broken and the frontier mapped. The island of Mindanao is now firmly under our dominion."
+ phfp_mindanao.4.f: "'Finally, a unified archipelago'"
+ phfp_mindanao.4.a: "A magnificent triumph!"
+
+ phfp_mindanao.5.t: "Embarrassing Defeat"
+ phfp_mindanao.5.d: "We have lost our control of [SCOPE.sStateRegion('mindanao_scope').GetName]. We can no longer sustain this colonial drive into the south."
+ phfp_mindanao.5.f: "The fierce jungle has claimed our soldiers, the rivers run red, and the remaining [GetCulture('moro').GetName] fiercely celebrate their continued defiance."
+ phfp_mindanao.5.a: "A shameful display..."
+
+ phfp_je_taming_the_south: "Taming the South"
+ phfp_je_taming_the_south_reason: "Though sovereignty over [SCOPE.sStateRegion('mindanao_scope').GetName] has been claimed on paper, the interior remains an unsubdued frontier hampered by rugged geography, underdeveloped infrastructure, and widespread local resistance.\nWe shall drain the marshes, irrigate the lands, and harness the vast potential that these jungles hold."
+ taming_the_south_established_port_of_zamboanga_tt: "We constructed the Port of Zamboanga"
+
+ phfp_arable_land_button: "Rehabilitate the Pulangi River Valley"
+ phfp_arable_land_button_desc: ""
+ phfp_arable_land_button_tt: "This decision can be taken a total of #v 3#! times. (currently [ROOT.GetCountry.MakeScope.Var('arable_land_counter_var').GetValue|v0])"
+ phfp_arable_land_button_complete: "We completed the rehabilitation of the Cotabato Basin"
+
+ phfp_send_missionaries_button: "Convert the Locals"
+ phfp_send_missionaries_button_desc: ""
+
+ phfp_fund_schools_button: "Build Schools"
+ phfp_fund_schools_button_desc: ""
+
+ phfp_establish_port_of_zamboanga_button: "Expand the Naval Fort Pilar"
+ phfp_establish_port_of_zamboanga_button_desc: ""
+
+ phfp_mindanao.6.t: "Faith in the Frontier"
+ phfp_mindanao.6.d: "Zealous missionaries have petitioned the government for funding to establish missions among the native populace, promising spiritual upliftment and integration"
+ phfp_mindanao.6.f: "The cross often follows the flag, but in [SCOPE.sStateRegion('mindanao_scope').GetName], bringing a new faith frequently invites the sword"
+ phfp_mindanao.6.a: "Send the cross"
+ phfp_mindanao.6.b: "Let them worship who they wish"
+
+ phfp_mindanao.7.t: "Education for the South"
+ phfp_mindanao.7.d: "If [SCOPE.sStateRegion('mindanao_scope').GetName] is to be truly integrated into the nation, we must build schools to educate the next generation of its inhabitants"
+ phfp_mindanao.7.f: "Literacy and a shared curriculum will forge bonds far stronger than any military garrison"
+ phfp_mindanao.7.a: "Build the schools."
+
+ phfp_mindanao.8.t: "The Bastion of the South"
+ phfp_mindanao.8.d: "To secure the naval passages between the Celebes and Sulu Seas, local engineers propose massively expanding the port facilities surrounding Fort Pilar in Zamboanga."
+ phfp_mindanao.8.f: "#italic'Our last port in Mindanao was Zamboanga... this, to my mind, is the most beautiful city in the Islands...'#! - William Dickson Boyce"
+ phfp_mindanao.8.a: "Thus, the port is built."
+
+ phfp_mindanao.9.t: "Taming the Pulangi River"
+ phfp_mindanao.9.d: "The vast Cotabato Basin offers incredibly fertile soil, but periodic flooding and dense mangroves have long hindered modern infrastructure and agriculture."
+ phfp_mindanao.9.f: "With modern engineering, we can drain the swamps and unlock the incredible agricultural potential of the Pulangi River valley"
+ phfp_mindanao.9.a: "Send in the Engineers!"
+
+ phfp_mindanao.10.t: "The Breadbasket of the South"
+ phfp_mindanao.10.d: "Through decades of investment, infrastructure expansion, and pacification, [SCOPE.sStateRegion('mindanao_scope').GetName] has transformed from an unsubdued frontier into a thriving agricultural powerhouse."
+ phfp_mindanao.10.f: "The once-impenetrable jungle interior now boasts bustling towns and vast plantations."
+ phfp_mindanao.10.a: "The future of [SCOPE.sStateRegion('mindanao_scope').GetNameNoFormatting] looks bright."

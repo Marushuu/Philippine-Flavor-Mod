@@ -51,7 +51,14 @@
 		}
 	}
 
-	event_outcome_completed_desc = {
+	event_outcome_completed_effect_desc = {
+		header = phfp_mindanao.4.a
+		effect = {
+			add_modifier = {
+				name = phfp_md_moro_pacification
+				days = long_modifier_time
+			}
+		}
 	}
 
 	fail = {
@@ -67,7 +74,29 @@
 		}
 	}
 
-	event_outcome_failed_desc = {
+	event_outcome_failed_effect_desc = {
+		header = phfp_mindanao.5.a
+		effect = {
+			add_modifier = {
+				name = phfp_md_loss_of_mindanao
+				days = moderately_long_modifier_time
+			}
+			add_radicals = {
+				value = medium_radicals
+			}
+			ig:ig_armed_forces ?= {
+				add_modifier = {
+					name = phfp_md_loss_of_mindanao_approval
+					days = normal_modifier_time
+				}
+			}
+			ig:ig_landowners ?= {
+				add_modifier = {
+					name = phfp_md_loss_of_mindanao
+					days = normal_modifier_time
+				}
+			}
+		}
 	}
 
 	invalid = {}
@@ -113,7 +142,7 @@ phfp_je_taming_the_south = {
 			}
 		}
 		custom_tooltip = {
-			text = taming_the_south_arable_land_goal_tt
+			text = phfp_arable_land_button_complete
 			exists = var:arable_land_counter_var
 			var:arable_land_counter_var >= 3
 		}
@@ -124,23 +153,84 @@ phfp_je_taming_the_south = {
 	}
 
 	on_complete = {
-
+		trigger_event = {
+			id = phfp_mindanao.10
+			popup = yes
+		}
 	}
 
 	event_outcome_completed_effect_desc = {
-
+		header = phfp_mindanao.10.a
+		effect = {
+			add_modifier = {
+				name = phfp_md_mindanao_developed
+				days = long_modifier_time
+			}
+			ig:ig_industrialists ?= {
+				add_modifier = {
+					name = phfp_md_mindanao_developed_approval
+					days = normal_modifier_time
+				}
+			}
+			ig:ig_rural_folk ?= {
+				add_modifier = {
+					name = phfp_md_mindanao_developed_approval
+					days = normal_modifier_time
+				}
+			}
+			s:STATE_MINDANAO = {
+				every_scope_state = {
+					limit = {
+						owner = ROOT
+					}
+					add_loyalists_in_state = {
+						value = medium_radicals
+					}
+					add_modifier = {
+						name = phfp_md_tamed_south
+						days = long_modifier_time
+					}
+				}
+			}
+		}
 	}
 
 	fail = {
-
+		NOT = {
+			has_state_in_state_region = STATE_MINDANAO
+		}
 	}
 
 	on_fail = {
-
+		trigger_event = {
+			id = phfp_mindanao.5
+			popup = yes
+		}
 	}
 
 	event_outcome_failed_effect_desc = {
-
+		header = phfp_mindanao.5.a
+		effect = {
+			add_modifier = {
+				name = phfp_md_loss_of_mindanao
+				days = moderately_long_modifier_time
+			}
+			add_radicals = {
+				value = medium_radicals
+			}
+			ig:ig_armed_forces ?= {
+				add_modifier = {
+					name = phfp_md_loss_of_mindanao_approval
+					days = normal_modifier_time
+				}
+			}
+			ig:ig_landowners ?= {
+				add_modifier = {
+					name = phfp_md_loss_of_mindanao
+					days = normal_modifier_time
+				}
+			}
+		}
 	}
 
 	invalid = {}

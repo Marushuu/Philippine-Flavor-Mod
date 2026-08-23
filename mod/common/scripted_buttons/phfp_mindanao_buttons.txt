@@ -3,18 +3,14 @@
 	desc = phfp_maguindanao_expedition_button_desc
 	visible = {
 		has_journal_entry = phfp_je_subjugation_of_the_south
-		OR = {
-			exists = C:MGD
-			exists = C:SUL
-		}
+		exists = C:MGD
 		NOT = {
 			has_variable = phfp_maguindanao_expedition_button_var
 		}
 	}
 	possible = {
-		OR = {
-			exists = C:MGD
-		}
+		exists = C:MGD
+		is_active_in_diplomatic_play = no
 		army_size >= 15
 	}
 	effect = {
@@ -34,18 +30,15 @@ phfp_sulu_expedition_button = {
 	desc = phfp_sulu_expedition_button_desc
 	visible = {
 		has_journal_entry = phfp_je_subjugation_of_the_south
-		OR = {
-			exists = C:SUL
-		}
+		exists = C:SUL
 		NOT = {
 			has_variable = phfp_sulu_expedition_button_var
 			exists = C:MGD
 		}
 	}
 	possible = {
-		OR = {
-			exists = C:SUL
-		}
+		exists = C:SUL
+		is_active_in_diplomatic_play = no
 		naval_power_projection >= 5
 		army_size >= 20
 	}
@@ -111,7 +104,46 @@ phfp_arable_land_button = {
 	}
 
 	possible = {
-		var:arable_land_counter_var < 3
+		custom_tooltip = {
+			text = phfp_arable_land_button_tt
+			var:arable_land_counter_var < 3
+		}
+		trigger_if = {
+			limit = {
+				s:STATE_MINDANAO = {
+					any_scope_state = {
+						owner = ROOT
+						has_state_trait = phfp_state_trait_liguasan_marsh
+					}
+				}
+			}
+			has_technology_researched = intensive_agriculture
+			has_technology_researched = atmospheric_engine
+		}
+		trigger_if = {
+			limit = {
+				s:STATE_MINDANAO = {
+					any_scope_state = {
+						owner = ROOT
+						has_state_trait = phfp_state_trait_cotabato_basin
+					}
+				}
+			}
+			has_technology_researched = improved_fertilizer
+			has_technology_researched = rotary_valve_engine
+		}
+		trigger_if = {
+			limit = {
+				s:STATE_MINDANAO = {
+					any_scope_state = {
+						owner = ROOT
+						has_state_trait = phfp_state_trait_cotabato_basin_upgrade
+					}
+				}
+			}
+			has_technology_researched = mechanized_farming
+			has_technology_researched = combustion_engine
+		}
 	}
 
 	selected = {
@@ -127,7 +159,8 @@ phfp_arable_land_button = {
 			add = 1
 		}
 		trigger_event = {
-
+			id = phfp_mindanao.9
+			popup = yes
 		}
 	}
 
@@ -154,20 +187,11 @@ phfp_send_missionaries_button = {
 	}
 
 	effect = {
-		s:STATE_MINDANAO = {
-			every_scope_state = {
-				limit = {
-					owner = ROOT
-				}
-				add_radicals_in_state = {
-					value = medium_radicals
-					culture = cu:moro
-				}
-				add_modifier = {
-				}
-			}
-		}
 		set_variable = phfp_send_missionaries_var
+		trigger_event = {
+			id = phfp_mindanao.6
+			popup = yes
+		}
 	}
 }
 
@@ -179,6 +203,20 @@ phfp_fund_schools_button = {
 		has_journal_entry = phfp_je_taming_the_south
 		NOT = {
 			has_variable = phfp_fund_schools_var
+		}
+	}
+
+	possible = {
+		NOT = {
+			has_law_or_variant = law_type:law_no_schools
+		}
+	}
+
+	effect = {
+		set_variable = phfp_fund_schools_var
+		trigger_event = {
+			id = phfp_mindanao.7
+			popup = yes
 		}
 	}
 }
@@ -194,12 +232,29 @@ phfp_establish_port_of_zamboanga_button = {
 		}
 	}
 
-	effect = {
-		set_variable = {
-			phfp_establish_port_of_zamboanga_var
-		}
+	possible = {
 		s:STATE_MINDANAO = {
-			add_state_trait = phfp_state_trait_port_of_zamboanga
+			 any_scope_state = {
+				 owner = ROOT
+				 state_has_building_type_levels = {
+					 target = bt:building_port
+					 value = 5
+				 }
+				 state_has_building_type_levels = {
+					 target = bt:building_shipyard
+					 value = 5
+				 }
+				 NOT = {
+					 has_state_trait = phfp_state_trait_port_of_zamboanga
+				 }
+			 }
+		}
+	}
+
+	effect = {
+		set_variable = phfp_establish_port_of_zamboanga_var
+		trigger_event = {
+			id = phfp_mindanao.8
 		}
 	}
 }

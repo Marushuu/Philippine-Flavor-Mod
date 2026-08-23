@@ -63,9 +63,6 @@
 			limit = {
 				has_dlc_feature = ip4_content
 			}
-			add_journal_entry = {
-				type = phfp_je_philippines_development_ip4
-			}
 			trigger_event = phfp_dlc_events.2
 		}
 		else = {

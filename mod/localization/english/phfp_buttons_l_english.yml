@@ -1,9 +1,0 @@
-﻿l_english:
- phfp_maguindanao_expedition_button: "Launch the Pulangi Expedition"
- phfp_maguindanao_expedition_button_desc: "Dispatch our forces to subdue the [SCOPE.sCountry('maguindanao_scope').GetName], it is time to expand past the Pulangi River."
-
- phfp_sulu_expedition_button: "Launch the [SCOPE.sCountry('sulu_scope').GetCapital.GetCityHubName] Campaign"
- phfp_sulu_expedition_button_desc: "With the mainlands secured, It is finally time to compel the Sultante of [SCOPE.sCountry('sulu_scope').GetName] to recognize our authority over this archipelago."
-
- phfp_establish_colonies_button: "Encourage Colonization"
- phfp_establish_colonies_button_desc: ""
