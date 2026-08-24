@@ -10,7 +10,7 @@ company_Tabacalera = {
 	}
 
 	possible_prestige_goods = {
-		prestige_good_filipino_tobacco
+		prestige_good_cigars
 	}
 
 	building_types = {
@@ -619,7 +619,7 @@ company_Meralco = {
 
 # La Fábrica de Cerveza San Miguel - Replaces the Vanilla
 # https://en.wikipedia.org/wiki/San_Miguel_Corporation
-company_san_miguel = {
+REPLACE:company_san_miguel = {
     icon = "gfx/interface/icons/company_icons/historical_company_icons/san_miguel.png"
     background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 

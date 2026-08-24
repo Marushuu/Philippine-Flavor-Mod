@@ -1,10 +1,4 @@
-﻿prestige_good_filipino_tobacco = {
-	base_good = tobacco
-	prestige_bonus = 0.1
-	texture = "gfx/interface/icons/goods_icons/prestige_goods/filipino_tabacco.png"
-}
-
-prestige_good_barako_coffee = {
+﻿prestige_good_barako_coffee = {
 	base_good = coffee
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/generic_coffee_prestige.dds"

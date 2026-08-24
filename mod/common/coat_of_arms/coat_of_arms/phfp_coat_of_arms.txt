@@ -1,0 +1,747 @@
+﻿PHI = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+	color4 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bicolor_top.dds"
+		color1 = color3
+		color2 = color3
+	}
+
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = color2
+		color2 = color2
+		instance = {
+			rotation = 0
+			scale = { 1.000 1.000 }
+			position = { 0.000 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color4
+		color2 = color4
+
+		instance = {
+			rotation = 0
+			scale = { 0.500 0.500 }
+			position = { 0.175 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color4
+		color2 = color4
+
+		instance = {
+			rotation = -270
+			scale = { 0.100 0.220 }
+			position = { 0.400 0.500 }
+		}
+
+		instance = {
+			rotation = 270
+			scale = { 0.100 0.220 }
+			position = { 0.055 0.855 }
+		}
+
+		instance = {
+			rotation = 270
+			scale = { 0.100 0.220 }
+			position = { 0.055 0.145 }
+		}
+	}
+}
+
+PHI_war = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	color3 = "blue"
+	color4 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = color3
+		color2 = color3
+	}
+
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = color2
+		color2 = color2
+
+		instance = {
+			rotation = 0
+			scale = { 1.000 1.000 }
+			position = { 0.000 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color4
+		color2 = color4
+
+		instance = {
+			rotation = 0
+			scale = { 0.500 0.500 }
+			position = { 0.175 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color4
+		color2 = color4
+
+		instance = {
+			rotation = -270
+			scale = { 0.100 0.220 }
+			position = { 0.400 0.500 }
+		}
+
+		instance = {
+			rotation = 270
+			scale = { 0.100 0.220 }
+			position = { 0.055 0.855 }
+		}
+
+		instance = {
+			rotation = 270
+			scale = { 0.100 0.220 }
+			position = { 0.055 0.145 }
+		}
+	}
+}
+
+PHI_katipunan = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_magdiwang.dds"
+		color1 = color2
+	}
+}
+
+PHI_autocrat = {
+	pattern = "pattern_horizontal_split_01.tga"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "yellow"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color3
+	}
+}
+
+PHI_autocrat_war = {
+	pattern = "pattern_horizontal_split_01.tga"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "yellow"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color3
+	}
+}
+
+PHI_monarchy = {
+	pattern = "pattern_per_saltire.dds"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "yellow"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_saltire.dds"
+		color1 = color4
+	}
+
+	colored_emblem = {
+		texture = "ce_saltire_fimbriated.dds"
+		color1 = color4
+		color2 = color3
+	}
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color4
+
+		instance = {
+			rotation = 0
+			scale = { 0.750 0.750 }
+			position = { 0.500 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_frame_circle_outline.dds"
+		color1 = color3
+
+		instance = {
+			rotation = 0
+			scale = { 0.500 0.500 }
+			position = { 0.500 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color3
+
+		instance = {
+			rotation = 0
+			scale = { 0.500 0.500 }
+			position = { 0.500 0.500 }
+		}
+	}
+}
+
+PHI_monarchy_war = {
+	pattern = "pattern_per_saltire.dds"
+	color1 = "red"
+	color2 = "blue"
+	color3 = "yellow"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_saltire.dds"
+		color1 = color4
+	}
+
+	colored_emblem = {
+		texture = "ce_saltire_fimbriated.dds"
+		color1 = color4
+		color2 = color3
+	}
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color4
+
+		instance = {
+			rotation = 0
+			scale = { 0.750 0.750 }
+			position = { 0.500 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_frame_circle_outline.dds"
+		color1 = color3
+
+		instance = {
+			rotation = 0
+			scale = { 0.500 0.500 }
+			position = { 0.500 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color3
+
+		instance = {
+			rotation = 0
+			scale = { 0.500 0.500 }
+			position = { 0.500 0.500 }
+		}
+	}
+}
+
+PHI_fascist = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "white"
+	color3 = "black"
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color2
+	}
+
+	colored_emblem = {
+		texture = "ce_baybayin_ka.dds"
+		color1 = color3
+	}
+}
+
+PHI_technate = {
+	pattern = "pattern_per_bend_senester.dds"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "yellow"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color3
+	}
+
+	colored_emblem = {
+		texture = "ce_technate.dds"
+		color1 = color3
+		color2 = color4
+
+		instance = {
+			rotation = 0
+			scale = { 0.500 0.500 }
+			position = { 0.500 0.500 }
+		}
+	}
+}
+
+PHI_technate_war = {
+	pattern = "pattern_per_bend_senester.dds"
+	color1 = "red"
+	color2 = "blue"
+	color3 = "yellow"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color3
+	}
+
+	colored_emblem = {
+		texture = "ce_technate.dds"
+		color1 = color3
+		color2 = color4
+
+		instance = {
+			rotation = 0
+			scale = { 0.500 0.500 }
+			position = { 0.500 0.500 }
+		}
+	}
+}
+
+PHI_theocracy = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_latin_cross.dds"
+		color1 = color2
+
+		instance = {
+			rotation = 0
+			scale = { 0.600 0.475 }
+			position = { 0.500 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_phil_sun_hole.dds"
+		color1 = color2
+
+		instance = {
+			rotation = 0
+			scale = { 1.080 1.080 }
+			position = { 0.500 0.500 }
+		}
+	}
+}
+
+PHI_theocracy_islam = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_crescent.dds"
+		color1 = color2
+
+		instance = {
+			rotation = 0
+			scale = { 1.000 1.000 }
+			position = { 0.450 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color2
+
+		instance = {
+			rotation = 0
+			scale = { 0.750 0.750 }
+			position = { 0.565 0.500 }
+		}
+	}
+}
+
+PHI_communist = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_hammer_sickle_italy.dds"
+		color1 = color2
+
+		instance = {
+			rotation = -5
+			scale = { 0.750 0.750 }
+			position = { 0.500 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color1
+
+		instance = {
+			rotation = 0
+			scale = { 0.350 0.350 }
+			position = { 0.377 0.331 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_star_05_hollow.dds"
+		color1 = color2
+		color2 = color1
+
+		instance = {
+			rotation = 0
+			scale = { 0.150 0.150 }
+			position = { 0.500 0.215 }
+		}
+
+		instance = {
+			rotation = 0
+			scale = { 0.150 0.150 }
+			position = { 0.685 0.776 }
+		}
+
+		instance = {
+			rotation = 0
+			scale = { 0.150 0.150 }
+			position = { 0.345 0.775 }
+		}
+	}
+}
+
+PHI_anarchist = {
+	pattern = "pattern_per_bend_senester.dds"
+	color1 = "red"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_phil_sun_half.dds"
+		color1 = color2
+		color2 = color1
+	}
+}
+
+PHI_atheist = {
+	pattern = "pattern_solid.tga"
+	color1 = "black"
+	color2 = "white"
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color2
+	}
+}
+
+PHI_sabah = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "red"
+	color3 = "yellow"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = color2
+	}
+
+	colored_emblem = {
+		texture = "ce_bicolor_top.dds"
+		color1 = color1
+	}
+
+	colored_emblem = {
+		texture = "ce_bicolor_left_third.dds"
+		color1 = color4
+	}
+
+	colored_emblem = {
+		texture = "ce_nine_ray_sun.dds"
+		color1 = color3
+
+		instance = {
+			rotation = 0
+			scale = { 0.750 0.750 }
+			position = { 0.170 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_star_05_tilted.dds"
+		color1 = color3
+
+		instance = {
+			rotation = 0
+			scale = { 0.100 0.100 }
+			position = { 0.035 0.055 }
+		}
+
+		instance = {
+			rotation = 0
+			scale = { 0.100 0.100 }
+			position = { 0.035 0.950 }
+		}
+
+		instance = {
+			rotation = 0
+			scale = { 0.100 0.100 }
+			position = { 0.300 0.055 }
+		}
+
+		instance = {
+			rotation = 0
+			scale = { 0.100 0.100 }
+			position = { 0.300 0.950 }
+		}
+	}
+}
+
+PHI_sabah_war = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	color2 = "blue"
+	color3 = "yellow"
+	color4 = "white"
+
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = color2
+	}
+
+	colored_emblem = {
+		texture = "ce_bicolor_top.dds"
+		color1 = color1
+	}
+
+	colored_emblem = {
+		texture = "ce_bicolor_left_third.dds"
+		color1 = color4
+	}
+
+	colored_emblem = {
+		texture = "ce_nine_ray_sun.dds"
+		color1 = color3
+
+		instance = {
+			rotation = 0
+			scale = { 0.750 0.750 }
+			position = { 0.170 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_star_05_tilted.dds"
+		color1 = color3
+
+		instance = {
+			rotation = 0
+			scale = { 0.100 0.100 }
+			position = { 0.035 0.055 }
+		}
+
+		instance = {
+			rotation = 0
+			scale = { 0.100 0.100 }
+			position = { 0.035 0.950 }
+		}
+
+		instance = {
+			rotation = 0
+			scale = { 0.100 0.100 }
+			position = { 0.300 0.055 }
+		}
+
+		instance = {
+			rotation = 0
+			scale = { 0.100 0.100 }
+			position = { 0.300 0.950 }
+		}
+	}
+}
+
+PHI_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color2
+		color2 = color2
+		instance = { scale = { 0.5 0.5 } position = { 0.75 0.5 }  }
+	}
+}
+
+PHI_subject_SPA = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+	color2 = "red"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = color2
+
+		instance = {
+			rotation = 0
+			scale = { 1.000 0.250 }
+			position = { 0.500 0.125 }
+		}
+
+		instance = {
+			rotation = 0
+			scale = { 1.000 0.250 }
+			position = { 0.500 0.875 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_circle.dds"
+		color1 = color3
+
+		instance = {
+			rotation = 0
+			scale = { 0.750 0.750 }
+			position = { 0.500 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color1
+
+		instance = {
+			rotation = 0
+			scale = { 0.500 0.500 }
+			position = { 0.500 0.500 }
+		}
+	}
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = color1
+
+		instance = {
+			rotation = 0
+			scale = { 0.100 0.100 }
+			position = { 0.050 0.075 }
+		}
+
+		instance = {
+			rotation = 0
+			scale = { 0.100 0.100 }
+			position = { 0.050 0.925 }
+		}
+
+		instance = {
+			rotation = 0
+			scale = { 0.100 0.100 }
+			position = { 0.950 0.075 }
+		}
+
+		instance = {
+			rotation = 0
+			scale = { 0.100 0.100 }
+			position = { 0.950 0.925 }
+		}
+	}
+}
+
+PHI_subject_USA = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {
+		texture = "te_coa_phil_usa.dds"
+
+		instance = {
+			rotation = 0
+			scale = { 0.650 0.650 }
+			position = { 0.800 0.600 }
+		}
+	}
+}
+
+PHI_subject_JAP = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color2
+
+		instance = {
+			rotation = 0
+			scale = { 1.000 1.000 }
+			position = { 0.500 0.500 }
+		}
+	}
+}
+
+PHI_subject_GBR = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {
+		texture = "te_coa_manila.dds"
+
+		instance = {
+			rotation = 0
+			scale = { 0.750 0.750 }
+			position = { 0.750 0.500 }
+		}
+	}
+}
+
+PHI_subject_FRA = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	color2 = "white"
+	color3 = "red"
+	color4 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = color2
+		color2 = color3
+	}
+
+	colored_emblem = {
+		texture = "ce_sun_philippines.dds"
+		color1 = color4
+
+		instance = {
+			rotation = 0
+			scale = { 0.500 0.500 }
+			position = { 0.500 0.500 }
+		}
+	}
+}

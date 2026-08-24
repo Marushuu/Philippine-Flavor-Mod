@@ -1,0 +1,15 @@
+﻿# Flag Triggers
+coa_def_japanese_ensign_trigger = {
+    exists = c:JAP
+    c:JAP ?= {
+        save_temporary_scope_as = custom_overlord
+    }
+    coa_def_ensign_trigger = yes
+}
+
+coa_controls_sabah = {
+    exists = scope:actor
+    scope:actor ?= {
+        has_state_in_state_region = STATE_NORTH_BORNEO
+    }
+}

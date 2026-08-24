@@ -200,11 +200,11 @@ ship_names_philippine_destroyers = {
 				sn_delubyo sn_daguldol sn_alimpapaw
 
 				# Thunders
-				sn_kidlat sn_kulog sn_lintik sn_linti sn_dagundong sn_dagisk sn_kidlat-tatal
+				sn_kidlat sn_kulog sn_lintik sn_linti sn_dagundong sn_dagisk sn_kidlat_tatal
 				sn_bagting sn_dahas sn_dilim sn_banag sn_banaag sn_sinag sn_dagundongdagat
 
 				# Waves
-				sn_alon sn_daluyong sn_agos sn_suno s_kati sn_taog sn_uliuli sn_humak sn_lilo
+				sn_alon sn_daluyong sn_agos sn_suno sn_kati sn_taog sn_uliuli sn_humak sn_lilo
 				sn_sambal sn_sarak sn_lona sn_alahoy sn_subasob sn_balinggataw sn_luyong sn_alonalon
 				sn_salpok
 
