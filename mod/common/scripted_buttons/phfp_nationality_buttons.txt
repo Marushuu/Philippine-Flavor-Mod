@@ -1,0 +1,208 @@
+﻿
+
+phfp_integrate_tagalogs = {
+    name = phfp_integrate_tagalogs
+    desc = phfp_integrate_tagalogs_desc
+
+    visible = {
+        has_journal_entry = phfp_je_national_ethnogenesis_ip4
+        NOT = {
+            has_variable = phfp_integrated_tagalogs_var
+        }
+    }
+
+    possible = {
+        country_average_culture_pop_acceptance = {
+            culture = cu:tagalog
+            value >= acceptance_status_5
+        }
+    }
+
+    effect = {
+        s:STATE_LUZON = {
+            remove_homeland = cu:tagalog
+        }
+        every_scope_pop = {
+            limit = {
+                culture = cu:tagalog
+            }
+            change_pop_culture = {
+                target = cu:filipino_mestizo value = 0.25
+            }
+        }
+        set_variable = {
+            name = phfp_integrated_tagalogs_var
+        }
+        set_variable = {
+            name = phfp_integrated_cultures_var
+            value = +1
+        }
+    }
+}
+
+phfp_integrate_ilocanos = {
+    name = phfp_integrate_ilocanos
+    desc = phfp_integrate_ilocanos_desc
+
+    visible = {
+        has_journal_entry = phfp_je_national_ethnogenesis_ip4
+        NOT = {
+            has_variable = phfp_integrated_ilocanos_var
+        }
+    }
+
+    possible = {
+        country_average_culture_pop_acceptance = {
+            culture = cu:ilocano
+            value >= acceptance_status_5
+        }
+    }
+
+    effect = {
+        s:STATE_LUZON = {
+            remove_homeland = cu:ilocano
+        }
+        every_scope_pop = {
+            limit = {
+                culture = cu:ilocano
+            }
+            change_pop_culture = {
+                target = cu:filipino_mestizo value = 0.25
+            }
+        }
+        set_variable = {
+            name = phfp_integrated_ilocanos_var
+        }
+        set_variable = {
+            name = phfp_integrated_cultures_var
+            value = +1
+        }
+    }
+}
+
+phfp_integrate_visayans = {
+    name = phfp_integrate_visayans
+    desc = phfp_integrate_visayans_desc
+
+    visible = {
+        has_journal_entry = phfp_je_national_ethnogenesis_ip4
+    }
+
+    visible = {
+        has_journal_entry = phfp_je_national_ethnogenesis_ip4
+        NOT = {
+            has_variable = phfp_integrated_visayans_var
+        }
+    }
+
+    possible = {
+        country_average_culture_pop_acceptance = {
+            culture = cu:visayan
+            value >= acceptance_status_5
+        }
+    }
+
+    effect = {
+        s:STATE_VISAYAS = {
+            remove_homeland = cu:visayan
+        }
+        s:STATE_MINDANAO = {
+            remove_homeland = cu:visayan
+        }
+        every_scope_pop = {
+            limit = {
+                culture = cu:visayan
+            }
+            change_pop_culture = {
+                target = cu:filipino_mestizo value = 0.25
+            }
+        }
+        set_variable = {
+            name = phfp_integrated_visayans_var
+        }
+        set_variable = {
+            name = phfp_integrated_cultures_var
+            value = +1
+        }
+    }
+}
+
+phfp_integrate_lumads = {
+    name = phfp_integrate_lumads
+    desc = phfp_integrate_lumads_desc
+
+    visible = {
+        has_journal_entry = phfp_je_national_ethnogenesis_ip4
+        NOT = {
+            has_variable = phfp_integrated_lumads_var
+        }
+    }
+
+    possible = {
+        country_average_culture_pop_acceptance = {
+            culture = cu:lumad
+            value >= acceptance_status_5
+        }
+    }
+
+    effect = {
+        s:STATE_MINDANAO = {
+            remove_homeland = cu:lumad
+        }
+        every_scope_pop = {
+            limit = {
+                culture = cu:lumad
+            }
+            change_pop_culture = {
+                target = cu:filipino_mestizo value = 0.25
+            }
+        }
+        set_variable = {
+            name = phfp_integrated_lumads_var
+        }
+        set_variable = {
+            name = phfp_integrated_cultures_var
+            value = +1
+        }
+    }
+}
+
+phfp_integrate_moros = {
+    name = phfp_integrate_moros
+    desc = phfp_integrate_moros_desc
+
+    visible = {
+        has_journal_entry = phfp_je_national_ethnogenesis_ip4
+        NOT = {
+            has_variable = phfp_integrated_moros_var
+        }
+    }
+
+    possible = {
+        country_average_culture_pop_acceptance = {
+            culture = cu:moro
+            value >= acceptance_status_5
+        }
+    }
+
+    effect = {
+        s:STATE_MINDANAO = {
+            remove_homeland = cu:moro
+        }
+        every_scope_pop = {
+            limit = {
+                culture = cu:moro
+            }
+            change_pop_culture = {
+                target = cu:filipino_mestizo value = 0.25
+            }
+        }
+        set_variable = {
+            name = phfp_integrated_moros_var
+        }
+        set_variable = {
+            name = phfp_integrated_cultures_var
+            value = +1
+        }
+    }
+}

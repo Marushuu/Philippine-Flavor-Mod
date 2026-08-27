@@ -1,3 +1,8 @@
 ﻿l_english:
  phfp_je_frailocracy: "La Frailocracia"
- phfp_je_frailocracy_reason: ""
+ phfp_je_frailocracy_reason: "Centuries of colonial rule have left the religious orders holding more land, more schools, and more sway over the common #italic tao#! than the Governor-General himself.\nThe friar-curate is often the only representative of Spain a barrio ever sees — confessor, teacher, landlord, and censor in one cassock.\nReform this arrangement, and the Church may never forgive it. Leave it untouched, and neither will the ilustrados"
+
+ phfp_secularize_parish_button: "Secularize the Parishes"
+ phfp_secularize_parish_button_desc: "Replace friar curates with Filipino secular clergy, a demand as old as Father Burgos and as dangerous to speak aloud."
+ phfp_seize_friar_estates_button: "Seize the Friar Estates"
+ phfp_seize_friar_estates_button_desc: "Move beyond survey and sermon: expropriate the orders' vast landholdings outright and redistribute them to their tenant farmers."

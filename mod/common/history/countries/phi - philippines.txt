@@ -36,7 +36,6 @@
 
 		ig:ig_landowners ?= {
 			add_ruling_interest_group = yes
-			add_ideology = ideology_colonialist
 			set_interest_group_name = phfp_ig_principalia
 		}
 
@@ -53,10 +52,6 @@
 		ig:ig_petty_bourgeoisie = {
 			remove_ideology = ideology_reactionary
 			add_ideology = ideology_modernizer
-		}
-
-		ig:ig_rural_folk = {
-			set_interest_group_name = phfp_ig_sakahan
 		}
 
 		if = {

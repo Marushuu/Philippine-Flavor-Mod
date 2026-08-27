@@ -1,0 +1,27 @@
+﻿l_english:
+ phfp_je_national_ethnogenesis_ip4: "$je_filipino_ethnogenesis$"
+ phfp_je_national_ethnogenesis_ip4_reason: "$je_filipino_ethnogenesis_reason$"
+ phfp_integrated_cultures_tt: "We have integrated at least #variable 3#! or more [concept_culture]"
+
+ phfp_integrate_tagalogs: "Integrate the $PLURAL_DEMONYM_tagalog$"
+ phfp_integrate_tagalogs_desc: "Formally recognize the $PLURAL_DEMONYM_tagalog$ as constituents of the emerging Filipino nation, folding their language and identity into the new national character being forged."
+ phfp_integrated_tagalogs_tt: "We integrated the $PLURAL_DEMONYM_tagalog$"
+
+ phfp_integrate_ilocanos: "Integrate the $PLURAL_DEMONYM_ilocano$"
+ phfp_integrate_ilocanos_desc: "Extend the national project northward, drawing the $PLURAL_DEMONYM_ilocano$ into the shared identity taking shape across the archipelago."
+ phfp_integrated_ilocanos_tt: "We integrated the $PLURAL_DEMONYM_ilocano$"
+
+ phfp_integrate_visayans: "Integrate the $PLURAL_DEMONYM_visayan$"
+ phfp_integrate_visayans_desc: "Bridge the waters between Luzon and the Visayas, welcoming the $PLURAL_DEMONYM_visayan$ into a single Filipino people rather than a loose federation of islands."
+ phfp_integrated_visayans_tt: "We integrated the $PLURAL_DEMONYM_visayan$"
+
+ phfp_integrate_lumads: "Integrate the $PLURAL_DEMONYM_lumad$"
+ phfp_integrate_lumads_desc: "Reach out to the indigenous $PLURAL_DEMONYM_lumad$ of the southern uplands — a harder sell than the lowland Christianized peoples, and one that risks being seen as just another wave of conquest in new clothing."
+ phfp_integrated_lumads_tt: "We integrated the $PLURAL_DEMONYM_lumad$"
+
+ phfp_integrate_moros: "Integrate the $PLURAL_DEMONYM_moro$"
+ phfp_integrate_moros_desc: "Attempt what centuries of Spanish arms could not: bring the proudly independent $PLURAL_DEMONYM_moro$ into the national fold as equals rather than subjects."
+ phfp_integrated_moros_tt: "We integrated the $PLURAL_DEMONYM_moro$"
+
+ phfp_je_the_matter_of_language: "The Matter of Language"
+ phfp_je_the_matter_of_language_reason: ""

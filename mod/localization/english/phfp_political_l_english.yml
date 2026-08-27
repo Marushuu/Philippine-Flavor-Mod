@@ -42,10 +42,8 @@
   phfp_ig_principalia: "Principalia" # Landowners
   phfp_ig_frailocracia: "Frailocracia" # Devout - Spain
   phfp_ig_simbahan: "Simbahan" # Devout
-  phfp_ig_sakahan: "Sakahan"
 
   # Interest Group Descriptions
-  phfp_ig_principalia_desc: ""
-  phfp_ig_frailocracia_desc: ""
-  phfp_ig_simbahan_desc: ""
-  phfp_ig_sakahan_desc: ""
+  phfp_ig_principalia_desc: "The old landed and mestizo elite of the provinces — gobernadorcillos, cabezas de barangay, and the pre-colonial families who have quietly run local affairs."
+  phfp_ig_frailocracia_desc: "The religious orders in their capacity as the archipelago's largest landholders, educators, and power brokers. The Church acts not only as faith, but also the landlord."
+  phfp_ig_simbahan_desc: "$ig_catholic_church_desc$"
