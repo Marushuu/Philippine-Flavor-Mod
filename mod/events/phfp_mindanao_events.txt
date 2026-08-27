@@ -4,22 +4,30 @@
 phfp_mindanao.1 = {
 	type = country_event
 	placement = ROOT
+
 	title = phfp_mindanao.1.t
 	desc = phfp_mindanao.1.d
 	flavor = phfp_mindanao.1.f
+
 	duration = 3
+
 	event_image = {
 		video = "europenorthamerica_before_the_battle"
 	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
 	trigger = {
 	}
+
 	immediate = {
 		c:MGD = {
 			save_scope_as = mgd_scope
 		}
 	}
+
 	option = {
 		name = phfp_mindanao.1.a
 		default_option = yes
@@ -45,6 +53,7 @@ phfp_mindanao.1 = {
 			}
 		}
 	}
+
 	option = {
 		name = phfp_mindanao.1.b
 		remove_variable = phfp_maguindanao_expedition_button_var
@@ -55,15 +64,21 @@ phfp_mindanao.1 = {
 phfp_mindanao.2 = {
 	type = country_event
 	placement = ROOT
+
 	title = phfp_mindanao.2.t
 	desc = phfp_mindanao.2.d
 	flavor = phfp_mindanao.2.f
+
 	duration = 3
+
 	event_image = {
 		video = "europenorthamerica_before_the_battle"
 	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
 	immediate = {
 		s:STATE_MINDANAO = {
 			random_scope_state = {
@@ -77,6 +92,7 @@ phfp_mindanao.2 = {
 			save_scope_as = sulu_scope
 		}
 	}
+
 	option = {
 		name = phfp_mindanao.2.a
 		default_option = yes
@@ -102,6 +118,7 @@ phfp_mindanao.2 = {
 			}
 		}
 	}
+
 	option = {
 		name = phfp_mindanao.2.b
 		remove_variable = phfp_sulu_expedition_button_var
@@ -112,15 +129,21 @@ phfp_mindanao.2 = {
 phfp_mindanao.3 = {
 	type = country_event
 	placement = ROOT
+
 	title = phfp_mindanao.3.t
 	desc = phfp_mindanao.3.d
 	flavor = phfp_mindanao.3.f
+
 	duration = 3
+
 	event_image = {
 		video = "asia_poor_people_moving"
 	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
 	immediate = {
 		s:STATE_MINDANAO.region_state:PHI = {
 			save_scope_as = mindanao_scope
@@ -129,6 +152,7 @@ phfp_mindanao.3 = {
 			save_scope_as = visayas_scope
 		}
 	}
+
 	option = {
 		name = phfp_mindanao.3.a
 		default_option = yes
@@ -156,6 +180,7 @@ phfp_mindanao.3 = {
 			base = 60
 		}
 	}
+
 	option = {
 		name = phfp_mindanao.3.b
 		scope:mindanao_scope = {
@@ -167,8 +192,12 @@ phfp_mindanao.3 = {
 				value = large_radicals
 				culture = cu:moro
 			}
+			add_loyalists_in_state = {
+				value = large_radicals
+				culture = cu:lumad
+			}
 			add_modifier = {
-				name = phfp_md_moro_autonomy
+				name = phfp_md_mindanao_autonomy
 				days = very_long_modifier_time
 			}
 		}
@@ -182,15 +211,21 @@ phfp_mindanao.3 = {
 phfp_mindanao.4 = {
 	type = country_event
 	placement = ROOT
+
 	title = phfp_mindanao.4.t
 	desc = phfp_mindanao.4.d
 	flavor = phfp_mindanao.4.f
+
 	duration = 3
+
 	event_image = {
 		video = "asia_farmers_market"
 	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
 	immediate = {
 
 	}
@@ -209,15 +244,21 @@ phfp_mindanao.4 = {
 phfp_mindanao.5 = {
 	type = country_event
 	placement = ROOT
+
 	title = phfp_mindanao.5.t
 	desc = phfp_mindanao.5.d
 	flavor = phfp_mindanao.5.f
+
 	duration = 3
+
 	event_image = {
 		video = "unspecific_devastation"
 	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
 	immediate = {
 		s:STATE_MINDANAO = {
 			save_scope_as = mindanao_scope
@@ -255,55 +296,73 @@ phfp_mindanao.5 = {
 phfp_mindanao.6 = {
 	type = country_event
 	placement = ROOT
+
 	title = phfp_mindanao.6.t
 	desc = phfp_mindanao.6.d
 	flavor = phfp_mindanao.6.f
+
 	duration = 3
+
 	event_image = {
 		video = "southamerica_christianity"
 	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
 	immediate = {
 		s:STATE_MINDANAO.region_state:PHI = {
 			save_scope_as = mindanao_scope
 		}
 	}
+
 	option = {
 		name = phfp_mindanao.6.a
 		default_option = yes
 		scope:mindanao_scope = {
 			add_modifier = {
-				name = phfp_md_moro_conversion
+				name = phfp_md_mindanao_conversion
 				days = long_modifier_time
-				multiplier = money_amount_multiplier_medium
 			}
 		}
 		add_modifier = {
 			name = phfp_md_conversion_cost
 			days = long_modifier_time
-			multiplier = money_amount_multiplier_small
+			multiplier = money_amount_multiplier_medium
 		}
+	}
+
+	option = {
+		name = phfp_mindanao.6.b
+		remove_variable = phfp_send_missionaries_var
 	}
 }
 
 phfp_mindanao.7 = {
 	type = country_event
 	placement = ROOT
+
 	title = phfp_mindanao.7.t
 	desc = phfp_mindanao.7.d
 	flavor = phfp_mindanao.7.f
+
 	duration = 3
+
 	event_image = {
 		video = "ip3_village_school"
 	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
 	immediate = {
 		s:STATE_MINDANAO.region_state:PHI = {
 			save_scope_as = mindanao_scope
 		}
 	}
+
 	option = {
 		name = phfp_mindanao.7.a
 		default_option = yes
@@ -316,28 +375,40 @@ phfp_mindanao.7 = {
 		add_modifier = {
 			name = phfp_md_education_cost
 			days = long_modifier_time
-			multiplier = money_amount_multiplier_small
+			multiplier = money_amount_multiplier_medium
 		}
+	}
+
+	option = {
+		name = phfp_mindanao.7.b
+		remove_variable = phfp_fund_schools_var
 	}
 }
 
 phfp_mindanao.8 = {
 	type = country_event
 	placement = ROOT
+
 	title = phfp_mindanao.8.t
 	desc = phfp_mindanao.8.d
 	flavor = phfp_mindanao.8.f
+
 	duration = 3
+
 	event_image = {
 		video = "ep2_active_shipyard"
 	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
 	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
 	immediate = {
 		s:STATE_MINDANAO.region_state:PHI = {
 			save_scope_as = mindanao_scope
 		}
 	}
+
 	option = {
 		name = phfp_mindanao.8.a
 		default_option = yes
@@ -352,20 +423,27 @@ phfp_mindanao.8 = {
 phfp_mindanao.9 = {
 	type = country_event
 	placement = ROOT
+
 	title = phfp_mindanao.9.t
 	desc = phfp_mindanao.9.d
 	flavor = phfp_mindanao.9.f
+
 	duration = 3
+
 	event_image = {
 		video = "ip2_india_countryside"
 	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
 	immediate = {
 		s:STATE_MINDANAO.region_state:PHI = {
 			save_scope_as = mindanao_scope
 		}
 	}
+
 	option = {
 		name = phfp_mindanao.9.a
 		default_option = yes
@@ -415,20 +493,27 @@ phfp_mindanao.9 = {
 phfp_mindanao.10 = {
 	type = country_event
 	placement = ROOT
+
 	title = phfp_mindanao.10.t
 	desc = phfp_mindanao.10.d
 	flavor = phfp_mindanao.10.f
+
 	duration = 3
+
 	event_image = {
 		video = "ip4_colonial_exploitation_going_well"
 	}
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
 	immediate = {
 		s:STATE_MINDANAO.region_state:PHI = {
 			save_scope_as = mindanao_scope
 		}
 	}
+
 	option = {
 		name = phfp_mindanao.10.a
 		add_modifier = {
@@ -460,6 +545,9 @@ phfp_mindanao.10 = {
 					days = long_modifier_time
 				}
 			}
+		}
+		hidden_effect = {
+			set_variable = phfp_mindanao_developed
 		}
 	}
 }

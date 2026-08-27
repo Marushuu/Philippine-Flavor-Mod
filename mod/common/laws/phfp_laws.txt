@@ -16,11 +16,10 @@ law_frailocracy = {
 	}
 
 	modifier = {
-		country_clergymen_pol_str_mult = 0.35
-		country_aristocrats_pol_str_mult = 0.10
-		state_clergymen_investment_pool_efficiency_mult = -0.15
+		interest_group_ig_devout_pol_str_mult = 0.5
+		interest_group_ig_landowners_pol_str_mult = 0.1
 		state_aristocrats_investment_pool_efficiency_mult = -0.15
-		state_tax_capacity_mult = -0.10
+		state_tax_capacity_mult = -0.1
 	}
 
 	ai_will_do = {

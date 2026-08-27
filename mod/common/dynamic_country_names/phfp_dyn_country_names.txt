@@ -1,31 +1,16 @@
 ﻿PHI = {
-	# Protectorate Status
+	# Standard Colony
 	dynamic_country_name = {
-		name = phfp_dyn_c_protectorate
+		name = PHI
 		adjective = PHI_ADJ
+		use_overlord_prefix = yes
 
 		is_main_tag_only = yes
-		priority = 10
+		priority = 30
 
 		trigger = {
 			scope:actor = {
 				is_subject = yes
-				is_subject_type = subject_type_protectorate
-			}
-		}
-	}
-
-	dynamic_country_name = {
-		name = phfp_dyn_c_dominion
-		adjective = PHI_ADJ
-
-		is_main_tag_only = yes
-		priority = 10
-
-		trigger = {
-			scope:actor = {
-				is_subject = yes
-				is_subject_type = subject_type_dominion
 			}
 		}
 	}
@@ -78,25 +63,18 @@
 		}
 	}
 
-	# American Dominion
+	# Philippine Commonwealth
 	dynamic_country_name = {
 		name = phfp_dyn_c_commonwealth
 		adjective = PHI_ADJ
 
 		is_main_tag_only = yes
-		priority = 45
+		priority = 40
 
 		trigger = {
 			scope:actor = {
 				is_subject = yes
 				is_subject_type = subject_type_dominion
-				can_increase_autonomy = yes
-				overlord ?= {
-					OR = {
-						c:USA = THIS
-						was_formed_from = USA
-					}
-				}
 			}
 		}
 	}
@@ -112,13 +90,56 @@
 		trigger = {
 			scope:actor = {
 				is_subject = yes
-				can_increase_autonomy = no
 				overlord ?= {
 					OR = {
 						c:JAP = THIS
 						was_formed_from = JAP
 					}
 				}
+			}
+		}
+	}
+
+	# Empire
+	dynamic_country_name = {
+		name = phfp_dyn_c_empire
+		adjective = PHI_ADJ
+
+		priority = 20
+
+		trigger = {
+			scope:actor ?= {
+				coa_monarchy_trigger = yes
+				is_country_type = recognized
+			}
+		}
+	}
+
+	# Communist
+	dynamic_country_name = {
+		name = phfp_dyn_c_communist
+		adjective = PHI_ADJ
+
+		priority = 20
+
+		trigger = {
+			scope:actor ?= {
+				coa_communist_trigger = yes
+				coa_anarchy_trigger   = no
+			}
+		}
+	}
+
+	# Anarchist
+	dynamic_country_name = {
+		name = phfp_dyn_c_anarchist
+		adjective = PHI_ADJ
+
+		priority = 20
+
+		trigger = {
+			scope:actor ?= {
+				coa_anarchy_trigger = yes
 			}
 		}
 	}

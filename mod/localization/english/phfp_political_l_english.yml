@@ -1,4 +1,7 @@
 ﻿l_english:
+  # Replaced JEs
+  phfp_je_group_hidden: "Hidden DLC Content"
+
   # Laws
   law_frailocracy: "Frailocracy"
   law_frailocracy_desc: "Agricultural land are dominated by the various catholic religious orders. Their tenants, the inquilinos, were often subjected to arbitrary rent increases."
@@ -8,18 +11,17 @@
   phfp_amendment_philippine_sangleys_desc: "The Philippines have a long history of chinese migration, throughout it's history, the economic vitality of these islands has become inextricably linked to the Sangley and their descendants, the Mestizo de Sangleys."
 
   # Dynamic Subjugation Names
-  phfp_dyn_c_protectorate: "Philippine Protectorate"
   phfp_dyn_c_spanish: "Captaincy General of the Philippines"
   phfp_dyn_c_dominion: "Philippine Dominion"
   phfp_dyn_c_american: "Philippine Insular Government"
-  phfp_dyn_c_commonwealth: "Philippine Commonwealth"
-  phfp_dyn_c_japanese: "Hikoku Executive Commission"
+  phfp_dyn_c_commonwealth: "Commonwealth of the Philippines"
+  phfp_dyn_c_japanese: "Philippine Executive Commission"
 
   # Dynamic Independent Philippine Names
   phfp_dyn_c_communist: "People's Republic of the Philippines"
-  phfp_dyn_c_anarchist: "Philippine Free Territories"
+  phfp_dyn_c_anarchist: "Philippine Anarchist Confederation"
   phfp_dyn_c_empire: "Philippine Empire"
-  phfp_dyn_c_theocracy: "The Holy Islands of Mary"
+  phfp_dyn_c_theocracy: "Holy State of the Philippines"
 
   # Power Bloc Names
 

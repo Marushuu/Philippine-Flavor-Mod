@@ -1,0 +1,431 @@
+﻿phfp_je_development = {
+    group = je_group_technology
+    icon = "gfx/interface/icons/invention_icons/banking.dds"
+
+    is_shown_in_lobby = {
+        c:PHI ?= this
+        NOT = {
+            has_dlc_feature = ip4_content
+        }
+    }
+
+    complete = {
+        gdp >= 4500000
+    }
+
+    on_complete = {
+        trigger_event = {
+            id = phfp_development.1
+        }
+        hidden_effect = {
+            set_variable = phi_dev_done
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = phfp_development.2.a
+        effect = {
+            add_modifier = {
+                name = phfp_md_opening_of_trade
+                days = long_modifier_time
+            }
+            add_loyalists = {
+                pop_type = academics
+                value = medium_radicals
+            }
+            add_loyalists = {
+                pop_type = capitalists
+                value = medium_radicals
+            }
+        }
+    }
+
+    fail = {
+        NOT = {
+            OR = {
+                has_state_in_state_region = STATE_LUZON
+                has_state_in_state_region = STATE_VISAYAS
+            }
+        }
+    }
+
+    on_fail = {
+        add_modifier = {
+            name = modifier_developmental_dearth
+            days = normal_modifier_time
+        }
+        add_modifier = {
+            name = modifier_archipelagic_anger
+            days = normal_modifier_time
+        }
+        if = {
+            limit = {
+                has_modifier = phfp_md_opening_of_trade
+            }
+            remove_modifier = phfp_md_opening_of_trade
+        }
+    }
+
+    weight = 1000
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+phfp_je_development_ip4 = {
+    group = je_group_technology
+    icon = "gfx/interface/icons/goods_icons/sugar.dds"
+
+    is_shown_in_lobby = {
+        c:PHI ?= this
+        has_dlc_feature = ip4_content
+    }
+
+    immediate = {
+        root = {
+            save_scope_as = phi_scope
+        }
+        random_scope_state = {
+            limit = {
+                state_region = s:STATE_LUZON
+            }
+            save_scope_as = luzon_scope
+        }
+        random_scope_state = {
+            limit = {
+                state_region = s:STATE_VISAYAS
+            }
+            save_scope_as = visayas_scope
+        }
+        random_scope_state = {
+            limit = {
+                state_region = s:STATE_MINDANAO
+            }
+            save_scope_as = mindanao_scope
+        }
+    }
+
+    complete = {
+        gdp >= 4500000
+        OR = {
+            country_has_building_group_levels = {
+                type = bg_plantations
+                value >= 15
+            }
+            any_scope_state = {
+                owner = ROOT
+                any_scope_building = {
+                    is_building_type = building_urban_center
+                    level >= 5
+                }
+            }
+        }
+    }
+
+    on_complete = {
+        trigger_event = {
+            id = phfp_development.3
+        }
+        hidden_effect = {
+            set_variable = phi_dev_done
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = phfp_development.3.a
+        effect = {
+            add_loyalists = {
+                value = medium_radicals
+                pop_type = capitalists
+            }
+            add_loyalists = {
+                value = small_radicals
+                pop_type = shopkeepers
+            }
+            add_modifier = {
+                name = phfp_md_growth_to_the_cities
+                days = long_modifier_time
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = phfp_development.3.b
+        effect = {
+            add_loyalists = {
+                value = medium_radicals
+                pop_type = aristocrats
+            }
+            add_loyalists = {
+                value = small_radicals
+                pop_type = peasants
+            }
+            add_modifier = {
+                name = phfp_md_growth_to_the_countrysides
+                days = long_modifier_time
+            }
+        }
+    }
+
+    fail = {
+        NOT = {
+            OR = {
+                has_state_in_state_region = STATE_LUZON
+                has_state_in_state_region = STATE_VISAYAS
+            }
+        }
+    }
+
+    on_fail = {
+        add_modifier = {
+            name = modifier_developmental_dearth
+            days = normal_modifier_time
+        }
+        add_modifier = {
+            name = modifier_archipelagic_anger
+            days = normal_modifier_time
+        }
+        if = {
+            limit = {
+                has_modifier = philippines_development_modifier_a
+            }
+            remove_modifier = philippines_development_modifier_a
+        }
+        if = {
+            limit = {
+                has_modifier = philippines_development_modifier_b
+            }
+            remove_modifier = philippines_development_modifier_b
+        }
+    }
+
+    weight = 1000
+    should_be_pinned_by_default_uninvolved_or_context = yes
+}
+
+phfp_je_luzon_development = {
+    group = je_group_technology
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+    scripted_button = phfp_manila_port_button
+    scripted_button = phfp_manila_rail_button
+
+    possible = {}
+
+    immediate = {
+        s:STATE_LUZON = {
+            every_scope_state = {
+                limit = {
+                    owner = ROOT
+                }
+                save_scope_as = luzon_scope
+            }
+        }
+    }
+
+    complete = {
+        scope:luzon_scope = {
+            is_incorporated = yes
+            gdp >= 5000000
+            OR = {
+                state_has_building_group_levels = {
+                    type = bg_light_industry
+                    value >= 15
+                }
+                state_has_building_group_levels = {
+                    type = bg_heavy_industry
+                    value >= 10
+                }
+            }
+            OR = {
+                state_has_building_group_levels = {
+                    type = bg_mining
+                    value >= 20
+                }
+                state_has_building_group_levels = {
+                    type = bg_agriculture
+                    value >= 20
+                }
+                state_has_building_group_levels = {
+                    type = bg_plantations
+                    value >= 20
+                }
+            }
+            state_has_building_type_levels = {
+                target = bt:building_urban_center
+                value >= 10
+            }
+        }
+        custom_tooltip = {
+            text = luzon_development_manila_port_tt
+            has_variable =  phfp_manila_port_button_var
+        }
+        custom_tooltip = {
+            text = luzon_development_manila_rail_tt
+            has_variable = phfp_manila_rail_button_var
+        }
+    }
+
+    on_complete = {
+        trigger_event = {
+            id = phfp_development.6
+        }
+        hidden_effect = {
+            set_variable = phfp_luzon_developed
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = phfp_development.6.a
+        effect = {
+            scope:luzon_scope = {
+                add_modifier = {
+                    name = phfp_md_industrial_heartland
+                    days = moderately_long_modifier_time
+                }
+            }
+            add_modifier = {
+                name = phfp_md_favored_manufacturing
+                days = moderately_long_modifier_time
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = phfp_development.6.b
+        effect = {
+            scope:luzon_scope = {
+                add_modifier = {
+                    name = phfp_md_agricultural_heartland
+                    days = moderately_long_modifier_time
+                }
+            }
+            add_modifier = {
+                name = phfp_md_favored_agriculture
+                days = moderately_long_modifier_time
+            }
+        }
+    }
+
+    fail = {
+        NOT = {
+            has_state_in_state_region = STATE_LUZON
+        }
+    }
+
+    on_fail = {
+        add_modifier = {
+            name = modifier_developmental_dearth
+            days = long_modifier_time
+        }
+        add_modifier = {
+            name = modifier_archipelagic_anger
+            days = long_modifier_time
+        }
+        add_radicals = {
+            value = large_radicals
+        }
+    }
+}
+
+phfp_je_visayas_development = {
+    group = je_group_technology
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+    scripted_button = phfp_cebu_port_button
+    scripted_button = phfp_iloilo_port_button
+
+    possible = {}
+
+    immediate = {
+        s:STATE_VISAYAS = {
+            every_scope_state = {
+                limit = {
+                    owner = ROOT
+                }
+                save_scope_as = visayas_scope
+            }
+        }
+    }
+
+    complete = {
+        custom_tooltip = {
+            scope:visayas_scope = {
+                is_incorporated = yes
+                gdp >= 4000000
+                state_has_building_type_levels = {
+                    target = bt:building_railway
+                    value >= 5
+                }
+                state_has_building_type_levels = {
+                    target = bt:building_urban_center
+                    value >= 7
+                }
+            }
+            text = visayas_development_port_tt
+            OR = {
+                has_variable = phfp_cebu_port_button_var
+                has_variable = phfp_iloilo_port_button_var
+            }
+        }
+    }
+
+    on_complete = {
+        trigger_event = {
+            id = phfp_development.9
+        }
+        hidden_effect = {
+            set_variable = phfp_visayas_developed
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = visayas_development_port_iloilo_tt
+        effect = {
+            scope:visayas_scope = {
+                add_modifier = {
+                    name = phfp_md_iloilo_expansion
+                    days = moderately_long_modifier_time
+                }
+            }
+            add_modifier = {
+                name = phfp_md_favored_agriculture
+                days = moderately_long_modifier_time
+            }
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = visayas_development_port_cebu_tt
+        effect = {
+            scope:visayas_scope = {
+                add_modifier = {
+                    name = phfp_md_cebu_expansion
+                    days = moderately_long_modifier_time
+                }
+            }
+            add_modifier = {
+                name = phfp_md_favored_manufacturing
+                days = moderately_long_modifier_time
+            }
+        }
+    }
+
+    fail = {
+        NOT = {
+            has_state_in_state_region = STATE_VISAYAS
+        }
+    }
+
+    on_fail = {
+        add_modifier = {
+            name = modifier_developmental_dearth
+            days = long_modifier_time
+        }
+        add_modifier = {
+            name = modifier_archipelagic_anger
+            days = long_modifier_time
+        }
+        add_radicals = {
+            value = large_radicals
+        }
+    }
+}

@@ -42,7 +42,7 @@
 
  phfp_je_taming_the_south: "Taming the South"
  phfp_je_taming_the_south_reason: "Though sovereignty over [SCOPE.sStateRegion('mindanao_scope').GetName] has been claimed on paper, the interior remains an unsubdued frontier hampered by rugged geography, underdeveloped infrastructure, and widespread local resistance.\nWe shall drain the marshes, irrigate the lands, and harness the vast potential that these jungles hold."
- taming_the_south_established_port_of_zamboanga_tt: "We constructed the Port of Zamboanga"
+ taming_the_south_established_port_of_zamboanga_tt: "We constructed the $phfp_state_trait_port_of_zamboanga$"
 
  phfp_arable_land_button: "Rehabilitate the Pulangi River Valley"
  phfp_arable_land_button_desc: ""
@@ -62,12 +62,13 @@
  phfp_mindanao.6.d: "Zealous missionaries have petitioned the government for funding to establish missions among the native populace, promising spiritual upliftment and integration"
  phfp_mindanao.6.f: "The cross often follows the flag, but in [SCOPE.sStateRegion('mindanao_scope').GetName], bringing a new faith frequently invites the sword"
  phfp_mindanao.6.a: "Send the cross"
- phfp_mindanao.6.b: "Let them worship who they wish"
+ phfp_mindanao.6.b: "We can't afford that"
 
  phfp_mindanao.7.t: "Education for the South"
  phfp_mindanao.7.d: "If [SCOPE.sStateRegion('mindanao_scope').GetName] is to be truly integrated into the nation, we must build schools to educate the next generation of its inhabitants"
  phfp_mindanao.7.f: "Literacy and a shared curriculum will forge bonds far stronger than any military garrison"
- phfp_mindanao.7.a: "Build the schools."
+ phfp_mindanao.7.a: "Build the schools"
+ phfp_mindanao.7.b: "We can't afford that"
 
  phfp_mindanao.8.t: "The Bastion of the South"
  phfp_mindanao.8.d: "To secure the naval passages between the Celebes and Sulu Seas, local engineers propose massively expanding the port facilities surrounding Fort Pilar in Zamboanga."

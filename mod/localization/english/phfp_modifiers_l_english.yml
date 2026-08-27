@@ -1,15 +1,37 @@
 ﻿l_english:
- phfp_md_moro_resistance: "Moro Resistance"
- phfp_md_southern_settlement: "Visayan Southern Settlement"
- phfp_md_moro_autonomy: "Provided Moro Autonomy"
+ # Starter Modifiers
+ phfp_md_opening_of_trade: "Opening of the Ports"
+
+ # Development Modifiers
+ phfp_md_growth_to_the_countrysides: "Growth to the Countrysides"
+ phfp_md_growth_to_the_cities: "Growth to the Cities"
+ phfp_md_manila_railway: "Manila Railway"
+ phfp_md_agricultural_heartland: "Agricultural Heartland"
+ phfp_md_industrial_heartland: "Industrial Heartland"
+ phfp_md_favored_manufacturing: "Manufacturing Focus"
+ phfp_md_cebu_expansion: "Queen City Cebu"
+ phfp_md_favored_agriculture: "Agricultural Focus"
+ phfp_md_iloilo_expansion: "Queen City Iloilo"
+ phfp_md_miracle_on_the_orient: "Miracle on the Orient Seas"
+
+ # Mindanao Modifiers
+ phfp_md_mindanao_resistance: "Local Resistance"
+ phfp_md_southern_settlement: "Visayan Settlement"
+ phfp_md_mindanao_autonomy: "Provided Local Autonomy"
  phfp_md_moro_education_investment: "Education Investments"
- phfp_md_education_cost: "Mindanao Education Investment Funds"
- phfp_md_moro_conversion: "Converting the Populace"
- phfp_md_conversion_cost: "Mindanao Conversion Funds"
- phfp_md_moro_pacification: "Pacification of the South"
+ phfp_md_education_cost: "Mindanao Education Fund"
+ phfp_md_mindanao_conversion: "Spreading the Gospel"
+ phfp_md_conversion_cost: "Mindanao Missionary Fund"
+ phfp_md_moro_pacification: "Pacification of Mindanao"
  phfp_md_loss_of_mindanao: "Loss of Mindanao"
  phfp_md_loss_of_mindanao_approval: "Embarrassing Loss"
  phfp_md_immigration: "Waves of Immigration"
- phfp_md_mindanao_developed: "Successful Southern Investments"
- phfp_md_mindanao_developed_approval: "Successful Southern Investments"
+ phfp_md_mindanao_developed: "Successful Mindanao Investments"
+ phfp_md_mindanao_developed_approval: "Successful Mindanao Investments"
  phfp_md_tamed_south: "Developed Lands"
+
+ # Nationalism Modifiers
+ phfp_md_ilustrado_movement: "Ilustrado Movement"
+ phfp_md_lib_gain: "Nascent Independence Movement"
+ phfp_md_lib_gain_2: "Burgeoning Independence Movement"
+ phfp_md_lib_gain_3: "Fully-fledged Independence Movement"

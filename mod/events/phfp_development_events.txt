@@ -1,0 +1,470 @@
+﻿namespace = phfp_development
+
+# Old Philippines Starter Event - No Dlc
+phfp_development.1 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_development.1.t
+    desc = phfp_development.1.d
+    flavor = phfp_development.1.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    event_image = {
+        video = "southamerica_aristocrats"
+    }
+
+    trigger = {
+    }
+
+    immediate = {
+        c:SPA = {
+            save_scope_as = spain_scope
+        }
+    }
+
+    option = {
+        name = phfp_development.1.a
+        default_option = yes
+        add_modifier = {
+            name = phfp_md_opening_of_trade
+            days = long_modifier_time
+        }
+        add_loyalists = {
+            pop_type = academics
+            value = medium_radicals
+        }
+        add_loyalists = {
+            pop_type = capitalists
+            value = medium_radicals
+        }
+    }
+}
+
+# Development No DLC Completion
+phfp_development.2 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_development.2.t
+    desc = phfp_development.2.d
+    flavor = phfp_development.2.f
+
+    duration = 3
+
+    event_image = {
+        video = "southamerica_factory_opening"
+    }
+
+    immediate = {
+        add_journal_entry = {
+            type = phfp_je_luzon_development
+        }
+
+        add_journal_entry = {
+            type = phfp_je_visayas_development
+        }
+    }
+
+    option = {
+        name = phfp_development.2.a
+        default_option = yes
+        add_loyalists = {
+            value = medium_radicals
+            pop_type = capitalists
+        }
+        add_loyalists = {
+            value = small_radicals
+            pop_type = shopkeepers
+        }
+        add_modifier = {
+            name = phfp_md_growth_to_the_cities
+            days = long_modifier_time
+        }
+    }
+}
+
+# Development IP4 Completion
+phfp_development.3 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_development.3.t
+    desc = phfp_development.3.d
+    flavor = phfp_development.3.f
+
+    duration = 3
+
+    event_image = {
+        video = "southamerica_factory_opening"
+    }
+
+    immediate = {
+        add_journal_entry = {
+            type = phfp_je_luzon_development
+        }
+
+        add_journal_entry = {
+            type = phfp_je_visayas_development
+        }
+    }
+
+    option = {
+        name = phfp_development.3.a
+        default_option = yes
+        add_loyalists = {
+            value = medium_radicals
+            pop_type = capitalists
+        }
+        add_loyalists = {
+            value = small_radicals
+            pop_type = shopkeepers
+        }
+        add_modifier = {
+            name = phfp_md_growth_to_the_cities
+            days = long_modifier_time
+        }
+    }
+
+    option = {
+        name = phfp_development.3.b
+        add_loyalists = {
+            value = medium_radicals
+            pop_type = aristocrats
+        }
+        add_loyalists = {
+            value = small_radicals
+            pop_type = peasants
+        }
+        add_modifier = {
+            name = phfp_md_growth_to_the_countrysides
+            days = long_modifier_time
+        }
+    }
+}
+
+# Port of Manila
+phfp_development.4 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_development.4.t
+    desc = phfp_development.4.d
+    flavor = phfp_development.4.f
+
+    duration = 3
+
+    event_image = {
+        video = "ep2_active_shipyard"
+    }
+
+    immediate = {
+        s:STATE_LUZON = {
+            every_scope_state = {
+                limit = {
+                    owner = ROOT
+                }
+                save_scope_as = luzon_scope
+            }
+        }
+    }
+
+    option = {
+        name = phfp_development.4.a
+        default_option = yes
+        scope:luzon_scope.state_region = {
+            remove_state_trait = state_trait_manila_bay
+            add_state_trait = phfp_state_trait_port_of_manila
+        }
+    }
+}
+
+# Manila Railway
+phfp_development.5 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_development.5.t
+    desc = phfp_development.5.d
+    flavor = phfp_development.5.f
+
+    duration = 3
+
+    event_image = {
+        video = "unspecific_trains"
+    }
+
+    immediate = {
+        s:STATE_LUZON = {
+            every_scope_state = {
+                limit = {
+                    owner = ROOT
+                }
+                save_scope_as = luzon_scope
+            }
+        }
+    }
+
+    option = {
+        name = phfp_development.5.a
+        default_option = yes
+        scope:luzon_scope = {
+            add_modifier = {
+                name = phfp_md_manila_railway
+            }
+        }
+        add_modifier = {
+            name = modifier_railway_magnates
+            days = moderately_long_modifier_time
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_technology_researched = steel_railway_cars
+                }
+            }
+            add_technology_progress = {
+                progress = 1500
+                technology = steel_frame_buildings
+            }
+        }
+    }
+}
+
+# Luzon Development Completion
+phfp_development.6 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_development.6.t
+    desc = phfp_development.6.d
+    flavor = phfp_development.6.f
+
+    duration = 3
+
+    event_image = {
+        video = "europenorthamerica_london_center"
+    }
+
+    immediate = {
+        s:STATE_LUZON = {
+            every_scope_state = {
+                limit = {
+                    owner = ROOT
+                }
+                save_scope_as = luzon_scope
+            }
+        }
+    }
+
+    option = {
+        name = phfp_development.6.a
+        default_option = yes
+        scope:luzon_scope = {
+            add_modifier = {
+                name = phfp_md_industrial_heartland
+                days = moderately_long_modifier_time
+            }
+        }
+        add_modifier = {
+            name = phfp_md_favored_manufacturing
+            days = moderately_long_modifier_time
+        }
+    }
+
+    option = {
+        name = phfp_development.6.b
+        scope:luzon_scope = {
+            add_modifier = {
+                name = phfp_md_agricultural_heartland
+                days = moderately_long_modifier_time
+            }
+        }
+        add_modifier = {
+            name = phfp_md_favored_agriculture
+            days = moderately_long_modifier_time
+        }
+    }
+}
+
+# Port of Cebu
+phfp_development.7 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_development.7.t
+    desc = phfp_development.7.d
+    flavor = phfp_development.7.f
+
+    duration = 3
+
+    event_image = {
+        video = "ep2_active_shipyard"
+    }
+
+    immediate = {
+        s:STATE_VISAYAS = {
+            every_scope_state = {
+                limit = {
+                    owner = ROOT
+                }
+                save_scope_as = visayas_scope
+            }
+        }
+    }
+
+    option = {
+        name = phfp_development.7.a
+        default_option = yes
+        scope:visayas_scope.state_region = {
+            add_state_trait = phfp_state_trait_port_of_cebu
+        }
+    }
+
+    option = {
+        name = phfp_development.7.b
+        remove_variable = phfp_cebu_port_button_var
+    }
+}
+
+# Port of Iloilo
+phfp_development.8 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_development.8.t
+    desc = phfp_development.8.d
+    flavor = phfp_development.8.f
+
+    duration = 3
+
+    event_image = {
+        video = "unspecific_steam_ship"
+    }
+
+    immediate = {
+        s:STATE_VISAYAS = {
+            every_scope_state = {
+                limit = {
+                    owner = ROOT
+                }
+                save_scope_as = visayas_scope
+            }
+        }
+    }
+
+    option = {
+        name = phfp_development.8.a
+        default_option = yes
+        scope:visayas_scope.state_region = {
+            add_state_trait = state_trait_port_of_iloilo
+        }
+    }
+
+    option = {
+        name = phfp_development.8.b
+        remove_variable = phfp_iloilo_port_button_var
+    }
+}
+
+# Visayan Development Completion
+phfp_development.9 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_development.9.t
+    desc = phfp_development.9.d
+    flavor = phfp_development.9.f
+
+    duration = 3
+
+    event_image = {
+        video = "europenorthamerica_london_center"
+    }
+
+    immediate = {
+        s:STATE_VISAYAS = {
+            every_scope_state = {
+                limit = {
+                    owner = ROOT
+                }
+                save_scope_as = visayas_scope
+            }
+        }
+    }
+
+    option = {
+        name = phfp_development.9.a
+        default_option = yes
+        trigger = {
+            custom_tooltip = {
+                text = visayas_development_port_iloilo_tt
+                has_variable = phfp_iloilo_port_button_var
+            }
+        }
+        scope:visayas_scope = {
+            add_modifier = {
+                name = phfp_md_iloilo_expansion
+                days = moderately_long_modifier_time
+            }
+        }
+        add_modifier = {
+            name = phfp_md_favored_agriculture
+            days = moderately_long_modifier_time
+        }
+    }
+
+    option = {
+        name = phfp_development.9.b
+        trigger = {
+            custom_tooltip = {
+                text = visayas_development_port_cebu_tt
+                has_variable = phfp_cebu_port_button_var
+            }
+        }
+        scope:visayas_scope = {
+            add_modifier = {
+                name = phfp_md_cebu_expansion
+                days = moderately_long_modifier_time
+            }
+        }
+        add_modifier = {
+            name = phfp_md_favored_manufacturing
+            days = moderately_long_modifier_time
+        }
+    }
+}
+
+# Completion of All Development JEs
+phfp_development.10 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_development.10.t
+    desc = phfp_development.10.d
+    flavor = phfp_development.10.f
+
+    duration = 3
+
+    event_image = {
+        video = "europenorthamerica_capitalists_meeting"
+    }
+
+    trigger = {
+        has_variable = phfp_luzon_developed
+        has_variable = phfp_visayas_developed
+        has_variable = phfp_mindanao_developed
+    }
+
+    option = {
+        name = phfp_development.10.a
+        default_option = yes
+        add_modifier = {
+            name = phfp_md_miracle_on_the_orient
+            days = very_long_modifier_time
+        }
+    }
+}

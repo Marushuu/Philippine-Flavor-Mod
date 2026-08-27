@@ -1,1 +1,209 @@
 ﻿namespace = phfp_nationalism
+
+# Starter Event - Ilustrados
+phfp_nationalism.1 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_nationalism.1.t
+    desc = phfp_nationalism.1.d
+    flavor = phfp_nationalism.1.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    event_image = {
+        video = "southamerica_aristocrats"
+    }
+
+    trigger = {
+    }
+
+    immediate = {
+        top_overlord = {
+            save_scope_as = overlord_scope
+        }
+    }
+
+    option = {
+        name = phfp_nationalism.1.a
+        default_option = yes
+    }
+
+    option = {
+        name = phfp_nationalism.1.b
+    }
+}
+
+# Reformist Win
+phfp_nationalism.2 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_nationalism.2.t
+    desc = phfp_nationalism.2.d
+    flavor = phfp_nationalism.2.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    event_image = {
+        video = "southamerica_aristocrats"
+    }
+
+    trigger = {
+    }
+
+    immediate = {
+        top_overlord = {
+            save_scope_as = overlord_scope
+        }
+    }
+
+    option = {
+        name = phfp_nationalism.2.a
+        default_option = yes
+        if = {
+            limit = {
+                has_dlc_feature = ip4_content
+            }
+            remove_primary_culture = cu:spanish
+            add_primary_culture = cu:filipino_mestizo
+        }
+        else = {
+            remove_primary_culture = cu:spanish
+            add_primary_culture = cu:filipino_hispanophone
+        }
+    }
+
+    option = {
+        name = phfp_nationalism.2.b
+    }
+}
+
+# Trigger Revolution
+phfp_nationalism.3 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_nationalism.3.t
+    desc = phfp_nationalism.3.d
+    flavor = phfp_nationalism.3.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    event_image = {
+        video = "southamerica_aristocrats"
+    }
+
+    trigger = {
+    }
+
+    immediate = {
+        add_journal_entry = {
+            type = phfp_je_the_revolution
+        }
+        top_overlord = {
+            save_scope_as = overlord_scope
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_diplomatic_play = {
+                        initiator_is = ROOT
+                        is_diplomatic_play_type = dp_independence
+                    }
+                }
+            }
+            create_diplomatic_play = {
+                type = dp_independence
+                initiator = ROOT
+                target_country = top_overlord
+            }
+        }
+    }
+
+    option = {
+        name = phfp_nationalism.3.a
+        default_option = yes
+    }
+}
+
+# Independence
+phfp_nationalism.4 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_nationalism.4.t
+    desc = phfp_nationalism.4.d
+    flavor = phfp_nationalism.4.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    event_image = {
+        video = "southamerica_aristocrats"
+    }
+
+    trigger = {
+    }
+
+    immediate = {
+        overlord = {
+            save_scope_as = overlord_scope
+        }
+    }
+
+    option = {
+        name = phfp_nationalism.4.a
+        default_option = yes
+        if = {
+            limit = {
+                has_dlc_feature = ip4_content
+            }
+            remove_primary_culture = cu:spanish
+            add_primary_culture = cu:filipino_mestizo
+        }
+        else = {
+            remove_primary_culture = cu:spanish
+            add_primary_culture = cu:filipino
+        }
+    }
+}
+
+# Lost Independence War (How did you even lose?)
+phfp_nationalism.5 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_nationalism.5.t
+    desc = phfp_nationalism.5.d
+    flavor = phfp_nationalism.5.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    event_image = {
+        video = "southamerica_aristocrats"
+    }
+
+    trigger = {
+    }
+
+    immediate = {
+        top_overlord = {
+            save_scope_as = overlord_scope
+        }
+    }
+
+    option = {
+        name = phfp_nationalism.5.a
+        default_option = yes
+    }
+}

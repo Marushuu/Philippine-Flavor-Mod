@@ -1,6 +1,100 @@
-﻿# Mindanao Modifiers
+﻿# Starter Modifier
 
-phfp_md_moro_resistance = {
+phfp_md_opening_of_trade = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    interest_group_ig_intelligentsia_pol_str_mult = 0.15
+    interest_group_ig_industrialists_pol_str_mult = 0.15
+    country_tech_spread_mult = 0.15
+    building_port_throughput_add = 0.1
+}
+
+REPLACE:philippines_development_modifier_a = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 0.15
+    interest_group_ig_industrialists_pol_str_mult = 0.15
+    country_tech_spread_mult = 0.15
+    building_port_throughput_add = 0.15
+}
+
+REPLACE:philippines_development_modifier_b = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_ig_rural_folk_pop_attraction_mult = 0.15
+    interest_group_ig_landowners_pol_str_mult = 0.15
+    country_tech_spread_mult = 0.15
+    building_group_bg_plantations_throughput_add = 0.1
+}
+# Development Modifiers
+
+phfp_md_growth_to_the_countrysides = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 0.2
+    interest_group_ig_rural_folk_pop_attraction_mult = 0.2
+}
+
+phfp_md_growth_to_the_cities = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 0.2
+    interest_group_ig_intelligentsia_pop_attraction_mult = 0.2
+}
+
+phfp_md_manila_railway = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+    state_trade_advantage_mult = 0.1
+    building_railway_throughput_add = 0.1
+}
+
+phfp_md_agricultural_heartland = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    state_birth_rate_mult = 0.15
+    building_group_bg_agriculture_throughput_add = 0.15
+    building_group_bg_plantations_throughput_add = 0.15
+}
+
+phfp_md_industrial_heartland = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+    state_migration_pull_mult = 0.15
+    building_group_bg_manufacturing_throughput_add = 0.15
+    building_group_bg_mining_throughput_add = 0.15
+}
+
+phfp_md_favored_manufacturing = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_ig_industrialists_approval_add = 2
+    interest_group_ig_petty_bourgeoisie_approval_add = 2
+    state_capitalists_investment_pool_efficiency_mult = 0.5
+}
+
+phfp_md_cebu_expansion = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+    building_port_throughput_add = 0.1
+    building_group_bg_manufacturing_throughput_add = 0.1
+}
+
+phfp_md_favored_agriculture = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_ig_landowners_approval_add = 2
+    interest_group_ig_rural_folk_approval_add = 2
+    state_aristocrats_investment_pool_efficiency_mult = 0.5
+}
+
+phfp_md_iloilo_expansion = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+    state_birth_rate_mult = 0.1
+    building_group_bg_agriculture_throughput_add = 0.1
+    building_group_bg_plantations_throughput_add = 0.1
+}
+
+phfp_md_miracle_on_the_orient = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_prestige_mult = 0.05
+    country_authority_mult = 0.15
+    state_migration_pull_mult = 0.15
+    country_tech_research_speed_mult = 0.05
+}
+
+# Mindanao Modifiers
+
+phfp_md_mindanao_resistance = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
     state_colony_growth_speed_mult = -0.5
     state_construction_mult = -0.1
@@ -13,7 +107,7 @@ phfp_md_southern_settlement = {
     state_migration_pull_mult = 0.25
 }
 
-phfp_md_moro_autonomy = {
+phfp_md_mindanao_autonomy = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     state_migration_pull_mult = 0.1
     state_assimilation_mult = -0.25
@@ -32,10 +126,9 @@ phfp_md_education_cost = {
     country_expenses_add = 1
 }
 
-phfp_md_moro_conversion = {
+phfp_md_mindanao_conversion = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
     state_conversion_mult = 0.25
-    country_expenses_add = 0.5
 }
 
 phfp_md_conversion_cost = {
@@ -45,7 +138,7 @@ phfp_md_conversion_cost = {
 
 phfp_md_moro_pacification = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
-    country_prestige_mult = 1
+    country_prestige_mult = 0.1
     state_assimilation_mult = 0.05
 }
 
@@ -64,13 +157,11 @@ phfp_md_immigration = {
     state_migration_pull_mult = 1
 }
 
-
 phfp_md_mindanao_developed = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
     country_legitimacy_base_add = 10
     country_production_tech_spread_mult = 0.1
 }
-
 
 phfp_md_mindanao_developed_approval = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
@@ -79,8 +170,39 @@ phfp_md_mindanao_developed_approval = {
 
 phfp_md_tamed_south = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    state_migration_pull_mult = 0.1
+    state_assimilation_mult = 0.1
     building_group_bg_oil_extraction_throughput_add = 0.1
     building_group_bg_agriculture_throughput_add = 0.1
     building_group_bg_mining_throughput_add = 0.1
+}
+
+# Nationalism
+
+phfp_md_ilustrado_movement = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_ig_intelligentsia_pop_attraction_mult = 0.25
+    state_radicals_from_political_movements_mult = 0.1
+    state_radicals_and_loyalists_from_sol_change_mult = 0.1
+}
+
+phfp_md_lib_gain_3 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_liberty_desire_add = 0.25
+}
+
+phfp_md_lib_gain_2 = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_liberty_desire_add = 0.15
+}
+
+phfp_md_lib_gain = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_liberty_desire_add = 0.1
+}
+
+phfp_md_revolutionary_fervor = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+    military_formation_mobilization_speed_mult = 0.1
+    military_formation_organization_gain_mult = 0.1
+    military_formation_attrition_risk_mult = -0.5
 }

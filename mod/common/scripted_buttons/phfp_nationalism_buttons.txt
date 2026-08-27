@@ -1,0 +1,66 @@
+﻿phfp_declare_independence_button = {
+    name = phfp_declare_independence_button
+    desc = phfp_declare_independence_button_desc
+
+    visible = {
+        has_journal_entry = phfp_je_propagandist_movement
+    }
+
+    possible = {
+        OR = {
+            je:phfp_je_propagandist_movement = {
+                "scripted_bar_progress(phfp_propaganda_movement_bar)" >= 300
+            }
+            liberty_desire >= 80
+        }
+    }
+
+    effect = {
+        set_variable = force_revolution_var
+    }
+}
+
+phfp_integrate_tagalogs = {
+    name = phfp_integrate_tagalogs
+    desc = phfp_integrate_tagalogs_desc
+
+    visible = {
+        has_journal_entry = phfp_je_national_ethnogenesis_ip4
+    }
+}
+
+phfp_integrate_ilocanos = {
+    name = phfp_integrate_ilocanos
+    desc = phfp_integrate_ilocanos_desc
+
+    visible = {
+        has_journal_entry = phfp_je_national_ethnogenesis_ip4
+    }
+}
+
+phfp_integrate_visayans = {
+    name = phfp_integrate_visayans
+    desc = phfp_integrate_visayans_desc
+
+    visible = {
+        has_journal_entry = phfp_je_national_ethnogenesis_ip4
+    }
+}
+
+phfp_integrate_lumads = {
+    name = phfp_integrate_lumads
+    desc = phfp_integrate_lumads_desc
+
+    visible = {
+        has_journal_entry = phfp_je_national_ethnogenesis_ip4
+    }
+}
+
+phfp_integrate_moros = {
+    name = phfp_integrate_moros
+    desc = phfp_integrate_moros_desc
+
+    visible = {
+        has_journal_entry = phfp_je_national_ethnogenesis_ip4
+    }
+}

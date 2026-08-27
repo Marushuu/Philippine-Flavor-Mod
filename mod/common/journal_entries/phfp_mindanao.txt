@@ -19,9 +19,14 @@
 	}
 
 	immediate = {
-		s:STATE_MINDANAO.region_state:PHI = {
-			add_modifier = {
-				name = phfp_md_moro_resistance
+		s:STATE_MINDANAO = {
+			every_scope_state = {
+				limit = {
+					owner = ROOT
+				}
+				add_modifier = {
+					name = phfp_md_mindanao_resistance
+				}
 			}
 			save_scope_as = mindanao_scope
 		}
@@ -39,15 +44,20 @@
 
 	on_complete = {
 		set_variable = phfp_subjugated_the_south_var
-		s:STATE_MINDANAO.region_state:PHI = {
-			remove_modifier = phfp_md_moro_resistance
+		s:STATE_MINDANAO = {
+			every_scope_state = {
+				limit = {
+					owner = ROOT
+				}
+				remove_modifier = phfp_md_mindanao_resistance
+			}
+		}
+		add_journal_entry = {
+			type = phfp_je_taming_the_south
 		}
 		trigger_event = {
 			id = phfp_mindanao.4
 			popup = yes
-		}
-		add_journal_entry = {
-			type = phfp_je_taming_the_south
 		}
 	}
 
@@ -127,18 +137,39 @@ phfp_je_taming_the_south = {
 				save_scope_as = mindanao_scope
 			}
 		}
+		set_variable = {
+			name = arable_land_counter_var
+			value = 0
+		}
 	}
 	complete = {
-		s:STATE_MINDANAO.region_state:PHI = {
+		scope:mindanao_scope = {
 			is_incorporated = yes
-			state_population > 750000
-			gdp > 750000
-			turmoil < 0.25
-		}
-		NOT = {
-			any_political_movement = {
-				culture = cu:moro
-				is_insurrectionary = yes
+			state_population >= 1000000
+			gdp >= 3000000
+			OR = {
+				state_has_building_group_levels = {
+					type = bg_light_industry
+					value >= 8
+				}
+				state_has_building_group_levels = {
+					type = bg_heavy_industry
+					value >= 5
+				}
+				state_has_building_group_levels = {
+					type = bg_mining
+					value >= 15
+				}
+			}
+			OR = {
+				state_has_building_group_levels = {
+					type = bg_agriculture
+					value >= 10
+				}
+				state_has_building_group_levels = {
+					type = bg_plantations
+					value >= 10
+				}
 			}
 		}
 		custom_tooltip = {
@@ -149,6 +180,11 @@ phfp_je_taming_the_south = {
 		custom_tooltip = {
 			text = taming_the_south_established_port_of_zamboanga_tt
 			has_variable = phfp_establish_port_of_zamboanga_var
+		}
+		NOT = {
+			any_political_movement = {
+				is_insurrectionary = yes
+			}
 		}
 	}
 
@@ -188,7 +224,7 @@ phfp_je_taming_the_south = {
 					}
 					add_modifier = {
 						name = phfp_md_tamed_south
-						days = long_modifier_time
+						days = very_long_modifier_time
 					}
 				}
 			}

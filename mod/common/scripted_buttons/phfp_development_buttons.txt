@@ -1,0 +1,149 @@
+﻿phfp_manila_port_button = {
+    name = phfp_manila_port_button
+    desc = phfp_manila_port_button_desc
+    visible = {
+        has_journal_entry = phfp_je_luzon_development
+        NOT = {
+            has_variable = phfp_manila_port_button_var
+        }
+    }
+    possible = {
+        any_scope_state = {
+            state_region = s:STATE_LUZON
+            owner = ROOT
+            any_scope_building = {
+                is_building_type = building_port
+                level >= 10
+            }
+        }
+    }
+    effect = {
+        set_variable = phfp_manila_port_button_var
+        trigger_event = {
+            id = phfp_development.4
+            popup = yes
+        }
+    }
+    ai_chance = {
+        value = 10
+    }
+}
+
+phfp_manila_rail_button = {
+    name = phfp_manila_rail_button
+    desc = phfp_manila_rail_button_desc
+    visible = {
+        has_journal_entry = phfp_je_luzon_development
+        NOT = {
+            has_variable = phfp_manila_rail_button_var
+        }
+    }
+    possible = {
+        any_scope_state = {
+            state_region = s:STATE_LUZON
+            owner = ROOT
+            any_scope_building = {
+                is_building_type = building_railway
+                level >= 5
+            }
+        }
+    }
+    effect = {
+        set_variable = phfp_manila_rail_button_var
+        trigger_event = {
+            id = phfp_development.5
+            popup = yes
+        }
+    }
+    ai_chance = {
+        value = 10
+    }
+}
+
+phfp_cebu_port_button = {
+    name = phfp_cebu_port_button
+    desc = phfp_cebu_port_button_desc
+    visible = {
+        has_journal_entry = phfp_je_visayas_development
+        NOT = {
+            has_variable = phfp_cebu_port_button_var
+        }
+    }
+    possible = {
+        any_scope_state = {
+            state_region = s:STATE_LUZON
+            owner = ROOT
+            state_has_building_type_levels = {
+                target = bt:building_port
+                value >= 5
+            }
+            OR = {
+                state_has_building_group_levels = {
+                    type = bg_light_industry
+                    value >= 9
+                }
+                state_has_building_group_levels = {
+                    type = bg_heavy_industry
+                    value >= 7
+                }
+            }
+        }
+        NOT = {
+            has_variable = phfp_iloilo_port_button_var
+        }
+    }
+    effect = {
+        set_variable = phfp_cebu_port_button_var
+        trigger_event = {
+            id = phfp_development.7
+            popup = yes
+        }
+    }
+    ai_chance = {
+        value = 10
+    }
+}
+
+phfp_iloilo_port_button = {
+    name = phfp_iloilo_port_button
+    desc = phfp_iloilo_port_button_desc
+    visible = {
+        has_journal_entry = phfp_je_visayas_development
+        NOT = {
+            has_variable = phfp_iloilo_port_button_var
+        }
+    }
+    possible = {
+        any_scope_state = {
+            state_region = s:STATE_LUZON
+            owner = ROOT
+            state_has_building_type_levels = {
+                target = bt:building_port
+                value >= 5
+            }
+            OR = {
+                state_has_building_group_levels = {
+                    type = bg_agriculture
+                    value >= 12
+                }
+                state_has_building_group_levels = {
+                    type = bg_plantations
+                    value >= 15
+                }
+            }
+        }
+        NOT = {
+            has_variable = phfp_cebu_port_button_var
+        }
+    }
+    effect = {
+        set_variable = phfp_iloilo_port_button_var
+        trigger_event = {
+            id = phfp_development.8
+            popup = yes
+        }
+    }
+    ai_chance = {
+        value = 20
+    }
+}

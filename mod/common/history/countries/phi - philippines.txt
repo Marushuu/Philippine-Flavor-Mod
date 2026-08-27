@@ -63,10 +63,22 @@
 			limit = {
 				has_dlc_feature = ip4_content
 			}
-			trigger_event = phfp_dlc_events.2
+			trigger_event = {
+				id = philippines.9
+				popup = yes
+			}
+			add_journal_entry = {
+				type = phfp_je_development_ip4
+			}
 		}
 		else = {
-			trigger_event = phfp_dlc_events.1
+			trigger_event = {
+				id = phfp_development.1
+				popup = yes
+			}
+			add_journal_entry = {
+				type = phfp_je_development
+			}
 		}
 
 		initialise_caciquismo_effect = yes

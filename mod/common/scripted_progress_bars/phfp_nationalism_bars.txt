@@ -1,138 +1,214 @@
-﻿# phfp_tagalog_bar = {
-# 	name = "phfp_tagalog_bar"
-# 	desc = "phfp_tagalog_bar_desc"
+﻿phfp_propaganda_movement_bar = {
+    name = "phfp_propaganda_movement_bar"
+    desc = "phfp_propaganda_movement_bar_desc"
 
-# 	default = yes
+    double_sided_two_spains = yes
 
-# 	monthly_progress = {
-# 		add = {
-# 			desc = "phfp_progress_from_principalia_clout"
-# 			value = owner.ig:ig_landowners.ig_clout
-# 		}
-# 		add = {
-# 			desc = "phfp_progress_from_army_clout"
-# 			value = owner.ig:ig_armed_forces.ig_clout
-# 		}
-# 		add = {
-# 			desc = "phfp_progress_from_tagalog_literacy"
-# 			value = phfp_tagalog_literacy_value
-# 		}
-# 		add = {
-# 			desc = "phfp_progress_from_tagalog_wealth"
-# 			value = phfp_tagalog_wealth_value
-# 		}
-# 		subtract = {
-# 			desc = "phfp_progress_from_tagalog_radicals"
-# 			value = phfp_tagalog_radicals_value
-# 		}
-# 	}
+    monthly_progress = {
+        # Turmoil
+        if = {
+            limit = {
+                any_scope_state = {
+                    turmoil >= 0.10
+                }
+            }
+            subtract = {
+                desc = "progress_from_radicals_tt"
+                every_scope_state = {
+                    limit = {
+                        turmoil >= 0.10
+                    }
+                    subtract = this.turmoil
+                }
+            }
+        }
+        # Loyalists
+        if = {
+            limit = {
+                any_scope_state = {
+                    loyalists >= 0.10
+                }
+            }
+            add = {
+                desc = "progress_from_loyalists_tt"
+                every_scope_state = {
+                    limit = {
+                        loyalists >= 0.10
+                    }
+                    subtract = this.loyalists
+                }
+            }
+        }
+        # Rural Folk
+        add = {
+            desc = "rural_folk_approval_tt"
+            if = {
+                limit = {
+                    ig:ig_rural_folk ?= {
+                        ig_approval <= angry
+                    }
+                }
+                value = 1
+            }
+            else_if = {
+                limit = {
+                    ig:ig_rural_folk ?= {
+                        ig_approval <= unhappy
+                    }
+                }
+                value = 0.5
+            }
+        }
+        add = {
+            desc = "intelligentsia_approval_tt"
+            if = {
+                limit = {
+                    ig:ig_intelligentsia ?= {
+                        ig_approval <= angry
+                    }
+                }
+                value = 1
+            }
+            else_if = {
+                limit = {
+                    ig:ig_intelligentsia ?= {
+                        ig_approval <= unhappy
+                    }
+                }
+                value = 0.5
+            }
+        }
+        # Taxes
+        if = {
+            limit = {
+                tax_level = very_low
+            }
+            add = {
+                desc = "very_low_tax_tt"
+                subtract = 1
+            }
+        }
+        if = {
+            limit = {
+                tax_level = low
+            }
+            add = {
+                desc = "low_tax_tt"
+                subtract = 0.5
+            }
+        }
+        if = {
+            limit = {
+                tax_level = high
+            }
+            add = {
+                desc = "high_tax_tt"
+                add = 0.5
+            }
+        }
+        if = {
+            limit = {
+                tax_level = very_high
+            }
+            add = {
+                desc = "very_high_tax_tt"
+                add = 1
+            }
+        }
+        # Laws
+        if = {
+            limit = {
+                OR = {
+                    has_law_or_variant = law_type:law_census_voting
+                    has_law_or_variant = law_type:law_universal_suffrage
+                }
+            }
+            add = {
+                desc = "democracy_laws_tt"
+                subtract = 1
+            }
+        }
+        if = {
+            limit = {
+                has_law_or_variant = law_type:law_state_religion
+            }
+            add = {
+                desc = "religion_laws_tt"
+                add = 0.5
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    has_law_or_variant = law_type:law_state_religion
+                }
+            }
+            add = {
+                desc = "religion_laws_tt_2"
+                subtract = 0.5
+            }
+        }
+        if = {
+            limit = {
+                has_law_or_variant = law_type:law_tenant_farmers
+            }
+            add = {
+                desc = "frailocracy_law_tt"
+                add = 0.5
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_law_or_variant = law_type:law_commercialized_agriculture
+                    has_law_or_variant = law_type:law_peasant_proprietorship
+                    has_law_or_variant = law_type:law_collectivized_agriculture
+                }
+            }
+            add = {
+                desc = "frailocracy_law_tt"
+                subtract = 1
+            }
+        }
+        if = {
+            limit = {
+                has_law_or_variant = law_type:law_guaranteed_liberties
+            }
+            add = {
+                desc = "liberties_law_tt"
+                subtract = 1
+            }
+        }
+        if = {
+            limit = {
+                OR = {
+                    has_law_or_variant = law_type:law_right_of_assembly
+                    has_law_or_variant = law_type:law_protected_speech
+                }
+            }
+            add = {
+                desc = "free_speech_laws_tt"
+                subtract = 1
+            }
+        }
+        # Check for Katipuneros
+        if = {
+            limit = {
+                any_interest_group = {
+                    is_in_government = yes
+                    leader = {
+                        has_ideology = ideology:phfp_ideology_katipunero
+                    }
+                }
+            }
+            add = {
+                desc = "katipunero_leaders_tt"
+                add = 2
+            }
+        }
+    }
 
-# 	start_value = 0
-# 	min_value = 0
-# 	max_value = 360
-# }
-
-# phfp_visaya_bar = {
-# 	name = "phfp_visaya_bar"
-# 	desc = "phfp_visaya_bar_desc"
-
-# 	default = yes
-
-# 	monthly_progress = {
-# 		add = {
-# 			desc = "phfp_progress_from_bour_clout"
-# 			value = owner.ig:ig_petty_bourgeoisie.ig_clout
-# 		}
-# 		add = {
-# 			desc = "phfp_progress_from_rural_clout"
-# 			value = owner.ig:ig_rural_folk.ig_clout
-# 		}
-# 		add = {
-# 			desc = "phfp_progress_from_visaya_literacy"
-# 			value = phfp_visaya_literacy_value
-# 		}
-# 		add = {
-# 			desc = "phfp_progress_from_visaya_wealth"
-# 			value = phfp_visaya_wealth_value
-# 		}
-# 		subtract = {
-# 			desc = "phfp_progress_from_visaya_radicals"
-# 			value = phfp_visaya_radicals_value
-# 		}
-# 	}
-
-# 	start_value = 0
-# 	min_value = 0
-# 	max_value = 360
-# }
-
-# phfp_moro_bar = {
-# 	name = "phfp_moro_bar"
-# 	desc = "phfp_moro_bar_desc"
-
-# 	default = yes
-
-# 	monthly_progress = {
-# 		if = {
-# 			limit = {
-# 				owner = {
-# 					NOT = {
-# 						has_law_or_variant = law_type:law_state_religion
-# 						has_law_or_variant = law_type:law_state_atheism
-# 					}
-# 				}
-# 			}
-# 			add = {
-# 				desc = "phfp_progress_from_moro_loyalism"
-# 				value = phfp_moro_loyalist_value
-# 			}
-# 		}
-# 		add = {
-# 			desc = "phfp_progress_from_moro_literacy"
-# 			value = phfp_moro_literacy_value
-# 		}
-# 		add = {
-# 			desc = "phfp_progress_from_moro_wealth"
-# 			value = phfp_moro_wealth_value
-# 		}
-# 		subtract = {
-# 			desc = "phfp_progress_from_moro_radicals"
-# 			value = phfp_moro_radicals_value
-# 		}
-# 	}
-
-# 	start_value = 0
-# 	min_value = 0
-# 	max_value = 360
-# }
-
-# phfp_filipino_bar = {
-# 	name = "phfp_filipino_bar"
-# 	desc = "phfp_filipino_bar_desc"
-
-# 	default = yes
-
-# 	monthly_progress = {
-# 		add = {
-# 			desc = "phfp_progress_from_ilustrado_clout"
-# 			value = owner.ig:ig_intelligentsia.ig_clout
-# 		}
-# 		add = {
-# 			desc = "phfp_progress_from_industrialist_clout"
-# 			value = owner.ig:ig_industrialists.ig_clout
-# 		}
-# 		add = {
-# 			desc = "phfp_progress_from_universities"
-# 			value = phfp_university_count_value
-# 		}
-# 		add = {
-# 			desc = "phfp_progress_from_investment"
-# 			value = owner.var:filipino_language_investment
-# 		}
-# 	}
-
-# 	start_value = 0
-# 	min_value = 0
-# 	max_value = 360
-# }
-
+    start_value = 200
+    min_value = 0
+    max_value = 400
+}
