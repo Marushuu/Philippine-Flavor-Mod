@@ -33,6 +33,10 @@
 				sponsor = prev.ig:ig_intelligentsia
 			}
 		}
+		ig:ig_intelligentsia ?= {
+			remove_ideology = ideology_republican
+			add_ideology = ideology_constitutionalist
+		}
 
 		ig:ig_landowners ?= {
 			add_ruling_interest_group = yes
@@ -41,7 +45,8 @@
 
 		ig:ig_devout = {
 			add_ruling_interest_group = yes
-			set_interest_group_name = phfp_ig_simbahan
+			set_interest_group_name = phfp_ig_frailocracia
+			add_ideology = phfp_ideology_frailocrat
 		}
 
 		ig:ig_industrialists = {

@@ -20,8 +20,8 @@
         subject_canton = PHI_katipunan
         priority = 3
         trigger = {
-            coa_def_independence_war_trigger = yes
-            coa_def_war_trigger = yes
+            coa_def_secessionist_or_revolutionary_trigger = yes
+            var:civil_war_type_var ?= movement_type:phfp_movement_filipino_national
         }
     }
     flag_definition = {

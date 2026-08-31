@@ -24,15 +24,43 @@ phfp_nationalism.1 = {
         top_overlord = {
             save_scope_as = overlord_scope
         }
+        set_variable = {
+            name = phfp_ilustrado_var
+        }
     }
 
     option = {
         name = phfp_nationalism.1.a
         default_option = yes
+        add_modifier = {
+            name = ilustrados_education_fervor_add
+            days = moderately_long_modifier_time
+            is_decaying = yes
+        }
+        ig:ig_intelligentsia ?= {
+            if = {
+                limit = {
+                    has_ideology = ideology:ideology_liberal
+                }
+                remove_ideology = ideology_liberal
+                add_ideology = phfp_ideology_ilustrado
+            }
+            set_ig_trait = ig_trait:ig_trait_westernisation
+        }
     }
 
     option = {
         name = phfp_nationalism.1.b
+        ig:ig_intelligentsia ?= {
+            if = {
+                limit = {
+                    has_ideology = ideology:ideology_liberal
+                }
+                remove_ideology = ideology_liberal
+                add_ideology = phfp_ideology_ilustrado
+            }
+            set_ig_trait = ig_trait:ig_trait_westernisation
+        }
     }
 }
 
@@ -81,9 +109,20 @@ phfp_nationalism.2 = {
     option = {
         name = phfp_nationalism.2.b
     }
+
+    option = {
+        name = phfp_nationalism.2.c
+        trigger = {
+            is_player = yes
+        }
+        play_as = overlord
+        overlord = {
+            annex = ROOT
+        }
+    }
 }
 
-# Trigger Revolution
+# Revolution
 phfp_nationalism.3 = {
     type = country_event
     placement = ROOT
@@ -101,39 +140,40 @@ phfp_nationalism.3 = {
     }
 
     trigger = {
+        c:PHI ?= this
+        has_civil_war_from_movement_type = movement_type:phfp_movement_filipino_national
     }
 
     immediate = {
-        add_journal_entry = {
-            type = phfp_je_the_revolution
-        }
-        top_overlord = {
-            save_scope_as = overlord_scope
-        }
-        if = {
+        random_country = {
             limit = {
-                NOT = {
-                    any_diplomatic_play = {
-                        initiator_is = ROOT
-                        is_diplomatic_play_type = dp_independence
-                    }
-                }
+                civil_war_origin_country ?= ROOT
             }
-            create_diplomatic_play = {
-                type = dp_independence
-                initiator = ROOT
-                target_country = top_overlord
-            }
+            save_scope_as = katipunero_scope
         }
     }
 
-    option = {
+    option = { # Play as the Katipunan
         name = phfp_nationalism.3.a
+        trigger = {
+            is_player = yes
+        }
+        scope:katipunero_scope = {
+            add_modifier = {
+                name = phfp_md_revolutionary_fervor
+                days = long_modifier_time
+            }
+        }
+        play_as = scope:katipunero_scope
+    }
+
+    option = { # Play as the Counter-Revolutionaries
+        name = phfp_nationalism.3.b
         default_option = yes
     }
 }
 
-# Independence
+# Independence War
 phfp_nationalism.4 = {
     type = country_event
     placement = ROOT
@@ -151,16 +191,51 @@ phfp_nationalism.4 = {
     }
 
     trigger = {
-    }
-
-    immediate = {
-        overlord = {
-            save_scope_as = overlord_scope
+        c:PHI ?= this
+        any_diplomatic_play = {
+            is_diplomatic_play_type = dp_independence
         }
     }
 
-    option = {
+    immediate = {
+    }
+
+    option = { # Same Same
         name = phfp_nationalism.4.a
+        add_modifier = {
+            name = phfp_md_revolutionary_fervor
+            days = long_modifier_time
+        }
+    }
+}
+
+# Independence
+phfp_nationalism.5 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_nationalism.5.t
+    desc = phfp_nationalism.5.d
+    flavor = phfp_nationalism.5.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    event_image = {
+        video = "southamerica_aristocrats"
+    }
+
+    trigger = {
+        c:PHI ?= this
+        is_subject = no
+    }
+
+    immediate = {
+    }
+
+    option = {
+        name = phfp_nationalism.5.a
         default_option = yes
         if = {
             limit = {
@@ -177,13 +252,13 @@ phfp_nationalism.4 = {
 }
 
 # Lost Independence War (How did you even lose?)
-phfp_nationalism.5 = {
+phfp_nationalism.6 = {
     type = country_event
     placement = ROOT
 
-    title = phfp_nationalism.5.t
-    desc = phfp_nationalism.5.d
-    flavor = phfp_nationalism.5.f
+    title = phfp_nationalism.6.t
+    desc = phfp_nationalism.6.d
+    flavor = phfp_nationalism.6.f
 
     duration = 3
 
@@ -203,7 +278,7 @@ phfp_nationalism.5 = {
     }
 
     option = {
-        name = phfp_nationalism.5.a
+        name = phfp_nationalism.6.a
         default_option = yes
     }
 }

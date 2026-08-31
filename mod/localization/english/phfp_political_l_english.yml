@@ -41,9 +41,27 @@
   # Interest Groups
   phfp_ig_principalia: "Principalia" # Landowners
   phfp_ig_frailocracia: "Frailocracia" # Devout - Spain
-  phfp_ig_simbahan: "Simbahan" # Devout
 
   # Interest Group Descriptions
   phfp_ig_principalia_desc: "The old landed and mestizo elite of the provinces — gobernadorcillos, cabezas de barangay, and the pre-colonial families who have quietly run local affairs."
   phfp_ig_frailocracia_desc: "The religious orders in their capacity as the archipelago's largest landholders, educators, and power brokers. The Church acts not only as faith, but also the landlord."
-  phfp_ig_simbahan_desc: "$ig_catholic_church_desc$"
+
+  # Ideologies - Movements
+  phfp_ideology_independence_movement: "$phfp_ideology_katipunero_leader$"
+  phfp_ideology_independence_movement_desc: "#lore This movement opposes oppressive measures imposed upon their nation by colonial authorities, and seeks to advance policies that serve the ends of national self-governance.#!"
+
+  phfp_ideology_ilustrado: "$ideology_ilustrado$"
+  phfp_ideology_ilustrado_desc: "$ideology_ilustrado_desc$"
+
+  phfp_ideology_ilustrado_leader: "$ideology_ilustrado_leader$"
+  phfp_ideology_ilustrado_leader_desc: "$ideology_ilustrado_leader_desc$"
+
+  phfp_ideology_katipunero_leader: "Katipunero"
+  phfp_ideology_katipunero_leader_desc: "This leader opposes oppressive measures imposed upon their nation by colonial authorities, preferring policies that serve the ends of national self-governance"
+
+  phfp_ideology_frailocrat: "Frailocrat"
+  phfp_ideology_frailocrat_desc: "#lore $phfp_ig_frailocracia_desc$ #!"
+
+  phfp_movement_filipino_national: "Philippine National Movement"
+  phfp_movement_filipino_national_name: "$phfp_movement_filipino_national$"
+  phfp_movement_filipino_national_short: "Philippine National"

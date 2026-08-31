@@ -1,1 +1,37 @@
 namespace = phfp_frailocracy
+
+phfp_frailocracy.1 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_frailocracy.1.t
+    desc = phfp_frailocracy.1.d
+    flavor = phfp_frailocracy.1.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    event_image = {
+        video = "southamerica_aristocrats"
+    }
+
+    trigger = {
+    }
+
+    immediate = {
+        ig:ig_devout = {
+            save_scope_as = devout_ig_scope
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.1.a
+        default_option = yes
+
+        scope:devout_ig_scope ?= {
+            set_interest_group_name = ig_catholic_church
+            remove_ideology = phfp_ideology_frailocrat
+        }
+    }
+}
