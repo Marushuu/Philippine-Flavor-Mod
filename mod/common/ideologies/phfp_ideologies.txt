@@ -148,13 +148,7 @@ phfp_ideology_ilustrado_leader = {
     }
 
     interest_group_leader_trigger = {
-        AND = {
-            c:PHI ?= owner
-            OR = {
-                is_interest_group_type = ig_intelligentsia
-                is_interest_group_type = ig_petty_bourgeoisie
-            }
-        }
+        ideology_ilustrado_leader_valid_trigger = yes
     }
 
     non_interest_group_leader_trigger = {
@@ -168,13 +162,7 @@ phfp_ideology_ilustrado_leader = {
             }
         }
         interest_group ?= {
-            AND = {
-                c:PHI ?= owner
-                OR = {
-                    is_interest_group_type = ig_intelligentsia
-                    is_interest_group_type = ig_petty_bourgeoisie
-                }
-            }
+            ideology_ilustrado_leader_valid_trigger = yes
         }
     }
 
@@ -267,14 +255,7 @@ phfp_ideology_katipunero_leader = {
     }
 
     interest_group_leader_trigger = {
-        AND = {
-            c:PHI ?= owner
-            OR = {
-                is_interest_group_type = ig_petty_bourgeoisie
-                is_interest_group_type = ig_rural_folk
-                is_interest_group_type = ig_trade_unions
-            }
-        }
+        ideology_katipunero_leader_valid_trigger = yes
     }
 
     non_interest_group_leader_trigger = {
@@ -288,14 +269,7 @@ phfp_ideology_katipunero_leader = {
             }
         }
         interest_group ?= {
-            AND = {
-                c:PHI ?= owner
-                OR = {
-                    is_interest_group_type = ig_petty_bourgeoisie
-                    is_interest_group_type = ig_rural_folk
-                    is_interest_group_type = ig_trade_unions
-                }
-            }
+            ideology_katipunero_leader_valid_trigger = yes
         }
     }
 
@@ -328,15 +302,6 @@ phfp_ideology_katipunero_leader = {
 
     non_interest_group_leader_weight = {
         value = 100
-
-        if = {
-            limit = {
-                owner = {
-                    has_variable = phfp_katipunero_var
-                }
-            }
-            add = 25
-        }
     }
 }
 

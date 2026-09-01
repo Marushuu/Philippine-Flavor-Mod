@@ -1,4 +1,16 @@
-﻿# Flag Triggers
+﻿# Ideology Triggers
+ideology_katipunero_leader_valid_trigger = {
+    AND = {
+        c:PHI ?= owner
+        OR = {
+            is_interest_group_type = ig_petty_bourgeoisie
+            is_interest_group_type = ig_rural_folk
+            is_interest_group_type = ig_trade_unions
+        }
+    }
+}
+
+# Flag Triggers
 coa_def_japanese_ensign_trigger = {
     exists = c:JAP
     c:JAP ?= {
@@ -7,9 +19,18 @@ coa_def_japanese_ensign_trigger = {
     coa_def_ensign_trigger = yes
 }
 
+coa_katipunan_trigger = {
+    exists = scope:actor
+    scope:actor ?= {
+        coa_secessionist_or_revolutionary_trigger = yes
+        var:civil_war_type_var ?= movement_type:phfp_movement_filipino_national
+    }
+}
+
 coa_controls_sabah = {
     exists = scope:actor
     scope:actor ?= {
         has_state_in_state_region = STATE_NORTH_BORNEO
+        has_variable = phfp_sabah_flag_var
     }
 }

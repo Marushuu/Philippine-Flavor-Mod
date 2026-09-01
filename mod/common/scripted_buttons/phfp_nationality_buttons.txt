@@ -1,6 +1,4 @@
-﻿
-
-phfp_integrate_tagalogs = {
+﻿phfp_integrate_tagalogs = {
     name = phfp_integrate_tagalogs
     desc = phfp_integrate_tagalogs_desc
 
@@ -14,7 +12,11 @@ phfp_integrate_tagalogs = {
     possible = {
         country_average_culture_pop_acceptance = {
             culture = cu:tagalog
-            value >= acceptance_status_5
+            value >= acceptance_status_3
+        }
+        radical_fraction = {
+            culture = cu:tagalog
+            value <= 0.10
         }
     }
 
@@ -54,7 +56,11 @@ phfp_integrate_ilocanos = {
     possible = {
         country_average_culture_pop_acceptance = {
             culture = cu:ilocano
-            value >= acceptance_status_5
+            value >= acceptance_status_3
+        }
+        radical_fraction = {
+            culture = cu:ilocano
+            value <= 0.10
         }
     }
 
@@ -98,7 +104,11 @@ phfp_integrate_visayans = {
     possible = {
         country_average_culture_pop_acceptance = {
             culture = cu:visayan
-            value >= acceptance_status_5
+            value >= acceptance_status_3
+        }
+        radical_fraction = {
+            culture = cu:visayan
+            value <= 0.10
         }
     }
 
@@ -141,7 +151,11 @@ phfp_integrate_lumads = {
     possible = {
         country_average_culture_pop_acceptance = {
             culture = cu:lumad
-            value >= acceptance_status_5
+            value >= acceptance_status_3
+        }
+        radical_fraction = {
+            culture = cu:lumad
+            value <= 0.10
         }
     }
 
@@ -181,7 +195,11 @@ phfp_integrate_moros = {
     possible = {
         country_average_culture_pop_acceptance = {
             culture = cu:moro
-            value >= acceptance_status_5
+            value >= acceptance_status_3
+        }
+        radical_fraction = {
+            culture = cu:moro
+            value <= 0.10
         }
     }
 

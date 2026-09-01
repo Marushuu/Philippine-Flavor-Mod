@@ -39,9 +39,25 @@
  phfp_nationalism.5.f: "'Land of the morning, child of the sun returning...' The anthem is new. The pride is not."
  phfp_nationalism.5.a: "Mabuhay ang bayang Pilipinas!"
 
- phfp_nationalism.6.t: "Triumphant [SCOPE.sCountry('overlord_scope').GetNameNoFlag]"
- phfp_nationalism.6.d: "The uprising is crushed. [SCOPE.sCountry('overlord_scope').GetNameNoFlag] tightens its grip, and the leaders of the revolt are made examples of, one way or another."
- phfp_nationalism.6.f: "The dream of Independence is not dead, buried perhaps, within unmarked graves and the memories of those who survived to tell the tale."
- phfp_nationalism.6.a: "We fight on, in whatever form remains to us"
+ phfp_nationalism.6.t: ""
+ phfp_nationalism.6.d: ""
+ phfp_nationalism.6.f: ""
+ phfp_nationalism.6.a: ""
+ phfp_nationalism.6.b: ""
+
+ phfp_nationalism.7.t: ""
+ phfp_nationalism.7.d: ""
+ phfp_nationalism.7.f: ""
+ phfp_nationalism.7.a: ""
+
+ phfp_nationalism.8.t: ""
+ phfp_nationalism.8.d: ""
+ phfp_nationalism.8.f: ""
+ phfp_nationalism.8.a: ""
+
+ phfp_nationalism.9.t: ""
+ phfp_nationalism.9.d: ""
+ phfp_nationalism.9.f: ""
+ phfp_nationalism.9.a: ""
 
  FERVOR_OF_FILIPINO_CULTURE_ACTIVISM: "Average [concept_fervor] ([GetPlayer.MakeScope.ScriptValue('average_german_fervor')|v0]) of [GetCulture('tagalog').GetName], [GetCulture('ilocano').GetName], [GetCulture('visayan').GetName], [GetCulture('moro').GetName], [GetCulture('lumad').GetName], and [GetCulture('filipino_mestizo').GetName] [Concept('concept_culture','$concept_cultures$')]"

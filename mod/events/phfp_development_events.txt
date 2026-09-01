@@ -454,9 +454,7 @@ phfp_development.10 = {
     }
 
     trigger = {
-        has_variable = phfp_luzon_developed
-        has_variable = phfp_visayas_developed
-        has_variable = phfp_mindanao_developed
+        # On Action
     }
 
     option = {

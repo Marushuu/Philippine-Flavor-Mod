@@ -1,0 +1,49 @@
+﻿phfp_sabah_flag_decision = {
+    is_shown = {
+        exists = c:PHI
+        c:PHI ?= THIS
+        hidden_trigger = {
+            NOT = {
+                has_variable = phfp_sabah_flag_var
+            }
+        }
+    }
+
+    possible = {
+        c:PHI ?= THIS
+        has_state_in_state_region = STATE_NORTH_BORNEO
+    }
+
+    when_taken = {
+        set_variable = {
+            name = phfp_sabah_flag_var
+        }
+    }
+
+    ai_chance = {
+        value = 0
+    }
+}
+
+phfp_remove_sabah_flag_decision = {
+    is_shown = {
+        exists = c:PHI
+        c:PHI ?= THIS
+        hidden_trigger = {
+            has_variable = phfp_sabah_flag_var
+        }
+
+    }
+
+    possible = {
+        c:PHI ?= THIS
+    }
+
+    when_taken = {
+        remove_variable = phfp_sabah_flag_var
+    }
+
+    ai_chance = {
+        value = 0
+    }
+}

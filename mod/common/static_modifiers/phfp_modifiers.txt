@@ -176,6 +176,54 @@ phfp_md_tamed_south = {
     building_group_bg_mining_throughput_add = 0.1
 }
 
+# Frailocracy
+
+phfp_md_friar_backlash = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    interest_group_approval_add = -2
+}
+
+phfp_md_friar_favor = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_approval_add = 2
+}
+
+phfp_md_estates_redistributed = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    building_group_bg_agriculture_throughput_add = 0.1
+    state_tax_collection_mult = 0.05
+}
+
+phfp_md_friar_estates_redistributed_approval = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_approval_add = 2
+}
+
+phfp_md_friar_estates_seized_anger = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    interest_group_approval_add = -2
+}
+
+phfp_md_secularizated_church = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+    interest_group_pop_attraction_mult = -0.25
+    interest_group_approval_add = -3
+}
+
+phfp_md_secularization_triumph_approval = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_approval_add = 3
+    interest_group_pop_attraction_mult = 0.25
+}
+
+phfp_md_secularization_triumph = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_legitimacy_base_add = 15
+    country_radicals_from_legitimacy_mult = 0.25
+    country_tech_spread_mult = 0.1
+    state_education_access_add = 0.1
+}
+
 # Nationalism
 
 phfp_md_ilustrado_movement = {

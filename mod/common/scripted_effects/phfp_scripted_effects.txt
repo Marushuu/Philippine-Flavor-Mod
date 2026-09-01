@@ -1,0 +1,7 @@
+﻿philippines_annex_effects = {
+    overlord ?= {
+        save_temporary_scope_as = boss
+        annex = c:PHI
+    }
+    play_as = scope:boss
+}

@@ -83,3 +83,70 @@ on_game_started = {
 		phfp_on_game_started
 	}
 }
+
+on_monthly_pulse_country = {
+	effect = {
+		if = {
+			limit = {
+				c:PHI ?= this
+				AND = {
+					has_variable = phfp_luzon_developed
+					has_variable = phfp_visayas_developed
+					has_variable = phfp_mindanao_developed
+				}
+			}
+			trigger_event = {
+				id = phfp_development.10
+				popup = yes
+			}
+		}
+	}
+}
+
+on_become_independent = {
+	effect = {
+		if = {
+			limit = {
+				c:PHI ?= this
+			}
+			trigger_event = {
+				id = phfp_nationalism.5
+				popup = yes
+			}
+		}
+	}
+}
+
+on_revolution_start = {
+	effect = {
+		if = {
+			limit = {
+				scope:target ?= {
+					is_revolutionary = yes
+					var:civil_war_type_var ?= movement_type:phfp_movement_filipino_national
+				}
+			}
+			trigger_event = {
+				id = phfp_nationalism.3
+				popup = yes
+			}
+		}
+	}
+}
+
+on_diplo_play_start = {
+	effect = {
+		if = {
+			limit = {
+				c:PHI ?= ROOT
+				any_diplomatic_play = {
+					is_diplomatic_play_type = dp_independence
+				}
+			}
+			trigger_event = {
+				id = phfp_nationalism.4
+				popup = yes
+			}
+		}
+	}
+}

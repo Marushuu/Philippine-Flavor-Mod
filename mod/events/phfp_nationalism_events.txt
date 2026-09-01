@@ -115,10 +115,7 @@ phfp_nationalism.2 = {
         trigger = {
             is_player = yes
         }
-        play_as = overlord
-        overlord = {
-            annex = ROOT
-        }
+        philippines_annex_effects = yes
     }
 }
 
@@ -140,8 +137,7 @@ phfp_nationalism.3 = {
     }
 
     trigger = {
-        c:PHI ?= this
-        has_civil_war_from_movement_type = movement_type:phfp_movement_filipino_national
+        # On Action
     }
 
     immediate = {
@@ -163,6 +159,8 @@ phfp_nationalism.3 = {
                 name = phfp_md_revolutionary_fervor
                 days = long_modifier_time
             }
+            remove_primary_culture = cu:spanish
+            add_primary_culture = cu:filipino_mestizo
         }
         play_as = scope:katipunero_scope
     }
@@ -227,8 +225,8 @@ phfp_nationalism.5 = {
     }
 
     trigger = {
+        exists = c:PHI
         c:PHI ?= this
-        is_subject = no
     }
 
     immediate = {
@@ -248,6 +246,24 @@ phfp_nationalism.5 = {
             remove_primary_culture = cu:spanish
             add_primary_culture = cu:filipino
         }
+    }
+
+    # Those without the DLC for ethnogenesis
+    option = {
+        name = phfp_nationalism.5.b
+        trigger = {
+            has_variable = phfp_reform_var
+            NOT = {
+                has_dlc_feature = ip4_content
+            }
+        }
+        remove_primary_culture = cu:spanish
+        add_primary_culture = cu:filipino_hispanophone
+    }
+
+    # Keep Spanish
+    option = {
+        name = phfp_nationalism.5.c
     }
 }
 
@@ -279,6 +295,238 @@ phfp_nationalism.6 = {
 
     option = {
         name = phfp_nationalism.6.a
+        default_option = yes
+    }
+}
+
+# Katipunan Radicalism
+phfp_nationalism.7 = {
+    type = country_event
+    placement = root
+
+    duration = 3
+
+    title = phfp_nationalism.7.t
+    desc = phfp_nationalism.7.d
+    flavor = phfp_nationalism.7.f
+
+    event_image = {
+        video = "ip2_india_urban_scene"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
+    trigger = {
+        any_political_movement = {
+            is_political_movement_type = phfp_movement_filipino_national
+            political_movement_radicalism >=  define:NPolitics|RADICALISM_PROTESTING_THRESHOLD
+        }
+    }
+
+    cancellation_trigger = {
+        has_revolution = yes
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                NOT = {
+                    any_political_lobby = {
+                        is_political_lobby_type = lobby_anti_overlord
+                    }
+                }
+            }
+            create_political_lobby = {
+                type = lobby_anti_overlord
+                target = top_overlord
+                add_interest_group = ig:ig_petty_bourgeoisie
+                add_interest_group = ig:ig_rural_folk
+                lobby_formation_reason = diplomacy
+            }
+            set_variable = {
+                name = inc_formed
+                months = 3
+            }
+        }
+        else = {
+            random_political_lobby = {
+                limit = {
+                    is_political_lobby_type = lobby_anti_overlord
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_lobby_member = {
+                                is_interest_group_type = ig_petty_bourgeoisie
+                            }
+                        }
+                    }
+                    add_lobby_member = ig:ig_petty_bourgeoisie
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_lobby_member = {
+                                is_interest_group_type = ig_rural_folk
+                            }
+                        }
+                    }
+                    add_lobby_member = ig:ig_rural_folk
+                }
+            }
+        }
+        random_political_lobby = {
+            limit = {
+                is_political_lobby_type = lobby_anti_overlord
+            }
+            save_scope_as = relevant_lobby
+        }
+    }
+
+    option = {
+        name = phfp_nationalism.7.a
+        default_option = yes
+    }
+}
+
+phfp_nationalism.8 = {
+    type = country_event
+    placement = root
+
+    duration = 3
+
+    title = phfp_nationalism.8.t
+    desc = phfp_nationalism.8.d
+    flavor = phfp_nationalism.8.f
+
+    event_image = {
+        video = "ip2_india_urban_scene"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
+    trigger = {
+    }
+
+    immediate = {
+    }
+
+    option = {
+        name = phfp_nationalism.8.a
+        default_option = yes
+    }
+}
+
+phfp_nationalism.9 = {
+    type = country_event
+    placement = root
+
+    duration = 3
+
+    title = phfp_nationalism.9.t
+    desc = phfp_nationalism.9.d
+    flavor = phfp_nationalism.9.f
+
+    event_image = {
+        video = "ip2_india_urban_scene"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
+    trigger = {
+    }
+
+    immediate = {
+    }
+
+    option = {
+        name = phfp_nationalism.9.a
+        default_option = yes
+    }
+}
+
+phfp_nationalism.10 = {
+    type = country_event
+    placement = root
+
+    duration = 3
+
+    title = phfp_nationalism.10.t
+    desc = phfp_nationalism.10.d
+    flavor = phfp_nationalism.10.f
+
+    event_image = {
+        video = "ip2_india_urban_scene"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
+    trigger = {
+    }
+
+    immediate = {
+    }
+
+    option = {
+        name = phfp_nationalism.10.a
+        default_option = yes
+    }
+}
+
+phfp_nationalism.11 = {
+    type = country_event
+    placement = root
+
+    duration = 3
+
+    title = phfp_nationalism.11.t
+    desc = phfp_nationalism.11.d
+    flavor = phfp_nationalism.11.f
+
+    event_image = {
+        video = "ip2_india_urban_scene"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
+    trigger = {
+    }
+
+    immediate = {
+    }
+
+    option = {
+        name = phfp_nationalism.11.a
         default_option = yes
     }
 }
