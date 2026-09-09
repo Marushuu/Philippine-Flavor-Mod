@@ -623,54 +623,8 @@ PHI_subject_SPA = {
 	}
 
 	colored_emblem = {
-		texture = "ce_circle.dds"
-		color1 = color3
-
-		instance = {
-			rotation = 0
-			scale = { 0.750 0.750 }
-			position = { 0.500 0.500 }
-		}
-	}
-
-	colored_emblem = {
 		texture = "ce_sun_philippines.dds"
-		color1 = color1
-
-		instance = {
-			rotation = 0
-			scale = { 0.500 0.500 }
-			position = { 0.500 0.500 }
-		}
-	}
-
-	colored_emblem = {
-		texture = "ce_star_05.dds"
-		color1 = color1
-
-		instance = {
-			rotation = 0
-			scale = { 0.100 0.100 }
-			position = { 0.050 0.075 }
-		}
-
-		instance = {
-			rotation = 0
-			scale = { 0.100 0.100 }
-			position = { 0.050 0.925 }
-		}
-
-		instance = {
-			rotation = 0
-			scale = { 0.100 0.100 }
-			position = { 0.950 0.075 }
-		}
-
-		instance = {
-			rotation = 0
-			scale = { 0.100 0.100 }
-			position = { 0.950 0.925 }
-		}
+		color1 = color3
 	}
 }
 

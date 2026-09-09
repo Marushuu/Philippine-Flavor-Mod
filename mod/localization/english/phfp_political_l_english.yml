@@ -28,7 +28,7 @@
   phfp_dyn_c_communist: "People's Republic of the Philippines"
   phfp_dyn_c_anarchist: "Philippine Anarchist Confederation"
   phfp_dyn_c_empire: "Philippine Empire"
-  phfp_dyn_c_theocracy: "Holy State of the Philippines"
+  phfp_dyn_c_theocracy: "Holy Marian Islands"
 
   # Power Bloc Names
 
@@ -39,7 +39,7 @@
   phfp_py_conservative: "Nacionalista" # Oldest Party
   phfp_py_fascist: "KALIBAPI" # Kapisanan sa Paglilingkod sa Bagong Pilipinas
   phfp_py_free_trade: "Progresista" # Progresista Party
-  phfp_py_liberal: "La Liga Filipina" # While the Liberal Party exists, this is more "flavorful"
+  phfp_py_liberal: "La Liga Filipina" # While the Liberal Party exists, this is more flavorful
   phfp_py_military: "Katipunan" # Referring to the Katipunan
   phfp_py_radicals: "People's Power" # Lakas ng Bayan (LABAN) from the People Power Revolution
   phfp_py_religious: "Kapatiran" # Modern Christian Democracy Party, means 'Brotherhood'
@@ -47,11 +47,13 @@
 
   # Interest Groups
   phfp_ig_principalia: "Principalia" # Landowners
+  phfp_ig_principalia_desc: "The native and mestizo landed gentry of the Philippines, who mediate between the colonial administration, the friar estates, and the peasantry beneath them."
   phfp_ig_frailocracia: "Frailocracia" # Devout - Spain
-
-  # Interest Group Descriptions
-  phfp_ig_principalia_desc: "The old landed and mestizo elite of the provinces — gobernadorcillos, cabezas de barangay, and the pre-colonial families who have quietly run local affairs."
   phfp_ig_frailocracia_desc: "The religious orders in their capacity as the archipelago's largest landholders, educators, and power brokers. The Church acts not only as faith, but also the landlord."
+  phfp_ig_sakahan: "Sakahan" # Rural Folk
+  phfp_ig_sakahan_desc: "The tenant farmers and peasant cultivators of the Philippines, working land they do not own under terms they did not set."
+  phfp_ig_hukbo: "Sandatahang Lakas" # Independent Armed Forces
+  phfp_ig_hukbo_desc: "The armed forces of the republic, forged from the veterans of the revolution against Spain. Their loyalty to the new state runs deeper than any oath of commission."
 
   # Ideologies - Movements
   phfp_ideology_independence_movement: "$phfp_ideology_katipunero_leader$"

@@ -35,9 +35,9 @@
         set_variable = {
             name = phfp_integrated_tagalogs_var
         }
-        set_variable = {
+        change_local_variable = {
             name = phfp_integrated_cultures_var
-            value = +1
+            add = 1
         }
     }
 }
@@ -79,9 +79,9 @@ phfp_integrate_ilocanos = {
         set_variable = {
             name = phfp_integrated_ilocanos_var
         }
-        set_variable = {
+        change_local_variable = {
             name = phfp_integrated_cultures_var
-            value = +1
+            add = 1
         }
     }
 }
@@ -130,9 +130,9 @@ phfp_integrate_visayans = {
         set_variable = {
             name = phfp_integrated_visayans_var
         }
-        set_variable = {
+        change_local_variable = {
             name = phfp_integrated_cultures_var
-            value = +1
+            add = 1
         }
     }
 }
@@ -174,9 +174,9 @@ phfp_integrate_lumads = {
         set_variable = {
             name = phfp_integrated_lumads_var
         }
-        set_variable = {
+        change_local_variable = {
             name = phfp_integrated_cultures_var
-            value = +1
+            add = 1
         }
     }
 }
@@ -218,9 +218,9 @@ phfp_integrate_moros = {
         set_variable = {
             name = phfp_integrated_moros_var
         }
-        set_variable = {
+        change_local_variable = {
             name = phfp_integrated_cultures_var
-            value = +1
+            add = 1
         }
     }
 }

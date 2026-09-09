@@ -1,0 +1,601 @@
+﻿## INTEREST GROUP LEADERS
+# Pedro Paterno - https://en.wikipedia.org/wiki/Pedro_Paterno
+phfp_pedro_paterno = {
+	first_name = Pedro
+	last_name = Paterno
+	historical = yes
+	culture = cu:filipino_mestizo
+	religion = rel:catholic
+	birth_date = 1857.2.27
+	dna = phfp_dna_pedro_paterno
+	ig_leader = yes
+	ideology = ideology_moderate
+	interest_group = ig_landowners
+	traits = {
+		aesthete
+		tactful
+		experienced_diplomat
+		expensive_tastes
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_landowners
+		}
+		earliest_usage_date = 1876.1.1		# First Written his Opus
+		latest_usage_date = 1911.4.26		# Death
+	}
+}
+
+# Apolinario Mabini - Brains of the Revolution - https://en.wikipedia.org/wiki/Apolinario_Mabini
+phfp_template_apolinario_mabini = {
+	first_name = Apolinario
+	last_name = Mabini
+	historical = yes
+	culture = cu:tagalog
+	religion = rel:catholic
+	birth_date = 1864.7.23
+	dna = phfp_dna_apolinario_mabini
+	ig_leader = yes
+	ideology = ideology_republican
+	interest_group = ig_intelligentsia
+	traits = {
+		meticulous
+		erudite
+		master_bureaucrat
+		experienced_political_operator
+		sickly
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
+			is_subject = no
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1883.1.1
+		latest_usage_date = 1903.5.13	# Death
+	}
+}
+
+# Pedro Pelaez - https://en.wikipedia.org/wiki/Pedro_Pelaez
+REPLACE:PHI_pedro_pelaez = {
+	first_name = Pedro
+	last_name = PelA_ez
+	historical = yes
+	culture = cu:filipino_mestizo
+	religion = rel:catholic
+	birth_date = 1812.6.29
+	dna = phfp_dna_pedro_pelaez
+	ig_leader = yes
+	interest_group = ig_devout
+	ideology = ideology_sovereignist_leader
+	home_region = STATE_LUZON
+	traits = {
+		pious
+		erudite
+		meticulous
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_devout
+		}
+		earliest_usage_date = 1836.1.1
+		latest_usage_date = 1936.1.1		# Died in the Manila Earthquake
+	}
+}
+
+### COMMANDERS
+# Emilio Aguinaldo -
+REPLACE:PHI_emilio_aguinaldo = {
+	first_name = Emilio
+	last_name = Aguinaldo
+	historical = yes
+	culture = cu:filipino_mestizo
+	religion = rel:catholic
+	birth_date = 1869.3.22
+	dna = phfp_dna_emilio_aguinaldo
+	interest_group = ig_landowners
+	ideology = ideology_authoritarian
+	home_region = STATE_LUZON
+	traits = {
+		ambitious
+		imperious
+		ruthless
+		basic_offensive_planner
+		basic_political_operator
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
+			is_subject = no
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_landowners
+		}
+		earliest_usage_date = 1888.1.1
+	}
+	commander_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
+		}
+		role = general
+		earliest_usage_date = 1888.1.1
+	}
+}
+
+# Andres Bonifacio -
+REPLACE:PHI_andres_bonifacio = {
+	first_name = AndrE_s
+	last_name = Bonifacio
+	historical = yes
+	culture = cu:tagalog
+	religion = rel:catholic
+	birth_date = 1863.11.30
+	dna = phfp_dna_andres_bonifacio
+	interest_group = ig_petty_bourgeoisie
+	ideology = phfp_ideology_katipunero_leader
+	home_region = STATE_LUZON
+	traits = {
+		direct
+		ambitious
+		firebrand
+		demagogue
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
+			is_subject = yes
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_petty_bourgeoisie
+		}
+		earliest_usage_date = 1882.1.1
+	}
+	commander_usage = {
+		country_trigger = {
+			c:PHI ?= this
+			NOT = {
+				country_has_primary_culture = cu:spanish
+			}
+		}
+		role = general
+		earliest_usage_date = 1882.1.1
+	}
+}
+
+# Antonio Luna - https://en.wikipedia.org/wiki/Antonio_Luna
+phfp_antonio_luna = {
+	first_name = Antonio
+	last_name = Luna
+	historical = yes
+	culture = cu:filipino_mestizo
+	birth_date = 1866.10.29
+	dna = phfp_dna_antonio_luna
+	is_general = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	traits = {
+		arrogant
+		direct
+		brave
+		experienced_offensive_planner
+	}
+	commander_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
+			NOT = {
+				country_has_primary_culture = cu:spanish
+			}
+		}
+		role = general
+		earliest_usage_date = 1885.1.1
+		chance = 100
+	}
+}
+
+# Gregorio del Pilar - https://en.wikipedia.org/wiki/Gregorio_del_Pilar
+phfp_gregorio_del_pilar = {
+	first_name = Gregorio
+	last_name = "del_Pilar"
+	historical = yes
+	culture = cu:filipino_mestizo
+	birth_date = 1875.11.14
+	dna = phfp_dna_gregorio_del_pilar
+	is_general = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_republican_leader
+	traits = {
+		romantic
+		brave
+		reckless
+		celebrity_commander
+		stalwart_defender
+	}
+	commander_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
+			NOT = {
+				country_has_primary_culture = cu:spanish
+			}
+		}
+		role = general
+		earliest_usage_date = 1895.1.1
+		chance = 100
+	}
+}
+
+# Miguel Malvar - https://en.wikipedia.org/wiki/Miguel_Malvar
+phfp_miguel_malvar = {
+	first_name = Miguel
+	last_name = Malvar
+	historical = yes
+	culture = cu:tagalog
+	birth_date = 1865.9.27
+	dna = phfp_dna_miguel_malvar
+	is_general = yes
+	interest_group = ig_landowners
+	ideology = ideology_republican_leader
+	traits = {
+		persistent
+		honorable
+		forest_commander
+		experienced_defensive_strategist
+	}
+	commander_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
+			NOT = {
+				country_has_primary_culture = cu:spanish
+			}
+		}
+		role = general
+		earliest_usage_date = 1875.1.1
+		chance = 100
+	}
+}
+
+# Artemio Ricarte - https://en.wikipedia.org/wiki/Artemio_Ricarte
+phfp_artemio_ricarte = {
+	first_name = Artemio
+	last_name = Ricarte
+	historical = yes
+	culture = cu:tagalog
+	birth_date = 1866.10.20
+	dna = phfp_dna_artemio_ricarte
+	is_general = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_sovereignist_leader
+	traits = {
+		persistent
+		ruthless
+		imposing
+		traditionalist_commander
+		basic_defensive_strategist
+	}
+	commander_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
+			NOT = {
+				country_has_primary_culture = cu:spanish
+			}
+		}
+		earliest_usage_date = 1880.1.1
+		chance = 100
+	}
+}
+
+# Macario Sakay - https://en.wikipedia.org/wiki/Macario_Sakay
+phfp_macario_sakay = {
+	first_name = Macario
+	last_name = Sakay
+	historical = yes
+	culture = cu:tagalog
+	birth_date = 1870.1.1
+	dna = phfp_dna_macario_sakay
+	is_general = yes
+	interest_group = ig_rural_folk
+	ideology = phfp_ideology_katipunero_leader
+	traits = {
+		direct
+		brave
+		persistent
+		social_bandit
+		forest_commander
+	}
+	commander_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= this
+				was_formed_from = PHI
+			}
+			NOT = {
+				country_has_primary_culture = cu:spanish
+			}
+		}
+		earliest_usage_date = 1888.1.1
+		chance = 100
+	}
+}
+
+### AGITATORS
+
+# Marcelo del Pilar - https://simple.wikipedia.org/wiki/Marcelo_H._del_Pilar
+phfp_marcelo_del_pilar = {
+	first_name = Marcelo
+	last_name = del_Pilar
+	historical = yes
+	culture = cu:filipino_mestizo
+	religion = rel:catholic
+	birth_date = 1850.8.30
+	dna = phfp_dna_marcelo_del_pilar
+	is_agitator = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_ilustrado_leader
+	home_region = STATE_LUZON
+	traits = {
+		charismatic
+		persistent
+		literary
+		inspirational_orator
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1870.1.1
+		latest_usage_date = 1896.7.4		# Death by Tuberculosis
+	}
+}
+
+# Graciano Lopez - https://en.wikipedia.org/wiki/Graciano_L%C3%B3pez_Jaena
+phfp_graciano_lopez = {
+	first_name = Graciano
+	last_name = Lopez_y_Jaena
+	historical = yes
+	culture = cu:filipino_mestizo
+	religion = rel:catholic
+	birth_date = 1856.12.18
+	dna = phfp_dna_graciano_lopez
+	is_agitator = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_radical
+	home_region = STATE_VISAYAS
+	traits = {
+		charismatic
+		demagogue
+		inspirational_orator
+		alcoholic
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1875.1.1
+		latest_usage_date = 1896.7.4		# Death by Tuberculosis
+	}
+}
+
+# Jose Rizal - https://en.wikipedia.org/wiki/Jose_Rizal
+REPLACE:PHI_jose_rizal = {
+	first_name = JosE_
+	last_name = Rizal
+	historical = yes
+	culture = cu:filipino_mestizo
+	religion = rel:catholic
+	birth_date = 1861.6.19
+	dna = phfp_dna_jose_rizal
+	is_agitator = yes
+	interest_group = ig_intelligentsia
+	ideology = ideology_ilustrado_leader
+	home_region = STATE_LUZON
+	traits = {
+		erudite
+		literary
+		innovative
+		inspirational_orator
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_intelligentsia
+		}
+		earliest_usage_date = 1887.1.1		# Noli me Tangere publication
+		latest_usage_date = 1936.1.1		# Executed by 1896.12.30
+	}
+}
+
+# Mariano Gomez (GOM) - https://en.wikipedia.org/wiki/Mariano_Gomez_(priest)
+phfp_mariano_gomez = {
+	first_name = Mariano
+	last_name = Gomez
+	historical = yes
+	culture = cu:filipino_mestizo
+	religion = rel:catholic
+	dna = phfp_dna_mariano_gomez
+	is_agitator = yes
+	interest_group = ig_devout
+	ideology = ideology_reformer
+	birth_date = 1799.8.2
+	home_region = STATE_LUZON
+	traits = {
+		cautious
+		honorable
+		erudite
+		elder
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_devout
+		}
+		earliest_usage_date = 1836.1.1
+		latest_usage_date = 1872.2.17		# Executed by 1872.2.17
+	}
+	on_created = {
+		set_variable = gomburza
+	}
+}
+
+# Jose Burgos (BUR) - https://en.wikipedia.org/wiki/Jos%C3%A9_Burgos
+REPLACE:PHI_jose_burgos = {
+	first_name = JosE_
+	last_name = Burgos
+	historical = yes
+	culture = cu:filipino_mestizo
+	religion = rel:catholic
+	dna = phfp_dna_jose_burgos
+	is_agitator = yes
+	interest_group = ig_devout
+	ideology = ideology_reformer
+	birth_date = 1837.2.9
+	home_region = STATE_LUZON
+	traits = {
+		pious
+		erudite
+		honorable
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_devout
+		}
+		earliest_usage_date = 1860.1.1
+		latest_usage_date = 1872.2.17		# Executed by 1872.2.17
+	}
+	on_created = {
+		set_variable = gomburza
+	}
+}
+
+# Jacinto Zamora (ZA) - https://en.wikipedia.org/wiki/Jacinto_Zamora
+phfp_jacinto_zamora = {
+	first_name = Jacinto
+	last_name = Zamora
+	historical = yes
+	culture = cu:filipino_mestizo
+	religion = rel:catholic
+	dna = phfp_dna_jacinto_zamora
+	is_agitator = yes
+	interest_group = ig_devout
+	ideology = ideology_moderate
+	birth_date = 1835.9.14
+	home_region = STATE_LUZON
+	traits = {
+		reckless
+		compliant
+		inexperienced
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_devout
+		}
+		earliest_usage_date = 1860.1.1
+		latest_usage_date = 1872.2.17		# Executed by 1872.2.17
+	}
+	on_created = {
+		set_variable = gomburza
+	}
+}
+
+# Apolinario de la Cruz / Hermano Pule - https://en.wikipedia.org/wiki/Hermano_Pule
+REPLACE:PHI_appolinario_de_la_cruz = {
+	first_name = Apolinario
+	last_name = de_la_Cruz
+	historical = yes
+	culture = cu:tagalog
+	religion = rel:catholic
+	dna = phfp_dna_hermano_pule
+	is_agitator = yes
+	interest_group = ig_rural_folk
+	ideology = ideology_utopian
+	birth_date = 1815.7.22
+	home_region = STATE_LUZON
+	traits = {
+		charismatic
+		pious
+		imposing
+		firebrand
+	}
+	agitator_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_rural_folk
+		}
+		latest_usage_date = 1936.1.1		# Executed by 1841.11.4
+	}
+}

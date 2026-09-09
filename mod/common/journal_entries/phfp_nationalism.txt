@@ -20,10 +20,6 @@
 			id = phfp_nationalism.1
 			popup = yes
 		}
-		set_variable = {
-			name = phfp_ilustrado_laws_var
-			value = 0
-		}
 		if = {
 			limit = {
 				NOT = {
@@ -119,9 +115,6 @@
 	}
 
 	on_fail = {
-		set_variable = {
-			name = phfp_revolution_var
-		}
 	}
 
 	on_monthly_pulse = {

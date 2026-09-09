@@ -32,7 +32,7 @@ phfp_je_national_ethnogenesis_ip4 = {
     immediate = {
         set_variable = {
             name = phfp_integrated_cultures_var
-            value = 1
+            value = 0
         }
     }
 

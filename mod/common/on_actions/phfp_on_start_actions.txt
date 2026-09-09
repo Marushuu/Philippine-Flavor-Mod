@@ -138,9 +138,9 @@ on_diplo_play_start = {
 	effect = {
 		if = {
 			limit = {
-				c:PHI ?= ROOT
 				any_diplomatic_play = {
 					is_diplomatic_play_type = dp_independence
+					initiator_is = PHI
 				}
 			}
 			trigger_event = {

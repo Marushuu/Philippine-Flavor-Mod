@@ -21,7 +21,10 @@
         priority = 3
         trigger = {
             coa_def_subject_trigger = yes
-            coa_def_secessionist_or_revolutionary_trigger = yes
+            OR = {
+                coa_def_secessionist_or_revolutionary_trigger = yes
+                coa_def_independence_war_trigger = yes
+            }
         }
     }
     flag_definition = {
