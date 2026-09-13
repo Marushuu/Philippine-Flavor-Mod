@@ -104,10 +104,26 @@ phfp_nationalism.2 = {
             remove_primary_culture = cu:spanish
             add_primary_culture = cu:filipino_hispanophone
         }
+        add_modifier = {
+            name = modifier_phi_spanish_vision
+            days = long_modifier_time
+        }
+        add_modifier = {
+            name = modifier_metropole_business_networks
+            days = long_modifier_time
+        }
     }
 
     option = {
         name = phfp_nationalism.2.b
+        add_modifier = {
+            name = modifier_phi_spanish_vision
+            days = long_modifier_time
+        }
+        add_modifier = {
+            name = modifier_metropole_business_networks
+            days = long_modifier_time
+        }
     }
 
     option = {
@@ -159,9 +175,25 @@ phfp_nationalism.3 = {
                 name = phfp_md_revolutionary_fervor
                 days = long_modifier_time
             }
-            remove_primary_culture = cu:spanish
-            add_primary_culture = cu:filipino_mestizo
+            if = {
+                limit = {
+                    has_dlc_feature = ip4_content
+                }
+                remove_primary_culture = cu:spanish
+                add_primary_culture = cu:filipino_mestizo
+            }
+            else = {
+                remove_primary_culture = cu:spanish
+                add_primary_culture = cu:filipino
+            }
+            every_character = {
+                limit = {
+                    culture = cu:spanish
+                }
+                kill_character = yes
+            }
         }
+
         play_as = scope:katipunero_scope
     }
 
@@ -246,69 +278,30 @@ phfp_nationalism.5 = {
             remove_primary_culture = cu:spanish
             add_primary_culture = cu:filipino
         }
-    }
-
-    # Those without the DLC for ethnogenesis
-    option = {
-        name = phfp_nationalism.5.b
-        trigger = {
-            has_variable = phfp_reform_var
-            NOT = {
-                has_dlc_feature = ip4_content
-            }
+        add_modifier = {
+            name = modifier_phi_indepenent_vision
+            days = long_modifier_time
         }
-        remove_primary_culture = cu:spanish
-        add_primary_culture = cu:filipino_hispanophone
-    }
-
-    # Keep Spanish
-    option = {
-        name = phfp_nationalism.5.c
+        add_modifier = {
+            name = modifier_national_consolidation
+            days = long_modifier_time
+        }
+        trigger_event = {
+            id = phfp_nationalism.11
+        }
     }
 }
 
-# Lost Independence War (How did you even lose?)
+# Katipunan Founded
 phfp_nationalism.6 = {
-    type = country_event
-    placement = ROOT
-
-    title = phfp_nationalism.6.t
-    desc = phfp_nationalism.6.d
-    flavor = phfp_nationalism.6.f
-
-    duration = 3
-
-    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
-
-    event_image = {
-        video = "southamerica_aristocrats"
-    }
-
-    trigger = {
-    }
-
-    immediate = {
-        top_overlord = {
-            save_scope_as = overlord_scope
-        }
-    }
-
-    option = {
-        name = phfp_nationalism.6.a
-        default_option = yes
-    }
-}
-
-# Katipunan Radicalism
-phfp_nationalism.7 = {
     type = country_event
     placement = root
 
     duration = 3
 
-    title = phfp_nationalism.7.t
-    desc = phfp_nationalism.7.d
-    flavor = phfp_nationalism.7.f
+    title = phfp_nationalism.6.t
+    desc = phfp_nationalism.6.d
+    flavor = phfp_nationalism.6.f
 
     event_image = {
         video = "ip2_india_urban_scene"
@@ -334,6 +327,9 @@ phfp_nationalism.7 = {
     }
 
     immediate = {
+        movement_type:phfp_movement_filipino_national = {
+            save_scope_as = propaganda_movement_scope
+        }
         if = {
             limit = {
                 NOT = {
@@ -387,14 +383,178 @@ phfp_nationalism.7 = {
             }
             save_scope_as = relevant_lobby
         }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_variable = andres_bonifacio_var
+                    }
+                }
+            }
+            create_character = {
+                template = PHI_andres_bonifacio
+                is_agitator = yes
+                save_scope_as = bonifacio_scope
+            }
+        }
+        else = {
+            random_character = {
+                limit = {
+                    has_variable = andres_bonifacio_var
+                }
+                save_scope_as = bonifacio_scope
+            }
+        }
+    }
+
+    option = {
+        name = phfp_nationalism.6.a
+        default_option = yes
+        scope:propaganda_movement_scope = {
+            add_movement_enthusiasm_modifier = yes
+        }
+        add_radicals = {
+            value = small_radicals
+        }
+    }
+}
+
+# La Solidaridad
+phfp_nationalism.7 = {
+    type = country_event
+    placement = root
+
+    duration = 3
+
+    title = phfp_nationalism.7.t
+    desc = phfp_nationalism.7.d
+    flavor = phfp_nationalism.7.f
+
+    event_image = {
+        video = "ep1_printing_press"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
+    trigger = {
+        any_political_movement = {
+            is_political_movement_type = phfp_movement_filipino_national
+        }
+        game_date >= 1875.1.1
+        NOT = {
+            has_variable = phfp_la_solidaridad_var
+        }
+    }
+
+    immediate = {
+        top_overlord = {
+            save_scope_as = overlord_scope
+        }
+        ig:ig_intelligentsia ?= {
+            save_scope_as = intelligentsia_scope
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_variable = graciano_lopez_var
+                    }
+                }
+            }
+            create_character = {
+                template = phfp_graciano_lopez
+                save_scope_as = lopez_scope
+            }
+        }
+        else = {
+            random_character = {
+                limit = {
+                    has_variable = graciano_lopez_var
+                }
+                save_scope_as = lopez_scope
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_variable = marcelo_del_pilar_var
+                    }
+                }
+            }
+            create_character = {
+                template = phfp_marcelo_del_pilar
+                save_scope_as = del_pilar_scope
+            }
+        }
+        else = {
+            random_character = {
+                limit = {
+                    has_variable = marcelo_del_pilar_var
+                }
+                save_scope_as = del_pilar_scope
+            }
+        }
+        movement_type:phfp_movement_filipino_national = {
+            save_scope_as = propaganda_movement_scope
+        }
+        set_variable = {
+            name = phfp_la_solidaridad_var
+        }
+
     }
 
     option = {
         name = phfp_nationalism.7.a
         default_option = yes
+        scope:intelligentsia_scope ?= {
+            add_modifier = {
+                name = phfp_md_ilustrado_favor
+                days = long_modifier_time
+            }
+        }
+        add_modifier = {
+            name = phfp_md_lib_gain
+            days = long_modifier_time
+        }
+        scope:propaganda_movement_scope ?= {
+            add_modifier = {
+                name = phfp_md_nespapers_propagated
+                days = long_modifier_time
+            }
+        }
+        scope:overlord_scope ?= {
+            change_relations = {
+                country = root
+                value = -5
+            }
+        }
+    }
+
+    option = {
+        name = phfp_nationalism.7.b
+        scope:intelligentsia_scope ?= {
+            add_modifier = {
+                name = phfp_md_ilustrado_backlash
+                days = moderately_long_modifier_time
+            }
+        }
+        scope:propaganda_movement_scope ?= {
+            add_modifier = {
+                name = phfp_md_censored_newspapers
+                days = long_modifier_time
+            }
+        }
     }
 }
 
+# Colonists read the Mail
 phfp_nationalism.8 = {
     type = country_event
     placement = root
@@ -414,21 +574,92 @@ phfp_nationalism.8 = {
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
     cooldown = {
-        days = never_fire_again_modifier_time
+        days = long_modifier_time
     }
 
     trigger = {
+        any_political_movement = {
+            is_political_movement_type = phfp_movement_filipino_national
+        }
     }
 
     immediate = {
+        ig:ig_devout ?= {
+            save_scope_as = devout_scope
+        }
+        ig:ig_landowners ?= {
+            save_scope_as = landowners_scope
+        }
+        ig:ig_intelligentsia ?= {
+            save_scope_as = intelligentsia_scope
+        }
+        movement_type:phfp_movement_filipino_national = {
+            save_scope_as = propaganda_movement_scope
+        }
     }
 
     option = {
         name = phfp_nationalism.8.a
         default_option = yes
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_favor
+                days = long_modifier_time
+            }
+        }
+        scope:landowners_scope ?= {
+            add_modifier = {
+                name = phfp_md_principalia_favor
+                days = long_modifier_time
+            }
+        }
+        scope:intelligentsia_scope ?= {
+            add_modifier = {
+                name = phfp_md_ilustrado_backlash
+                days = long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = small_radicals
+            strata = middle
+        }
+        add_radicals = {
+            value = small_radicals
+            strata = lower
+        }
     }
+
+    option = {
+        name = phfp_nationalism.8.b
+        scope:intelligentsia_scope ?= {
+            add_modifier = {
+                name = phfp_md_ilustrado_favor
+                days = long_modifier_time
+            }
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_backlash
+                days = long_modifier_time
+            }
+        }
+        scope:landowners_scope ?= {
+            add_modifier = {
+                name = phfp_md_principalia_backlash
+                days = long_modifier_time
+            }
+        }
+        scope:propaganda_movement_scope ?= {
+            add_modifier = {
+                name = phfp_md_nespapers_propagated
+                days = long_modifier_time
+            }
+        }
+    }
+
 }
 
+# Noli Me Tangere
 phfp_nationalism.9 = {
     type = country_event
     placement = root
@@ -440,29 +671,113 @@ phfp_nationalism.9 = {
     flavor = phfp_nationalism.9.f
 
     event_image = {
-        video = "ip2_india_urban_scene"
+        video = "ep1_printing_press"
     }
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
     cooldown = {
         days = never_fire_again_modifier_time
     }
 
     trigger = {
+        has_variable = phfp_la_solidaridad_var
+        game_date >= 1887.1.1
+        NOT = {
+            has_variable = phfp_noli_published_var
+        }
     }
 
     immediate = {
+        ig:ig_devout ?= {
+            save_scope_as = devout_scope
+        }
+        ig:ig_intelligentsia ?= {
+            save_scope_as = intelligentsia_scope
+        }
+        movement_type:phfp_movement_filipino_national = {
+            save_scope_as = propaganda_movement_scope
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_variable = jose_rizal_var
+                    }
+                }
+            }
+            create_character = {
+                template = PHI_jose_rizal
+                save_scope_as = rizal_scope
+            }
+        }
+        else = {
+            random_character = {
+                limit = {
+                    has_variable = jose_rizal_var
+                }
+                save_scope_as = rizal_scope
+            }
+        }
+        set_variable = {
+            name = phfp_noli_published_var
+        }
     }
 
     option = {
         name = phfp_nationalism.9.a
         default_option = yes
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_favor
+                days = long_modifier_time
+            }
+        }
+        scope:propaganda_movement_scope = {
+            add_modifier = {
+                name = phfp_md_censored_newspapers
+                days = long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = medium_radicals
+            strata = middle
+        }
+    }
+
+    option = {
+        name = phfp_nationalism.9.b
+        scope:intelligentsia_scope ?= {
+            add_modifier = {
+                name = phfp_md_ilustrado_favor
+                days = long_modifier_time
+            }
+            scope:rizal_scope = {
+                set_as_interest_group_leader = yes
+            }
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_backlash
+                days = long_modifier_time
+            }
+        }
+        scope:propaganda_movement_scope = {
+            add_modifier = {
+                name = phfp_md_nespapers_propagated
+                days = long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = small_radicals
+            strata = middle
+        }
     }
 }
 
+# La Liga Filipina
 phfp_nationalism.10 = {
     type = country_event
     placement = root
@@ -479,24 +794,109 @@ phfp_nationalism.10 = {
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
     cooldown = {
         days = never_fire_again_modifier_time
     }
 
     trigger = {
+        has_variable = phfp_noli_published_var
+        game_date >= 1892.1.1
+        NOT = {
+            has_variable = phfp_la_liga_var
+        }
     }
 
     immediate = {
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = phfp_movement_filipino_national
+            }
+            save_scope_as = propaganda_movement_scope
+        }
+        ig:ig_petty_bourgeoisie ?= {
+            save_scope_as = pb_scope
+        }
+        ig:ig_intelligentsia ?= {
+            save_scope_as = intelligentsia_scope
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_variable = jose_rizal_var
+                    }
+                }
+            }
+            create_character = {
+                template = PHI_jose_rizal
+                save_scope_as = rizal_scope
+            }
+        }
+        else = {
+            random_character = {
+                limit = {
+                    has_variable = jose_rizal_var
+                }
+                save_scope_as = rizal_scope
+            }
+        }
+        set_variable = {
+            name = phfp_la_liga_var
+        }
     }
 
     option = {
         name = phfp_nationalism.10.a
         default_option = yes
+        scope:propaganda_movement_scope ?= {
+            add_movement_enthusiasm_modifier = yes
+        }
+        scope:pb_scope ?= {
+            add_modifier = {
+                name = phfp_md_popular_favor
+                days = long_modifier_time
+            }
+        }
+        scope:intelligentsia_scope ?= {
+            add_modifier = {
+                name = phfp_md_ilustrado_favor
+                days = long_modifier_time
+            }
+        }
+        add_modifier = {
+            name = phfp_md_lib_gain_2
+            days = long_modifier_time
+        }
+    }
+
+    option = {
+        name = phfp_nationalism.10.b
+        scope:pb_scope ?= {
+            add_modifier = {
+                name = phfp_md_popular_backlash
+                days = long_modifier_time
+            }
+        }
+        scope:propaganda_movement_scope ?= {
+            add_modifier = {
+                name = phfp_md_dissolution_of_la_liga_filipina
+                days = very_long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = medium_radicals
+            strata = middle
+        }
+        add_radicals = {
+            value = small_radicals
+            strata = lower
+        }
     }
 }
 
+# Independence Government
 phfp_nationalism.11 = {
     type = country_event
     placement = root
@@ -515,18 +915,40 @@ phfp_nationalism.11 = {
 
     icon = "gfx/interface/icons/event_icons/event_protest.dds"
 
-    cooldown = {
-        days = never_fire_again_modifier_time
-    }
-
     trigger = {
+        # from phfp_nationalism.5
     }
 
     immediate = {
+        random_character = {
+            limit = {
+                has_variable = jose_rizal_var
+            }
+            save_scope_as = rizal_scope
+        }
     }
 
     option = {
         name = phfp_nationalism.11.a
         default_option = yes
+        activate_law = law_type:law_parliamentary_republic
+    }
+
+    option = {
+        name = phfp_nationalism.11.b
+        activate_law = law_type:law_presidential_republic
+    }
+
+    option = {
+        name = phfp_nationalism.11.c
+        trigger = {
+            scope:rizal_scope = {
+                exists = yes
+            }
+        }
+        activate_law = law_type:law_monarchy
+        scope:rizal_scope = {
+            set_character_as_ruler = yes
+        }
     }
 }

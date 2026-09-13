@@ -1,6 +1,6 @@
 ﻿l_english:
  phfp_je_subjugation_of_the_south: "Subjugation of the South"
- phfp_je_subjugation_of_the_south_reason: "The southern island of [SCOPE.sState('mindanao_scope').GetName] and its surrounding islands remain largely outside effective central governance, split between independent sultanates and an unmapped frontier terrain still inhabited by the [GetCulture('lumad').GetName]. Securing complete control over the region is essential for our national security and economic growth."
+ phfp_je_subjugation_of_the_south_reason: "The southern island of [SCOPE.sStateRegion('mindanao_scope').GetName] and its surrounding islands remain largely outside effective central governance, split between independent sultanates and an unmapped frontier terrain still inhabited by the [GetCulture('lumad').GetName]. Securing complete control over the region is essential for our national security and economic growth."
 
  phfp_maguindanao_expedition_button: "Launch the Pulangi Expedition"
  phfp_maguindanao_expedition_button_desc: "Dispatch our forces to subdue the [SCOPE.sCountry('maguindanao_scope').GetName], it is time to expand past the Pulangi River."
@@ -40,8 +40,8 @@
  phfp_mindanao.5.f: "The fierce jungle has claimed our soldiers, the rivers run red, and the remaining [GetCulture('moro').GetName] fiercely celebrate their continued defiance."
  phfp_mindanao.5.a: "A shameful display..."
 
- phfp_je_taming_the_south: "Taming the South"
- phfp_je_taming_the_south_reason: "Though sovereignty over [SCOPE.sStateRegion('mindanao_scope').GetName] has been claimed on paper, the interior remains an unsubdued frontier hampered by rugged geography, underdeveloped infrastructure, and widespread local resistance.\nWe shall drain the marshes, irrigate the lands, and harness the vast potential that these jungles hold."
+ phfp_je_mindanao_development: "$phfp_je_main_development$: The Southern Frontier"
+ phfp_je_mindanao_development_reason: "Though sovereignty over [SCOPE.sStateRegion('mindanao_scope').GetName] has been claimed on paper, the interior remains an unsubdued frontier hampered by rugged geography, underdeveloped infrastructure, and widespread local resistance.\nWe shall drain the marshes, irrigate the lands, and harness the vast potential that these jungles hold."
  taming_the_south_established_port_of_zamboanga_tt: "We constructed the $phfp_state_trait_port_of_zamboanga$"
 
  phfp_arable_land_button: "Rehabilitate the Pulangi River Valley"

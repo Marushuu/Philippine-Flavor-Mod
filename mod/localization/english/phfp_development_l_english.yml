@@ -21,7 +21,13 @@
  phfp_development.3.a: "The future is urban and industrial"
  phfp_development.3.b: "The future is rooted in the land"
 
- phfp_je_luzon_development: "Developing the Heartlands"
+ phfp_je_main_development: "Economic Development"
+ phfp_je_development_main_reason: ""
+ luzon_developed_tt: "Finished the #BOLD $phfp_je_luzon_development$#! [concept_journal_entry]."
+ visayas_developed_tt: "Finished the #BOLD $phfp_je_visayas_development$#! [concept_journal_entry]."
+ mindanao_developed_tt: "Finished the #BOLD $phfp_je_mindanao_development$#! [concept_journal_entry]."
+
+ phfp_je_luzon_development: "$phfp_je_main_development$: The Heartlands"
  phfp_je_luzon_development_reason: ""
  luzon_development_manila_port_tt: "We have constructed the $phfp_state_trait_port_of_manila$"
  luzon_development_manila_rail_tt: "We have constructed the Manila Railway"
@@ -30,7 +36,7 @@
  phfp_manila_rail_button: "Build Railways"
  phfp_manila_rail_button_desc: "Lay iron rails across the Central Luzon Plain, binding the capital to the rice fields and sugar estates of the interior."
 
- phfp_je_visayas_development: "Developing the Visayan Islands"
+ phfp_je_visayas_development: "$phfp_je_main_development$: The Jewel Islands"
  phfp_je_visayas_development_reason: ""
  visayas_development_port_tt: "We have constructed either the $phfp_state_trait_port_of_cebu$ or the $state_trait_port_of_iloilo$"
  visayas_development_port_cebu_tt: "If we built the Port of Cebu:"

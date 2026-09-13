@@ -84,25 +84,6 @@ on_game_started = {
 	}
 }
 
-on_monthly_pulse_country = {
-	effect = {
-		if = {
-			limit = {
-				c:PHI ?= this
-				AND = {
-					has_variable = phfp_luzon_developed
-					has_variable = phfp_visayas_developed
-					has_variable = phfp_mindanao_developed
-				}
-			}
-			trigger_event = {
-				id = phfp_development.10
-				popup = yes
-			}
-		}
-	}
-}
-
 on_become_independent = {
 	effect = {
 		if = {

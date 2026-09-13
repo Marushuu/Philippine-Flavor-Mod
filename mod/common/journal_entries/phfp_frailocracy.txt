@@ -49,6 +49,14 @@
 
     on_yearly_pulse = {
         random_events = {
+            100 = 0
+            18 = phfp_frailocracy.2
+            6 = phfp_frailocracy.3
+            18 = phfp_frailocracy.4
+            18 = phfp_frailocracy.5
+            18 = phfp_frailocracy.6
+            5 = phfp_frailocracy.7
+            5 = phfp_frailocracy.8
         }
     }
 

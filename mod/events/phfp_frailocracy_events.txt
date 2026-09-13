@@ -54,3 +54,675 @@ phfp_frailocracy.1 = {
         }
     }
 }
+
+# The Friar Curate's Tithe
+phfp_frailocracy.2 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_frailocracy.2.t
+    desc = phfp_frailocracy.2.d
+    flavor = phfp_frailocracy.2.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    event_image = {
+        video = "ip3_village_school"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    cooldown = {
+        days = long_modifier_time
+    }
+
+    trigger = {
+        ig:ig_devout = {
+            is_powerful = yes
+        }
+    }
+
+    immediate = {
+        ig:ig_devout = {
+            save_scope_as = devout_scope
+        }
+        ig:ig_rural_folk ?= {
+            save_scope_as = rural_scope
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.2.a
+        default_option = yes
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_favor
+                days = moderately_long_modifier_time
+            }
+        }
+        scope:rural_scope ?= {
+            add_modifier = {
+                name = phfp_md_popular_backlash
+                days = moderately_long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = small_radicals
+            strata = lower
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.2.b
+        scope:rural_scope ?= {
+            add_modifier = {
+                name = phfp_md_popular_favor
+                days = moderately_long_modifier_time
+            }
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_backlash
+                days = moderately_long_modifier_time
+            }
+        }
+    }
+}
+
+# Survey of the Friar Estates
+phfp_frailocracy.3 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_frailocracy.3.t
+    desc = phfp_frailocracy.3.d
+    flavor = phfp_frailocracy.3.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+    event_image = {
+        video = "ip3_village_school"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
+    trigger = {
+        ig:ig_devout = {
+            is_powerful = yes
+        }
+        NOT = {
+            has_modifier = phfp_md_estates_redistributed
+        }
+    }
+
+    immediate = {
+        ig:ig_devout = {
+            save_scope_as = devout_scope
+        }
+        ig:ig_rural_folk ?= {
+            save_scope_as = rural_scope
+        }
+        ig:ig_landowners ?= {
+            save_scope_as = landowners_scope
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.3.a
+        default_option = yes
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_favor
+                days = long_modifier_time
+            }
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.3.b
+        add_modifier = {
+            name = phfp_md_estates_redistributed
+            days = very_long_modifier_time
+        }
+        scope:rural_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_estates_redistributed_approval
+                days = long_modifier_time
+            }
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_estates_seized_anger
+                days = long_modifier_time
+            }
+        }
+        scope:landowners_scope ?= {
+            add_modifier = {
+                name = phfp_md_principalia_backlash
+                days = moderately_long_modifier_time
+            }
+        }
+        add_loyalists = {
+            value = medium_radicals
+            strata = lower
+        }
+    }
+}
+
+# Friars in the Classroom
+phfp_frailocracy.4 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_frailocracy.4.t
+    desc = phfp_frailocracy.4.d
+    flavor = phfp_frailocracy.4.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    event_image = {
+        video = "ip3_village_school"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    cooldown = {
+        days = long_modifier_time
+    }
+
+    trigger = {
+        ig:ig_devout = {
+            is_powerful = yes
+        }
+    }
+
+    immediate = {
+        ig:ig_devout = {
+            save_scope_as = devout_scope
+        }
+        ig:ig_intelligentsia ?= {
+            save_scope_as = intelligentsia_scope
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.4.a
+        default_option = yes
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_favor
+                days = moderately_long_modifier_time
+            }
+        }
+        scope:intelligentsia_scope ?= {
+            add_modifier = {
+                name = phfp_md_ilustrado_backlash
+                days = moderately_long_modifier_time
+            }
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.4.b
+        scope:intelligentsia_scope ?= {
+            add_modifier = {
+                name = phfp_md_ilustrado_favor
+                days = moderately_long_modifier_time
+            }
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_backlash
+                days = moderately_long_modifier_time
+            }
+        }
+    }
+}
+
+# The Confessional and the Ballot
+phfp_frailocracy.5 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_frailocracy.5.t
+    desc = phfp_frailocracy.5.d
+    flavor = phfp_frailocracy.5.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+    event_image = {
+        video = "southamerica_aristocrats"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    cooldown = {
+        days = long_modifier_time
+    }
+
+    trigger = {
+        ig:ig_devout = {
+            is_powerful = yes
+        }
+    }
+
+    immediate = {
+        ig:ig_devout = {
+            save_scope_as = devout_scope
+        }
+        ig:ig_petty_bourgeoisie ?= {
+            save_scope_as = pb_scope
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.5.a
+        default_option = yes
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_favor
+                days = moderately_long_modifier_time
+            }
+        }
+        scope:pb_scope ?= {
+            add_modifier = {
+                name = phfp_md_popular_backlash
+                days = moderately_long_modifier_time
+            }
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.5.b
+        scope:pb_scope ?= {
+            add_modifier = {
+                name = phfp_md_popular_favor
+                days = moderately_long_modifier_time
+            }
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_backlash
+                days = moderately_long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = small_radicals
+            strata = middle
+        }
+    }
+}
+
+# An Inquilino's Complaint
+phfp_frailocracy.6 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_frailocracy.6.t
+    desc = phfp_frailocracy.6.d
+    flavor = phfp_frailocracy.6.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    event_image = {
+        video = "ip3_village_school"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    cooldown = {
+        days = moderately_long_modifier_time
+    }
+
+    trigger = {
+        ig:ig_devout = {
+            is_powerful = yes
+        }
+    }
+
+    immediate = {
+        ig:ig_devout = {
+            save_scope_as = devout_scope
+        }
+        ig:ig_rural_folk ?= {
+            save_scope_as = rural_scope
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.6.a
+        default_option = yes
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_favor
+                days = moderately_long_modifier_time
+            }
+        }
+        scope:rural_scope ?= {
+            add_modifier = {
+                name = phfp_md_popular_backlash
+                days = moderately_long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = small_radicals
+            strata = lower
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.6.b
+        scope:rural_scope ?= {
+            add_modifier = {
+                name = phfp_md_popular_favor
+                days = moderately_long_modifier_time
+            }
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_backlash
+                days = moderately_long_modifier_time
+            }
+        }
+    }
+}
+
+# Hermano Pule and the Cofradia de San Jose
+phfp_frailocracy.7 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_frailocracy.7.t
+    desc = phfp_frailocracy.7.d
+    flavor = phfp_frailocracy.7.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_protest.dds"
+
+    event_image = {
+        video = "asia_sepoy_mutiny"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
+    trigger = {
+        ig:ig_devout = {
+            is_powerful = yes
+        }
+        game_date >= 1836.1.1
+        game_date <= 1845.1.1
+    }
+
+    immediate = {
+        ig:ig_devout = {
+            save_scope_as = devout_scope
+        }
+        ig:ig_rural_folk ?= {
+            save_scope_as = rural_scope
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_variable = hermano_pule_var
+                    }
+                }
+            }
+            create_character = {
+                template = PHI_appolinario_de_la_cruz
+                save_scope_as = hermano_pule_scope
+            }
+        }
+        else_if = {
+            random_character = {
+                limit = {
+                    has_variable = hermano_pule_var
+                }
+                save_scope_as = hermano_pule_scope
+            }
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.7.a
+        default_option = yes
+        scope:hermano_pule_scope = {
+            kill_character = yes
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_favor
+                days = long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = small_radicals
+            strata = lower
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.7.b
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_backlash
+                days = long_modifier_time
+            }
+        }
+        scope:rural_scope ?= {
+            add_modifier = {
+                name = phfp_md_popular_favor
+                days = long_modifier_time
+            }
+        }
+        add_loyalists = {
+            value = small_radicals
+            strata = lower
+        }
+    }
+}
+
+# GOMBURZA - Blood at Bagumbayan
+phfp_frailocracy.8 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_frailocracy.8.t
+    desc = phfp_frailocracy.8.d
+    flavor = phfp_frailocracy.8.f
+
+    duration = 3
+
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+    event_image = {
+        video = "asia_sepoy_mutiny"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
+    trigger = {
+        ig:ig_devout = {
+            is_powerful = yes
+        }
+        game_date >= 1870.1.1
+        NOT = {
+            has_variable = gomburza
+        }
+    }
+
+    immediate = {
+        ig:ig_devout = {
+            save_scope_as = devout_scope
+        }
+        ig:ig_intelligentsia ?= {
+            save_scope_as = intelligentsia_scope
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_variable = mariano_gomez_var
+                    }
+                }
+            }
+            create_character = {
+                template = phfp_mariano_gomez
+                save_scope_as = gomez_scope
+            }
+        }
+        else = {
+            random_character = {
+                limit = {
+                    has_variable = mariano_gomez_var
+                }
+                save_scope_as = gomez_scope
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_variable = jose_burgos_var
+                    }
+                }
+            }
+            create_character = {
+                template = PHI_jose_burgos
+                save_scope_as = burgos_scope
+            }
+        }
+        else = {
+            random_character = {
+                limit = {
+                    has_variable = jose_burgos_var
+                }
+                save_scope_as = burgos_scope
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_variable = jacinto_zamora_var
+                    }
+                }
+            }
+            create_character = {
+                template = phfp_jacinto_zamora
+                save_scope_as = zamora_scope
+            }
+        }
+        else = {
+            random_character = {
+                limit = {
+                    has_variable = jacinto_zamora_var
+                }
+                save_scope_as = zamora_scope
+            }
+        }
+        if = {
+            limit = {
+                any_political_movement = {
+                    is_political_movement_type = phfp_movement_filipino_national
+                }
+            }
+            random_political_movement = {
+                limit = {
+                    is_political_movement_type = phfp_movement_filipino_national
+                }
+                save_scope_as = propaganda_movement_scope
+            }
+        }
+        set_variable = {
+            name = gomburza
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.8.a
+        default_option = yes
+        scope:gomez_scope = {
+            kill_character = yes
+        }
+        scope:burgos_scope = {
+            kill_character = yes
+        }
+        scope:zamora_scope = {
+            kill_character = yes
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_favor
+                days = long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = small_radicals
+            strata = middle
+        }
+        add_radicals = {
+            value = small_radicals
+            strata = lower
+        }
+    }
+
+    option = {
+        name = phfp_frailocracy.8.b
+        scope:gomez_scope = {
+            kill_character = yes
+        }
+        scope:burgos_scope = {
+            kill_character = yes
+        }
+        scope:zamora_scope = {
+            kill_character = yes
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_friar_backlash
+                days = long_modifier_time
+            }
+        }
+        scope:intelligentsia_scope ?= {
+            add_modifier = {
+                name = phfp_md_ilustrado_favor
+                days = long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = medium_radicals
+            strata = middle
+        }
+        add_radicals = {
+            value = medium_radicals
+            strata = lower
+        }
+        scope:propaganda_movement_scope ?= {
+            add_movement_enthusiasm_modifier = yes
+        }
+    }
+}

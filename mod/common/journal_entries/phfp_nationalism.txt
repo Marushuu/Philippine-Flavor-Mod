@@ -90,21 +90,46 @@
 	event_outcome_completed_effect_desc = {
 		header = phfp_nationalism.2.a
 		effect = {
-
+			if = {
+				limit = {
+					has_dlc_feature = ip4_content
+				}
+				remove_primary_culture = cu:spanish
+				add_primary_culture = cu:filipino_mestizo
+			}
+			else = {
+				remove_primary_culture = cu:spanish
+				add_primary_culture = cu:filipino_hispanophone
+			}
+			add_modifier = {
+				name = modifier_phi_spanish_vision
+				days = long_modifier_time
+			}
+			add_modifier = {
+				name = modifier_metropole_business_networks
+				days = long_modifier_time
+			}
 		}
 	}
 
 	event_outcome_completed_effect_desc = {
 		header = phfp_nationalism.2.b
 		effect = {
-
+			add_modifier = {
+				name = modifier_phi_spanish_vision
+				days = long_modifier_time
+			}
+			add_modifier = {
+				name = modifier_metropole_business_networks
+				days = long_modifier_time
+			}
 		}
 	}
 
 	event_outcome_completed_effect_desc = {
 		header = phfp_nationalism.2.c
 		effect = {
-
+			philippines_annex_effects = yes
 		}
 	}
 
@@ -117,15 +142,43 @@
 	on_fail = {
 	}
 
-	on_monthly_pulse = {
-		random_events = {
-			120 = 0
-			10 = phfp_nationalism.7
+	event_outcome_failed_effect_desc = {
+		header = phfp_nationalism.5.a
+		effect = {
+			if = {
+				limit = {
+					has_dlc_feature = ip4_content
+				}
+				remove_primary_culture = cu:spanish
+				add_primary_culture = cu:filipino_mestizo
+			}
+			else = {
+				remove_primary_culture = cu:spanish
+				add_primary_culture = cu:filipino
+			}
+			add_modifier = {
+				name = modifier_phi_indepenent_vision
+				days = long_modifier_time
+			}
+			add_modifier = {
+				name = modifier_national_consolidation
+				days = long_modifier_time
+			}
+			trigger_event = {
+				id = phfp_nationalism.11
+			}
 		}
 	}
 
-	on_yearly_pulse = {
-
+	on_monthly_pulse = {
+		random_events = {
+			250 = 0
+			10 = phfp_nationalism.6
+			6 = phfp_nationalism.7
+			8 = phfp_nationalism.8
+			6 = phfp_nationalism.9
+			6 = phfp_nationalism.10
+		}
 	}
 
 	weight = 5000

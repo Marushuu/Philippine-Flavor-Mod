@@ -61,11 +61,7 @@ phfp_development.2 = {
 
     immediate = {
         add_journal_entry = {
-            type = phfp_je_luzon_development
-        }
-
-        add_journal_entry = {
-            type = phfp_je_visayas_development
+            type = phfp_je_main_development
         }
     }
 
@@ -104,11 +100,7 @@ phfp_development.3 = {
 
     immediate = {
         add_journal_entry = {
-            type = phfp_je_luzon_development
-        }
-
-        add_journal_entry = {
-            type = phfp_je_visayas_development
+            type = phfp_je_main_development
         }
     }
 
@@ -454,7 +446,6 @@ phfp_development.10 = {
     }
 
     trigger = {
-        # On Action
     }
 
     option = {
@@ -463,6 +454,13 @@ phfp_development.10 = {
         add_modifier = {
             name = phfp_md_miracle_on_the_orient
             days = very_long_modifier_time
+        }
+        active_law:lawgroup_economic_system ?= {
+            add_amendment = {
+                type = phfp_amendment_economic_miracle
+                sponsor = PREV.ig:ig_industrialists
+                cooldown = 240
+            }
         }
     }
 }

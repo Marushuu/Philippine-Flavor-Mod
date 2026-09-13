@@ -15,7 +15,7 @@
 
     on_complete = {
         trigger_event = {
-            id = phfp_development.1
+            id = phfp_development.2
         }
         hidden_effect = {
             set_variable = phi_dev_done
@@ -426,6 +426,65 @@ phfp_je_visayas_development = {
         }
         add_radicals = {
             value = large_radicals
+        }
+    }
+}
+
+phfp_je_main_development = {
+    group = je_group_technology
+    icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+    possible = {}
+
+    immediate = {
+        add_journal_entry = {
+            type = phfp_je_luzon_development
+        }
+
+        add_journal_entry = {
+            type = phfp_je_visayas_development
+        }
+    }
+
+    complete = {
+        gdp >= 20000000
+        custom_tooltip = {
+            text = luzon_developed_tt
+            has_variable = phfp_luzon_developed
+        }
+        custom_tooltip = {
+            text = visayas_developed_tt
+            has_variable = phfp_visayas_developed
+        }
+        custom_tooltip = {
+            text = mindanao_developed_tt
+            has_variable = phfp_mindanao_developed
+        }
+    }
+
+    on_complete = {
+        trigger_event = {
+            id = phfp_development.10
+        }
+        hidden_effect = {
+            set_variable = phfp_economic_miracle_var
+        }
+    }
+
+    event_outcome_completed_effect_desc = {
+        header = phfp_development.10.a
+        effect = {
+            add_modifier = {
+                name = phfp_md_miracle_on_the_orient
+                days = very_long_modifier_time
+            }
+            active_law:lawgroup_economic_system ?= {
+                add_amendment = {
+                    type = phfp_amendment_economic_miracle
+                    sponsor = PREV.ig:ig_industrialists
+                    cooldown = 240
+                }
+            }
         }
     }
 }

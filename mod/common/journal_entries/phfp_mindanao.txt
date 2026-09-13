@@ -53,7 +53,7 @@
 			}
 		}
 		add_journal_entry = {
-			type = phfp_je_taming_the_south
+			type = phfp_je_mindanao_development
 		}
 		trigger_event = {
 			id = phfp_mindanao.4
@@ -115,7 +115,7 @@
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
-phfp_je_taming_the_south = {
+phfp_je_mindanao_development = {
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 	group = je_group_historical_content
 
@@ -123,10 +123,6 @@ phfp_je_taming_the_south = {
 	scripted_button = phfp_send_missionaries_button
 	scripted_button = phfp_fund_schools_button
 	scripted_button = phfp_establish_port_of_zamboanga_button
-
-	modifiers_while_active = {
-		phfp_md_moro_pacification
-	}
 
 	immediate = {
 		s:STATE_MINDANAO = {

@@ -99,7 +99,7 @@ phfp_arable_land_button = {
 	}
 
 	visible = {
-		has_journal_entry = phfp_je_taming_the_south
+		has_journal_entry = phfp_je_mindanao_development
 		var:arable_land_counter_var < 3
 	}
 
@@ -174,7 +174,7 @@ phfp_send_missionaries_button = {
 	desc = phfp_send_missionaries_button_desc
 
 	visible = {
-		has_journal_entry = phfp_je_taming_the_south
+		has_journal_entry = phfp_je_mindanao_development
 		NOT = {
 			has_variable = phfp_send_missionaries_var
 		}
@@ -200,7 +200,7 @@ phfp_fund_schools_button = {
 	desc = phfp_fund_schools_button_desc
 
 	visible = {
-		has_journal_entry = phfp_je_taming_the_south
+		has_journal_entry = phfp_je_mindanao_development
 		NOT = {
 			has_variable = phfp_fund_schools_var
 		}
@@ -226,7 +226,7 @@ phfp_establish_port_of_zamboanga_button = {
 	desc = phfp_establish_port_of_zamboanga_button_desc
 
 	visible = {
-		has_journal_entry = phfp_je_taming_the_south
+		has_journal_entry = phfp_je_mindanao_development
 		NOT = {
 			has_variable = phfp_establish_port_of_zamboanga_var
 		}

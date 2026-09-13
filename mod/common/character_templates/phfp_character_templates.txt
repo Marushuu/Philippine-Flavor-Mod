@@ -100,6 +100,115 @@ REPLACE:PHI_pedro_pelaez = {
 	}
 }
 
+
+
+# Mariano Gomez (GOM) - https://en.wikipedia.org/wiki/Mariano_Gomez_(priest)
+phfp_mariano_gomez = {
+	first_name = Mariano
+	last_name = Gomez
+	historical = yes
+	culture = cu:filipino_mestizo
+	religion = rel:catholic
+	dna = phfp_dna_mariano_gomez
+	interest_group = ig_devout
+	ideology = ideology_reformer
+	birth_date = 1799.8.2
+	home_region = STATE_LUZON
+	traits = {
+		cautious
+		honorable
+		erudite
+		elder
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_devout
+		}
+		earliest_usage_date = 1836.1.1
+		latest_usage_date = 1872.2.17		# Executed by 1872.2.17
+	}
+	on_created = {
+		set_variable = mariano_gomez_var
+	}
+}
+
+# Jose Burgos (BUR) - https://en.wikipedia.org/wiki/Jos%C3%A9_Burgos
+REPLACE:PHI_jose_burgos = {
+	first_name = JosE_
+	last_name = Burgos
+	historical = yes
+	culture = cu:filipino_mestizo
+	religion = rel:catholic
+	dna = phfp_dna_jose_burgos
+	ig_leader = yes
+	interest_group = ig_devout
+	ideology = ideology_reformer
+	birth_date = 1837.2.9
+	home_region = STATE_LUZON
+	traits = {
+		pious
+		erudite
+		honorable
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_devout
+		}
+		earliest_usage_date = 1860.1.1
+		latest_usage_date = 1872.2.17		# Executed by 1872.2.17
+	}
+	on_created = {
+		set_variable = jose_burgos_var
+	}
+}
+
+# Jacinto Zamora (ZA) - https://en.wikipedia.org/wiki/Jacinto_Zamora
+phfp_jacinto_zamora = {
+	first_name = Jacinto
+	last_name = Zamora
+	historical = yes
+	culture = cu:filipino_mestizo
+	religion = rel:catholic
+	dna = phfp_dna_jacinto_zamora
+	interest_group = ig_devout
+	ideology = ideology_moderate
+	birth_date = 1835.9.14
+	home_region = STATE_LUZON
+	traits = {
+		reckless
+		compliant
+		inexperienced
+	}
+	interest_group_leader_usage = {
+		country_trigger = {
+			OR = {
+				c:PHI ?= THIS
+				was_formed_from = PHI
+			}
+		}
+		interest_group_trigger = {
+			is_interest_group_type = ig_devout
+		}
+		earliest_usage_date = 1860.1.1
+		latest_usage_date = 1872.2.17		# Executed by 1872.2.17
+	}
+	on_created = {
+		set_variable = jacinto_zamora_var
+	}
+}
+
 ### COMMANDERS
 # Emilio Aguinaldo -
 REPLACE:PHI_emilio_aguinaldo = {
@@ -110,6 +219,8 @@ REPLACE:PHI_emilio_aguinaldo = {
 	religion = rel:catholic
 	birth_date = 1869.3.22
 	dna = phfp_dna_emilio_aguinaldo
+	ig_leader = yes
+	is_general = yes
 	interest_group = ig_landowners
 	ideology = ideology_authoritarian
 	home_region = STATE_LUZON
@@ -142,6 +253,9 @@ REPLACE:PHI_emilio_aguinaldo = {
 		}
 		role = general
 		earliest_usage_date = 1888.1.1
+	}
+	on_created = {
+		set_variable = emilio_aguinaldo_var
 	}
 }
 
@@ -186,6 +300,9 @@ REPLACE:PHI_andres_bonifacio = {
 		role = general
 		earliest_usage_date = 1882.1.1
 	}
+	on_created = {
+		set_variable = andres_bonifacio_var
+	}
 }
 
 # Antonio Luna - https://en.wikipedia.org/wiki/Antonio_Luna
@@ -196,6 +313,7 @@ phfp_antonio_luna = {
 	culture = cu:filipino_mestizo
 	birth_date = 1866.10.29
 	dna = phfp_dna_antonio_luna
+	ig_leader = yes
 	is_general = yes
 	interest_group = ig_armed_forces
 	ideology = ideology_jingoist_leader
@@ -228,7 +346,7 @@ phfp_gregorio_del_pilar = {
 	historical = yes
 	culture = cu:filipino_mestizo
 	birth_date = 1875.11.14
-	dna = phfp_dna_gregorio_del_pilar
+	# dna = phfp_dna_gregorio_del_pilar
 	is_general = yes
 	interest_group = ig_armed_forces
 	ideology = ideology_republican_leader
@@ -262,7 +380,7 @@ phfp_miguel_malvar = {
 	historical = yes
 	culture = cu:tagalog
 	birth_date = 1865.9.27
-	dna = phfp_dna_miguel_malvar
+	# dna = phfp_dna_miguel_malvar
 	is_general = yes
 	interest_group = ig_landowners
 	ideology = ideology_republican_leader
@@ -295,7 +413,7 @@ phfp_artemio_ricarte = {
 	historical = yes
 	culture = cu:tagalog
 	birth_date = 1866.10.20
-	dna = phfp_dna_artemio_ricarte
+	# dna = phfp_dna_artemio_ricarte
 	is_general = yes
 	interest_group = ig_armed_forces
 	ideology = ideology_sovereignist_leader
@@ -388,6 +506,9 @@ phfp_marcelo_del_pilar = {
 		earliest_usage_date = 1870.1.1
 		latest_usage_date = 1896.7.4		# Death by Tuberculosis
 	}
+	on_created = {
+		set_variable = marcelo_del_pilar_var
+	}
 }
 
 # Graciano Lopez - https://en.wikipedia.org/wiki/Graciano_L%C3%B3pez_Jaena
@@ -420,7 +541,10 @@ phfp_graciano_lopez = {
 			is_interest_group_type = ig_intelligentsia
 		}
 		earliest_usage_date = 1875.1.1
-		latest_usage_date = 1896.7.4		# Death by Tuberculosis
+		latest_usage_date = 1896.1.20		# Death
+	}
+	on_created = {
+		set_variable = graciano_lopez_var
 	}
 }
 
@@ -454,116 +578,10 @@ REPLACE:PHI_jose_rizal = {
 			is_interest_group_type = ig_intelligentsia
 		}
 		earliest_usage_date = 1887.1.1		# Noli me Tangere publication
-		latest_usage_date = 1936.1.1		# Executed by 1896.12.30
-	}
-}
-
-# Mariano Gomez (GOM) - https://en.wikipedia.org/wiki/Mariano_Gomez_(priest)
-phfp_mariano_gomez = {
-	first_name = Mariano
-	last_name = Gomez
-	historical = yes
-	culture = cu:filipino_mestizo
-	religion = rel:catholic
-	dna = phfp_dna_mariano_gomez
-	is_agitator = yes
-	interest_group = ig_devout
-	ideology = ideology_reformer
-	birth_date = 1799.8.2
-	home_region = STATE_LUZON
-	traits = {
-		cautious
-		honorable
-		erudite
-		elder
-	}
-	agitator_usage = {
-		country_trigger = {
-			OR = {
-				c:PHI ?= THIS
-				was_formed_from = PHI
-			}
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_devout
-		}
-		earliest_usage_date = 1836.1.1
-		latest_usage_date = 1872.2.17		# Executed by 1872.2.17
+		latest_usage_date = 1896.12.30		# Executed by 1896.12.30
 	}
 	on_created = {
-		set_variable = gomburza
-	}
-}
-
-# Jose Burgos (BUR) - https://en.wikipedia.org/wiki/Jos%C3%A9_Burgos
-REPLACE:PHI_jose_burgos = {
-	first_name = JosE_
-	last_name = Burgos
-	historical = yes
-	culture = cu:filipino_mestizo
-	religion = rel:catholic
-	dna = phfp_dna_jose_burgos
-	is_agitator = yes
-	interest_group = ig_devout
-	ideology = ideology_reformer
-	birth_date = 1837.2.9
-	home_region = STATE_LUZON
-	traits = {
-		pious
-		erudite
-		honorable
-	}
-	agitator_usage = {
-		country_trigger = {
-			OR = {
-				c:PHI ?= THIS
-				was_formed_from = PHI
-			}
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_devout
-		}
-		earliest_usage_date = 1860.1.1
-		latest_usage_date = 1872.2.17		# Executed by 1872.2.17
-	}
-	on_created = {
-		set_variable = gomburza
-	}
-}
-
-# Jacinto Zamora (ZA) - https://en.wikipedia.org/wiki/Jacinto_Zamora
-phfp_jacinto_zamora = {
-	first_name = Jacinto
-	last_name = Zamora
-	historical = yes
-	culture = cu:filipino_mestizo
-	religion = rel:catholic
-	dna = phfp_dna_jacinto_zamora
-	is_agitator = yes
-	interest_group = ig_devout
-	ideology = ideology_moderate
-	birth_date = 1835.9.14
-	home_region = STATE_LUZON
-	traits = {
-		reckless
-		compliant
-		inexperienced
-	}
-	agitator_usage = {
-		country_trigger = {
-			OR = {
-				c:PHI ?= THIS
-				was_formed_from = PHI
-			}
-		}
-		interest_group_trigger = {
-			is_interest_group_type = ig_devout
-		}
-		earliest_usage_date = 1860.1.1
-		latest_usage_date = 1872.2.17		# Executed by 1872.2.17
-	}
-	on_created = {
-		set_variable = gomburza
+		set_variable = jose_rizal_var
 	}
 }
 
@@ -596,6 +614,10 @@ REPLACE:PHI_appolinario_de_la_cruz = {
 		interest_group_trigger = {
 			is_interest_group_type = ig_rural_folk
 		}
-		latest_usage_date = 1936.1.1		# Executed by 1841.11.4
+		earliest_usage_date = 1836.1.1
+		latest_usage_date = 1841.11.4		# Executed by 1841.11.4
+	}
+	on_created = {
+		set_variable = hermano_pule_var
 	}
 }

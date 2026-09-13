@@ -40,3 +40,52 @@
 
 	amendment_activism_multiplier = 0.25
 }
+
+phfp_amendment_economic_miracle = {
+	parent = law_interventionism
+
+	allowed_laws = {
+		law_traditionalism
+		law_agrarianism
+		law_interventionism
+		law_industry_banned
+		law_laissez_faire
+		law_cooperative_ownership
+		law_command_economy
+		law_extraction_economy
+	}
+
+	modifier = {
+		country_loan_interest_rate_mult = -0.2
+		country_max_companies_add = 1
+		country_free_charters_add = 2
+		state_capitalists_investment_pool_efficiency_mult = 0.25
+	}
+
+	possible = {
+		OR = {
+			c:PHI ?= this
+			was_formed_from = PHI
+		}
+		OR = {
+			has_variable = phfp_
+		}
+	}
+
+	would_sponsor = {
+		AND = {
+			exists = scope:approval
+			scope:approval > 0
+		}
+	}
+
+	ai_will_revoke = {
+		always = no
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+
+	amendment_activism_multiplier = 0.5
+}
