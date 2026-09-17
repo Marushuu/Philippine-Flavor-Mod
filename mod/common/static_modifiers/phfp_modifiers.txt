@@ -24,48 +24,6 @@ REPLACE:philippines_development_modifier_b = {
     building_group_bg_plantations_throughput_add = 0.1
 }
 
-# General Modifiers
-
-phfp_md_ilustrado_backlash = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    interest_group_approval_add = -2
-}
-
-phfp_md_ilustrado_favor = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    interest_group_approval_add = 2
-}
-
-phfp_md_principalia_backlash = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    interest_group_approval_add = -2
-}
-
-phfp_md_principalia_favor = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    interest_group_approval_add = 2
-}
-
-phfp_md_friar_backlash = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    interest_group_approval_add = -2
-}
-
-phfp_md_friar_favor = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    interest_group_approval_add = 2
-}
-
-phfp_md_popular_backlash = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-    interest_group_approval_add = -2
-}
-
-phfp_md_popular_favor = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    interest_group_approval_add = 2
-}
-
 # Development Modifiers
 
 phfp_md_growth_to_the_countrysides = {
@@ -125,6 +83,11 @@ phfp_md_iloilo_expansion = {
     state_birth_rate_mult = 0.1
     building_group_bg_agriculture_throughput_add = 0.1
     building_group_bg_plantations_throughput_add = 0.1
+}
+
+phfp_md_port_construction_cost = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+    country_expenses_add = 1
 }
 
 phfp_md_miracle_on_the_orient = {
@@ -219,28 +182,42 @@ phfp_md_tamed_south = {
     building_group_bg_mining_throughput_add = 0.1
 }
 
-# Frailocracy
+# Frailocracy Content
 
 phfp_md_estates_redistributed = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    state_tax_collection_mult = 0.1
+    state_infrastructure_add = 2
     building_group_bg_agriculture_throughput_add = 0.1
-    state_tax_collection_mult = 0.05
 }
 
-phfp_md_friar_estates_redistributed_approval = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    interest_group_approval_add = 2
+phfp_md_friar_untouched_estates = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    interest_group_approval_add = 1
 }
 
-phfp_md_friar_estates_seized_anger = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+phfp_md_stripped_of_estate = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+    country_clergymen_pol_str_mult = -0.25
+}
+
+phfp_md_stripped_of_estate_ig = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
     interest_group_approval_add = -2
 }
 
-phfp_md_secularizated_church = {
+phfp_md_secularized_church = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
     interest_group_pop_attraction_mult = -0.25
     interest_group_approval_add = -3
+}
+
+phfp_md_secularization_triumph = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    country_legitimacy_base_add = 15
+    country_tech_spread_mult = 0.1
+    state_education_access_add = 0.1
+    state_conversion_mult = -0.25
 }
 
 phfp_md_secularization_triumph_approval = {
@@ -249,13 +226,82 @@ phfp_md_secularization_triumph_approval = {
     interest_group_pop_attraction_mult = 0.25
 }
 
-phfp_md_secularization_triumph = {
+# Hermano Pule
+
+phfp_md_cofradia_founded = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    country_legitimacy_base_add = 15
-    country_radicals_from_legitimacy_mult = 0.25
-    country_tech_spread_mult = 0.1
-    state_education_access_add = 0.1
+    country_peasants_pol_str_mult = 0.15
+    state_radicals_from_political_movements_mult = 0.05
 }
+
+phfp_md_cofradia_founded_ig = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    interest_group_pop_attraction_mult = 0.15
+}
+
+phfp_md_growing_popularity = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+    character_popularity_add = 10
+    character_prominence_add = 15
+}
+
+phfp_md_growing_cofradia = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    state_radicals_from_political_movements_mult = 0.1
+    country_radicals_from_legitimacy_mult = 0.1
+}
+
+phfp_md_growing_cofradia_ig = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_approval_add = 2
+    interest_group_pop_attraction_mult = 0.25
+}
+
+phfp_md_let_cofradia_grow = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    interest_group_approval_add = -2
+}
+
+phfp_md_cofradia_supression = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+    country_legitimacy_base_add = 5
+    state_radicals_from_political_movements_mult = -0.25
+}
+
+phfp_md_cofradia_supression_ig = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+    interest_group_approval_add = -3
+    interest_group_pop_attraction_mult = -0.25
+}
+
+phfp_md_cofradia_supression_ig_approval = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+    interest_group_approval_add = 2
+}
+
+phfp_md_alitao_massacre = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+    country_legitimacy_base_add = -10
+    country_bureaucracy_mult = -0.10
+}
+
+phfp_md_alitao_massacre_mortality = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+    state_mortality_mult = 0.5
+}
+
+phfp_md_alitao_massacre_ruler = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    character_popularity_add = -50
+}
+
+phfp_md_hermano_pule_martyrdom = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    country_radicals_from_legitimacy_mult = 0.15
+    state_radicals_from_political_movements_mult = 0.25
+}
+
+# GomBurZa
 
 # Nationalism
 
@@ -264,21 +310,6 @@ phfp_md_ilustrado_movement = {
     interest_group_ig_intelligentsia_pop_attraction_mult = 0.25
     state_radicals_from_political_movements_mult = 0.1
     state_radicals_and_loyalists_from_sol_change_mult = 0.1
-}
-
-phfp_md_lib_gain_3 = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    country_liberty_desire_add = 0.2
-}
-
-phfp_md_lib_gain_2 = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    country_liberty_desire_add = 0.1
-}
-
-phfp_md_lib_gain = {
-    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-    country_liberty_desire_add = 0.05
 }
 
 phfp_md_nespapers_propagated = {

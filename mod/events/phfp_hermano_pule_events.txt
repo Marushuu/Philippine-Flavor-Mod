@@ -1,0 +1,357 @@
+﻿namespace = phfp_hermano_pule
+
+# Starter Event for Cofradia de San Jose
+phfp_hermano_pule.1 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_hermano_pule.1.t
+    desc = phfp_hermano_pule.1.d
+    flavor = phfp_hermano_pule.1.f
+
+    duration = 3
+
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
+    event_image = {
+        video = "ep1_printing_press"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    trigger = {
+        game_date >= 1836.1.1
+        NOT = {
+            has_variable = hermano_pule_stage_var
+        }
+    }
+
+    cancellation_trigger = {
+        NOT = {
+            has_journal_entry = phfp_je_frailocracy
+        }
+    }
+
+    immediate = {
+        ig:ig_rural_folk ?= {
+            save_scope_as = rural_scope
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_variable = hermano_pule_var
+                    }
+                }
+            }
+            create_character = {
+                template = PHI_appolinario_de_la_cruz
+                save_scope_as = hermano_pule_scope
+            }
+        }
+        else_if = {
+            random_character = {
+                limit = {
+                    has_variable = hermano_pule_var
+                }
+                save_scope_as = hermano_pule_scope
+            }
+        }
+        set_variable = {
+            name = hermano_pule_stage_var
+            value = 1
+        }
+    }
+
+    option = {
+        name = phfp_hermano_pule.1.a
+        default_option = yes
+        add_modifier = {
+            name = phfp_md_cofradia_founded
+            days = normal_modifier_time
+        }
+        scope:rural_scope ?= {
+            add_modifier = {
+                name = phfp_md_cofradia_founded_ig
+                days = normal_modifier_time
+            }
+        }
+    }
+}
+
+# Growth
+phfp_hermano_pule.2 = {
+    type = country_event
+    placement = ROOT
+
+    duration = 3
+
+    cooldown = {
+        days = normal_modifier_time
+    }
+
+    title = phfp_hermano_pule.2.t
+    desc = phfp_hermano_pule.2.d
+    flavor = phfp_hermano_pule.2.f
+
+    event_image = {
+        video = unspecific_devastation
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    trigger = {
+        game_date >= 1840.1.1
+        has_variable = hermano_pule_stage_var
+        var:hermano_pule_stage_var = 1
+    }
+
+    cancellation_trigger = {
+        NOT = {
+            any_character = {
+                has_variable = hermano_pule_var
+            }
+        }
+    }
+
+    immediate = {
+        ig:ig_devout ?= {
+            save_scope_as = devout_scope
+        }
+        ig:ig_rural_folk ?= {
+            save_scope_as = rural_scope
+        }
+        random_character = {
+            limit = {
+                has_variable = hermano_pule_var
+            }
+            save_scope_as = hermano_pule_scope
+        }
+    }
+
+    option = {
+        name = phfp_hermano_pule.2.a
+        default_option = yes
+        set_variable = {
+            name = hermano_pule_stage_var
+            value = 2
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_cofradia_supression_ig_approval
+                days = long_modifier_time
+            }
+        }
+        scope:rural_scope ?= {
+            add_modifier = {
+                name = phfp_md_cofradia_supression_ig
+                days = long_modifier_time
+            }
+        }
+        add_modifier = {
+            name = phfp_md_cofradia_supression
+            days = long_modifier_time
+        }
+        add_radicals = {
+            value = medium_radicals
+            strata = lower
+        }
+    }
+
+    option = {
+        name = phfp_hermano_pule.2.b
+        scope:devout_scope = {
+            add_modifier = {
+                name = phfp_md_let_cofradia_grow
+                days = normal_modifier_time
+            }
+        }
+        scope:rural_scope = {
+            add_modifier = {
+                name = phfp_md_growing_cofradia_ig
+                days = normal_modifier_time
+            }
+        }
+        scope:hermano_pule_scope = {
+            add_modifier = {
+                name = phfp_md_growing_popularity
+                days = normal_modifier_time
+            }
+        }
+        add_modifier = {
+            name = phfp_md_growing_cofradia
+            days = normal_modifier_time
+        }
+        add_loyalists = {
+            value = small_radicals
+            strata = lower
+        }
+    }
+}
+
+# Alitao Massacre
+phfp_hermano_pule.3 = {
+    type = country_event
+    placement = ROOT
+
+    duration = 3
+
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
+    title = phfp_hermano_pule.3.t
+    desc = phfp_hermano_pule.3.d
+    flavor = phfp_hermano_pule.3.f
+
+    event_image = {
+        video = unspecific_devastation
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    trigger = {
+        game_date >= 1840.1.1
+        has_variable = hermano_pule_stage_var
+        var:hermano_pule_stage_var = 2
+    }
+
+    cancellation_trigger = {
+        NOT = {
+            any_character = {
+                has_variable = hermano_pule_var
+            }
+        }
+    }
+
+    immediate = {
+        s:STATE_LUZON ?= {
+            random_state = {
+                limit = {
+                    owner = ROOT
+                }
+                save_scope_as = luzon_scope
+            }
+        }
+        random_character = {
+            limit = {
+                has_variable = hermano_pule_var
+            }
+            save_scope_as = hermano_pule_scope
+        }
+        random_scope_character = {
+            limit = {
+                is_ruler_of_own_country = yes
+            }
+            save_scope_as = ruler_scope
+        }
+    }
+
+    option = {
+        name = phfp_hermano_pule.3.a
+        default_option = yes
+        scope:luzon_scope ?= {
+            kill_population = {
+                culture = cu:tagalog
+                value = 1000
+            }
+            add_radicals = {
+                culture = cu:tagalog
+                value = medium_radicals
+            }
+            add_modifier = {
+                name = phfp_md_alitao_massacre_mortality
+                days = short_modifier_time
+            }
+        }
+        ruler = {
+            add_modifier = {
+                name = phfp_md_alitao_massacre_ruler #popularity loss
+                days = long_modifier_time
+            }
+        }
+        add_modifier = {
+            name = phfp_md_alitao_massacre
+            days = normal_modifier_time
+        }
+        trigger_event = {
+            id = phfp_hermano_pule.4
+            days = 30
+        }
+    }
+}
+
+# Execution or Exile
+phfp_hermano_pule.4 = {
+    type = country_event
+    placement = ROOT
+
+    duration = 3
+
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
+    title = phfp_hermano_pule.4.t
+    desc = phfp_hermano_pule.4.d
+    flavor = phfp_hermano_pule.4.f
+
+    event_image = {
+        video = unspecific_devastation
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    trigger = {
+        # Triggered by Event
+    }
+
+    immediate = {
+        ig:ig_devout >= {
+            save_scope_as = devout_scope
+        }
+        ig:ig_rural_folk ?= {
+            save_scope_as = rural_scope
+        }
+        random_character = {
+            limit = {
+                has_variable = hermano_pule_var
+            }
+            save_scope_as = hermano_pule_scope
+        }
+        remove_variable = hermano_pule_stage_var
+    }
+
+    option = {
+        name = phfp_hermano_pule.4.a
+        default_option = yes
+        scope:hermano_pule_scope ?= {
+            kill_character = yes
+        }
+        add_modifier = {
+            name = phfp_md_hermano_pule_martyrdom
+            days = moderately_long_modifier_time
+        }
+    }
+
+    option = {
+        name = phfp_hermano_pule.4.b
+        scope:hermano_pule_scope ?= {
+            exile_character = yes
+        }
+        add_modifier = {
+            name = phfp_md_hermano_pule_martyrdom
+            days = moderately_long_modifier_time
+        }
+    }
+}

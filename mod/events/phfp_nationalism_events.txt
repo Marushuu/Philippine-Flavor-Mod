@@ -327,7 +327,10 @@ phfp_nationalism.6 = {
     }
 
     immediate = {
-        movement_type:phfp_movement_filipino_national = {
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = phfp_movement_filipino_national
+            }
             save_scope_as = propaganda_movement_scope
         }
         if = {
@@ -501,7 +504,10 @@ phfp_nationalism.7 = {
                 save_scope_as = del_pilar_scope
             }
         }
-        movement_type:phfp_movement_filipino_national = {
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = phfp_movement_filipino_national
+            }
             save_scope_as = propaganda_movement_scope
         }
         set_variable = {
@@ -593,7 +599,10 @@ phfp_nationalism.8 = {
         ig:ig_intelligentsia ?= {
             save_scope_as = intelligentsia_scope
         }
-        movement_type:phfp_movement_filipino_national = {
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = phfp_movement_filipino_national
+            }
             save_scope_as = propaganda_movement_scope
         }
     }
@@ -697,7 +706,10 @@ phfp_nationalism.9 = {
         ig:ig_intelligentsia ?= {
             save_scope_as = intelligentsia_scope
         }
-        movement_type:phfp_movement_filipino_national = {
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = phfp_movement_filipino_national
+            }
             save_scope_as = propaganda_movement_scope
         }
         if = {
@@ -825,7 +837,7 @@ phfp_nationalism.10 = {
             limit = {
                 NOT = {
                     any_character = {
-                        has_variable = jose_rizal_var
+                        has_template = PHI_jose_rizal
                     }
                 }
             }
@@ -834,13 +846,13 @@ phfp_nationalism.10 = {
                 save_scope_as = rizal_scope
             }
         }
-        else = {
-            random_character = {
-                limit = {
-                    has_variable = jose_rizal_var
+        else_if = {
+            limit = {
+                any_scope_character = {
+                    has_template = PHI_jose_rizal
                 }
-                save_scope_as = rizal_scope
             }
+            save_scope_as = rizal_scope
         }
         set_variable = {
             name = phfp_la_liga_var

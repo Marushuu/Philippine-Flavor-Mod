@@ -441,106 +441,6 @@ phfp_frailocracy.6 = {
     }
 }
 
-# Hermano Pule and the Cofradia de San Jose
-phfp_frailocracy.7 = {
-    type = country_event
-    placement = ROOT
-
-    title = phfp_frailocracy.7.t
-    desc = phfp_frailocracy.7.d
-    flavor = phfp_frailocracy.7.f
-
-    duration = 3
-
-    icon = "gfx/interface/icons/event_icons/event_protest.dds"
-
-    event_image = {
-        video = "asia_sepoy_mutiny"
-    }
-
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-    cooldown = {
-        days = never_fire_again_modifier_time
-    }
-
-    trigger = {
-        ig:ig_devout = {
-            is_powerful = yes
-        }
-        game_date >= 1836.1.1
-        game_date <= 1845.1.1
-    }
-
-    immediate = {
-        ig:ig_devout = {
-            save_scope_as = devout_scope
-        }
-        ig:ig_rural_folk ?= {
-            save_scope_as = rural_scope
-        }
-        if = {
-            limit = {
-                NOT = {
-                    any_character = {
-                        has_variable = hermano_pule_var
-                    }
-                }
-            }
-            create_character = {
-                template = PHI_appolinario_de_la_cruz
-                save_scope_as = hermano_pule_scope
-            }
-        }
-        else_if = {
-            random_character = {
-                limit = {
-                    has_variable = hermano_pule_var
-                }
-                save_scope_as = hermano_pule_scope
-            }
-        }
-    }
-
-    option = {
-        name = phfp_frailocracy.7.a
-        default_option = yes
-        scope:hermano_pule_scope = {
-            kill_character = yes
-        }
-        scope:devout_scope ?= {
-            add_modifier = {
-                name = phfp_md_friar_favor
-                days = long_modifier_time
-            }
-        }
-        add_radicals = {
-            value = small_radicals
-            strata = lower
-        }
-    }
-
-    option = {
-        name = phfp_frailocracy.7.b
-        scope:devout_scope ?= {
-            add_modifier = {
-                name = phfp_md_friar_backlash
-                days = long_modifier_time
-            }
-        }
-        scope:rural_scope ?= {
-            add_modifier = {
-                name = phfp_md_popular_favor
-                days = long_modifier_time
-            }
-        }
-        add_loyalists = {
-            value = small_radicals
-            strata = lower
-        }
-    }
-}
-
 # GOMBURZA - Blood at Bagumbayan
 phfp_frailocracy.8 = {
     type = country_event
@@ -644,18 +544,11 @@ phfp_frailocracy.8 = {
                 save_scope_as = zamora_scope
             }
         }
-        if = {
+        random_political_movement = {
             limit = {
-                any_political_movement = {
-                    is_political_movement_type = phfp_movement_filipino_national
-                }
+                is_political_movement_type = phfp_movement_filipino_national
             }
-            random_political_movement = {
-                limit = {
-                    is_political_movement_type = phfp_movement_filipino_national
-                }
-                save_scope_as = propaganda_movement_scope
-            }
+            save_scope_as = propaganda_movement_scope
         }
         set_variable = {
             name = gomburza

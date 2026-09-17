@@ -254,9 +254,6 @@ REPLACE:PHI_emilio_aguinaldo = {
 		role = general
 		earliest_usage_date = 1888.1.1
 	}
-	on_created = {
-		set_variable = emilio_aguinaldo_var
-	}
 }
 
 # Andres Bonifacio -
@@ -614,7 +611,6 @@ REPLACE:PHI_appolinario_de_la_cruz = {
 		interest_group_trigger = {
 			is_interest_group_type = ig_rural_folk
 		}
-		earliest_usage_date = 1836.1.1
 		latest_usage_date = 1841.11.4		# Executed by 1841.11.4
 	}
 	on_created = {

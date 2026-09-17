@@ -71,7 +71,7 @@
 		}
 		country_has_voting_franchise = yes
 		NOT = {
-			has_law_or_variant = law_type:law_frailocracy
+			has_law = law_type:law_frailocracy
 			has_law_or_variant = law_type:law_legacy_slavery
 		}
 		liberty_desire <= 25
@@ -81,9 +81,6 @@
 		trigger_event = {
 			id = phfp_nationalism.2
 			popup = yes
-		}
-		set_variable = {
-			name = phfp_reform_var
 		}
 	}
 
@@ -171,13 +168,18 @@
 	}
 
 	on_monthly_pulse = {
+		events = {
+			phfp_nationalism.6
+			phfp_nationalism.7
+			phfp_nationalism.9
+			phfp_nationalism.10
+		}
+	}
+
+	on_yearly_pulse = {
 		random_events = {
 			250 = 0
-			10 = phfp_nationalism.6
-			6 = phfp_nationalism.7
-			8 = phfp_nationalism.8
-			6 = phfp_nationalism.9
-			6 = phfp_nationalism.10
+			10 = phfp_nationalism.8
 		}
 	}
 

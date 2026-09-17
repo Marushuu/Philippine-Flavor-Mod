@@ -43,7 +43,6 @@
 	}
 
 	on_complete = {
-		set_variable = phfp_subjugated_the_south_var
 		s:STATE_MINDANAO = {
 			every_scope_state = {
 				limit = {

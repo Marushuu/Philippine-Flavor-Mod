@@ -47,20 +47,29 @@
         }
     }
 
-    on_yearly_pulse = {
+    on_monthly_pulse = {
+        events = {
+            phfp_hermano_pule.1
+            phfp_hermano_pule.3
+        }
         random_events = {
             100 = 0
-            18 = phfp_frailocracy.2
-            6 = phfp_frailocracy.3
-            18 = phfp_frailocracy.4
-            18 = phfp_frailocracy.5
-            18 = phfp_frailocracy.6
-            5 = phfp_frailocracy.7
-            5 = phfp_frailocracy.8
+            10 = phfp_hermano_pule.2
         }
     }
 
-    weight = 100
+    on_yearly_pulse = {
+        random_events = {
+            100 = 0
+            20 = phfp_frailocracy.2
+            10 = phfp_frailocracy.3
+            20 = phfp_frailocracy.4
+            20 = phfp_frailocracy.5
+            20 = phfp_frailocracy.6
+        }
+    }
+
+    weight = 1000
     transferable = no
     can_revolution_inherit = yes
     can_deactivate = no

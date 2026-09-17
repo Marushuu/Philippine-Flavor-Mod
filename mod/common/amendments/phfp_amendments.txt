@@ -68,7 +68,7 @@ phfp_amendment_economic_miracle = {
 			was_formed_from = PHI
 		}
 		OR = {
-			has_variable = phfp_
+			has_variable = phfp_economic_miracle_var
 		}
 	}
 

@@ -288,36 +288,6 @@
                 }
             }
             add = {
-                desc = "INDIA_SUBJECT"
-                if = {
-                    limit = {
-                        owner ?= {
-                            OR = {
-                                is_subject_type = subject_type_colony
-                                is_subject_type = subject_type_chartered_company
-                            }
-                        }
-                    }
-                    value = 0.25
-                }
-                if = {
-                    limit = {
-                        owner ?= {
-                            is_subject_type = subject_type_dominion
-                        }
-                    }
-                    value = 0.10
-                }
-            }
-        }
-
-        if = {
-            limit = {
-                owner ?= {
-                    is_subject = yes
-                }
-            }
-            add = {
                 desc = "LIBERTY_DESIRE"
                 value = owner.liberty_desire
                 divide = 500

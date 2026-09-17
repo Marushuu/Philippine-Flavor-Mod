@@ -12,6 +12,7 @@
  phfp_md_cebu_expansion: "Queen City Cebu"
  phfp_md_favored_agriculture: "Agricultural Focus"
  phfp_md_iloilo_expansion: "Queen City Iloilo"
+ phfp_md_port_construction_cost: "Port Construction Cost"
  phfp_md_miracle_on_the_orient: "Miracle on the Orient Seas"
 
  # Mindanao Modifiers
@@ -19,9 +20,9 @@
  phfp_md_southern_settlement: "Visayan Settlement"
  phfp_md_mindanao_autonomy: "Provided Local Autonomy"
  phfp_md_moro_education_investment: "Education Investments"
- phfp_md_education_cost: "Mindanao Education Fund"
+ phfp_md_education_cost: "Mindanao Education Cost"
  phfp_md_mindanao_conversion: "Spreading the Gospel"
- phfp_md_conversion_cost: "Mindanao Missionary Fund"
+ phfp_md_conversion_cost: "Mindanao Missionary Cost"
  phfp_md_moro_pacification: "Pacification of Mindanao"
  phfp_md_loss_of_mindanao: "Loss of Mindanao"
  phfp_md_loss_of_mindanao_approval: "Embarrassing Loss"
@@ -30,8 +31,36 @@
  phfp_md_mindanao_developed_approval: "Successful Mindanao Investments"
  phfp_md_tamed_south: "Developed Lands"
 
+ # Frailocracy Modifiers
+ phfp_md_estates_redistributed: "Friar Estates Redistributed"
+ phfp_md_friar_untouched_estates: "Friar Estates Left Untouched"
+ phfp_md_stripped_of_estate: "Stripped Away Friar Estates"
+ phfp_md_stripped_of_estate_ig: "$phfp_md_stripped_of_estate$"
+ phfp_md_secularized_church: "Secularized Church"
+ phfp_md_secularization_triumph: "Triumphant Secularization"
+ phfp_md_secularization_triumph_approval: "$phfp_md_secularization_triumph$"
+
+ # Hermano Pule Modifiers
+ phfp_md_cofradia_founded: "Cofradía Founded"
+ phfp_md_cofradia_founded_ig: "$phfp_md_cofradia_founded$"
+ phfp_md_growing_popularity: "Growing Popularity"
+ phfp_md_growing_cofradia: "Growing Cofradía"
+ phfp_md_growing_cofradia_ig: "$phfp_md_growing_cofradia$"
+ phfp_md_let_cofradia_grow: "Untouched Cofradía"
+ phfp_md_cofradia_supression: "Cofradía Crackdown"
+ phfp_md_cofradia_supression_ig: "$phfp_md_cofradia_supression$"
+ phfp_md_cofradia_supression_ig_approval: "$phfp_md_cofradia_supression$"
+ phfp_md_alitao_massacre: "Alitao Massacre"
+ phfp_md_alitao_massacre_mortality: "$phfp_md_alitao_massacre$"
+ phfp_md_alitao_massacre_ruler: "$phfp_md_alitao_massacre$"
+ phfp_md_hermano_pule_martyrdom: "Martyrdom of Hermano Pule"
+
+
+
  # Nationalism Modifiers
  phfp_md_ilustrado_movement: "Ilustrado Movement"
- phfp_md_lib_gain: "Nascent Independence Movement"
- phfp_md_lib_gain_2: "Burgeoning Independence Movement"
- phfp_md_lib_gain_3: "Fully-fledged Independence Movement"
+ phfp_md_nespapers_propagated: "Untouched Newspaper Publication"
+ phfp_md_censored_newspapers: "Newspaper Censorship"
+ phfp_md_dissolution_of_la_liga_filipina: "Dissolution of the La Liga Filipina"
+ phfp_md_revolutionary_fervor: "Revolutionary Fervor"
+ phfp_md_constitutional_fervor: "Constitutional Fervor"
