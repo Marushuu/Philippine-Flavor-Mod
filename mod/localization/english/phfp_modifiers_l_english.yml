@@ -33,6 +33,7 @@
 
  # Frailocracy Modifiers
  phfp_md_estates_redistributed: "Friar Estates Redistributed"
+ phfp_md_estates_redistributed_ig: "$phfp_md_estates_redistributed$"
  phfp_md_friar_untouched_estates: "Friar Estates Left Untouched"
  phfp_md_stripped_of_estate: "Stripped Away Friar Estates"
  phfp_md_stripped_of_estate_ig: "$phfp_md_stripped_of_estate$"
@@ -55,7 +56,20 @@
  phfp_md_alitao_massacre_ruler: "$phfp_md_alitao_massacre$"
  phfp_md_hermano_pule_martyrdom: "Martyrdom of Hermano Pule"
 
-
+ # GomBurZa
+ phfp_md_polo_y_servicio_exemption: "Military Polo y Servicio Exemptions"
+ phfp_md_polo_y_servicio_exemption_ig: "$phfp_md_polo_y_servicio_exemption$"
+ phfp_md_kept_polo_y_servicio_exemptions: "Maintained $phfp_md_polo_y_servicio_exemption$"
+ phfp_md_cavite_mutiny: "Cavite Mutiny"
+ phfp_md_exemptions_removed: "Polo y Servicio Exemptions Removed"
+ phfp_md_exemptions_reinstated: "Reinstated Polo y Servicio Exemptions"
+ phfp_md_protected_native_priests: "Protected Native Priests"
+ phfp_md_scapegoated_native_priests: "Scapegoated Native Priests"
+ phfp_md_silenced_native_priests: "Unjust Execution of Native Priests"
+ phfp_md_gomburza_acquitted_approve: "GOMBURZA Acquitted"
+ phfp_md_gomburza_acquitted_disapprove: "$phfp_md_gomburza_acquitted_approve$"
+ phfp_md_legacy_of_gomburza: "Legacy of GOMBURZA"
+ phfp_md_legacy_of_gomburza_movement: "$phfp_md_legacy_of_gomburza$"
 
  # Nationalism Modifiers
  phfp_md_ilustrado_movement: "Ilustrado Movement"

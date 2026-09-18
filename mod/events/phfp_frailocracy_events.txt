@@ -1,5 +1,6 @@
 namespace = phfp_frailocracy
 
+# Frailocracy JE Completion
 phfp_frailocracy.1 = {
     type = country_event
     placement = ROOT
@@ -36,7 +37,7 @@ phfp_frailocracy.1 = {
             set_interest_group_name = ig_catholic_church
             remove_ideology = phfp_ideology_frailocrat
             add_modifier = {
-                name = phfp_md_secularizated_church
+                name = phfp_md_secularized_church
                 days = long_modifier_time
             }
         }
@@ -50,7 +51,7 @@ phfp_frailocracy.1 = {
 
         add_modifier = {
             name = phfp_md_secularization_triumph
-            days = very_long_modifier_time
+            days = long_modifier_time
         }
     }
 }
@@ -140,27 +141,18 @@ phfp_frailocracy.3 = {
     desc = phfp_frailocracy.3.d
     flavor = phfp_frailocracy.3.f
 
-    duration = 3
-
-    icon = "gfx/interface/icons/event_icons/event_scales.dds"
-
     event_image = {
         video = "ip3_village_school"
     }
 
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    cooldown = {
-        days = never_fire_again_modifier_time
-    }
+    duration = 3
 
     trigger = {
-        ig:ig_devout = {
-            is_powerful = yes
-        }
-        NOT = {
-            has_modifier = phfp_md_estates_redistributed
-        }
+        # Triggered by Button
     }
 
     immediate = {
@@ -437,185 +429,6 @@ phfp_frailocracy.6 = {
                 name = phfp_md_friar_backlash
                 days = moderately_long_modifier_time
             }
-        }
-    }
-}
-
-# GOMBURZA - Blood at Bagumbayan
-phfp_frailocracy.8 = {
-    type = country_event
-    placement = ROOT
-
-    title = phfp_frailocracy.8.t
-    desc = phfp_frailocracy.8.d
-    flavor = phfp_frailocracy.8.f
-
-    duration = 3
-
-    icon = "gfx/interface/icons/event_icons/event_military.dds"
-
-    event_image = {
-        video = "asia_sepoy_mutiny"
-    }
-
-    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
-    cooldown = {
-        days = never_fire_again_modifier_time
-    }
-
-    trigger = {
-        ig:ig_devout = {
-            is_powerful = yes
-        }
-        game_date >= 1870.1.1
-        NOT = {
-            has_variable = gomburza
-        }
-    }
-
-    immediate = {
-        ig:ig_devout = {
-            save_scope_as = devout_scope
-        }
-        ig:ig_intelligentsia ?= {
-            save_scope_as = intelligentsia_scope
-        }
-        if = {
-            limit = {
-                NOT = {
-                    any_character = {
-                        has_variable = mariano_gomez_var
-                    }
-                }
-            }
-            create_character = {
-                template = phfp_mariano_gomez
-                save_scope_as = gomez_scope
-            }
-        }
-        else = {
-            random_character = {
-                limit = {
-                    has_variable = mariano_gomez_var
-                }
-                save_scope_as = gomez_scope
-            }
-        }
-        if = {
-            limit = {
-                NOT = {
-                    any_character = {
-                        has_variable = jose_burgos_var
-                    }
-                }
-            }
-            create_character = {
-                template = PHI_jose_burgos
-                save_scope_as = burgos_scope
-            }
-        }
-        else = {
-            random_character = {
-                limit = {
-                    has_variable = jose_burgos_var
-                }
-                save_scope_as = burgos_scope
-            }
-        }
-        if = {
-            limit = {
-                NOT = {
-                    any_character = {
-                        has_variable = jacinto_zamora_var
-                    }
-                }
-            }
-            create_character = {
-                template = phfp_jacinto_zamora
-                save_scope_as = zamora_scope
-            }
-        }
-        else = {
-            random_character = {
-                limit = {
-                    has_variable = jacinto_zamora_var
-                }
-                save_scope_as = zamora_scope
-            }
-        }
-        random_political_movement = {
-            limit = {
-                is_political_movement_type = phfp_movement_filipino_national
-            }
-            save_scope_as = propaganda_movement_scope
-        }
-        set_variable = {
-            name = gomburza
-        }
-    }
-
-    option = {
-        name = phfp_frailocracy.8.a
-        default_option = yes
-        scope:gomez_scope = {
-            kill_character = yes
-        }
-        scope:burgos_scope = {
-            kill_character = yes
-        }
-        scope:zamora_scope = {
-            kill_character = yes
-        }
-        scope:devout_scope ?= {
-            add_modifier = {
-                name = phfp_md_friar_favor
-                days = long_modifier_time
-            }
-        }
-        add_radicals = {
-            value = small_radicals
-            strata = middle
-        }
-        add_radicals = {
-            value = small_radicals
-            strata = lower
-        }
-    }
-
-    option = {
-        name = phfp_frailocracy.8.b
-        scope:gomez_scope = {
-            kill_character = yes
-        }
-        scope:burgos_scope = {
-            kill_character = yes
-        }
-        scope:zamora_scope = {
-            kill_character = yes
-        }
-        scope:devout_scope ?= {
-            add_modifier = {
-                name = phfp_md_friar_backlash
-                days = long_modifier_time
-            }
-        }
-        scope:intelligentsia_scope ?= {
-            add_modifier = {
-                name = phfp_md_ilustrado_favor
-                days = long_modifier_time
-            }
-        }
-        add_radicals = {
-            value = medium_radicals
-            strata = middle
-        }
-        add_radicals = {
-            value = medium_radicals
-            strata = lower
-        }
-        scope:propaganda_movement_scope ?= {
-            add_movement_enthusiasm_modifier = yes
         }
     }
 }

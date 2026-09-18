@@ -32,9 +32,6 @@
  phfp_nationalism.4.f: "$phfp_nationalism.3.f$"
  phfp_nationalism.4.a: "$phfp_nationalism.3.a$"
 
- phfp_je_the_revolution: "The Philippine Revolution"
- phfp_je_the_revolution_reason: "The pen has failed where the sword may yet succeed. What began as petitions and pamphlets in Madrid salons has curdled into secret societies and buried krises, waiting for the signal."
-
  phfp_nationalism.5.t: "Beloved Country"
  phfp_nationalism.5.d: "Finally, the archipelago answers to no crown but its own, within its own hills and river deltas."
  phfp_nationalism.5.f: "'Land of the morning, child of the sun returning...' The anthem is new. The pride is not."
@@ -68,6 +65,32 @@
  phfp_nationalism.10.f: "Unity is the one demand a colonial government cannot grant without also granting everything else."
  phfp_nationalism.10.a: "Recognize the league. Let reform have its forum"
  phfp_nationalism.10.b: "Dissolve it before it becomes something worse"
+
+ # GomBurZa Events
+
+ phfp_gomburza.1.t: "Demand for the Removal of Military Privileges"
+ phfp_gomburza.1.d: "Disturbed by the growing independence of native workers and military personnel at the Cavite naval arsenal, conservative clerical authorities have formally petitioned the colonial administration.\nThey demand the immediate revocation of long-standing tax and forced-labor exemptions enjoyed by the garrison, arguing that such privileges undermine colonial discipline and foster anti-clerical sentiment."
+ phfp_gomburza.1.f: "To grant special dispensations to native recruits is to nourish the seeds of insubordination beneath our very naval guns. The authority of Church and Crown must remain absolute."
+ phfp_gomburza.1.a: "Revoke the exemptions. Colonial revenue and order come first."
+ phfp_gomburza.1.b: "Maintain the privileges. We cannot afford to alienate the garrison."
+
+ phfp_gomburza.2.t: "Mutiny at the Cavite Arsenal"
+ phfp_gomburza.2.d: "Outraged by the sudden deduction of taxes from their pay and the enforcement of mandatory labor, native soldiers and artillerymen have seized Fort San Felipe in Cavite.\nThough colonial forces are rapidly moving to crush the uprising, prominent friars insist that this is no simple military riot, but part of a wider, treacherous conspiracy orchestrated by native secular clergy"
+ phfp_gomburza.2.f: "Shouts of defiance echoed across the ramparts as the red flag of rebellion was briefly raised above the arsenal, only to be answered by the roar of colonial artillery"
+ phfp_gomburza.2.a: "Surrender the accused conspirators to an ecclesiastical tribunal."
+ phfp_gomburza.2.b: "Keep the matter strictly within the military court-martial."
+ phfp_gomburza.2.c: "Pardon the mutineers and restore their former exemptions."
+
+ phfp_gomburza.3.t: "Trail of GOMBURZA"
+ phfp_gomburza.3.d: "Before a crowded martial tribunal, Fathers [SCOPE.sCharacter('gomez_scope').GetLastName], [SCOPE.sCharacter('burgos_scope').GetLastName], and [SCOPE.sCharacter('zamora_scope').GetLastName] stand charged with treason and sedition.\n\nThe prosecution, heavily backed by the religious orders, presents dubious testimonies attempting to link the secular priests' campaign for parish equality to the Cavite mutineers. Observers openly whisper that the evidence has been manufactured to eliminate the reformist clergy once and for all."
+ phfp_gomburza.3.f: ""Father, I know that not a leaf falls to the ground but by the will of God. Since He wills that I should die here, His holy will be done."\n\n—Mariano Gomez"
+ phfp_gomburza.3.a: "They are guilty of high treason. Issue the sentence of death!"
+ phfp_gomburza.3.b: "The evidence is flimsy at best. Acquit these priests!"
+
+ phfp_gomburza.4.t: "Blood at Bagumbayan"
+ phfp_gomburza.4.d: "At dawn before a vast, silent crowd at Bagumbayan, Fathers [SCOPE.sCharacter('gomez_scope').GetLastName], [SCOPE.sCharacter('burgos_scope').GetLastName], and [SCOPE.sCharacter('zamora_scope').GetLastName] are publicly executed by garrote for their crimes of sedition against the state."
+ phfp_gomburza.4.f: ""In so far, therefore, as your complicity in the Cavite Mutiny is not proved, as you may or may not have been patriots, and as you may or may not cherish sentiments for justice and liberty, I have the right to dedicate my work to you as victims of the evil which I undertake in combat"\n\n—José Rizal, #italic El Filibusterismo#!"
+ phfp_gomburza.4.a: "Our court's verdict stands. Let this serve as a warning to all subversives."
 
 
  FERVOR_OF_FILIPINO_CULTURE_ACTIVISM: "Average [concept_fervor] ([GetPlayer.MakeScope.ScriptValue('average_german_fervor')|v0]) of [GetCulture('tagalog').GetName], [GetCulture('ilocano').GetName], [GetCulture('visayan').GetName], [GetCulture('moro').GetName], [GetCulture('lumad').GetName], and [GetCulture('filipino_mestizo').GetName] [Concept('concept_culture','$concept_cultures$')]"

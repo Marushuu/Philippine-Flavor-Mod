@@ -9,17 +9,18 @@ phfp_mindanao.1 = {
 	desc = phfp_mindanao.1.d
 	flavor = phfp_mindanao.1.f
 
-	duration = 3
-
 	event_image = {
 		video = "europenorthamerica_before_the_battle"
 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
 	trigger = {
+		# Triggered by Button
 	}
 
 	immediate = {
@@ -69,15 +70,19 @@ phfp_mindanao.2 = {
 	desc = phfp_mindanao.2.d
 	flavor = phfp_mindanao.2.f
 
-	duration = 3
-
 	event_image = {
 		video = "europenorthamerica_before_the_battle"
 	}
 
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+
+	trigger = {
+		# Triggered by Button
+	}
 
 	immediate = {
 		s:STATE_MINDANAO = {
@@ -134,15 +139,19 @@ phfp_mindanao.3 = {
 	desc = phfp_mindanao.3.d
 	flavor = phfp_mindanao.3.f
 
-	duration = 3
-
 	event_image = {
 		video = "asia_poor_people_moving"
 	}
 
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	duration = 3
+
+	trigger = {
+		# Triggered by Button
+	}
 
 	immediate = {
 		s:STATE_MINDANAO.region_state:PHI = {
@@ -216,18 +225,22 @@ phfp_mindanao.4 = {
 	desc = phfp_mindanao.4.d
 	flavor = phfp_mindanao.4.f
 
-	duration = 3
 
 	event_image = {
 		video = "asia_farmers_market"
 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-
 	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
 
-	immediate = {
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
+	duration = 3
+
+	trigger = {
+		# Triggered by JE
+	}
+
+	immediate = {
 	}
 
 	option = {
@@ -249,15 +262,19 @@ phfp_mindanao.5 = {
 	desc = phfp_mindanao.5.d
 	flavor = phfp_mindanao.5.f
 
-	duration = 3
-
 	event_image = {
 		video = "unspecific_devastation"
 	}
 
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+
+	trigger = {
+		# Triggered by JE
+	}
 
 	immediate = {
 		s:STATE_MINDANAO = {
@@ -293,6 +310,7 @@ phfp_mindanao.5 = {
 	}
 }
 
+# Conversion
 phfp_mindanao.6 = {
 	type = country_event
 	placement = ROOT
@@ -301,15 +319,19 @@ phfp_mindanao.6 = {
 	desc = phfp_mindanao.6.d
 	flavor = phfp_mindanao.6.f
 
-	duration = 3
-
 	event_image = {
 		video = "southamerica_christianity"
 	}
 
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+
+	trigger = {
+		# Triggered by Button
+	}
 
 	immediate = {
 		s:STATE_MINDANAO.region_state:PHI = {
@@ -339,6 +361,7 @@ phfp_mindanao.6 = {
 	}
 }
 
+# School Fund
 phfp_mindanao.7 = {
 	type = country_event
 	placement = ROOT
@@ -347,15 +370,20 @@ phfp_mindanao.7 = {
 	desc = phfp_mindanao.7.d
 	flavor = phfp_mindanao.7.f
 
-	duration = 3
-
 	event_image = {
 		video = "ip3_village_school"
 	}
 
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	duration = 3
+
+	trigger = {
+		# Triggered by Button
+	}
 
 	immediate = {
 		s:STATE_MINDANAO.region_state:PHI = {
@@ -385,6 +413,7 @@ phfp_mindanao.7 = {
 	}
 }
 
+# Port of Zamboanga
 phfp_mindanao.8 = {
 	type = country_event
 	placement = ROOT
@@ -393,15 +422,19 @@ phfp_mindanao.8 = {
 	desc = phfp_mindanao.8.d
 	flavor = phfp_mindanao.8.f
 
-	duration = 3
-
 	event_image = {
 		video = "ep2_active_shipyard"
 	}
 
+	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_trade.dds"
+	duration = 3
+
+	trigger = {
+		# Triggered by Button
+	}
 
 	immediate = {
 		s:STATE_MINDANAO.region_state:PHI = {
@@ -420,6 +453,7 @@ phfp_mindanao.8 = {
 	}
 }
 
+# Cotabato Basin Button
 phfp_mindanao.9 = {
 	type = country_event
 	placement = ROOT
@@ -428,15 +462,19 @@ phfp_mindanao.9 = {
 	desc = phfp_mindanao.9.d
 	flavor = phfp_mindanao.9.f
 
-	duration = 3
-
 	event_image = {
 		video = "ip2_india_countryside"
 	}
 
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	duration = 3
+
+	trigger = {
+		# Triggered by Button
+	}
 
 	immediate = {
 		s:STATE_MINDANAO.region_state:PHI = {
@@ -490,6 +528,7 @@ phfp_mindanao.9 = {
 	}
 }
 
+# Mindanao Development JE Completion
 phfp_mindanao.10 = {
 	type = country_event
 	placement = ROOT
@@ -498,15 +537,19 @@ phfp_mindanao.10 = {
 	desc = phfp_mindanao.10.d
 	flavor = phfp_mindanao.10.f
 
-	duration = 3
-
 	event_image = {
 		video = "ip4_colonial_exploitation_going_well"
 	}
 
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+
+	trigger = {
+		# Triggered by JE
+	}
 
 	immediate = {
 		s:STATE_MINDANAO.region_state:PHI = {

@@ -9,15 +9,18 @@ phfp_development.1 = {
     desc = phfp_development.1.d
     flavor = phfp_development.1.f
 
-    duration = 3
-
-    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
-
     event_image = {
         video = "southamerica_aristocrats"
     }
 
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
     trigger = {
+        # Triggered by History
     }
 
     immediate = {
@@ -53,10 +56,18 @@ phfp_development.2 = {
     desc = phfp_development.2.d
     flavor = phfp_development.2.f
 
-    duration = 3
-
     event_image = {
         video = "southamerica_factory_opening"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
+    trigger = {
+        # Triggered by JE
     }
 
     immediate = {
@@ -92,10 +103,18 @@ phfp_development.3 = {
     desc = phfp_development.3.d
     flavor = phfp_development.3.f
 
-    duration = 3
-
     event_image = {
         video = "southamerica_factory_opening"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
+    trigger = {
+        # Triggered by JE
     }
 
     immediate = {
@@ -147,10 +166,18 @@ phfp_development.4 = {
     desc = phfp_development.4.d
     flavor = phfp_development.4.f
 
-    duration = 3
-
     event_image = {
         video = "ep2_active_shipyard"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
+    trigger = {
+        # Triggered by Button
     }
 
     immediate = {
@@ -183,10 +210,19 @@ phfp_development.5 = {
     desc = phfp_development.5.d
     flavor = phfp_development.5.f
 
-    duration = 3
 
     event_image = {
         video = "unspecific_trains"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
+    trigger = {
+        # Triggered by Button
     }
 
     immediate = {
@@ -235,10 +271,18 @@ phfp_development.6 = {
     desc = phfp_development.6.d
     flavor = phfp_development.6.f
 
-    duration = 3
-
     event_image = {
         video = "europenorthamerica_london_center"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
+    trigger = {
+        # Triggered by JE
     }
 
     immediate = {
@@ -291,10 +335,18 @@ phfp_development.7 = {
     desc = phfp_development.7.d
     flavor = phfp_development.7.f
 
-    duration = 3
-
     event_image = {
         video = "ep2_active_shipyard"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
+    trigger = {
+        # Triggered by Button
     }
 
     immediate = {
@@ -331,10 +383,18 @@ phfp_development.8 = {
     desc = phfp_development.8.d
     flavor = phfp_development.8.f
 
-    duration = 3
-
     event_image = {
         video = "unspecific_steam_ship"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
+    trigger = {
+        # Triggered by Button
     }
 
     immediate = {
@@ -371,10 +431,18 @@ phfp_development.9 = {
     desc = phfp_development.9.d
     flavor = phfp_development.9.f
 
-    duration = 3
-
     event_image = {
         video = "europenorthamerica_london_center"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
+    trigger = {
+        # Triggered by JE
     }
 
     immediate = {
@@ -439,13 +507,18 @@ phfp_development.10 = {
     desc = phfp_development.10.d
     flavor = phfp_development.10.f
 
-    duration = 3
-
     event_image = {
         video = "europenorthamerica_capitalists_meeting"
     }
 
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
     trigger = {
+        # Triggered by JE
     }
 
     option = {

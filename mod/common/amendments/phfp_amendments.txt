@@ -41,6 +41,51 @@
 	amendment_activism_multiplier = 0.25
 }
 
+phfp_amendment_polo_y_servicio = {
+	parent = law_debt_slavery
+
+	allowed_laws = {
+		law_colonial_slavery
+		law_debt_slavery
+		law_slave_trade
+		law_legacy_slavery
+	}
+
+	modifier = {
+		state_construction_mult = 0.1
+		building_peasants_standard_of_living_add = -0.5
+		building_laborers_standard_of_living_add = -0.5
+		building_slaves_standard_of_living_add = -0.5
+	}
+
+	possible = {
+		OR = {
+			c:PHI ?= this
+			was_formed_from = PHI
+		}
+	}
+
+	would_sponsor = {
+		OR = {
+			AND = {
+				exists = scope:approval
+				scope:approval > 0
+			}
+			is_interest_group_type = ig_landowners
+		}
+	}
+
+	ai_will_revoke = {
+		always = no
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+
+	amendment_activism_multiplier = 0.5
+}
+
 phfp_amendment_economic_miracle = {
 	parent = law_interventionism
 

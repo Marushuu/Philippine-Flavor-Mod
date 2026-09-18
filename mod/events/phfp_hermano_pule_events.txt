@@ -9,19 +9,15 @@ phfp_hermano_pule.1 = {
     desc = phfp_hermano_pule.1.d
     flavor = phfp_hermano_pule.1.f
 
-    duration = 3
-
-    cooldown = {
-        days = never_fire_again_modifier_time
-    }
-
     event_image = {
         video = "ep1_printing_press"
     }
 
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+    duration = 3
 
     trigger = {
         game_date >= 1836.1.1
@@ -34,6 +30,10 @@ phfp_hermano_pule.1 = {
         NOT = {
             has_journal_entry = phfp_je_frailocracy
         }
+    }
+
+    cooldown = {
+        days = never_fire_again_modifier_time
     }
 
     immediate = {
@@ -88,12 +88,6 @@ phfp_hermano_pule.2 = {
     type = country_event
     placement = ROOT
 
-    duration = 3
-
-    cooldown = {
-        days = normal_modifier_time
-    }
-
     title = phfp_hermano_pule.2.t
     desc = phfp_hermano_pule.2.d
     flavor = phfp_hermano_pule.2.f
@@ -102,9 +96,11 @@ phfp_hermano_pule.2 = {
         video = unspecific_devastation
     }
 
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+    duration = 3
 
     trigger = {
         game_date >= 1840.1.1
@@ -118,6 +114,10 @@ phfp_hermano_pule.2 = {
                 has_variable = hermano_pule_var
             }
         }
+    }
+
+    cooldown = {
+        days = normal_modifier_time
     }
 
     immediate = {
@@ -200,12 +200,6 @@ phfp_hermano_pule.3 = {
     type = country_event
     placement = ROOT
 
-    duration = 3
-
-    cooldown = {
-        days = never_fire_again_modifier_time
-    }
-
     title = phfp_hermano_pule.3.t
     desc = phfp_hermano_pule.3.d
     flavor = phfp_hermano_pule.3.f
@@ -214,9 +208,11 @@ phfp_hermano_pule.3 = {
         video = unspecific_devastation
     }
 
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+    duration = 3
 
     trigger = {
         game_date >= 1840.1.1
@@ -230,6 +226,10 @@ phfp_hermano_pule.3 = {
                 has_variable = hermano_pule_var
             }
         }
+    }
+
+    cooldown = {
+        days = never_fire_again_modifier_time
     }
 
     immediate = {
@@ -294,12 +294,6 @@ phfp_hermano_pule.4 = {
     type = country_event
     placement = ROOT
 
-    duration = 3
-
-    cooldown = {
-        days = never_fire_again_modifier_time
-    }
-
     title = phfp_hermano_pule.4.t
     desc = phfp_hermano_pule.4.d
     flavor = phfp_hermano_pule.4.f
@@ -308,16 +302,22 @@ phfp_hermano_pule.4 = {
         video = unspecific_devastation
     }
 
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
-    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+    duration = 3
 
     trigger = {
         # Triggered by Event
     }
 
+    cooldown = {
+        days = never_fire_again_modifier_time
+    }
+
     immediate = {
-        ig:ig_devout >= {
+        ig:ig_devout ?= {
             save_scope_as = devout_scope
         }
         ig:ig_rural_folk ?= {
@@ -342,6 +342,10 @@ phfp_hermano_pule.4 = {
             name = phfp_md_hermano_pule_martyrdom
             days = moderately_long_modifier_time
         }
+        add_radicals = {
+            value = medium_radicals
+            culture = cu:tagalog
+        }
     }
 
     option = {
@@ -352,6 +356,10 @@ phfp_hermano_pule.4 = {
         add_modifier = {
             name = phfp_md_hermano_pule_martyrdom
             days = moderately_long_modifier_time
+        }
+        add_radicals = {
+            value = small_radicals
+            culture = cu:tagalog
         }
     }
 }

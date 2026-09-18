@@ -37,40 +37,26 @@
  phfp_frailocracy.6.a: "Side with the overseer. The order's accounts are not ours to question"
  phfp_frailocracy.6.b: "Side with the tenant, and open the ledger"
 
- phfp_frailocracy.7.t: "Hermano Pule's Confraternity"
- phfp_frailocracy.7.d: "[SCOPE.sCharacter('hermano_pule_scope').GetFullName], a devout layman, sought admission to the priesthood and was turned away.\nThe religious orders do not ordain natives, whatever their piety;\nThus, he founded his own: the Cofradía de San José, a brotherhood of prayer and mutual aid open to precisely the men the friars would not have.\nIt has grown faster than anyone in the parish houses is comfortable with, and the friars are calling it something between heresy and sedition."
- phfp_frailocracy.7.f: "A church that will not ordain you is, eventually, a church you build yourself."
- phfp_frailocracy.7.a: "#Italic This is a heretic, do not imitate.#!"
- phfp_frailocracy.7.b: "Grant the confraternity recognition, whatever the bishop says"
-
- phfp_frailocracy.8.t: "Blood at Bagumbayan"
- phfp_frailocracy.8.d: "In the aftermath of a mutiny at the Cavite arsenal, three native priests — [SCOPE.sCharacter('gomez_scope').GetFullName], [SCOPE.sCharacter('burgos_scope').GetFullName], and [SCOPE.sCharacter('zamora_scope').GetFullName] — are tried on flimsy evidence and garroted before a crowd at the Luneta.\nTheir crime, in the eyes of the friar orders, was less the mutiny than the years they had spent arguing that a native-born priest was no less a priest than a Spanish one.\nThe execution is meant to end the argument. In the barrios and seminaries, it does the opposite."
- phfp_frailocracy.8.f: "GOMBURZA\n\nThree syllables the friars hoped no one would remember, and no Filipino ever forgot."
- phfp_frailocracy.8.a: "The court's verdict stands. Let it be the end of the matter"
- phfp_frailocracy.8.b: "Decry the executions as martyrdom, whatever Manila thinks of it"
-
  # Hermano Pule Events
 
- phfp_hermano_pule.1.t: ""
- phfp_hermano_pule.1.d: ""
- phfp_hermano_pule.1.f: ""
- phfp_hermano_pule.1.a: ""
+ phfp_hermano_pule.1.t: "The Cofradía de San José"
+ phfp_hermano_pule.1.d: "After being denied admission to Spanish monastic orders on account of his race, [SCOPE.sCharacter('hermano_pule_scope').GetFullName]—known to his followers as Hermano Pule—has established the Cofradía de San José.\nCombining traditional Catholic devotion with native communal organization, the brotherhood is quietly spreading throughout the provinces of Tayabas and Laguna, offering solace and solidarity to the rural populace"
+ phfp_hermano_pule.1.f: "We seek no conflict with Holy Mother Church; we ask only that we, as native children of God, may gather in prayer under our own brotherhood"
+ phfp_hermano_pule.1.a: "Monitor this so called Hermano Pule."
 
- phfp_hermano_pule.2.t: ""
- phfp_hermano_pule.2.d: ""
- phfp_hermano_pule.2.f: ""
- phfp_hermano_pule.2.a: ""
- phfp_hermano_pule.2.b: ""
+ phfp_hermano_pule.2.t: "The Growing Cofradía"
+ phfp_hermano_pule.2.d: "Thousands more peasant families have joined the Cofradía de San José, pooling their modest funds to pay for monthly masses and mutual aid.\nHowever, the monastic orders and colonial authorities view this rapid, unapproved organization with deep suspicion, suspecting heresy and anti-Spanish sedition among the rural masses."
+ phfp_hermano_pule.2.f: "In remote chapels and hidden forest clearings, thousands gather in disciplined devotion.\nTo the friars, this is not piety, it is a shadow state in the making"
+ phfp_hermano_pule.2.a: "Declare the fraternity illegal and deploy local forces to disperse them."
+ phfp_hermano_pule.2.b: "Ignore the friars' panic and let these people be."
 
- phfp_hermano_pule.3.t: ""
- phfp_hermano_pule.3.d: ""
- phfp_hermano_pule.3.f: ""
- phfp_hermano_pule.3.a: ""
+ phfp_hermano_pule.3.t: "Confrontation at Mount Cristobal"
+ phfp_hermano_pule.3.d: "Cornered near Mount Cristobal after colonial troops attacked their peaceful encampment, the armed followers of Hermano Pule made a desperate stand at Alitao.\nOur colonial regulars and native auxiliaries launched a total assault on the improvised stockade, resulting in a brutal massacre of hundreds of devoutees, including women and children."
+ phfp_hermano_pule.3.f: "The holy banners of Saint Joseph lay shredded in the mud, soaked in the blood of peasant martyrs who had come armed only with faith, amulets, and wooden stakes."
+ phfp_hermano_pule.3.a: "Cruel, but this is necessary to uphold our authority."
 
- phfp_hermano_pule.4.t: ""
- phfp_hermano_pule.4.d: ""
- phfp_hermano_pule.4.f: ""
- phfp_hermano_pule.4.a: ""
- phfp_hermano_pule.4.b: ""
-
- # GomBurZa Events
+ phfp_hermano_pule.4.t: "Fate of Hermano Pule"
+ phfp_hermano_pule.4.d: "[SCOPE.sCharacter('hermano_pule_scope').GetFullName] has been captured following their defeat at Alitao.\nColonial officials and religious authorities now gather to decide his fate. While the church hierarchy demands a public execution to instil fear within the local populace, others warn that execution will only deepen resentment."
+ phfp_hermano_pule.4.f: ""You may sever my head, but you cannot sever the faith of the people in the justice of Heaven.""
+ phfp_hermano_pule.4.a: "Execute him publicly and display his remains as a warning."
+ phfp_hermano_pule.4.b: "Exile him somewhere distant, away from his followers."

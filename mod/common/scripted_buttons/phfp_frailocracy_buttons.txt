@@ -1,0 +1,21 @@
+﻿phfp_confiscate_friar_estates = {
+    name = phfp_confiscate_friar_estates
+    desc = phfp_confiscate_friar_estates_desc
+    visible = {
+        has_journal_entry = phfp_je_frailocracy
+    }
+    possible = {
+        NOT = {
+            has_modifier = phfp_md_estates_redistributed
+        }
+    }
+    effect = {
+        trigger_event = {
+            id = phfp_frailocracy.3
+            popup = yes
+        }
+    }
+    ai_chance = {
+        value = 10
+    }
+}

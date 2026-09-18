@@ -72,9 +72,9 @@
 		country_has_voting_franchise = yes
 		NOT = {
 			has_law = law_type:law_frailocracy
-			has_law_or_variant = law_type:law_legacy_slavery
 		}
-		liberty_desire <= 25
+		has_law = law_type:law_slavery_banned
+		liberty_desire <= 50
 	}
 
 	on_complete = {
@@ -169,17 +169,10 @@
 
 	on_monthly_pulse = {
 		events = {
-			phfp_nationalism.6
-			phfp_nationalism.7
-			phfp_nationalism.9
-			phfp_nationalism.10
 		}
-	}
-
-	on_yearly_pulse = {
 		random_events = {
-			250 = 0
-			10 = phfp_nationalism.8
+			200 = 0
+			20 = phfp_gomburza.1
 		}
 	}
 

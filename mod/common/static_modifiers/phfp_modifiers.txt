@@ -191,6 +191,11 @@ phfp_md_estates_redistributed = {
     building_group_bg_agriculture_throughput_add = 0.1
 }
 
+phfp_md_estates_redistributed_ig = {
+    interest_group_approval_add = -3
+    interest_group_pol_str_mult = -0.15
+}
+
 phfp_md_friar_untouched_estates = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
     interest_group_approval_add = 1
@@ -297,11 +302,85 @@ phfp_md_alitao_massacre_ruler = {
 
 phfp_md_hermano_pule_martyrdom = {
     icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
-    country_radicals_from_legitimacy_mult = 0.15
-    state_radicals_from_political_movements_mult = 0.25
+    country_radicals_from_legitimacy_mult = 0.1
+    state_radicals_from_political_movements_mult = 0.1
 }
 
 # GomBurZa
+
+phfp_md_polo_y_servicio_exemption = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    state_tax_collection_mult = -0.05
+    building_soldiers_standard_of_living_add = 0.5
+}
+
+phfp_md_polo_y_servicio_exemption_ig = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    interest_group_approval_add = 2
+    interest_group_pop_attraction_mult = 0.1
+}
+
+phfp_md_kept_polo_y_servicio_exemptions = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+    interest_group_approval_add = -2
+}
+
+phfp_md_cavite_mutiny = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+    country_authority_mult = -0.1
+    state_conscription_rate_mult = -0.25
+    state_turmoil_effects_mult = 0.1
+}
+
+phfp_md_exemptions_removed = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    interest_group_approval_add = -2
+}
+
+phfp_md_exemptions_reinstated = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    interest_group_approval_add = 2
+}
+
+phfp_md_protected_native_priests = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+    interest_group_approval_add = -2
+}
+
+phfp_md_gomburza_acquitted_approve = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    interest_group_approval_add = 2
+    interest_group_pop_attraction_mult = 0.15
+}
+
+phfp_md_gomburza_acquitted_disapprove = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+    interest_group_approval_add = -2
+    interest_group_pop_attraction_mult = -0.15
+}
+
+phfp_md_scapegoated_native_priests = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+    interest_group_approval_add = 2
+}
+
+phfp_md_silenced_native_priests = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+    interest_group_approval_add = -2
+    interest_group_pop_attraction_mult = 0.15
+}
+
+phfp_md_legacy_of_gomburza = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+    country_radicals_from_legitimacy_mult = 0.25
+    state_radicals_from_political_movements_mult = 0.25
+}
+
+phfp_md_legacy_of_gomburza_movement = {
+    icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+    political_movement_pop_attraction_mult = 0.1
+    political_movement_radicalism_add = 0.05
+}
 
 # Nationalism
 

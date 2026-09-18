@@ -1,5 +1,15 @@
 ﻿phfp_on_game_started = {
 	effect = {
+		c:PHI = {
+			add_modifier = {
+				name = phfp_md_polo_y_servicio_exemption
+			}
+			ig:ig_armed_forces = {
+				add_modifier = {
+					name = phfp_md_polo_y_servicio_exemption_ig
+				}
+			}
+		}
 		s:STATE_LUZON = {
 			add_state_trait = phfp_state_trait_central_luzon_plain
 			add_arable_land = 45
@@ -7,11 +17,6 @@
 				type = building_iron_mine
 				amount = 28
 			}
-			change_resource_potential = {
-				type = building_rubber_plantation
-				amount = 21
-			}
-			add_resource_potential = building_gold_field
 			change_resource_potential = {
 				type = building_gold_field
 				amount = 4
@@ -42,10 +47,6 @@
 				type = building_coal_mine
 				amount = 8
 			}
-			change_resource_potential = {
-				type = building_rubber_plantation
-				amount = 16
-			}
 			region_state:PHI = {
 				add_cultural_community = cu:min
 				create_pop = {
@@ -65,11 +66,6 @@
 				type = building_logging_camp
 				amount = 14
 			}
-			change_resource_potential = {
-				type = building_rubber_plantation
-				amount = 16
-			}
-			add_resource_potential = building_gold_field
 			change_resource_potential = {
 				type = building_gold_field
 				amount = 4

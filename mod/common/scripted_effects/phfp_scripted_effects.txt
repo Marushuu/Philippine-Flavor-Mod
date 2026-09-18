@@ -1,7 +1,19 @@
 ﻿philippines_annex_effects = {
+    s:STATE_LUZON = {
+        remove_homeland = cu:filipino_mestizo
+        add_homeland = cu:filipino_hispanophone
+    }
+    s:STATE_VISAYAS = {
+        remove_homeland = cu:filipino_mestizo
+        add_homeland = cu:filipino_hispanophone
+    }
+    s:STATE_MINDANAO = {
+        remove_homeland = cu:filipino_mestizo
+        add_homeland = cu:filipino_hispanophone
+    }
     overlord ?= {
         save_temporary_scope_as = boss
-        annex = c:PHI
+        annex_with_incorporation = c:PHI
     }
     play_as = scope:boss
 }

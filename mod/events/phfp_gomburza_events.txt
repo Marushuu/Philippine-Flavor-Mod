@@ -1,1 +1,453 @@
 ﻿namespace = phfp_gomburza
+
+# Church ask Polo y Servicio Exemptions to be Removed
+phfp_gomburza.1 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_gomburza.1.t
+    desc = phfp_gomburza.1.d
+    flavor = phfp_gomburza.1.f
+
+    event_image = {
+        video = "ep1_printing_press"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
+    trigger = {
+        game_date >= 1865.1.1
+        has_modifier = phfp_md_polo_y_servicio_exemption
+    }
+
+    cancellation_trigger = {
+        has_law_or_variant = law_type:law_slavery_banned
+    }
+
+    cooldown = {
+        days = normal_modifier_time
+    }
+
+    immediate = {
+        ig:ig_armed_forces ?= {
+            save_scope_as = armed_forces_scope
+        }
+        ig:ig_devout ?= {
+            save_scope_as = devout_scope
+        }
+    }
+
+    option = {
+        name = phfp_gomburza.1.a
+        default_option = yes
+        remove_modifier = phfp_md_polo_y_servicio_exemption
+        scope:armed_forces_scope ?= {
+            remove_modifier = phfp_md_polo_y_servicio_exemption_ig
+            add_modifier = {
+                name = phfp_md_exemptions_removed
+                days = long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = small_radicals
+            pop_type = soldiers
+        }
+        add_radicals = {
+            value = medium_radicals
+            pop_type = officers
+        }
+        trigger_event = {
+            id = phfp_gomburza.2
+            days = 30
+        }
+    }
+
+    option = {
+        name = phfp_gomburza.1.b
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_kept_polo_y_servicio_exemptions
+                days = long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = small_radicals
+            interest_group = ig:ig_devout
+        }
+    }
+}
+
+# Cavite Mutiny
+phfp_gomburza.2 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_gomburza.2.t
+    desc = phfp_gomburza.2.d
+    flavor = phfp_gomburza.2.f
+
+    event_image = {
+        video = "ep1_printing_press"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
+    trigger = {
+        # Triggered by Event
+    }
+
+    immediate = {
+        ig:ig_armed_forces ?= {
+            save_scope_as = armed_forces_scope
+        }
+        ig:ig_devout ?= {
+            save_scope_as = devout_scope
+        }
+        ig:ig_intelligentsia ?= {
+            save_scope_as = ilustrado_scope
+        }
+    }
+
+    option = {
+        name = phfp_gomburza.2.a
+        default_option = yes
+        add_radicals = {
+            value = small_radicals
+            pop_type = soldiers
+        }
+        add_radicals = {
+            value = medium_radicals
+            pop_type = officers
+        }
+        add_radicals = {
+            value = small_radicals
+            interest_group = ig:ig_intelligentsia
+        }
+        add_loyalists = {
+            value = small_radicals
+            pop_type = clergymen
+        }
+        trigger_event = {
+            id = phfp_gomburza.3
+            days = 30
+        }
+    }
+
+    option = {
+        name = phfp_gomburza.2.b
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_protected_native_priests
+                days = long_modifier_time
+            }
+        }
+        add_radicals = {
+            value = small_radicals
+            pop_type = soldiers
+        }
+        add_radicals = {
+            value = medium_radicals
+            pop_type = officers
+        }
+        add_radicals = {
+            value = medium_radicals
+            pop_type = clergymen
+        }
+    }
+
+    option = {
+        name = phfp_gomburza.2.c
+        trigger = {
+            NOT = {
+                has_variable = reinstated_before_var # So you don't just keep doing the reinstate loop
+            }
+        }
+        add_modifier = {
+            name = phfp_md_polo_y_servicio_exemption
+        }
+        scope:armed_forces_scope ?= {
+            add_modifier = {
+                name = phfp_md_polo_y_servicio_exemption_ig
+            }
+            add_modifier = {
+                name = phfp_md_exemptions_reinstated
+                days = normal_modifier_time
+            }
+            remove_modifier = phfp_md_exemptions_removed
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_kept_polo_y_servicio_exemptions
+                days = long_modifier_time
+            }
+        }
+        add_loyalists = {
+            value = small_radicals
+            pop_type = soldiers
+        }
+        add_loyalists = {
+            value = medium_radicals
+            pop_type = officers
+        }
+        add_radicals = {
+            value = medium_radicals
+            pop_type = clergymen
+        }
+        hidden_effect = {
+            set_variable = reinstated_before_var
+        }
+    }
+}
+
+# Trial of GOMBURZA
+phfp_gomburza.3 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_gomburza.3.t
+    desc = phfp_gomburza.3.d
+    flavor = phfp_gomburza.3.f
+
+    event_image = {
+        video = "ep1_printing_press"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
+    trigger = {
+        # Triggered by Event
+    }
+
+    immediate = {
+        ig:ig_devout ?= {
+            save_scope_as = devout_scope
+        }
+        ig:ig_intelligentsia ?= {
+            save_scope_as = ilustrado_scope
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_template = phfp_mariano_gomez
+                    }
+                }
+            }
+            create_character = {
+                template = phfp_mariano_gomez
+                save_scope_as = gomez_scope
+            }
+        }
+        else = {
+            random_character = {
+                limit = {
+                    has_template = phfp_mariano_gomez
+                }
+                save_scope_as = gomez_scope
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_template = PHI_jose_burgos
+                    }
+                }
+            }
+            create_character = {
+                template = PHI_jose_burgos
+                save_scope_as = burgos_scope
+            }
+        }
+        else = {
+            random_character = {
+                limit = {
+                    has_template = PHI_jose_burgos
+                }
+                save_scope_as = burgos_scope
+            }
+        }
+        if = {
+            limit = {
+                NOT = {
+                    any_character = {
+                        has_template = phfp_jacinto_zamora
+                    }
+                }
+            }
+            create_character = {
+                template = phfp_jacinto_zamora
+                save_scope_as = zamora_scope
+            }
+        }
+        else = {
+            random_character = {
+                limit = {
+                    has_template = phfp_jacinto_zamora
+                }
+                save_scope_as = zamora_scope
+            }
+        }
+    }
+
+    option = {
+        name = phfp_gomburza.3.a
+        default_option = yes
+        add_radicals = {
+            value = small_radicals
+            interest_group = scope:ilustrado_scope
+        }
+        trigger_event = {
+            id = phfp_gomburza.4
+            days = 14
+        }
+    }
+
+    option = {
+        name = phfp_gomburza.3.b
+        scope:ilustrado_scope ?= {
+            add_modifier = {
+                name = phfp_md_gomburza_acquitted_approve
+                days = long_modifier_time
+            }
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_gomburza_acquitted_disapprove
+                days = long_modifier_time
+            }
+        }
+    }
+}
+
+# Execution of GOMBURZA
+phfp_gomburza.4 = {
+    type = country_event
+    placement = ROOT
+
+    title = phfp_gomburza.4.t
+    desc = phfp_gomburza.4.d
+    flavor = phfp_gomburza.4.f
+
+    event_image = {
+        video = "ep1_printing_press"
+    }
+
+    icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    duration = 3
+
+    trigger = {
+        # Triggered by Event
+    }
+
+    immediate = {
+        ig:ig_devout = {
+            save_scope_as = devout_scope
+        }
+        ig:ig_intelligentsia ?= {
+            save_scope_as = ilustrado_scope
+        }
+        random_character = {
+            limit = {
+                has_template = phfp_mariano_gomez
+            }
+            save_scope_as = gomez_scope
+        }
+        random_character = {
+            limit = {
+                has_template = PHI_jose_burgos
+            }
+            save_scope_as = burgos_scope
+        }
+        random_character = {
+            limit = {
+                has_template = phfp_jacinto_zamora
+            }
+            save_scope_as = zamora_scope
+        }
+        random_political_movement = {
+            limit = {
+                is_political_movement_type = phfp_movement_filipino_national
+            }
+            save_scope_as = propaganda_movement_scope
+        }
+    }
+
+    option = {
+        name = phfp_gomburza.4.a
+        default_option = yes
+        scope:gomez_scope = {
+            kill_character = yes
+        }
+        scope:burgos_scope = {
+            kill_character = yes
+        }
+        scope:zamora_scope = {
+            kill_character = yes
+        }
+        scope:devout_scope ?= {
+            add_modifier = {
+                name = phfp_md_scapegoated_native_priests
+                days = long_modifier_time
+            }
+        }
+        scope:ilustrado_scope ?= {
+            add_modifier = {
+                name = phfp_md_silenced_native_priests
+                days = long_modifier_time
+            }
+        }
+        add_modifier = {
+            name = phfp_md_legacy_of_gomburza
+            days = long_modifier_time
+        }
+        add_loyalists = {
+            value = medium_radicals
+            interest_group = ig:ig_devout
+        }
+        scope:propaganda_movement_scope ?= {
+            add_modifier = {
+                name = phfp_md_legacy_of_gomburza_movement
+            }
+        }
+        add_radicals = {
+            value = small_radicals
+        }
+    }
+}
+
+# Remove Polo y Servicio Exemptions if no slavery
+phfp_gomburza.5 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        has_law = law_type:law_slavery_banned
+        has_modifier = phfp_md_polo_y_servicio_exemption
+        ig:ig_armed_forces = {
+            has_modifier = phfp_md_polo_y_servicio_exemption_ig
+        }
+    }
+
+    immediate = {
+        remove_modifier = phfp_md_polo_y_servicio_exemption
+        ig:ig_armed_forces = {
+            remove_modifier = phfp_md_polo_y_servicio_exemption_ig
+        }
+    }
+}
